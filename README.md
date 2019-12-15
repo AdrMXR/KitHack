@@ -157,4 +157,39 @@
 
 ### Others
 
+- [](https://github.com/Screetsec/TheFatRat)
+- [](https://github.com/g0tmi1k/msfpc)
+- [](https://github.com/hyc/fcrackzip)
+- [](https://github.com/OWASP/QRLJacking)
+- [Lazy](https://github.com/arismelachroinos/lscript)
+- [](https://github.com/the-shadowbrokers/Blue-Thunder-IP-Locator)
+- [](https://github.com/nycto-hackerone/HTB-INVITE)
+- [](https://ngrok.com)
+- [](https://github.com/thelinuxchoice/thechoice)
+- [](http://www.mediafire.com/file/3g7xyzt1611z8zl/ransomware.rar/file)
+- [](https://github.com/andrewmichaelsmith/bluepot)
+- [](https://github.com/trustedsec/social-engineer-toolkit)
+- [](https://github.com/hahwul/a2sv)
+- [](https://github.com/Hackplayers/4nonimizer)
+- [](https://github.com/thelinuxchoice/saycheese)
+- [](https://github.com/KALILINUXTRICKSYT/easysploit)
+- [](https://github.com/Hadi999/NXcrypt)
+- [](https://github.com/4w4k3/KnockMail)
+- [](https://github.com/installation/rkhunter)
+- [](https://github.com/UndeadSec/HeraKeylogger)
+- [](https://github.com/z00z/ZLogger)
+- [](https://github.com/LionSec/xerosploit)
+- [](https://github.com/franc205/Slacksec)
+
+### Backdoors with msfvenom
+
+LINUX --> Kithack.elf
+WINDOWS --> Kithack.exe
+ANDROID --> Kithack.apk
+MAC OS --> Kithack.macho
+PHP --> Kithack.php
+PYTHON --> Kithack.py
+BASH --> Kithack.sh
+PERL --> Kithack.pl
+
 
