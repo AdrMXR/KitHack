@@ -10,5 +10,5 @@
 
 **KitHack** es una herramienta de código abierto que automatiza el proceso de descarga e instalación de 130 herramientas enfocadas al hacking. **KitHack** también proporciona la facilidad de poder generar puertas traseras con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS. 
 
-# MENU DE OPCIONES 
+### Menu de opciones 
 
