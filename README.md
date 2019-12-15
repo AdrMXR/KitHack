@@ -1,4 +1,5 @@
 
+
 # KITHACK
 
 [![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue)](https://facebook.com/Adrian.Guillermo.22)
@@ -23,19 +24,18 @@
 - Others
 - Backdoors with msfvenom
 
-### Tools
+### Android
 
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp 
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-- [backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)           by dana-at-cp
-
-
+- [Backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)
+- [Evil-Droid](https://github.com/M4sc3r4n0/Evil-Droid)
+- [ApkTool](https://ibotpeaches.github.io/Apktool/)
+- [AhMyth](https://github.com/AhMyth/AhMyth-Android-RAT)
+- [Andspoilt](https://github.com/sundaysec/Andspoilt)
+- [kwetza](https://github.com/sensepost/kwetza)
+- [Termux](https://termux.com)
+- [DroidTracker](https://github.com/thelinuxchoice/DroidTracker)
+- [Droidcam](https://github.com/thelinuxchoice/droidcam)
+- [Crydroid](https://github.com/thelinuxchoice/crydroid)
+- [Keydroid](https://github.com/thelinuxchoice/keydroid)
+- [Android-Exploits](https://github.com/sundaysec/Android-Exploits)
 
