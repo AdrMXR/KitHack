@@ -105,6 +105,56 @@
 - [Hashcat](https://github.com/hashcat/hashcat)
 - [BruteDum](https://github.com/GitHackTools/BruteDum.git)
 
+### Web Attacks
 
+- [SQLmap](https://github.com/sqlmapproject/sqlmap)
+- [XAttacker](https://github.com/Moham3dRiahi/XAttacker)
+- [Fuxploider](https://github.com/almandin/fuxploider)
+- [Wordpresscan](https://github.com/swisskyrepo/Wordpresscan)
+- [SiteBroker](https://github.com/Anon-Exploiter/SiteBroker)
+- [NoSQLMap](https://github.com/codingo/NoSQLMap)
+- [Sqli-scanner](https://github.com/the-c0d3r/sqli-scanner)
+- [Joomscan](https://github.com/rezasp/joomscan)
+- [Metagoofil](https://github.com/laramies/metagoofil)
+- [Sublist3r](https://github.com/aboul3la/Sublist3r)
+- [WAFNinja](https://github.com/khalilbijjou/WAFNinja)
+- [Dirsearch](https://github.com/maurosoria/dirsearch)
+- [XSStrike](https://github.com/s0md3v/XSStrike)
+- [LinksF1nd3r](https://github.com/ihebski/LinksF1nd3r)
+
+### Spoofing 
+
+- [SpoofMAC](https://github.com/feross/SpoofMAC)
+- [Ip_spoofing](https://github.com/pankajmore/ip_spoofing)
+- [ArpSpoof](https://github.com/ickerwx/arpspoof)
+- [DerpNSpoof](https://github.com/Trackbool/DerpNSpoof)
+- [Email-spoof](https://github.com/MatiasTilerias/email-spoof)
+- [DrSpoof](https://github.com/Enixes/Dr.Spoof)
+- [Smslistattack](https://github.com/Firestormhacker/smslistattack)
+
+### Information Gathering 
+
+- [Nmap](https://github.com/nmap/nmap) 
+- [Th3inspector](https://github.com/Moham3dRiahi/Th3inspector)  
+- [Facebook Information](https://github.com/xHak9x/fbi) 
+- [Infoga](https://github.com/m4ll0k/Infoga) 
+- [Crips](https://github.com/Manisso/Crips) 
+- [BillCipher](https://github.com/GitHackTools/BillCipher) 
+- [RED_HAWK](https://github.com/Tuhinshubhra/RED_HAWK) 
+- [Recon-ng](https://github.com/lanmaster53/recon-ng) 
+- [TheHarvester](https://github.com/alanchavez88/theHarvester) 
+- [PhoneInfoga](https://github.com/sundowndev/PhoneInfoga) 
+- [Gasmask](https://github.com/twelvesec/gasmask) 
+- [Infog](https://github.com/thelinuxchoice/infog) 
+- [Locator](https://github.com/thelinuxchoice/locator) 
+- [Userrecon](https://github.com/thelinuxchoice/userrecon) 
+- [Excuseme](https://github.com/thelinuxchoice/excuseme) 
+- [URLextractor](https://github.com/eschultze/URLextractor) 
+- [Devploit](https://github.com/GhettoCole/Devploit) 
+- [ReconDog](https://github.com/s0md3v/ReconDog) 
+- [Webkiller](https://github.com/ultrasecurity/webkiller) 
+- [Quasar](https://github.com/Cyb0r9/quasar) 
+
+### Others
 
 
