@@ -24,7 +24,7 @@
 - Others
 - Backdoors with msfvenom
 
-### Android
+### Android:
 
 - [Backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)
 - [Evil-Droid](https://github.com/M4sc3r4n0/Evil-Droid)
@@ -38,4 +38,23 @@
 - [Crydroid](https://github.com/thelinuxchoice/crydroid)
 - [Keydroid](https://github.com/thelinuxchoice/keydroid)
 - [Android-Exploits](https://github.com/sundaysec/Android-Exploits)
+
+### Windows:
+
+- [Winpayloads](https://github.com/nccgroup/Winpayloads)
+- [sAINT](https://github.com/tiagorlampert/sAINT)
+- [BeeLogger](https://github.com/4w4k3/BeeLogger)
+- [FakeImageExploiter](https://github.com/r00t-3xp10it/FakeImageExploiter)
+- [Koadic](https://github.com/zerosum0x0/koadic)
+- [Phantom-Evasion](https://github.com/oddcod3/Phantom-Evasion)
+- [Ps1encode](https://github.com/CroweCybersecurity/ps1encode)
+- [DKMC](https://github.com/Mr-Un1k0d3r/DKMC)
+- [Cromos](https://github.com/6IX7ine/cromos)
+- [Eternal_scanner](https://github.com/peterpt/eternal_scanner)
+- [Eternalblue-Doublepulsar-Metasploit](https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit)
+- [MS17-010-EternalBlue-WinXP-Win10](https://github.com/hanshaze/MS17-010-EternalBlue-WinXP-Win10)
+- [Spykey](https://github.com/thelinuxchoice/spykey)
+- [WindowsExploits](https://github.com/WindowsExploits/Exploits)
+
+
 
