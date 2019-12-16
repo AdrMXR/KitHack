@@ -225,7 +225,7 @@ git pull
 
 | Demo 1 | Demo 2 |
 | ------ | ------ |
-|![Index](<a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>)|![f](<a href="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T" target="_blank"><img src="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T.svg" /></a>)
+(<a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>)|(<a href="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T" target="_blank"><img src="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T.svg" /></a>)
 
 
 
