@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-brightgreen)]()
 [![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/AdrMXR?locale.x=es_ES)
 
-**KitHack** es una herramienta de código abierto que automatiza el proceso de descarga e instalación de 130 herramientas enfocadas al hacking. **KitHack** también proporciona la facilidad de poder generar puertas traseras con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS. 
+**KitHack** es un proyecto de código abierto que contiene 130 herramientas enfocadas al hacking y automatiza el proceso de descarga e instalación para la herramienta que usted desee. **KitHack** también nos brinda la facilidad de poder generar puertas traseras con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS. 
 
 ### Menu
 
@@ -235,8 +235,31 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 2. Contactarme mediante el siguiente correo: kithacking@gmail.com
 3. Mandar el screenshot y explicar su problemática con ese fallo.
 
-***Importante***: Existirán diversas razones por las que una herramienta incorporada no se ejecute y no precisamente será a causa de un fallo en el código de KitHack. Algunos repositorios en GitHub se encuentran desatendidos o los actualizan y en lugar de mejorar empeoran o ya no inician, también puede ser que algún repositorio sea eliminado y por ende se presente usted con algún tipo de error, es por ello que es importante reportar estos fallos y especificar detalladamente que tipo de fallo se le presentó. 
+***Importante***: Existirán diversas razones por las que una herramienta incorporada no se ejecute y no precisamente será a causa de un fallo en el código de KitHack. Algunos repositorios en GitHub de las 130 herramientas se encuentran desatendidos o los actualizan y en lugar de mejorar empeoran o ya no inician, también puede ser que algún repositorio sea eliminado y por ende se presente usted con algún tipo de error, es por ello que es importante reportar estos fallos y especificar detalladamente que tipo de error se le presentó. 
 
+## Licensia 
+
+MIT License
+
+Copyright (c) 2019 Adrián Guillermo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 
 
