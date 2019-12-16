@@ -217,8 +217,6 @@ git pull
 
 ## Screenshots 
 
-|![Index](https://cloud.githubusercontent.com/assets/17976841/25420100/9ee12cf6-2a80-11e7-8dfa-c2e3cfe71366.png)|![f](https://user-images.githubusercontent.com/17976841/65820886-91a4b200-e258-11e9-9a00-1e5905f6be16.jpg)|![f](https://user images.githubusercontent.com/17976841/65820886-91a4b200-e258-11e9-9a00-1e5905f6be16.jpg)
-
 
 
 
