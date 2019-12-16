@@ -92,7 +92,7 @@
 - [SniffAir](https://github.com/Tylous/SniffAir)
 - [Wifijammer](https://github.com/DanMcInerney/wifijammer)
 
-### Passwords Attacks
+### Passwords Attacks:
 
 - [Cupp](https://github.com/Mebus/cupp)
 - [Facebooker](https://github.com/FakeFBI/Facebooker)
@@ -105,7 +105,7 @@
 - [Hashcat](https://github.com/hashcat/hashcat)
 - [BruteDum](https://github.com/GitHackTools/BruteDum.git)
 
-### Web Attacks
+### Web Attacks:
 
 - [SQLmap](https://github.com/sqlmapproject/sqlmap)
 - [XAttacker](https://github.com/Moham3dRiahi/XAttacker)
@@ -122,7 +122,7 @@
 - [XSStrike](https://github.com/s0md3v/XSStrike)
 - [LinksF1nd3r](https://github.com/ihebski/LinksF1nd3r)
 
-### Spoofing 
+### Spoofing:
 
 - [SpoofMAC](https://github.com/feross/SpoofMAC)
 - [Ip_spoofing](https://github.com/pankajmore/ip_spoofing)
@@ -132,7 +132,7 @@
 - [DrSpoof](https://github.com/Enixes/Dr.Spoof)
 - [Smslistattack](https://github.com/Firestormhacker/smslistattack)
 
-### Information Gathering 
+### Information Gathering:
 
 - [Nmap](https://github.com/nmap/nmap) 
 - [Th3inspector](https://github.com/Moham3dRiahi/Th3inspector)  
@@ -155,7 +155,7 @@
 - [Webkiller](https://github.com/ultrasecurity/webkiller) 
 - [Quasar](https://github.com/Cyb0r9/quasar) 
 
-### Others
+### Others:
 
 - [TheFatRat](https://github.com/Screetsec/TheFatRat)
 - [Msfpc](https://github.com/g0tmi1k/msfpc)
@@ -181,7 +181,7 @@
 - [Xerosploit](https://github.com/LionSec/xerosploit)
 - [Slacksec](https://github.com/franc205/Slacksec)
 
-### Backdoors with msfvenom
+### Backdoors with msfvenom:
 
 - Linux --> Kithack.elf
 - Windows --> Kithack.exe
@@ -221,7 +221,7 @@ git pull
 | -------------- | ---------------------- |
 |![Index](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-2.png)
 
-## Screenshots 
+## Videos  
 
 | Demo 1 | Demo 2 |
 | ------ | ------ |
