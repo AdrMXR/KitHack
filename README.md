@@ -183,13 +183,43 @@
 
 ### Backdoors with msfvenom
 
-- LINUX --> Kithack.elf
-- WINDOWS --> Kithack.exe
-- ANDROID --> Kithack.apk
-- MAC OS --> Kithack.macho
-- PHP --> Kithack.php
-- PYTHON --> Kithack.py
-- BASH --> Kithack.sh
-- PERL --> Kithack.pl
+- Linux --> Kithack.elf
+- Windows --> Kithack.exe
+- Android --> Kithack.apk
+- Mac OS --> Kithack.macho
+- Php --> Kithack.php
+- Python --> Kithack.py
+- Bash --> Kithack.sh
+- Perl --> Kithack.pl
+
+## Probado en:
+
+[![Kali)](https://www.google.com/s2/favicons?domain=https://www.kali.org/)](https://www.kali.org) **Kali Linux
+
+## Instalación:
+
+Instrucciones para instalar KitHack:
+```bash
+sudo apt install python2.7 python-pip  
+git clone https://github.com/AdrMXR/KitHack.git
+cd KitHack
+pip install -r requirements.txt
+sudo python KitHack.py
+```
+
+## Actualización:
+
+Actualizar KitHack es importante para disfrutar de las nuevas herramientas que se vayan incorporando o de alguna función en especial que se agregue. Para ello, escriba lo siguiente en su terminal cuando desee actualizar:
+```bash
+cd KitHack
+git pull
+```
+
+## Screenshots 
+
+|![Index](https://cloud.githubusercontent.com/assets/17976841/25420100/9ee12cf6-2a80-11e7-8dfa-c2e3cfe71366.png)|![f](https://user-images.githubusercontent.com/17976841/65820886-91a4b200-e258-11e9-9a00-1e5905f6be16.jpg)|![f](https://user images.githubusercontent.com/17976841/65820886-91a4b200-e258-11e9-9a00-1e5905f6be16.jpg)
+
+
+
 
 
