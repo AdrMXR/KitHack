@@ -227,6 +227,21 @@ git pull
 | ------ | ------ |
 <a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>|<a href="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T" target="_blank"><img src="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T.svg" /></a>
 
+## Bug? 
+
+Si encuentra algun fallo en la herramienta siga los siguientes pasos:
+
+1. Tomar un screenshot y que el fallo se aprecie detalladamente.
+2. Contactarme mediante el siguiente correo: kithacking@gmail.com
+3. Mandar el screenshot y explicar su problemática con ese fallo.
+
+***Importante***: Existirán diversas razones por las que una herramienta incorporada no se ejecute y no precisamente será a causa de un fallo en el código de KitHack. Algunos repositorios en GitHub se encuentran desatendidos o los actualizan y en lugar de mejorar empeoran o ya no inician, también puede ser que algún repositorio sea eliminado y por ende se presente usted con algún tipo de error, es por ello que es importante reportar estos fallos y especificar detalladamente que tipo de fallo se le presentó. 
+
+
+
+
+
+
 
 
 
