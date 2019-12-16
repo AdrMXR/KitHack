@@ -237,7 +237,7 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
 ***Importante***: Existirán diversas razones por las que una herramienta incorporada no se ejecute y no precisamente será a causa de un fallo en el código de KitHack. Algunos repositorios en GitHub de las 130 herramientas se encuentran desatendidos o los actualizan y en lugar de mejorar empeoran o ya no inician, también puede ser que algún repositorio sea eliminado y por ende se presente usted con algún tipo de error, es por ello que es importante reportar estos fallos y especificar detalladamente que tipo de error se le presentó. 
 
-## Licensia 
+## Licencia 
 
 MIT License
 
