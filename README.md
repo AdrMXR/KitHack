@@ -203,6 +203,7 @@ Instrucciones para instalar KitHack:
 sudo apt install python2.7 python-pip  
 git clone https://github.com/AdrMXR/KitHack.git
 cd KitHack
+chmod +x configure.sh && ./configure.sh 
 pip install -r requirements.txt
 sudo python KitHack.py
 ```
