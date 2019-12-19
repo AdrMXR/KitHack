@@ -218,9 +218,9 @@ git pull
 
 ## Screenshots 
 
-| Menu principal | Generador de backdoors	|
-| -------------- | ---------------------- |
-|![Index](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-2.png)
+| Menu principal | Generador de backdoors	| | Tutorial |
+| -------------- | ---------------------- |   --------
+|![Index](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-2.png)|![f](https://youtu.be/w36SfY6Dzko)
 
 ## Videos  
 
