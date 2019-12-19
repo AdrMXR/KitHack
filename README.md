@@ -229,7 +229,6 @@ git pull
 <a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>|<a href="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T" target="_blank"><img src="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T.svg" /></a>
 <p align="center">
   <a href="https://youtu.be/w36SfY6Dzko">
-  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/miniatura.PNG" />
 </a></p>
 
 ## Bug? 
