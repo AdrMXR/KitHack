@@ -224,9 +224,9 @@ git pull
 
 ## Videos  
 
-| Demo 1 | Demo 2 | Tutorial |
-| ------ | ------ | -------- |
-<a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>|<a href="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T" target="_blank"><img src="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T.svg" /></a>|<a href="https://youtu.be/w36SfY6Dzko"</a>
+| Demo 1 | Demo 2 | 
+| ------ | ------ | 
+<a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>|<a href="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T" target="_blank"><img src="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T.svg" /></a>
 
 ## Bug? 
 
