@@ -231,7 +231,7 @@ git pull
 
 ## Tutorial
 <a href="https://youtu.be/w36SfY6Dzko">
-  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/miniatura.PNG" />
+  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/miniatura.png" />
 </a></p>
 
 ## Bug? 
