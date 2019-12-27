@@ -198,13 +198,23 @@
 
 ## Instalación:
 
-Instrucciones para instalar KitHack:
-```bash
+```
 sudo apt install python2.7 python-pip  
+```
+
+```
 git clone https://github.com/AdrMXR/KitHack.git
+```
+
+```
 cd KitHack
-chmod +x configure.sh && ./configure.sh 
-pip install -r requirements.txt
+```
+
+```
+bash install.sh 
+```
+
+```
 sudo python KitHack.py
 ```
 
