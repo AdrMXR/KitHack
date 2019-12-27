@@ -35,7 +35,7 @@ echo ""
 echo -e "\e[0;34m[✔][Postgresql]:    OK"
 sleep 1.5
 else
-echo -e "[!][Postgresql]:   \e[0;31m NOT FOUND"
+echo -e "\e[0;34m[!][Postgresql]:   \e[0;31m NOT FOUND"
 xterm -T "INSTALLER POSTGRESQL" -geometry 100x50 -e "sudo apt-get install -y postgresql"
 fi 
 
@@ -45,7 +45,7 @@ if [ "$?" -eq "0" ]; then
 echo -e "\e[0;34m[✔][Msfvenom]:      OK"
 sleep 1.5
 else
-echo -e "[!][Msfvenom]:     \e[0;31m NOT FOUND"
+echo -e "\e[0;34m[!][Msfvenom]:     \e[0;31m NOT FOUND"
 xterm -T "INSTALLER METASPLOIT FRAMEWORK" -geometry 100x50 -e "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall && sudo apt-get update && apt-get upgrade"
 fi
 
@@ -55,7 +55,7 @@ if [ "$?" -eq "0" ]; then
 echo -e "\e[0;34m[✔][Msfconsole]:    OK "
 sleep 1.5
 else
-echo -e "[!][Msfvenom]:     \e[0;31m NOT FOUND"
+echo -e "\e[0;34m[!][Msfvenom]:     \e[0;31m NOT FOUND"
 xterm -T "INSTALLER METASPLOIT FRAMEWORK" -geometry 100x50 -e "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall && sudo apt-get update && apt-get upgrade"
 fi
 echo ""

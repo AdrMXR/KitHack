@@ -194,7 +194,12 @@
 
 ## Probado en:
 
-[![Kali)](https://www.google.com/s2/favicons?domain=https://www.kali.org/)](https://www.kali.org)  **Kali Linux**
+* **Kali Linux**
+* **Ubuntu**
+* **Debian**
+* **Deepin**
+* **Linux mint**
+* **Slax linux**
 
 ## Instalación:
 
