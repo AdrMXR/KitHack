@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-brightgreen)]()
 [![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/AdrMXR?locale.x=es_ES)
 
-**KitHack** es un proyecto de código abierto que contiene 130 herramientas enfocadas al hacking y automatiza el proceso de descarga e instalación para la herramienta que usted desee. **KitHack** también nos brinda la facilidad de poder generar puertas traseras con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS. 
+**KitHack** es un proyecto de código abierto que contiene 130 herramientas enfocadas al hacking y automatiza el proceso de descarga e instalación para la herramienta que usted desee. **KitHack** también nos brinda la facilidad de poder generar puertas traseras con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
 
 ### Menu
 
