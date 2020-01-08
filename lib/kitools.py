@@ -40,7 +40,7 @@ def EvilDroid():
 		os.system('cd tools && cd Android && cd Evil-Droid && ./evil-droid')
 
 def ApkTool():
-	os.system('cd tools && cd Android && mkdir ApkTool && cd ApkTool && wget http://download1491.mediafire.com/7ngahohbsthg/he4vdj2wea7abbv/apktool.zip && unzip apktool.zip && chmod +x * && cp apktool /usr/local/bin/apktool && cp apktool.jar /usr/local/bin/apktool.jar')
+	os.system('cd tools && cd Android && mkdir ApkTool && cd ApkTool && wget http://download1491.mediafire.com/7ga50yx9roqg/he4vdj2wea7abbv/apktool.zip && unzip apktool.zip && chmod +x * && cp apktool /usr/local/bin/apktool && cp apktool.jar /usr/local/bin/apktool.jar')
 	time.sleep(2)
 	print("\n{}Herramienta guardada en /usr/local/bin/apktool".format(GREEN))
 	if raw_input("\n¿Desea ejecutarla? (y/n)\n{0}KitHack >>{1} ".format(RED, DEFAULT)).upper() != "Y":
