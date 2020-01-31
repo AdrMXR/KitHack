@@ -28,7 +28,7 @@
 
 - [Backdoor-apk](https://github.com/dana-at-cp/backdoor-apk)
 - [Evil-Droid](https://github.com/M4sc3r4n0/Evil-Droid)
-- [ApkTool](https://ibotpeaches.github.io/Apktool/)
+- [Spade](https://github.com/turksiberguvenlik/spade)
 - [AhMyth](https://github.com/AhMyth/AhMyth-Android-RAT)
 - [Andspoilt](https://github.com/sundaysec/Andspoilt)
 - [kwetza](https://github.com/sensepost/kwetza)
