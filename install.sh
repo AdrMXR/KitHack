@@ -4,59 +4,103 @@
 # Check root 
 if [ "$(id -u)" != "0" ] > /dev/null 2>&1; then
 echo ""
-echo -e '\e[0;31m【x】Este script necesita permisos root.\e[0m' 1>&2
+echo -e '\e[1;31m【x】Este script necesita permisos root.\e[0m' 1>&2
 sleep 2
 exit
 fi
 
-# Banner 
+# Banner 1
 clear
 sleep 2
-echo -e "\e[0;33m_________ .__                   __   .__                            "
-echo -e "\e[0;33m\_   ___ \|  |__   ____   ____ |  | _|__| ____    ____              "
-echo -e "\e[0;33m/    \  \/|  |  \_/ __ \_/ ___\|  |/ /  |/    \  / ___\             "
-echo -e "\e[0;33m\     \___|   Y  \  ___/\  \___|    <|  |   |  \/ /_/  >            "
-echo -e "\e[0;33m \______  /___|  /\___  >\___  >__|_ \__|___|  /\___  / /\  /\  /\  "
-echo -e "\e[0;33m        \/     \/     \/     \/     \/       \//_____/  \/  \/  \/  "
+echo -e "\e[0;33m ___                 __         .__  .__                              "
+echo -e "\e[0;33m|   | ____   _______/  |______  |  | |  |   ___________               "    
+echo -e "\e[0;33m|   |/    \ /  ___/\   __\__  \ |  | |  | _/ __ \_  __ \              "    
+echo -e "\e[0;33m|   |   |  \___  \  |  |  / __ \|  |_|  |_\  ___/|  | \/              "    
+echo -e "\e[0;33m|___|___|  /____  > |__| (____  /____/____/\___  >__|   /\  /\  /\    "
+echo -e "\e[0;33m         \/     \/            \/               \/       \/  \/  \/    "
 echo -e ""
-echo -e "                   \e[38;5;166m Installer for KitHack v1.0                  "
+echo -e "                        \e[38;5;166m Setup KitHack v1.1.0                     "
 echo -e ""
-echo "                            By:AdrMXR                                          "
+echo "                               By:AdrMXR                                         "
+ 
+# Check if there is an internet connection
+ping -c 1 google.com > /dev/null 2>&1
+if [[ "$?" == 0 ]]; then
+echo ""
+echo -e "\033[92m[✔][Internet Connection]............[ OK ]"
+sleep 1.5
+else
+echo ""
+echo -e "\e[1;31m[!][Internet Connection].........[ NOT FOUND ]"
+echo ""
+exit
+fi	
 
+# Check dependencies
 echo -e "\e[0;33m"
 echo -n [*] Checando dependencias...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done 
 echo ""
 
-# check if postgresql exists 
+# Check if postgresql exists 
 which /etc/init.d/postgresql > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
 echo ""
-echo -e "\e[0;34m[✔][Postgresql]:    OK"
+echo -e "\033[92m[✔][Postgresql].....................[ OK ]"
 sleep 1.5
 else
-echo -e "\e[0;34m[!][Postgresql]:   \e[0;31m NOT FOUND"
-xterm -T "INSTALLER POSTGRESQL" -geometry 100x50 -e "sudo apt-get install -y postgresql"
+echo -e "\e[1;31m[!][Postgresql]..................[ NOT FOUND ]"
+xterm -T "INSTALLER POSTGRESQL" -geometry 100x30 -e "sudo apt-get install -y postgresql"
 fi 
 
-# Check if msfvenom exists 
-which msfvenom > /dev/null 2>&1
+# Check if xterm exists
+which xterm > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
-echo -e "\e[0;34m[✔][Msfvenom]:      OK"
+echo -e "\033[92m[✔][Xterm]..........................[ OK ]"
 sleep 1.5
 else
-echo -e "\e[0;34m[!][Msfvenom]:     \e[0;31m NOT FOUND"
-xterm -T "INSTALLER METASPLOIT FRAMEWORK" -geometry 100x50 -e "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall && sudo apt-get update && apt-get upgrade"
+echo -e "\e[1;31m[!][Xterm].......................[ NOT FOUND ]"
+xterm -T "INSTALLER XTERM" -geometry 100x30 -e "sudo apt-get install xterm -y"
 fi
 
-# Check if msfconsole exists 
+# Check if metasploit framework exists 
 which msfconsole > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
-echo -e "\e[0;34m[✔][Msfconsole]:    OK "
+echo -e "\033[92m[✔][Metasploit Framework]...........[ OK ]"
 sleep 1.5
 else
-echo -e "\e[0;34m[!][Msfvenom]:     \e[0;31m NOT FOUND"
-xterm -T "INSTALLER METASPLOIT FRAMEWORK" -geometry 100x50 -e "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall && sudo apt-get update && apt-get upgrade"
+echo -e "\e[1;31m[!][Metasploit Framework]........[ NOT FOUND ]"
+xterm -T "INSTALLER METASPLOIT FRAMEWORK" -geometry 100x30 -e "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall && sudo apt-get update && apt-get upgrade"
+fi
+
+# Check if apktool exists 
+which apktool > /dev/null 2>&1
+if [ "$?" -eq "0" ]; then
+echo -e "\033[92m[✔][Apktool]........................[ OK ]"
+sleep 1.5
+else
+echo -e "\e[1;31m[!][Apktool].....................[ NOT FOUND ]"
+xterm -T "INSTALLER APKTOOL" -geometry 100x30 -e "echo -e "" && echo [*] Añadiendo Apktool... && sleep 2 && echo -e "" && cp apktoolv2.4.0/apktool /usr/local/bin/apktool && echo [✔]/usr/local/bin/apktool && sleep 2 && cp apktoolv2.4.0/apktool.jar /usr/local/bin/apktool.jar && echo [✔]/usr/local/bin/apktool.jar && echo "" && sleep 2 && echo Instalación completa. && sleep 1"
+fi
+
+# Check if aapt exists
+which aapt > /dev/null 2>&1
+if [ "$?" -eq "0" ]; then
+echo -e "\033[92m[✔][Aapt]...........................[ OK ]"
+sleep 1.5
+else
+echo -e "\e[1;31m[!][Aapt]........................[ NOT FOUND ]"
+xterm -T "INSTALLER AAPT" -geometry 100x30 -e "sudo apt-get install aapt -y && sudo apt-get install android-framework-res -y"
+fi
+
+# Check if zipalign exists
+which zipalign > /dev/null 2>&1
+if [ "$?" -eq "0" ]; then
+echo -e "\033[92m[✔][Zipalign].......................[ OK ]"
+sleep 1.5
+else
+echo -e "\e[1;31m[!][Zipalign]...................[ NOT FOUND ]"
+xterm -T "INSTALLER ZIPALIGN" -geometry 100x30 -e "sudo apt-get install zipalign -y"
 fi
 echo ""
 
@@ -67,7 +111,7 @@ echo -n [*] Configurando carpetas...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 mkdir output 
 echo ""
-echo -e "\e[0;34m"
+echo -e "\033[92m"
 echo -e "$path/output"
 sleep 0.2
 mkdir -p tools/Android
@@ -104,6 +148,6 @@ echo -e "\e[0;33m"
 echo -n [*] Instalando requerimientos de python...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 echo ""
-echo -e "\e[0;34m"
+echo -e "\033[92m"
 pip install py-getch 
 apt-get install python-tk

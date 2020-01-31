@@ -3,7 +3,7 @@
 # KITHACK
 
 [![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue)](https://facebook.com/Adrian.Guillermo.22)
-[![Version](https://img.shields.io/badge/Version-1.0-red)]()
+[![Version](https://img.shields.io/badge/Version-1.1.0-red)]()
 [![System](https://img.shields.io/badge/Supported%20OS-Linux-orange)]()
 [![Python](https://img.shields.io/badge/Python-2.7-yellow)]()
 [![License](https://img.shields.io/badge/License-MIT-brightgreen)]()
@@ -192,14 +192,20 @@
 - Bash --> Kithack.sh
 - Perl --> Kithack.pl
 
-## Probado en:
+## Distribuciones compatibles:
 
-* **Kali Linux**
-* **Ubuntu**
-* **Debian**
-* **Deepin**
-* **Linux mint**
-* **Slax linux**
+| Distribución |   Estado   |
+|--------------|------------| 
+| Kali Linux   | Compatible |
+| Ubuntu       | Compatible |
+| Xbuntu       | Compatible |
+| Debian       | Compatible |
+| Raspbian     | Compatible |
+| Deepin       | Compatible |
+| Parrot OS    | Compatible |
+| Wifislax     | Trabajando |
+| Arch Linux   | Trabajando |
+| Termux       | Trabajando |
 
 ## Instalación:
 
@@ -256,8 +262,6 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 1. Tomar un screenshot y que el fallo se aprecie detalladamente.
 2. Contactarme mediante el siguiente correo: kithacking@gmail.com
 3. Mandar el screenshot y explicar su problemática con ese fallo.
-
-***Importante***: Existirán diversas razones por las que una herramienta incorporada no se ejecute y no precisamente será a causa de un fallo en el código de KitHack. Algunos repositorios en GitHub de las 130 herramientas incorporadas se encuentran desatendidos o los actualizan y en lugar de mejorar empeoran o ya no inician, también puede ser que algún repositorio sea eliminado y por ende se presente usted con algún tipo de error, es por ello que es importante reportar estos fallos y especificar detalladamente que tipo de error se le presentó para ver de que se trata y corregirlo lo antes posible.  
 
 ## Licencia 
 

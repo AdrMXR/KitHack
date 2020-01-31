@@ -34,7 +34,7 @@ def check(host='https://www.google.com'):
 
 def info():
 	os.system('clear')
-	print("{0}[VERSION]:{1} 1.0\n\n").format(RED, DEFAULT)
+	print("{0}[VERSION]:{1} 1.1.0\n\n").format(RED, DEFAULT)
 	time.sleep(0.5)
 	print("{0}[AUTOR]:{1} ADRIAN GUILLERMO\n\n").format(RED, DEFAULT)
 	time.sleep(0.5)
@@ -60,7 +60,7 @@ def banner():
 	print '{}| $$\  $$   | $$     | $$         | $$  | $$| $$  | $$| $$    $$| $$\  $$  '.format(RED).center(93)
 	print '{}| $$ \  $$ /$$$$$$   | $$         | $$  | $$| $$  | $$|  $$$$$$/| $$ \  $$ '.format(RED).center(93)
 	print '{}|__/  \__/|______/   |__/         |__/  |__/|__/  |__/ \______/ |__/  \__/ '.format(RED).center(93)
-	print '{}                                                                      v1.0 by:AdrMXR'.format(BOLD)
+	print '{}                                                                      v1.1.0 by:AdrMXR'.format(BOLD)
                     														
 
 def menu():
@@ -89,7 +89,7 @@ def options():
 		print '======={0}Tool{1}==================================={0}Information{1}================================'.format(GREEN, DEFAULT)
 		print '{0}01){1} Backdoor-apk      {2}Agrega una puerta trasera a cualquier archivo APK.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}02){1} Evil-Droid        {2}Genera puertas traseras para Android.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}03){1} ApkTool           {2}Ingenieria inversa de aplicaciones Android.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}03){1} Spade             {2}Script en python que genera una puerta trasera a cualquier APK.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}04){1} AhMyth            {2}Herramienta de administración remota de Android.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}05){1} Andspoilt         {2}Ejecuta exploits interactivos de Android en Linux.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}06){1} Kwetza            {2}Inyecta malware en aplicaciones android existentes.'.format(WHITE, YELLOW, DEFAULT)
@@ -114,7 +114,7 @@ def options():
 			kitools.EvilDroid()
 		
 		elif tool == 3:
-			kitools.ApkTool()
+			kitools.Spade()
 		
 		elif tool == 4:
 			kitools.AhMyth()

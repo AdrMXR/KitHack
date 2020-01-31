@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #Copyright 2019 KITHACK
 #Written by: Adrian Guillermo
@@ -39,15 +39,16 @@ def EvilDroid():
 	else:
 		os.system('cd tools && cd Android && cd Evil-Droid && ./evil-droid')
 
-def ApkTool():
-	os.system('cd tools && cd Android && mkdir ApkTool && cd ApkTool && wget http://download1491.mediafire.com/7ga50yx9roqg/he4vdj2wea7abbv/apktool.zip && unzip apktool.zip && chmod +x * && cp apktool /usr/local/bin/apktool && cp apktool.jar /usr/local/bin/apktool.jar')
+def Spade():
+	location = os.getcwd()
+	os.system('cd tools && cd Android && git clone https://github.com/turksiberguvenlik/spade.git')
 	time.sleep(2)
-	print("\n{}Herramienta guardada en /usr/local/bin/apktool".format(GREEN))
+	print("\n{0}Herramienta guardada en {1}/tools/Android/spade".format(GREEN, location))
 	if raw_input("\n¿Desea ejecutarla? (y/n)\n{0}KitHack >>{1} ".format(RED, DEFAULT)).upper() != "Y":
 		os.system('clear')
 		KitHack.banner(), KitHack.menu(), KitHack.options()		
 	else:
-		os.system('apktool')	
+		os.system('cd tools && cd Android && cd spade && python spade.py')	
 
 def AhMyth():
 	os.system('cd tools && cd Android && mkdir AhMyth && cd AhMyth && wget http://download1581.mediafire.com/yda7cvfrnesg/ifxzqonwvff2wir/AhMyth_linux64.deb && dpkg -i AhMyth_linux64.deb && apt --fix-broken install')
@@ -644,7 +645,7 @@ def Facebooker():
 		os.system('clear')
 		KitHack.banner(), KitHack.menu(), KitHack.options()
 	else:
-		os.system('cd tools && cd Passwords && cd Facebooker && perl Facebooker.pl')		
+		os.system('cd tools && cd Passwords && cd Facebooker && perl facebooker.pl')		
 
 def InstaInsane():
 	location = os.getcwd()
