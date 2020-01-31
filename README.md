@@ -194,18 +194,18 @@
 
 ## Distribuciones compatibles:
 
-| Distribución |   Estado   |
-|--------------|------------| 
-| Kali Linux   | Compatible |
-| Ubuntu       | Compatible |
-| Xbuntu       | Compatible |
-| Debian       | Compatible |
-| Raspbian     | Compatible |
-| Deepin       | Compatible |
-| Parrot OS    | Compatible |
-| Wifislax     | Trabajando |
-| Arch Linux   | Trabajando |
-| Termux       | Trabajando |
+| Distribución |   Estado      |
+|--------------|---------------| 
+| Kali Linux   | Compatible    |
+| Ubuntu       | Compatible    |
+| Xbuntu       | Compatible    |
+| Debian       | Compatible    |
+| Raspbian     | Compatible    |
+| Deepin       | Compatible    |
+| Parrot OS    | Compatible    |
+| Wifislax     | En desarrollo |
+| Arch Linux   | En desarrollo |
+| Termux       | En desarrollo |
 
 ## Instalación:
 
