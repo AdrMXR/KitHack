@@ -203,7 +203,6 @@
 | Raspbian     | Compatible    |
 | Deepin       | Compatible    |
 | Parrot OS    | Compatible    |
-| Wifislax     | En desarrollo |
 | Arch Linux   | En desarrollo |
 | Termux       | En desarrollo |
 
