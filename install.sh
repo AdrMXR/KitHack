@@ -19,7 +19,7 @@ echo -e "\e[0;33m|   |   |  \___  \  |  |  / __ \|  |_|  |_\  ___/|  | \/       
 echo -e "\e[0;33m|___|___|  /____  > |__| (____  /____/____/\___  >__|   /\  /\  /\    "
 echo -e "\e[0;33m         \/     \/            \/               \/       \/  \/  \/    "
 echo -e ""
-echo -e "                        \e[38;5;166m Setup KitHack v1.1.0                     "
+echo -e "                        \e[38;5;166m Setup KitHack v1.0.1                     "
 echo -e ""
 echo "                               By:AdrMXR                                         "
  
