@@ -3,7 +3,7 @@
 # KITHACK
 
 [![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue)](https://facebook.com/Adrian.Guillermo.22)
-[![Version](https://img.shields.io/badge/Version-1.1.0-red)]()
+[![Version](https://img.shields.io/badge/Version-1.0.1-red)]()
 [![System](https://img.shields.io/badge/Supported%20OS-Linux-orange)]()
 [![Python](https://img.shields.io/badge/Python-2.7-yellow)]()
 [![License](https://img.shields.io/badge/License-MIT-brightgreen)]()

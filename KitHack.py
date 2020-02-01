@@ -34,7 +34,7 @@ def check(host='https://www.google.com'):
 
 def info():
 	os.system('clear')
-	print("{0}[VERSION]:{1} 1.1.0\n\n").format(RED, DEFAULT)
+	print("{0}[VERSION]:{1} 1.0.1\n\n").format(RED, DEFAULT)
 	time.sleep(0.5)
 	print("{0}[AUTOR]:{1} ADRIAN GUILLERMO\n\n").format(RED, DEFAULT)
 	time.sleep(0.5)
@@ -60,7 +60,7 @@ def banner():
 	print '{}| $$\  $$   | $$     | $$         | $$  | $$| $$  | $$| $$    $$| $$\  $$  '.format(RED).center(93)
 	print '{}| $$ \  $$ /$$$$$$   | $$         | $$  | $$| $$  | $$|  $$$$$$/| $$ \  $$ '.format(RED).center(93)
 	print '{}|__/  \__/|______/   |__/         |__/  |__/|__/  |__/ \______/ |__/  \__/ '.format(RED).center(93)
-	print '{}                                                                      v1.1.0 by:AdrMXR'.format(BOLD)
+	print '{}                                                                      v1.0.1 by:AdrMXR'.format(BOLD)
                     														
 
 def menu():
