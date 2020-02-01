@@ -183,16 +183,18 @@
 
 ### Backdoors with msfvenom:
 
-- Linux --> Kithack.elf
-- Windows --> Kithack.exe
-- Android --> Kithack.apk
-- Mac OS --> Kithack.macho
-- Php --> Kithack.php
-- Python --> Kithack.py
-- Bash --> Kithack.sh
-- Perl --> Kithack.pl
+| Sistema |    Formato    |
+|---------|---------------|
+| Linux   | Kithack.elf   |
+| Windows | Kithack.exe   |
+| Android | Kithack.apk   |
+| Mac OS  | Kithack.macho |
+| Php     | Kithack.php   |
+| Python  | Kithack.py    |
+| Bash    | Kithack.sh    |
+| Perl    | Kithack.pl    |
 
-## Distribuciones compatibles:
+## Distribuciones compatibles con KitHack:
 
 | Distribución |   Estado      |
 |--------------|---------------| 
