@@ -169,7 +169,7 @@ echo -n [*] Instalando requerimientos de python...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 echo ""
 echo -e "\033[92m"
-pip install py-getch 
+pip2 install py-getch 
 apt-get install python-tk
 exit 0
 
