@@ -1,15 +1,15 @@
-
+<img src="https://github.com/AdrMXR/KitHack/blob/master/icons/banner.png" title="KitHack">
 
 # KITHACK
 
 [![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue)](https://facebook.com/Adrian.Guillermo.22)
-[![Version](https://img.shields.io/badge/Version-1.0.1-red)]()
+[![Version](https://img.shields.io/badge/Version-1.2.0-red)]()
 [![System](https://img.shields.io/badge/Supported%20OS-Linux-orange)]()
 [![Python](https://img.shields.io/badge/Python-2.7-yellow)]()
 [![License](https://img.shields.io/badge/License-MIT-brightgreen)]()
 [![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/AdrMXR?locale.x=es_ES)
 
-**KitHack** es un proyecto de código abierto que contiene 130 herramientas enfocadas al hacking y automatiza el proceso de descarga e instalación para la herramienta que usted desee. **KitHack** también nos brinda la facilidad de poder generar puertas traseras con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
+**KitHack** es un proyecto de código abierto que permite a los usuarios tener a su disposición una gran variedad de herramientas enfocadas al hacking. **KitHack** también nos brinda la facilidad de poder generar distintos backdoors con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
 
 ### Menu
 
@@ -68,6 +68,8 @@
 - [Blackeye](https://github.com/An0nUD4Y/blackeye)
 - [PhEmail](https://github.com/Dionach/PhEmail)
 - [Weeman](https://github.com/evait-security/weeman)
+- [Zphisher](https://github.com/htr-tech/zphisher.git)
+- [Lockphish](https://github.com/thelinuxchoice/lockphish.git)
 
 ### Wifi Attacks:
 
@@ -230,17 +232,38 @@ bash install.sh
 sudo python KitHack.py
 ```
 
-## Actualización:
+## Nuevas funciones
 
-Actualizar KitHack es importante para disfrutar de las nuevas herramientas que se vayan incorporando o de alguna función en especial que se agregue. Para ello, escriba lo siguiente en su terminal cuando desee actualizar:
-```bash
-cd KitHack
-git pull
-```
+Yo como desarrollador estoy comprometido con proporcionar a la comunidad entera del pentesting nuevas funciones que tengan una gran utilidad en sus actividades laborales, academicas o personales.
+Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuevas las cuales son las siguientes:
+
+* Depuración de herramientas obsoletas en la antigua versión
+* Integración de nuevas herramientas. 
+* Refactorización del proceso de descarga de las herramientas.
+* Unificación de los diferentes tipos de Payloads (por etapas y sin etapas).
+* Incorporación de un nuevo metodo para la certificación de APKS maliciosas generadas con este proyecto.
+* Utilización de la herramienta Ngrok para generar conexiones conexiones TCP (puerto 443 por default).
+* Automatización de la configuración de Metasploit para ponerlo en escucha de nuevas sesiones.
+* Planificación de puntos estrategicos para la evasión de antivirus.
+
+## APKS que fueron probadas en el nuevo metodo de certificación 
+
+|        APK          |   Versión    |
+|---------------------|--------------| 
+| FaceApp             | 1.00         |
+| Pou                 | 1.4.79       |
+| Google Now Launcher | 1.4.large    |
+| Terminal Emulator   | 1.0.70       |
+| Solitaire           | 3.6.0.3      |
+| RAR                 | 5.60.build63 |
+| WPSApp              | 1.6.7.3      |
+| Phone Cleaner       | 1.0          |
+| Ccleaner            | 1.19.74      |
+| AVG Cleaner         | 2.0.2        |
 
 ## Screenshots 
 
-| Menu principal | Generador de backdoors	|
+| Menu principal | Generador de backdoors |	
 | -------------- | ---------------------- |   
 |![Index](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-2.png)
 
@@ -248,12 +271,12 @@ git pull
 
 | Demo 1 | Demo 2 | 
 | ------ | ------ | 
-<a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>|<a href="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T" target="_blank"><img src="https://asciinema.org/a/4MBWdBkklBUX8A5kCv4ojxg5T.svg" /></a>
+<a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>|<a href="https://asciinema.org/a/ADXLN5f1MogAqSdMBohlNIdsa" target="_blank"><img src="https://asciinema.org/a/ADXLN5f1MogAqSdMBohlNIdsa.svg" /></a>
 <p align="center">
 
 ## Tutorial
 <a href="https://youtu.be/w36SfY6Dzko">
-  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/icon.png" />
+  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/youtube.png" />
 </a></p>
 
 ## Bug? 

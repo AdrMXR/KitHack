@@ -1,5 +1,12 @@
 #!/usr/bin
-# Installer KitHack
+#Copyright 2020 KITHACK
+#Written by: Adrian Guillermo
+#Facebook: https://facebook.com/adrian.guillermo.22
+#Github: https://github.com/AdrMXR
+
+#Installer KitHack
+
+path=$(pwd)
 
 # Check root 
 if [ "$(id -u)" != "0" ] > /dev/null 2>&1; then
@@ -9,7 +16,7 @@ sleep 2
 exit
 fi
 
-# Banner 1
+# Banner 
 clear
 sleep 2
 echo -e "\e[0;33m ___                 __         .__  .__                              "
@@ -19,9 +26,9 @@ echo -e "\e[0;33m|   |   |  \___  \  |  |  / __ \|  |_|  |_\  ___/|  | \/       
 echo -e "\e[0;33m|___|___|  /____  > |__| (____  /____/____/\___  >__|   /\  /\  /\    "
 echo -e "\e[0;33m         \/     \/            \/               \/       \/  \/  \/    "
 echo -e ""
-echo -e "                        \e[38;5;166m Setup KitHack v1.0.1                     "
+echo -e "                        \e[38;5;166m Setup KitHack v1.2.0                     "
 echo -e ""
-echo "                               By:AdrMXR                                         "
+echo -e "                            By:AdrMXR                                         "
  
 # Check if there is an internet connection
 ping -c 1 google.com > /dev/null 2>&1
@@ -93,6 +100,16 @@ echo -e "\e[1;31m[!][Aapt]........................[ NOT FOUND ]"
 xterm -T "INSTALLER AAPT" -geometry 100x30 -e "sudo apt-get install aapt -y && sudo apt-get install android-framework-res -y"
 fi
 
+# Check if jarsigner exists
+which jarsigner > /dev/null 2>&1
+if [ "$?" -eq "0" ]; then
+echo -e "\033[92m[✔][Jarsigner]......................[ OK ]"
+sleep 1.5
+else
+echo -e "\e[1;31m[!][Jarsigner]...................[ NOT FOUND ]"
+xterm -T "INSTALLER JARSIGNER" -geometry 100x30 -e "sudo apt-get install default-jdk"
+fi
+
 # Check if zipalign exists
 which zipalign > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
@@ -102,12 +119,11 @@ else
 echo -e "\e[1;31m[!][Zipalign]...................[ NOT FOUND ]"
 xterm -T "INSTALLER ZIPALIGN" -geometry 100x30 -e "sudo apt-get install zipalign -y"
 fi
-echo ""
 
-## Configuring folders
+## Configuring folders and icon
 path=$(pwd)
 echo -e "\e[0;33m"
-echo -n [*] Configurando carpetas...= ;
+echo -n [*] Configurando carpetas e icono...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 mkdir output 
 echo ""
@@ -141,7 +157,11 @@ sleep 0.2
 mkdir -p tools/Others
 echo -e "$path/tools/Others"
 sleep 0.2
-echo ""
+sed -i "4i\Exec=sh -c 'cd $path && python KitHack.py'" icons/kithack.desktop
+cp icons/kithack.desktop /usr/share/applications/kithack.desktop
+cp icons/kithack.png /usr/share/icons/kithack.png
+echo -e "/usr/share/applications/kithack.desktop"
+sleep 0.2
 
 # Installing requirements
 echo -e "\e[0;33m"
@@ -151,3 +171,5 @@ echo ""
 echo -e "\033[92m"
 pip install py-getch 
 apt-get install python-tk
+exit 0
+
