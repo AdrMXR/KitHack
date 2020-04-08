@@ -229,7 +229,7 @@ bash install.sh
 ```
 sudo python KitHack.py
 ```
-***Si desea actualizar en un futuro ejecute:
+***Si desea actualizar en un futuro ejecute:***
 ```
 sudo bash update.sh
 ```
