@@ -1,7 +1,5 @@
 <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/banner.png" title="KitHack">
 
-# KITHACK
-
 [![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue)](https://facebook.com/Adrian.Guillermo.22)
 [![Version](https://img.shields.io/badge/Version-1.2.0-red)]()
 [![System](https://img.shields.io/badge/Supported%20OS-Linux-orange)]()
