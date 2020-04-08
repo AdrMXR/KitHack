@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=KitHack
 Encoding=UTF-8
-Exec=sh -c 'cd /root/Github/manual/KitHack && python KitHack.py'
 Icon=/usr/share/icons/kithack.png
 Terminal=true
 Type=Application
