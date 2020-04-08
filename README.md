@@ -240,7 +240,7 @@ Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuev
 * Refactorización del proceso de descarga de las herramientas.
 * Unificación de los diferentes tipos de Payloads (por etapas y sin etapas).
 * Incorporación de un nuevo metodo para la certificación de APKS maliciosas generadas con este proyecto.
-* Utilización de la herramienta Ngrok para generar conexiones conexiones TCP (puerto 443 por default).
+* Utilización de la herramienta Ngrok para generar conexiones TCP (puerto 443 por default).
 * Automatización de la configuración de Metasploit para ponerlo en escucha de nuevas sesiones.
 * Planificación de puntos estrategicos para la evasión de antivirus.
 
