@@ -9,6 +9,108 @@
 
 **KitHack** es un proyecto de código abierto que permite a los usuarios tener a su disposición una gran variedad de herramientas enfocadas al hacking. **KitHack** también nos brinda la facilidad de poder generar distintos backdoors con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
 
+## Distribuciones compatibles con KitHack:
+
+| Distribución |   Estado      |
+|--------------|---------------| 
+| Kali Linux   | Compatible    |
+| Ubuntu       | Compatible    |
+| Xbuntu       | Compatible    |
+| Debian       | Compatible    |
+| Raspbian     | Compatible    |
+| Deepin       | Compatible    |
+| Parrot OS    | Compatible    |
+| Arch Linux   | En desarrollo |
+| Termux       | En desarrollo |
+
+## Instalación:
+
+```
+sudo apt install python2.7 python-pip  
+```
+
+```
+git clone https://github.com/AdrMXR/KitHack.git
+```
+
+```
+cd KitHack
+```
+
+```
+bash install.sh 
+```
+
+```
+sudo python KitHack.py
+```
+***Si desea actualizar en un futuro ejecute:***
+```
+sudo bash update.sh
+```
+
+## Dependencias
+
+* sudo
+* postgresql
+* xterm
+* Metasploit-Framework 
+* apktool
+* aapt
+* jarsigner
+* zipalign 
+* pip2
+* py-getch
+* python-tk
+* Cuenta autentificada de Ngrok 
+
+## Nuevas funciones
+
+Yo como desarrollador estoy comprometido con proporcionar a la comunidad entera del pentesting nuevas funciones que tengan una gran utilidad en sus actividades laborales, academicas o personales.
+Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuevas las cuales son las siguientes:
+
+* Depuración de herramientas obsoletas en la antigua versión
+* Integración de nuevas herramientas. 
+* Refactorización del proceso de descarga de las herramientas.
+* Unificación de los diferentes tipos de Payloads (por etapas y sin etapas).
+* Incorporación de un nuevo metodo para la certificación de APKS maliciosas generadas con este proyecto.
+* Utilización de la herramienta Ngrok para generar conexiones TCP (puerto 443 por default).
+* Automatización de la configuración de Metasploit para ponerlo en escucha de nuevas sesiones.
+* Planificación de puntos estrategicos para la evasión de antivirus.
+
+## APKS que fueron probadas en el nuevo metodo de certificación 
+
+|        APK          |   Versión    |
+|---------------------|--------------| 
+| FaceApp             | 1.00         |
+| Pou                 | 1.4.79       |
+| Google Now Launcher | 1.4.large    |
+| Terminal Emulator   | 1.0.70       |
+| Solitaire           | 3.6.0.3      |
+| RAR                 | 5.60.build63 |
+| WPSApp              | 1.6.7.3      |
+| Phone Cleaner       | 1.0          |
+| Ccleaner            | 1.19.74      |
+| AVG Cleaner         | 2.0.2        |
+
+## Screenshots 
+
+| Menu principal | Generador de backdoors |	
+| -------------- | ---------------------- |   
+|![Index](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-2.png)
+
+## Videos  
+
+| Demo 1 | Demo 2 | 
+| ------ | ------ | 
+<a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>|<a href="https://asciinema.org/a/ADXLN5f1MogAqSdMBohlNIdsa" target="_blank"><img src="https://asciinema.org/a/ADXLN5f1MogAqSdMBohlNIdsa.svg" /></a>
+<p align="center">
+
+## Tutorial
+<a href="https://youtu.be/w36SfY6Dzko">
+  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/youtube.png" />
+</a></p>
+
 ### Menu
 
 - Android
@@ -193,93 +295,6 @@
 | Python  | Kithack.py    |
 | Bash    | Kithack.sh    |
 | Perl    | Kithack.pl    |
-
-## Distribuciones compatibles con KitHack:
-
-| Distribución |   Estado      |
-|--------------|---------------| 
-| Kali Linux   | Compatible    |
-| Ubuntu       | Compatible    |
-| Xbuntu       | Compatible    |
-| Debian       | Compatible    |
-| Raspbian     | Compatible    |
-| Deepin       | Compatible    |
-| Parrot OS    | Compatible    |
-| Arch Linux   | En desarrollo |
-| Termux       | En desarrollo |
-
-## Instalación:
-
-```
-sudo apt install python2.7 python-pip  
-```
-
-```
-git clone https://github.com/AdrMXR/KitHack.git
-```
-
-```
-cd KitHack
-```
-
-```
-bash install.sh 
-```
-
-```
-sudo python KitHack.py
-```
-***Si desea actualizar en un futuro ejecute:***
-```
-sudo bash update.sh
-```
-
-## Nuevas funciones
-
-Yo como desarrollador estoy comprometido con proporcionar a la comunidad entera del pentesting nuevas funciones que tengan una gran utilidad en sus actividades laborales, academicas o personales.
-Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuevas las cuales son las siguientes:
-
-* Depuración de herramientas obsoletas en la antigua versión
-* Integración de nuevas herramientas. 
-* Refactorización del proceso de descarga de las herramientas.
-* Unificación de los diferentes tipos de Payloads (por etapas y sin etapas).
-* Incorporación de un nuevo metodo para la certificación de APKS maliciosas generadas con este proyecto.
-* Utilización de la herramienta Ngrok para generar conexiones TCP (puerto 443 por default).
-* Automatización de la configuración de Metasploit para ponerlo en escucha de nuevas sesiones.
-* Planificación de puntos estrategicos para la evasión de antivirus.
-
-## APKS que fueron probadas en el nuevo metodo de certificación 
-
-|        APK          |   Versión    |
-|---------------------|--------------| 
-| FaceApp             | 1.00         |
-| Pou                 | 1.4.79       |
-| Google Now Launcher | 1.4.large    |
-| Terminal Emulator   | 1.0.70       |
-| Solitaire           | 3.6.0.3      |
-| RAR                 | 5.60.build63 |
-| WPSApp              | 1.6.7.3      |
-| Phone Cleaner       | 1.0          |
-| Ccleaner            | 1.19.74      |
-| AVG Cleaner         | 2.0.2        |
-
-## Screenshots 
-
-| Menu principal | Generador de backdoors |	
-| -------------- | ---------------------- |   
-|![Index](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-2.png)
-
-## Videos  
-
-| Demo 1 | Demo 2 | 
-| ------ | ------ | 
-<a href="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye" target="_blank"><img src="https://asciinema.org/a/LxJkuEWmJqWRwbUmj4nVm22Ye.svg" /></a>|<a href="https://asciinema.org/a/ADXLN5f1MogAqSdMBohlNIdsa" target="_blank"><img src="https://asciinema.org/a/ADXLN5f1MogAqSdMBohlNIdsa.svg" /></a>
-<p align="center">
-
-## Tutorial
-<a href="https://youtu.be/w36SfY6Dzko">
-  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/youtube.png" />
-</a></p>
 
 ## Bug? 
 
