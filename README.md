@@ -38,7 +38,7 @@ cd KitHack
 ```
 
 ```
-bash install.sh 
+sudo bash install.sh 
 ```
 
 ```
