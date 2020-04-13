@@ -177,7 +177,7 @@ def Droidcam():
 			os.system('clear')
 			KitHack.banner(), KitHack.menu(), KitHack.options()	
 		else:
-			os.system('tools && cd Android && cd droidcam && bash droidcam.sh')
+			os.system('cd tools && cd Android && cd droidcam && bash droidcam.sh')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
