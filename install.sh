@@ -67,7 +67,7 @@ echo -e "\033[92m[✔][Xterm]..........................[ OK ]"
 sleep 1.5
 else
 echo -e "\e[1;31m[!][Xterm].......................[ NOT FOUND ]"
-xterm -T "INSTALLER XTERM" -geometry 100x30 -e "sudo apt-get install xterm -y"
+xterm -T "INSTALLER XTERM" -geometry 100x30 -e "sudo apt-get install -y xterm"
 fi
 
 # Check if metasploit framework exists 
@@ -97,7 +97,7 @@ echo -e "\033[92m[✔][Aapt]...........................[ OK ]"
 sleep 1.5
 else
 echo -e "\e[1;31m[!][Aapt]........................[ NOT FOUND ]"
-xterm -T "INSTALLER AAPT" -geometry 100x30 -e "sudo apt-get install aapt -y && sudo apt-get install android-framework-res -y"
+xterm -T "INSTALLER AAPT" -geometry 100x30 -e "sudo apt-get install -y aapt && sudo apt-get install -y android-framework-res"
 fi
 
 # Check if jarsigner exists
@@ -117,7 +117,7 @@ echo -e "\033[92m[✔][Zipalign].......................[ OK ]"
 sleep 1.5
 else
 echo -e "\e[1;31m[!][Zipalign]...................[ NOT FOUND ]"
-xterm -T "INSTALLER ZIPALIGN" -geometry 100x30 -e "sudo apt-get install zipalign -y"
+xterm -T "INSTALLER ZIPALIGN" -geometry 100x30 -e "sudo apt-get install -y zipalign"
 fi
 
 ## Configuring folders and icon
