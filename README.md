@@ -26,7 +26,11 @@
 ## Instalación:
 
 ```
-sudo apt install python2.7 python-pip  
+sudo apt update
+```
+
+```
+sudo apt install python2.7  
 ```
 
 ```
@@ -44,6 +48,7 @@ sudo bash install.sh
 ```
 sudo python KitHack.py
 ```
+
 ***Si desea actualizar en un futuro ejecute:***
 ```
 sudo bash update.sh

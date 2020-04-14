@@ -49,17 +49,6 @@ echo -n [*] Checando dependencias...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done 
 echo ""
 
-# Check if postgresql exists 
-which /etc/init.d/postgresql > /dev/null 2>&1
-if [ "$?" -eq "0" ]; then
-echo ""
-echo -e "\033[92m[✔][Postgresql].....................[ OK ]"
-sleep 1.5
-else
-echo -e "\e[1;31m[!][Postgresql]..................[ NOT FOUND ]"
-xterm -T "INSTALLER POSTGRESQL" -geometry 100x30 -e "sudo apt-get install -y postgresql"
-fi 
-
 # Check if xterm exists
 which xterm > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
@@ -69,6 +58,17 @@ else
 echo -e "\e[1;31m[!][Xterm].......................[ NOT FOUND ]"
 xterm -T "INSTALLER XTERM" -geometry 100x30 -e "sudo apt-get install -y xterm"
 fi
+
+# Check if postgresql exists
+which /etc/init.d/postgresql > /dev/null 2>&1
+if [ "$?" -eq "0" ]; then
+echo ""
+echo -e "\033[92m[✔][Postgresql].....................[ OK ]"
+sleep 1.5
+else
+echo -e "\e[1;31m[!][Postgresql]..................[ NOT FOUND ]"
+xterm -T "INSTALLER POSTGRESQL" -geometry 100x30 -e "sudo apt-get install -y postgresql"
+fi 
 
 # Check if metasploit framework exists 
 which msfconsole > /dev/null 2>&1
@@ -118,6 +118,17 @@ sleep 1.5
 else
 echo -e "\e[1;31m[!][Zipalign]...................[ NOT FOUND ]"
 xterm -T "INSTALLER ZIPALIGN" -geometry 100x30 -e "sudo apt-get install -y zipalign"
+fi
+
+# Check if pip2 exists
+which pip2 > /dev/null 2>&1
+if [ "$?" -eq "0" ]; then
+echo -e "\033[92m[✔][Pip2]...........................[ OK ]"
+sleep 1.5
+else
+echo -e "\e[1;31m[!][Pip2].......................[ NOT FOUND ]"
+xterm -T "INSTALLER PIP2" -geometry 100x30 -e "wget https://bootstrap.pypa.io/get-pip.py && sudo python2.7 get-pip.py"
+rm get-pip.py
 fi
 
 ## Configuring folders and icon
