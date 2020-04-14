@@ -117,7 +117,7 @@ if [ "$?" -eq "0" ]; then
 echo -e "\033[92m[✔][Zipalign].......................[ OK ]"
 sleep 1.5
 else
-echo -e "\e[1;31m[!][Zipalign]...................[ NOT FOUND ]"
+echo -e "\e[1;31m[!][Zipalign]....................[ NOT FOUND ]"
 xterm -T "INSTALLER ZIPALIGN" -geometry 100x30 -e "sudo apt-get install -y zipalign"
 fi
 
@@ -127,7 +127,7 @@ if [ "$?" -eq "0" ]; then
 echo -e "\033[92m[✔][Pip2]...........................[ OK ]"
 sleep 1.5
 else
-echo -e "\e[1;31m[!][Pip2].......................[ NOT FOUND ]"
+echo -e "\e[1;31m[!][Pip2]........................[ NOT FOUND ]"
 xterm -T "INSTALLER PIP2" -geometry 100x30 -e "wget https://bootstrap.pypa.io/get-pip.py && sudo python2.7 get-pip.py"
 rm get-pip.py
 fi
