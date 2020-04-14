@@ -56,7 +56,7 @@ echo -e "\033[92m[✔][Xterm]..........................[ OK ]"
 sleep 1.5
 else
 echo -e "\e[1;31m[!][Xterm].......................[ NOT FOUND ]"
-xterm -T "INSTALLER XTERM" -geometry 100x30 -e "sudo apt-get install -y xterm"
+sudo apt-get install -y xterm > /dev/null
 fi
 
 # Check if postgresql exists
