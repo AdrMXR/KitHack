@@ -52,6 +52,7 @@ echo ""
 # Check if xterm exists
 which xterm > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
+echo ""
 echo -e "\033[92m[✔][Xterm]..........................[ OK ]"
 sleep 1.5
 else
@@ -62,7 +63,6 @@ fi
 # Check if postgresql exists
 which /etc/init.d/postgresql > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
-echo ""
 echo -e "\033[92m[✔][Postgresql].....................[ OK ]"
 sleep 1.5
 else
