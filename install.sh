@@ -140,39 +140,39 @@ sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\'
 mkdir output 
 echo ""
 echo -e "\033[92m"
-echo -e "$path/output"
+echo -e "[✔]$path/output"
 sleep 0.2
 mkdir -p tools/Android
-echo -e "$path/tools/Android"
+echo -e "[✔]$path/tools/Android"
 sleep 0.2
 mkdir -p tools/Windows
-echo -e "$path/tools/Windows"
+echo -e "[✔]$path/tools/Windows"
 sleep 0.2
 mkdir -p tools/Phishing
-echo -e "$path/tools/Phishing"
+echo -e "[✔]$path/tools/Phishing"
 sleep 0.2
 mkdir -p tools/Wifi
-echo -e "$path/tools/Wifi"
+echo -e "[✔]$path/tools/Wifi"
 sleep 0.2
 mkdir -p tools/Passwords
-echo -e "$path/tools/Passwords"
+echo -e "[✔]$path/tools/Passwords"
 sleep 0.2
 mkdir -p tools/Web
-echo -e "$path/tools/Web"
+echo -e "[✔]$path/tools/Web"
 sleep 0.2
 mkdir -p tools/Spoofing
-echo -e "$path/tools/Spoofing"
+echo -e "[✔]$path/tools/Spoofing"
 sleep 0.2
 mkdir -p tools/InformationGathering
-echo -e "$path/tools/InformationGathering"
+echo -e "[✔]$path/tools/InformationGathering"
 sleep 0.2
 mkdir -p tools/Others
-echo -e "$path/tools/Others"
+echo -e "[✔]$path/tools/Others"
 sleep 0.2
 sed -i "4i\Exec=sh -c 'cd $path && python KitHack.py'" icons/kithack.desktop
 cp icons/kithack.desktop /usr/share/applications/kithack.desktop
 cp icons/kithack.png /usr/share/icons/kithack.png
-echo -e "/usr/share/applications/kithack.desktop"
+echo -e "[✔]/usr/share/applications/kithack.desktop"
 sleep 0.2
 
 # Installing requirements
