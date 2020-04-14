@@ -56,6 +56,7 @@ echo ""
 echo -e "\033[92m[✔][Xterm]..........................[ OK ]"
 sleep 1.5
 else
+echo ""
 echo -e "\e[1;31m[!][Xterm].......................[ NOT FOUND ]"
 sudo apt-get install -y xterm > /dev/null
 fi
