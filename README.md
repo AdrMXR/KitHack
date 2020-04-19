@@ -112,7 +112,7 @@ Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuev
 <p align="center">
 
 ## Tutorial
-<a href="https://youtu.be/w36SfY6Dzko">
+<a href="https://www.youtube.com/watch?v=Wsdn158PH50">
   <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/youtube.png" />
 </a></p>
 
