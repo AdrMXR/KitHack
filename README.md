@@ -5,7 +5,7 @@
 [![System](https://img.shields.io/badge/Supported%20OS-Linux-orange)]()
 [![Python](https://img.shields.io/badge/Python-2.7-yellow)]()
 [![License](https://img.shields.io/badge/License-MIT-brightgreen)]()
-[![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/AdrMXR?locale.x=es_ES)
+[![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/AdrMXR0)
 
 **KitHack** es un proyecto de código abierto que permite a los usuarios tener a su disposición una gran variedad de herramientas enfocadas al hacking. **KitHack** también nos brinda la facilidad de poder generar distintos backdoors con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
 
