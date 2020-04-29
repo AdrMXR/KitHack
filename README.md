@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-brightgreen)]()
 [![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/AdrMXR0)
 [![Twitter](https://img.shields.io/twitter/follow/adrianguiller10?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=adrianguiller10)
-https://twitter.com/intent/follow?screen_name=adrianguiller10
+
 **KitHack** es un proyecto de código abierto que permite a los usuarios tener a su disposición una gran variedad de herramientas enfocadas al hacking. **KitHack** también nos brinda la facilidad de poder generar distintos backdoors con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
 
 ## Distribuciones compatibles con KitHack:
