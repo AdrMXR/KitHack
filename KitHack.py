@@ -3557,7 +3557,7 @@ def options():
 			banner(), menu(), options()
 
 	elif option == 11:
-		os.system("firefox https://github.com/AdrMXR/KitHack/blob/master/README.md")
+		os.system("firefox https://adrmxr.github.io/KitHack/")
 		os.system('clear')
 		banner(), menu(), options()	
 
