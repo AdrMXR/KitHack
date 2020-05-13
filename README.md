@@ -114,9 +114,9 @@ Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuev
 
 ## Tutorial
 
-<html>
-  <iframe width="965" height="543" src="https://www.youtube.com/embed/Wsdn158PH50" frameborder="0" allow="accelerometer; autoplay;         encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</html>
+<a href="https://www.youtube.com/watch?v=Wsdn158PH50">
+  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/youtube.png" />
+</a></p>
 
 ### Menu
 
