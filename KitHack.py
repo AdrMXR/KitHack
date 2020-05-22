@@ -15,6 +15,7 @@ import Tkinter, Tkconstants, tkFileDialog
 from sys import exit 
 from getch import pause 
 from Tkinter import *
+from platform import system as systemos
 sys.path.insert(0,"lib")
 import kitools
 sys.dont_write_bytecode = True
@@ -26,10 +27,17 @@ def check(host='https://www.google.com'):
 		urllib.urlopen(host)
 		print("{0}Conexion a internet exitosa.").format(GREEN)
 		time.sleep(0.5)
-		info()
 	except:
-		print("{0}[ERROR NETWORK]: Verifique su conexion a internet.").format(RED, GREEN)
+		print("{0}[ERROR NETWORK]:{1} Verifique su conexion a internet.".format(RED, DEFAULT))
 		exit(0)
+
+def permissions():
+    if os.getuid() == 0:
+        info()    
+    else:
+    	os.system('clear')
+        print("{0}[!]{1} ¡Permiso denegado! Recuerde ejecutar: {2}sudo {1}python KitHack.py".format(RED, DEFAULT, GREEN))
+        exit(0)
 
 def info():
 	os.system('clear')
@@ -43,13 +51,22 @@ def info():
 	time.sleep(0.5)
 	print("{0}[INSTAGRAM]:{1} https://www.instagram.com/adrian.guillermo22\n\n").format(RED, DEFAULT)	
 	time.sleep(0.5)
-	print("{0}[YOUTUBE]:{1} https://www.youtube.com/channel/UCqEtxJKbIghx6lyymrjfvnA\n\n").format(RED, DEFAULT)
-	time.sleep(5)
+	print("{0}[YOUTUBE]:{1} https://www.youtube.com/channel/UCqEtxJKbIghx6lyymrjfvnA\n").format(RED, DEFAULT)
+	time.sleep(0.5)
+	question()
+	time.sleep(2)
 	os.system('clear')
 	banner()
 
-def banner():
+def question():
+	global command 	
+	if raw_input("\n{0}[!] {1}¿Estas utilizando Kali Linux 2020? (y/n)\n{0}KitHack >>{1} ".format(RED, DEFAULT)).upper() != "Y":
+		command = 'python lib/network.py'
 	
+	else:
+		command = 'sudo -u kali python lib/network.py'
+
+def banner():
 	print '\n\n' 
 	print '{} /$$   /$$ /$$$$$$ /$$$$$$$$       /$$   /$$  /$$$$$$   /$$$$$$  /$$   /$$ '.format(RED).center(93)
 	print '{}| $$  /$$/|_  $$_/|__  $$__/      | $$  | $$ /$$__  $$ /$$__  $$| $$  /$$/ '.format(RED).center(93)		
@@ -60,7 +77,6 @@ def banner():
 	print '{}| $$ \  $$ /$$$$$$   | $$         | $$  | $$| $$  | $$|  $$$$$$/| $$ \  $$ '.format(RED).center(93)
 	print '{}|__/  \__/|______/   |__/         |__/  |__/|__/  |__/ \______/ |__/  \__/ '.format(RED).center(93)
 	print '{}                                                                      v1.2.0 by:AdrMXR'.format(BOLD)
-                    														
 
 def menu():
 	print '\n'
@@ -822,7 +838,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 			
 			if pay == 1:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -855,7 +871,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 2:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -888,7 +904,7 @@ def options():
 					banner(), menu(), options()			
 
 			elif pay == 3:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -921,7 +937,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 4:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -954,7 +970,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 5:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -987,7 +1003,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 6:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1020,7 +1036,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 7:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1053,7 +1069,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 8:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1086,7 +1102,7 @@ def options():
 					banner(), menu(), options()				
 
 			elif pay == 9:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1119,7 +1135,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 10:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1152,7 +1168,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 11:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1185,7 +1201,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 12:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1244,7 +1260,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1277,7 +1293,7 @@ def options():
 					banner(), menu(), options()						
 
 			elif pay == 2:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1310,7 +1326,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 3:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1343,7 +1359,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 4:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1376,7 +1392,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 5:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1409,7 +1425,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 6:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1442,7 +1458,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 7:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1475,7 +1491,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 8:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1508,7 +1524,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 9:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1541,7 +1557,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 10:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1574,7 +1590,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 11:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1607,7 +1623,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 12:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1640,7 +1656,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 13:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1673,7 +1689,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 14:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1732,7 +1748,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('python lib/network.py')
+					os.system('{}'.format(command))
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1772,7 +1788,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 					if m == 1:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -1808,7 +1824,7 @@ def options():
 							banner(), menu(), options()	
 
 					elif m == 2:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -1887,7 +1903,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('python lib/network.py')
+					os.system('{}'.format(command))
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1927,7 +1943,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 					if m == 1:					
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -1963,7 +1979,7 @@ def options():
 							banner(), menu(), options()	
 				
 					elif m == 2:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2041,7 +2057,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('python lib/network.py')
+					os.system('{}'.format(command))
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2081,7 +2097,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 					
 					if m == 1:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2117,7 +2133,7 @@ def options():
 							banner(), menu(), options()	
 
 					elif m == 2:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2195,7 +2211,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('python lib/network.py')
+					os.system('{}'.format(command))
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2235,7 +2251,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 					
 					if m == 1:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2271,7 +2287,7 @@ def options():
 							banner(), menu(), options()	
 
 					elif m == 2:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2349,7 +2365,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('python lib/network.py')
+					os.system('{}'.format(command))
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2389,7 +2405,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 					if m == 1:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2425,7 +2441,7 @@ def options():
 							banner(), menu(), options()		
 
 					elif m == 2:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2503,7 +2519,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('python lib/network.py')
+					os.system('{}'.format(command))
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2543,7 +2559,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 					if m == 1:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2579,7 +2595,7 @@ def options():
 							banner(), menu(), options()	
 
 					elif m == 2:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2657,7 +2673,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('python lib/network.py')
+					os.system('{}'.format(command))
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2697,7 +2713,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 					
 					if m == 1:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2733,7 +2749,7 @@ def options():
 							banner(), menu(), options()		
 
 					elif m == 2:
-						os.system('python lib/network.py')
+						os.system('{}'.format(command))
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2822,7 +2838,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2855,7 +2871,7 @@ def options():
 					banner(), menu(), options()						
 
 			elif pay == 2:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2888,7 +2904,7 @@ def options():
 					banner(), menu(), options()			
 
 			elif pay == 3:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2921,7 +2937,7 @@ def options():
 					banner(), menu(), options()											
 
 			elif pay == 4:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2954,7 +2970,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 5:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2987,7 +3003,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 6:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3034,7 +3050,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3067,7 +3083,7 @@ def options():
 					banner(), menu(), options()		
 
 			if pay == 2:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3100,7 +3116,7 @@ def options():
 					banner(), menu(), options()											
 
 			elif pay == 3:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3152,7 +3168,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3185,7 +3201,7 @@ def options():
 					banner(), menu(), options()								
 
 			elif pay == 2:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3218,7 +3234,7 @@ def options():
 					banner(), menu(), options()		
 
 			elif pay == 3:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3251,7 +3267,7 @@ def options():
 					banner(), menu(), options()		
 
 			elif pay == 4:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3284,7 +3300,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 5:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3317,7 +3333,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 6:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3350,7 +3366,7 @@ def options():
 					banner(), menu(), options()		
 
 			elif pay == 7:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3397,7 +3413,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3430,7 +3446,7 @@ def options():
 					banner(), menu(), options()						
 
 			elif pay == 2:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3477,7 +3493,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3510,7 +3526,7 @@ def options():
 					banner(), menu(), options()						
 			
 			elif pay == 2:
-				os.system('python lib/network.py')
+				os.system('{}'.format(command))
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3575,6 +3591,7 @@ def options():
 
 if __name__ == "__main__":
 	check()
+	permissions()
 	menu()
 	options()
 
