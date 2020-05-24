@@ -313,8 +313,8 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
 ## Contribuidores 
 
-Ironpuerquito - Diseñador 
-C1b0rk - Tester y diseñador 
+- Ironpuerquito - Diseñador 
+- C1b0rk - Tester y diseñador 
 
 ## Licencia 
 
