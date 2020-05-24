@@ -62,9 +62,9 @@ def question():
 	global command 	
 	if raw_input("\n{0}[!] {1}¿Estas utilizando Kali Linux 2020? (y/n)\n{0}KitHack >>{1} ".format(RED, DEFAULT)).upper() != "Y":
 		command = 'python lib/network.py'
-	
 	else:
-		command = 'sudo -u kali python lib/network.py'
+		user = os.popen('logname | tr -d "[[:space:]]"').read()
+		command = 'sudo -u {} python lib/network.py'.format(user)
 
 def banner():
 	print '\n\n' 
@@ -838,7 +838,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 			
 			if pay == 1:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -871,7 +871,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 2:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -904,7 +904,7 @@ def options():
 					banner(), menu(), options()			
 
 			elif pay == 3:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -937,7 +937,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 4:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -970,7 +970,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 5:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1003,7 +1003,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 6:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1036,7 +1036,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 7:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1069,7 +1069,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 8:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1102,7 +1102,7 @@ def options():
 					banner(), menu(), options()				
 
 			elif pay == 9:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1135,7 +1135,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 10:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1168,7 +1168,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 11:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1201,7 +1201,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 12:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1260,7 +1260,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1293,7 +1293,7 @@ def options():
 					banner(), menu(), options()						
 
 			elif pay == 2:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1326,7 +1326,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 3:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1359,7 +1359,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 4:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1392,7 +1392,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 5:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1425,7 +1425,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 6:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1458,7 +1458,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 7:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1491,7 +1491,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 8:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1524,7 +1524,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 9:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1557,7 +1557,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 10:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1590,7 +1590,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 11:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1623,7 +1623,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 12:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1656,7 +1656,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 13:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1689,7 +1689,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 14:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1748,7 +1748,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('{}'.format(command))
+					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1788,7 +1788,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 					if m == 1:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -1824,7 +1824,7 @@ def options():
 							banner(), menu(), options()	
 
 					elif m == 2:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -1903,7 +1903,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('{}'.format(command))
+					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -1943,7 +1943,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 					if m == 1:					
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -1979,7 +1979,7 @@ def options():
 							banner(), menu(), options()	
 				
 					elif m == 2:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2057,7 +2057,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('{}'.format(command))
+					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2097,7 +2097,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 					
 					if m == 1:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2133,7 +2133,7 @@ def options():
 							banner(), menu(), options()	
 
 					elif m == 2:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2211,7 +2211,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('{}'.format(command))
+					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2251,7 +2251,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 					
 					if m == 1:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2287,7 +2287,7 @@ def options():
 							banner(), menu(), options()	
 
 					elif m == 2:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2365,7 +2365,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('{}'.format(command))
+					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2405,7 +2405,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 					if m == 1:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2441,7 +2441,7 @@ def options():
 							banner(), menu(), options()		
 
 					elif m == 2:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2519,7 +2519,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('{}'.format(command))
+					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2559,7 +2559,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 					if m == 1:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2595,7 +2595,7 @@ def options():
 							banner(), menu(), options()	
 
 					elif m == 2:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2673,7 +2673,7 @@ def options():
 				a = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 				
 				if a == 1:
-					os.system('{}'.format(command))
+					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2713,7 +2713,7 @@ def options():
 					m = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 					
 					if m == 1:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2749,7 +2749,7 @@ def options():
 							banner(), menu(), options()		
 
 					elif m == 2:
-						os.system('{}'.format(command))
+						os.system(command)
 						LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 						LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 						Tk().withdraw()
@@ -2838,7 +2838,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2871,7 +2871,7 @@ def options():
 					banner(), menu(), options()						
 
 			elif pay == 2:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2904,7 +2904,7 @@ def options():
 					banner(), menu(), options()			
 
 			elif pay == 3:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2937,7 +2937,7 @@ def options():
 					banner(), menu(), options()											
 
 			elif pay == 4:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -2970,7 +2970,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 5:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3003,7 +3003,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 6:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3050,7 +3050,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3083,7 +3083,7 @@ def options():
 					banner(), menu(), options()		
 
 			if pay == 2:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3116,7 +3116,7 @@ def options():
 					banner(), menu(), options()											
 
 			elif pay == 3:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3168,7 +3168,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3201,7 +3201,7 @@ def options():
 					banner(), menu(), options()								
 
 			elif pay == 2:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3234,7 +3234,7 @@ def options():
 					banner(), menu(), options()		
 
 			elif pay == 3:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3267,7 +3267,7 @@ def options():
 					banner(), menu(), options()		
 
 			elif pay == 4:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3300,7 +3300,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 5:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3333,7 +3333,7 @@ def options():
 					banner(), menu(), options()	
 
 			elif pay == 6:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3366,7 +3366,7 @@ def options():
 					banner(), menu(), options()		
 
 			elif pay == 7:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3413,7 +3413,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3446,7 +3446,7 @@ def options():
 					banner(), menu(), options()						
 
 			elif pay == 2:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3493,7 +3493,7 @@ def options():
 			pay = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 
 			if pay == 1:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
@@ -3526,7 +3526,7 @@ def options():
 					banner(), menu(), options()						
 			
 			elif pay == 2:
-				os.system('{}'.format(command))
+				os.system(command)
 				LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 				LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 				OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))

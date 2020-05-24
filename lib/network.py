@@ -40,7 +40,8 @@ def public_ip():
 print("\n{0}Public IP: {1}{2}").format(GREEN, DEFAULT, public_ip())
 
 def ngrok():
-    if os.path.isfile('/root/.ngrok2/ngrok.yml'):
+    home = expanduser("~")
+    if os.path.isfile('{}/.ngrok2/ngrok.yml'.format(home)):
         a = os.popen('pgrep ngrok').read()
         if not a:
             os.system('./ngrok tcp 443 > /dev/null 2>&1 &')
@@ -56,24 +57,6 @@ def ngrok():
         else:
             os.system('kill -9 $(pgrep ngrok)')
             ngrok()
-    
-    elif os.path.isfile('/home/kali/.ngrok2/ngrok.yml'):
-        a = os.popen('pgrep ngrok').read()
-        if not a:
-            os.system('./ngrok tcp 443 > /dev/null 2>&1 &')
-            while True:
-                os.system('curl -s -N http://127.0.0.1:4040/status | grep "tcp://0.tcp.ngrok.io:[0-9]*" -oh > ngrok.tcp')
-                TcpFile = open('ngrok.tcp', 'r')
-                tcp = TcpFile.read()
-                TcpFile.close()
-                if re.match("tcp://0.tcp.ngrok.io:[0-9]*", tcp) != None:
-                    print("\n{0}Ngrok TCP: {1}{2}".format(GREEN, DEFAULT, tcp))
-                    break
-
-        else:
-            os.system('kill -9 $(pgrep ngrok)')
-            ngrok()        
-
     else:
         print("\n{0}Ngrok TCP:{1} None\n".format(GREEN, DEFAULT))
 
