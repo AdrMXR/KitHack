@@ -311,6 +311,11 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 2. Contactarme mediante el siguiente correo: kithacking@gmail.com
 3. Mandar el screenshot y explicar su problemática con ese fallo.
 
+## Contribuidores 
+
+Ironpuerquito - Diseñador 
+C1b0rk - Tester y diseñador 
+
 ## Licencia 
 
 MIT License
