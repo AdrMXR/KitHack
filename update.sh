@@ -55,6 +55,8 @@ echo -e "\033[92m[✔][GIT]............................[ OK ]"
 sleep 1.5
 else
 echo -e "\e[1;31m[!][GIT].........................[ NOT FOUND ]"
+sleep 1.5
+echo -e "\e[0;33m[!][Installing GIT...]"
 xterm -T "INSTALLER GIT" -geometry 100x30 -e "apt-get install git -y"
 fi 
 

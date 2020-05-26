@@ -3590,9 +3590,24 @@ def options():
 		banner(), menu(), options()
 
 if __name__ == "__main__":
-	check()
-	permissions()
-	menu()
-	options()
+	try:
+		check()
+		permissions()
+		menu()
+		options()
 
-	
+	except KeyboardInterrupt:
+		choice = input('\n\n{0}[1] {1}Return KitHack {0}[2] {1}Exit \n{2}KitHack >> {1}'.format(GREEN, DEFAULT, RED))
+		if choice == 1:
+			if os.path.isfile('/usr/local/bin/kithack'):
+				os.system('clear && kithack')
+			else:
+				os.system('clear && sudo python KitHack.py')	
+
+		elif choice == 2:
+			time.sleep(2)
+			exit(0)
+		else:
+			print("\n{}[x] Opcion invalida.".format(RED))
+			time.sleep(2)	
+			exit(0)

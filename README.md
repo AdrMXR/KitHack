@@ -50,6 +50,11 @@ sudo bash install.sh
 sudo python KitHack.py
 ```
 
+***Si acepta poder ejecutar KitHack desde cualquier lugar de su terminal, simplemente escriba:***
+```
+kithack
+```
+ 
 ***Si desea actualizar en un futuro ejecute:***
 ```
 sudo bash update.sh
