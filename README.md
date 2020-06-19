@@ -107,7 +107,7 @@ Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuev
 
 ## Método de modificación de nombre e icono
 
-El unico requerimiento que se necesita para modificar el icono es una imagén en formato PNG con resolución de 48x48 pixeles. En la carpeta icons se encuentran algunas como ejemplo. 
+El unico requerimiento que se necesita para modificar el icono de un payload generado por Metasploit es una imagén en formato PNG con resolución de 48x48 pixeles. En la carpeta icons se encuentran algunas como ejemplo. 
 
 ## Screenshots 
 
