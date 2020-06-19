@@ -135,6 +135,18 @@ echo -e "\e[0;33m[!][Installing Zipalign...]"
 xterm -T "INSTALLER ZIPALIGN" -geometry 100x30 -e "sudo apt-get install -y zipalign"
 fi
 
+# Check if pwgen exists
+which pwgen > /dev/null 2>&1
+if [ "$?" -eq "0" ]; then
+echo -e "\033[92m[✔][Pwgen]..........................[ OK ]"
+sleep 1.5
+else
+echo -e "\e[1;31m[x][Pwgen].......................[ NOT FOUND ]"
+sleep 1.5
+echo -e "\e[0;33m[!][Installing Pwgen...]"
+xterm -T "INSTALLER PWGEN" -geometry 100x30 -e "sudo apt-get install pwgen"
+fi
+
 # Check if pip2 exists
 which pip2 > /dev/null 2>&1
 if [ "$?" -eq "0" ]; then
@@ -215,9 +227,9 @@ touch /usr/local/bin/kithack
 echo "#!/bin/bash" > /usr/local/bin/kithack
 echo "$run" >> /usr/local/bin/kithack
 chmod +x /usr/local/bin/kithack
-sed -i "4i\Exec=sh -c '$run'" icons/kithack.desktop
-cp icons/kithack.desktop /usr/share/applications/kithack.desktop
-cp icons/kithack.png /usr/share/icons/kithack.png
+sed -i "4i\Exec=sh -c '$run'" images/kithack.desktop
+cp images/kithack.desktop /usr/share/applications/kithack.desktop
+cp images/kithack.png /usr/share/icons/kithack.png
 echo ""
 sleep 2
 echo -e "\033[92m[✔] Installation complete. Type 'kithack' to run the tool"

@@ -1,4 +1,4 @@
-<img src="https://github.com/AdrMXR/KitHack/blob/master/icons/banner.png" title="KitHack">
+<img src="https://github.com/AdrMXR/KitHack/blob/master/images/banner.png" title="KitHack">
 
 [![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue)](https://facebook.com/Adrian.Guillermo.22)
 [![Version](https://img.shields.io/badge/Version-1.2.0-red)]()
@@ -88,6 +88,7 @@ Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuev
 * Utilización de la herramienta Ngrok para generar conexiones TCP (puerto 443 por default).
 * Automatización de la configuración de Metasploit para ponerlo en escucha de nuevas sesiones.
 * Planificación de puntos estrategicos para la evasión de antivirus.
+* Elaboración de un nuevo metodo que permite modificar el nombre e icono de un payload generado por Metasploit.
 
 ## APKS que fueron probadas en el nuevo metodo de certificación 
 
@@ -104,11 +105,15 @@ Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuev
 | Ccleaner            | 1.19.74      |
 | AVG Cleaner         | 2.0.2        |
 
+## Método de modificación de nombre e icono
+
+El unico requerimiento que se necesita para modificar el icono es una imagén en formato PNG con resolución de 48x48 pixeles. En la carpeta icons se encuentran algunas como ejemplo. 
+
 ## Screenshots 
 
 | Menu principal | Generador de backdoors |	
 | -------------- | ---------------------- |   
-|![Index](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/icons/screenshot-2.png)
+|![Index](https://github.com/AdrMXR/KitHack/blob/master/images/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/images/screenshot-2.png)
 
 ## Videos  
 
@@ -120,7 +125,7 @@ Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuev
 ## Tutorial
 
 <a href="https://www.youtube.com/watch?v=Wsdn158PH50">
-  <img src="https://github.com/AdrMXR/KitHack/blob/master/icons/youtube.png" />
+  <img src="https://github.com/AdrMXR/KitHack/blob/master/images/youtube.png" />
 </a></p>
 
 ### Menu
