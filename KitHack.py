@@ -3979,6 +3979,7 @@ def options():
 			PAYLOAD = raw_input("\n{0}SET PAYLOAD: {1}".format(YELLOW, DEFAULT))
 			os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {}; set LPORT {}; set PAYLOAD {}; exploit\'"'.format(LHOST, LPORT, PAYLOAD))
 			pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+			os.system('clear')
 			banner(), menu(), options() 
 
 		else:
