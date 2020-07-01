@@ -1,12 +1,14 @@
+<p align="center">
 <img src="https://github.com/AdrMXR/KitHack/blob/master/images/banner.png" title="KitHack">
+</p>
 
-[![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue)](https://facebook.com/Adrian.Guillermo.22)
-[![Version](https://img.shields.io/badge/Version-1.2.0-red)]()
-[![System](https://img.shields.io/badge/Supported%20OS-Linux-orange)]()
-[![Python](https://img.shields.io/badge/Python-2.7-yellow)]()
-[![License](https://img.shields.io/badge/License-MIT-brightgreen)]()
-[![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/AdrMXR0)
-[![Correo](https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet)](mailto:kithacking@gmail.com)
+[![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue?style=for-the-badge&logo=github)](https://facebook.com/Adrian.Guillermo.22)
+[![Version](https://img.shields.io/badge/Version-1.2.0-red?style=for-the-badge&logo=)]()
+[![System](https://img.shields.io/badge/Supported%20OS-Linux-orange?style=for-the-badge&logo=linux)]()
+[![Python](https://img.shields.io/badge/Python-2.7-yellow?style=for-the-badge&logo=python)]()
+[![License](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge&logo=python)]()
+[![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=paypal)](https://www.paypal.me/AdrMXR0)
+[![Correo](https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet?style=for-the-badge&logo=gmail)](mailto:kithacking@gmail.com)
 
 **KitHack** es un proyecto de código abierto que permite a los usuarios tener a su disposición una gran variedad de herramientas enfocadas al hacking. **KitHack** también nos brinda la facilidad de poder generar distintos backdoors con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
 
