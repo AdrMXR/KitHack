@@ -3,16 +3,16 @@
 </p>
 
 <p align="center">
-[![Author](https://img.shields.io/badge/Author-Adrián%20Guillermo-blue?style=for-the-badge&logo=github)](https://github.com/AdrMXR)
-[![Version](https://img.shields.io/badge/Version-1.2.0-red?style=for-the-badge&logo=)]()
+<a href="https://github.com/AdrMXR"><img title="Autor" src="Author-Adrián%20Guillermo-blue?style=for-the-badge&logo=github"></a>
+<a href=""><img title="Version" src="https://img.shields.io/badge/Version-1.2.0-red?style=for-the-badge&logo="></a>
 </p>
 
 <p align="center">
-[![System](https://img.shields.io/badge/Supported%20OS-Linux-orange?style=for-the-badge&logo=linux)]()
-[![Python](https://img.shields.io/badge/Python-2.7-yellow?style=for-the-badge&logo=python)]()
-[![License](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge&logo=python)]()
-[![Paypal](https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=paypal)](https://www.paypal.me/AdrMXR0)
-[![Correo](https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet?style=for-the-badge&logo=gmail)](mailto:kithacking@gmail.com)
+<a href=""><img title="System" src="https://img.shields.io/badge/Supported%20OS-Linux-orange?style=for-the-badge&logo=linux"></a>
+<a href=""><img title="Python" src="https://img.shields.io/badge/Python-2.7-yellow?style=for-the-badge&logo=python"></a>
+<a href=""><img title="Lincencia" src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge&logo="></a>
+<a href="https://www.paypal.me/AdrMXR0"><img title="Paypal" src="https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=paypal"></a>
+<a href="mailto:kithacking@gmail.com"><img title="System" src="https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet?style=for-the-badge&logo=gmail"></a>
 </p>
 
 **KitHack** es un proyecto de código abierto que permite a los usuarios tener a su disposición una gran variedad de herramientas enfocadas al hacking. **KitHack** también nos brinda la facilidad de poder generar distintos backdoors con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
