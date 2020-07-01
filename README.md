@@ -63,13 +63,14 @@ sudo bash update.sh
 ## Dependencias
 
 * sudo
-* postgresql
 * xterm
+* postgresql
 * Metasploit-Framework 
 * apktool
 * aapt
 * jarsigner
 * zipalign 
+* pwgen
 * pip2
 * py-getch
 * python-tk
