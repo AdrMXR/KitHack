@@ -19,7 +19,7 @@
 <a href="https://t.me/AdrMXR"><img title="Chat" src="https://img.shields.io/badge/CHAT-TELEGRAM-blue?style=for-the-badge&logo=telegram"></a>
 </p>
 
-Framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras mediante Metasploit Framework. 
+Kithack es un framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras mediante Metasploit Framework. 
 
 ## Distribuciones compatibles con KitHack:
 
