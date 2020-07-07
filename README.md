@@ -19,7 +19,7 @@
 <a href="https://t.me/AdrMXR"><img title="Chat" src="https://img.shields.io/badge/CHAT-TELEGRAM-blue?style=for-the-badge&logo=telegram"></a>
 </p>
 
-**KitHack** es un proyecto de código abierto que permite a los usuarios tener a su disposición una gran variedad de herramientas enfocadas al hacking. **KitHack** también nos brinda la facilidad de poder generar distintos backdoors con diferentes tipos de Payloads tanto para Linux, Windows, Android y MAC OS con ayuda de Metasploit-Framework. 
+Framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras mediante Metasploit Framework. 
 
 ## Distribuciones compatibles con KitHack:
 
