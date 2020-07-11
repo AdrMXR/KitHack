@@ -136,9 +136,14 @@ El unico requerimiento que se necesita para modificar el icono de un payload gen
 
 ## Tutorial
 
-<a href="https://www.youtube.com/watch?v=Wsdn158PH50">
-  <img src="https://github.com/AdrMXR/KitHack/blob/master/images/youtube.png" />
-</a></p>
+<p align="center">
+<iframe width="965" height="543" src="https://www.youtube.com/embed/Wsdn158PH50" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+## Documentación
+- [Hackear WhatsApp en Kali Linux](https://www.youtube.com/watch?v=Qck83WG0B5A&t=3s)
+- [Como tener el control de un Android fuera de la red local](https://www.youtube.com/watch?v=V1w1CMSdTyU&t=308s)
+- [KITHACK - Una herramienta todo en uno](https://www.youtube.com/watch?v=-8TCtiI9HWM&t=186s)
 
 ### Menu
 
