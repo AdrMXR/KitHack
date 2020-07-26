@@ -89,9 +89,6 @@ sudo bash update.sh
 
 ## Nuevas funciones
 
-Yo como desarrollador estoy comprometido con proporcionar a la comunidad entera del pentesting nuevas funciones que tengan una gran utilidad en sus actividades laborales, academicas o personales.
-Es por ello que en esta nueva versión he incorporado algunas caracteriscas nuevas las cuales son las siguientes:
-
 * Depuración de herramientas obsoletas en la antigua versión
 * Integración de nuevas herramientas. 
 * Refactorización del proceso de descarga de las herramientas.
