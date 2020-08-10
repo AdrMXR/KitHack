@@ -41,9 +41,9 @@
 
 <div style="text-align: center"><img src="images/menu.png"></div>
 <center><span><strong>Menú principal de KitHack Framework.</strong></span></center>
-<h2><strong>¿Que es KitHack?</strong></h2>
+<h2 id="Kithack"><strong>¿Qué es KitHack?</strong></h2>
 
-<p>Es un framework diseñado para automatizar la instalación de distintas herramientas enfocadas al pentesting. Mediante una recopilación se obtuvo un listado de las herramientas más frecuentadas por los amantes de la ciberseguridad, y de la misma forma se obtuvieron herramientas que son poco conocidas pero que funcionan correctamente. Todas estas se clasificaron de la siguiente forma:</p>
+<p>Kithack es un framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras multiplataforma mediante Metasploit Framework. El kit de herramientas está clasificado de la siguiente forma:</p>
 
 <ul>
   <li>Android</li>
@@ -59,34 +59,28 @@
 
 <p>En cada sección se encuentran las diferentes herramientas que podemos instalar junto con una pequeña descripción que nos beneficia en saber de que tratan o que funciones tienen.
 
-<h2 id="header-2"><strong>¿Cómo es el proceso de instalación de las herramientas?</strong></h2>
+<h2 id="installation-tools"><strong>¿Cómo es el proceso de instalación de las herramientas?</strong></h2>
 <p>KitHack de manera automatizada se encarga tanto de la clonación del repositorio como de la instalación de sus dependencias o requerimientos especiales. Una vez terminada la instalación de su herramienta, esta se almacenará en la carpeta tools, y dentro de esta carpeta nos vamos a encontrar con otras subcarpetas con los nombres de cada categoría. <br>Por ejemplo, si la herramienta que usted eligió se encuentra dentro de la categoría Android, esta se almacenará en el directorio <code>KitHack/tools/Android/mi_herramienta.</code></p>
 
-<blockquote>
-  <p>Si por alguna razón usted inconscientemente trata de volver a instalar una herramienta que ya instaló anteriormente, KitHack va a detectar que esa herramienta ya existe y le arrojará un mensaje indicandole esto mismo y lo regresará al menú principal.</p>
-</blockquote>
-
-<h2 id="header-3"><strong>Generador de backdoors.</strong></h2>
+<h2 id="backdoors-with-msfvenom"><strong>Generador de backdoors.</strong></h2>
 <p>Una de las funciones más atractivas que tiene KitHack es el generador de puertas traseras que funciona mediante <a href="https://www.metasploit.com">Metasploit Framework.</a>
-Este consiste en la generación de puertas traseras tanto para Linux, Windows, Android y Mac OS. Tambien contiene 4 formatos multiplataforma los cuales son; PHP, python, bash y perl.
-<br><br>Las 4 principales caracteristicas que tiene este generador de puertas traseras son las siguientes:</p>
+Podemos generar puertas traseras tanto para Linux, Windows, Android y Mac OS. Tambien contiene 4 formatos multiplataforma los cuales son; PHP, python, bash y perl.
+<br><br>Las principales caracteristicas que tiene este generador de puertas traseras son las siguientes:</p>
 <ul>
-  <li>Unificación de los 2 tipos de Payloads.</li>
-  <li>Utilización de la herramienta Ngrok para generar la conexión TCP (puerto 443 por default).</li>
-  <li>Incorporación de un nuevo método para la certificación de APKS maliciosas.</li>
-  <li>Elaboración de una nueva función que permite modificar el nombre e icono de un payload generado por Metasploit.</li>
+  <li>Disponibilidad de payloads por etapas y sin etapas.</li>
+  <li>Generación de enlaces tcp mediante ngrok para conexiones publicas.</li>
+  <li>Infección de aplicaciones android originales.</li>
+  <li>Personalización de payloads para android.</li>
+  <li>Persistencia automatizada.</li>
 </ul>
 
-<h3><strong>Tipos de payloads.</strong></h3>
+<h3 id="tipos-de-payloads"><strong>Tipos de payloads.</strong></h3>
 <p>Metasploit en su conjunto de herramientas nos proporciona una gran variedad de payloads los cuales se clasifican por 2 tipos:
   <ul>
     <li><strong>Payloads por etapas:</strong> Este tipo de payload se mantiene de manera muy compacta y solo se encarga de proporcionar los medios para realizar los escenarios de explotación. <br>Cada vez que utilizamos <code>windows/meterpreter/reverse_tcp</code>, <code>linux/meterpreter/reverse_tcp</code>, <code>android/meterpreter/reverse_tcp</code> y entre otros, estamos indicandole a metasploit que prepare un tipo de payload que se divida en 2 etapas. Este en varios escenarios de explotación puede funcionar muy bien. Sin embargo, existen otros escenarios donde este tipo de payload es lo menos ideal a realizar por el tamaño de memoria que utilizan los bufer y los DLL.
     <br>El ejemplo más común de este tipo de escenarios es donde nosotros como atacantes nos encontramos en entornos de bajo ancho de banda o de alta latencia y queremos realizar un ataque fuera de nuestra red local. El costo de datos o tiempo de carga metsrv, stdapi y priv se vuelven dificiles de manejar o practicamente imposibles. En tal escenario, es mejor realizar un ataque de Payload individual.
     <li><strong>Payloads individuales:</strong> Este tipo de payload es un binario que ya incluye todas las partes requeridas de meterpreter, junto con las extensiones requeridas y todas agrupadas en una sola. Cuando se invoca, la instancia de meterpreter ya tiene todo lo que necesita para funcionar y por lo tanto, metasploit no necesita perder tiempo ni ancho de banda para realizar las cargas habituales que se requieren con el enfoque por etapas.
   </ul>
-
-<h3><strong>¿Cómo utilizar meterpreter sin etapas?</strong></h3>
-<p>En primer lugar, debemos aclarar que los 2 tipos de payloads tienen distinto formato pero esto hace que sean faciles de identificar.
 <table>
   <thead>
     <tr>
@@ -119,42 +113,55 @@ Este consiste en la generación de puertas traseras tanto para Linux, Windows, A
   </tbody>
 </table>
 
-<h3><strong>Ngrok.</strong></h3>
-<p>Otra de las caracteristicas de este generador de puertas traseras es la utilización de la herramienta ngrok para generar conexiones TCP. Debemos tener autentificada una cuenta de ngrok en nuestro sistema para que funcione correctamente. Una vez teniendo indicado que tipo de Payload queremos manejar, KitHack nos solicita un LHOST y un LPORT, pero antes de estas 2 solicitudes como primera instancia KitHack nos imprime nuestra IP local, nuestra IP publica y el enlace TCP generado con ngrok. Este enlace TCP se regenera cada que nos salimos de la herramienta o cada que se ejecuta de nuevo la funcion del menú principal. Si nosotros queremos realizar un ataque fuera de nuestra red local podemos utilizar ngrok para realizar la conexión TCP con nuestra victima y asi obtener la reverse shell sin ningun tipo de problema.
+<h3 id="ngrok"><strong>Ngrok.</strong></h3>
+<p>Para poder utilizar ngrok correctamente debemos registrarnos en su <a href="https://dashboard.ngrok.com/signup">pagina oficial</a> y configurar nuestro <a href="https://ngrok.com/docs#getting-started-authtoken">authtoken</a> en kithack. Una vez teniendo configurado correctamente nuestro authtoken, ya podemos configurar nuestro backdoor. Kithack como primera instancia nos solicita un LHOST y un LPORT, pero antes de estas 2 solicitudes nos proporciona nuestra IP local, nuestra IP publica y el enlace TCP generado con ngrok. Si nosotros queremos realizar un ataque fuera de nuestra red local podemos utilizar ngrok para realizar la conexión con nuestro victima sin necesidad de abrir puertos en nuestro router.
 <br>Ejemplo:</p>
 
 <div class="nx"><pre class="nx"><code><span class="nx">Local IP: 192.168.1.223</span><span class="nx"><br>Public IP: 201.97.221.230</span><span class="nx"><br>Ngrok TCP: tcp://0.tcp.ngrok.io:15225</span><span class="nx"><br><br>SET LHOST:</span><span class="nx"><br>SET LPORT:</span></code></pre></div>
 
 <p>Para realizar el ataque fuera de nuestra red local, debemos colocar como LHOST: <strong>0.tcp.ngrok.io</strong> y como LPORT el puerto que nos genere ngrok, en mi caso sería el <strong>15225.</strong>
-<br>Una vez terminado todo el proceso, KitHack nos va a cuestionar si deseamos ejecutar msfconsole, si colocamos que si, automaticamente se va a poner Metasploit en escucha con nuestro localhost y el puerto 443 configurado. Si usted decide no ejecutar msfconsole, la sesión ngrok se perderá y por lo tanto no se va a generar la conexión. Recordemos que ngrok debe permanecer activo para que la conexión se pueda realizar y si negamos ejecutar msfconsole KitHack detiene el proceso de ngrok, por lo tanto, si vas a trabajar con ngrok es obligatorio que aceptes ejecutar msfconsole mediante KitHack. </p>
 
-<h3><strong>Metodo KitHack para la certificación de APKS maliciosas.</strong></h3>
-<p>Hemos llegado a la parte más interesante de esta documentación, este nuevo método nos permite autentificar la certificación de una APK maliciosa. ¿Alguna vez han intentado realizar un RAT con el parametro <code>-x</code> de msfvenom? Este método mayormente genera algún tipo de error a los usuarios ya que no admite la mayoría de APKS y tampoco realiza un método de certificación valido que pueda ser indetectable por los antivirus. El método de KitHack lo he puesto a prueba en unas 15 aplicaciones como máximo y funciona sin problemas. Hay que aclarar que no todas las aplicaciones van a ser admitidas con este proceso, tales como WhatsApp, facebook, messenger, tiktok, etc. 
-<br><br>El proceso que realiza KitHack para estos fines es el siguiente:</p>
+<h3 id="apks-originales"><strong>Infección de aplicaciones android originales.</strong></h3>
+<p>Este nuevo método nos permite onfuscar un payload dentro de una APK legitima. ¿Alguna vez intentaste realizar este proceso con el parametro <code>-x</code> de msfvenom? Este método mayormente genera algún tipo de error a los usuarios ya que no admite la mayoría de aplicaciones y tampoco realiza un método de certificación valido que pueda ser indetectable por los antivirus. El método de KitHack tiene menor margen de error al realizar el mismo proceso. Aún así, cabe mencionar que no todas las aplicaciones son vulnerables a este ataque, aplicaciones como Facebook, WhatsApp, instagram, y similares a estas, tienen los suficientes mecanismos de seguridad para evitar este tipo de actividades. Nosotros te aconsejamos descargar las aplicaciones desde <a href="https://apkpure.com">apkpure</a> o similares a esta.
+
+<br><br>El proceso que realiza KitHack para infectar una APK es el siguiente:</p>
 <ul>
   <li>Genera un payload de forma normal con metasploit.</li>
   <li>Decompila la APK legitima proporcionada.</li>
   <li>Decompila el payload que se generó anteriormente.</li>
-  <li>Añade nuevos permisos al archivo AndroidManifest.xml de la APK legitima.</li>
-  <li>Remueve el archivo MainActivity.smali de la carpeta stage del payload generado.</li>
+  <li>Añade nuevos permisos al archivo <code>AndroidManifest.xml</code> de la APK legitima.</li>
+  <li>Remueve el archivo <code>MainActivity.smali</code> de la carpeta stage del payload generado.</li>
   <li>Reconfigura los archivos smali del payload generado.</li>
   <li>Copia la carpeta stage del payload generado a la APK original.</li>
-  <li>Localiza el punto de entrada dentro del archivo AndroidManifest.xml de la APK original.</li>
+  <li>Localiza el punto de entrada dentro del archivo <code>AndroidManifest.xml</code> de la APK original.</li>
   <li>Modifica el archivo <code>.smali</code> del activity para incluir una linea que se encarga de invocar MainService para la sesión meterpreter. 
   <li>Compila nuevamente el APK ya configurado como backdoor.
   <li>Certifica el archivo APK generado con jarsigner.
 </ul>
-<p>En mi repositorio de github se encuentra una tabla de las APKS que llegué a probar con este método y que si fueron admitidas de manera correcta, si desea echarles un vistazo da click en "View on GitHub" en la parte superior de la página.</p>
 
-<h2 id="header-3"><strong>Preguntas más frecuentes.</strong></h2>
+<h3 id="payload-personalizado"><strong>Modificación de nombre e icono en nuestro payload para android.</strong></h3>
+<p>Esta nueva función nos permite modificar el nombre e icono predeterminados que nos proporciona metasploit a la hora de generar un payload básico de android. El famoso nombre conocido como <code>MainActivity</code> lo reemplaza kithack por el nombre que le proporciamos a nuestro archivo de salida. De la misma forma, podemos modificar el icono android predeterminado, este tiene que tener las siguientes caracteristicas:
+<ul>
+<li>Resolución 48x48.</li>
+<li>Formato PNG.</li>
+</ul>
+
+<p>Si desea saber de donde puede descargar sus propios iconos, de click <a href="https://github.com/AdrMXR/KitHack/blob/master/icons/LEEME.txt">aquí.</a>
+
+<h3 id="persistencia"><strong>Persistencia automatizada para cualquier APK.</strong></h3>
+<p>Gracias a la persistencia automatizada por parte de kithack, ahora podrás recuperar tus sesiones meterpreter cuando se cierren, y esto es gracias a que kithack genera un archivo de persistencia único por cada APK generada. Este archivo de persistencia se guardará en la carpeta <code>output</code> y tendrá el mismo nombre que tu archivo de salida pero con la extensión <code>.sh</code> ya que es un archivo escrito en bash.
+
+<h2 id="preguntas-mas-frecuentes"><strong>Preguntas más frecuentes.</strong></h2>
 <ol>
- <li><strong>¿Cómo autentifico una cuenta de Ngrok?</strong><br>Primero que nada, debemos de registrarnos en la pagina oficial de 
-  <a href="https://dashboard.ngrok.com/signup">ngrok</a> con nuestro nombre, correo electronico y una contraseña. Una vez registrados y logueados en la plataforma, debemos ubicar la sección de <strong>Connect your account</strong>, ya que en ella se encontrará nuestro token para autentificarnos, copiaremos toda la instrucción del apartado negro a partir de <strong>./ngrok authotoken</strong> y lo pegaremos en nuestra terminal en la carpeta KitHack y finalmente ejecutamos.</li>
-  <li><strong>¿Qué tal funciona KitHack en la version 2020 de Kali linux?</strong><br>Anteriormente KitHack estaba generando un par de problemas en esta nueva versión de kali linux 2020 pero ya se ha desarrollado la solución y ya está implementada en mi repositorio de KitHack.</li> 
-  <li><strong>¿Por qué me da error al momento en el que se tratan de instalar las dependencias en kali linux?</strong><br>Si usted esta teniendo problemas al momento en el que se tratan de instalar las dependencias, lo más seguro es que su instalación de kali linux fue reciente, por lo tanto, es necesario verificar en el archivo <code>/etc/apt/sources.list</code> que se encuentre la siguiente linea de codigo: <br><strong>deb http://http.kali.org/kali kali-rolling main non-free contrib</strong>, en caso de que no se encuentre, es necesario añadirla y guardar cambios, y finalmente ejecutar "sudo apt-get update && sudo apt-get upgrade".</li> 
+ <li><strong>¿Cómo configuro mi authtoken?</strong><br>Primero que nada, debemos de registrarnos en la pagina oficial de 
+  <a href="https://dashboard.ngrok.com/signup">ngrok</a> con nuestro nombre, correo electronico y una contraseña. Una vez registrados y logueados en la plataforma, debemos ubicar la sección de <strong>Connect your account</strong> y copiaremos todo el serial alfanumérico que nos proporciona ngrok. Posteriormente, debemos ejecutar kithack y seleccionar la opción número 10 de <strong>backdoors with msfvenom</strong>, elegimos el tipo de backdoor que deseamos crear con su respectivo payload, y automaticamente kithack va a detectar que su achivo de configuración <code>ngrok.yml</code> no existe, por lo tanto le va a solicitar ingresar su authtoken, en ese apartado debe pegar su serial alfanumérico.
+
+ <li><strong>¿Por qué se me cierra muy rapido mi sesión de metasploit?</strong><br>Pueden ser diversos factores que provoquen que su sesión de metasploit expire muy rápido, depende mucho del LHOST que hayas configurado. Si realizaste una prueba local y tu sesión expira muy rápido, puede ser la velocidad de tu internet, si utilizaste tu ip publica, puede ser la velocidad de internet de tu victima, si estas trabajando con ngrok, puede que los servidores de ngrok estén muy lentos, lo recomendable es elegir un buen tipo de payload que se adapte a nuestros objetivos, y realizar persistencia o migrar a otro proceso al obtener nuestra shell meterpreter.
+
+ <li><strong>¿Por qué me da errores el instalador de kithack?</strong><br>En este caso es necesario verificar en el archivo <code>/etc/apt/sources.list</code> que se encuentre la siguiente linea de codigo: <br><strong>deb http://http.kali.org/kali kali-rolling main non-free contrib</strong><br>En caso de que no se encuentre, es necesario añadirla y guardar cambios, y finalmente ejecutar <code>sudo apt-get update && sudo apt-get upgrade.</code></li>
 </ol>
 
-<h2 id="header-3"><strong>Atención.</strong></h2>
+<h2 id="licencia"><strong>Atención.</strong></h2>
 <p>Este programa se distribuye con la esperanza de que sea útil, sin la garantía implícita de comerciabilidad. Es responsabilidad del usuario obedecer todas las leyes locales, estatales y federales aplicables. Yo como desarrollador no asumo ninguna responsabilidad y no seré responsable del mal uso o daño causado con este programa.</p>
 
 <footer class="site-footer">

@@ -26,7 +26,7 @@ echo -e "\e[0;33m|   |   |  \___  \  |  |  / __ \|  |_|  |_\  ___/|  | \/       
 echo -e "\e[0;33m|___|___|  /____  > |__| (____  /____/____/\___  >__|   /\  /\  /\    "
 echo -e "\e[0;33m         \/     \/            \/               \/       \/  \/  \/    "
 echo -e ""
-echo -e "                      \e[38;5;166m Setup KitHack v1.2.0                       "
+echo -e "                      \e[38;5;166m Setup KitHack v1.3.0                       "
 echo -e ""
 echo -e "                            By:AdrMXR                                         "
  
@@ -160,43 +160,111 @@ xterm -T "INSTALLER PIP2" -geometry 100x30 -e "wget https://bootstrap.pypa.io/ge
 rm get-pip.py
 fi
 
-## Configuring folders
-path=$(pwd)
+# Configuring folders
 echo -e "\e[0;33m"
 echo -n [*] Configurando carpetas...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
-mkdir output 
 echo ""
 echo -e "\033[92m"
+
+if [ -d output ]; then
+echo -e "[✔]Ya existe $path/output"
+sleep 0.2
+else
+mkdir output
 echo -e "[✔]$path/output"
 sleep 0.2
+fi
+
+if [ -d tools/Android ]; then
+echo -e "[✔]Ya existe $path/tools/Android"
+sleep 0.2
+else
 mkdir -p tools/Android
 echo -e "[✔]$path/tools/Android"
 sleep 0.2
+fi
+
+if [ -d tools/Windows ]; then
+echo -e "[✔]Ya existe $path/tools/Windows"
+sleep 0.2
+else
 mkdir -p tools/Windows
 echo -e "[✔]$path/tools/Windows"
 sleep 0.2
+fi
+
+if [ -d tools/Phishing ]; then
+echo -e "[✔]Ya existe $path/tools/Phishing"
+sleep 0.2
+else
 mkdir -p tools/Phishing
 echo -e "[✔]$path/tools/Phishing"
 sleep 0.2
+fi
+
+if [ -d tools/Wifi ]; then
+echo -e "[✔]Ya existe $path/tools/Wifi"
+sleep 0.2
+else
 mkdir -p tools/Wifi
 echo -e "[✔]$path/tools/Wifi"
 sleep 0.2
+fi
+
+if [ -d tools/Passwords ]; then
+echo -e "[✔]Ya existe $path/tools/Passwords"
+sleep 0.2
+else
 mkdir -p tools/Passwords
 echo -e "[✔]$path/tools/Passwords"
 sleep 0.2
+fi
+
+if [ -d tools/Web ]; then
+echo -e "[✔]Ya existe $path/tools/Web"
+sleep 0.2
+else
 mkdir -p tools/Web
 echo -e "[✔]$path/tools/Web"
 sleep 0.2
+fi
+
+if [ -d tools/Spoofing ]; then
+echo -e "[✔]Ya existe $path/tools/Spoofing"
+sleep 0.2
+else
 mkdir -p tools/Spoofing
 echo -e "[✔]$path/tools/Spoofing"
 sleep 0.2
+fi
+
+if [ -d tools/InformationGathering ]; then
+echo -e "[✔]Ya existe $path/tools/InformationGathering"
+sleep 0.2
+else
 mkdir -p tools/InformationGathering
 echo -e "[✔]$path/tools/InformationGathering"
 sleep 0.2
+fi
+
+if [ -d tools/Others ]; then
+echo -e "[✔]Ya existe $path/tools/Others"
+sleep 0.2
+else
 mkdir -p tools/Others
 echo -e "[✔]$path/tools/Others"
 sleep 0.2
+fi
+
+if [ -d .config ]; then
+echo -e "[✔]Ya existe $path/.config"
+sleep 0.2
+else
+mkdir -p .config
+echo -e "[✔]$path/.config"
+sleep 0.2
+fi
 
 # Installing requirements
 echo -e "\e[0;33m"
@@ -206,6 +274,9 @@ echo ""
 echo -e "\033[92m"
 pip2 install py-getch 
 apt-get install python-tk
+pip2 install pathlib
+pip2 install python-zenity
+pip2 install pgrep
 
 # Shortcut for kithack
 echo -e "\e[0;33m"

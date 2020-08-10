@@ -26,7 +26,7 @@ echo -e "\e[0;33m|    |  / |  |_> > /_/ | / __ \|  | \  ___/               "
 echo -e "\e[0;33m|______/  |   __/\____ |(____  /__|  \___  > /\  /\  /\   "
 echo -e "\e[0;33m          |__|        \/     \/          \/  \/  \/  \/   "
 echo -e ""
-echo -e "                \e[38;5;166m Update KitHack v1.2.0                "
+echo -e "                \e[38;5;166m Update KitHack v1.3.0                "
 echo -e ""
 echo -e "                      By:AdrMXR                                   "
 
