@@ -277,6 +277,8 @@ apt-get install python-tk
 pip2 install pathlib
 pip2 install python-zenity
 pip2 install pgrep
+apt-get install libatk-adaptor libgail-common
+apt-get install python-gtk2-dev
 
 # Shortcut for kithack
 echo -e "\e[0;33m"
