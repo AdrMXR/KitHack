@@ -96,7 +96,7 @@ sudo bash update.sh
 - Debido a la eliminación de algunos repositorios por parte de sus respectivos autores, es fundamental que nuestros usuarios nos [reporten](mailto:kithacking@gmail.com) cualquier herramienta que no se esté instalando de forma correcta, ya que de esa forma nosotros podremos depurarla completamente de kithack.
 
 **2) Integración de nuevas herramientas.**
-- Así como depuramos herramientas también integramos algunas nuevas, si tienes algún proyecto personal en github que te gustaría que apareciera en nuestro kit de herramientas, o si estás interesado en ser contribuidor de kithack, ayudanos a maximizar nuestro kit de herramientas contestando esta [encuesta.](https://forms.gle/Kwrb3fbGni8z2kLi9) 
+- Así como depuramos herramientas también integramos algunas nuevas, si tienes algún proyecto personal en github que te gustaría que apareciera en nuestro kit de herramientas, o si estás interesado en ser contribuidor de kithack, ayudanos a maximizar nuestro kit contestando esta [encuesta.](https://forms.gle/Kwrb3fbGni8z2kLi9) 
 
 **3) Unificación de tipos de Payloads (por etapas y sin etapas).**
 - Tal como lo explicamos en nuestra pagina web de documentación, kithack nos permite utilizar tanto payloads por etapas como individuales. Si deseas saber sus diferencias, consulta [aquí.](https://adrmxr.github.io/KitHack#tipos-de-payloads)
