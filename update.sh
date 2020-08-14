@@ -11,7 +11,7 @@ path=$(pwd)
 # Check root 
 if [ "$(id -u)" != "0" ] > /dev/null 2>&1; then
 echo ""
-echo -e '\e[1;31m【x】Este script necesita permisos root.\e[0m' 1>&2
+echo -e '\e[1;31m[x] Este script necesita permisos root.\e[0m' 1>&2
 sleep 2
 exit
 fi
@@ -60,6 +60,20 @@ echo -e "\e[0;33m[!][Installing GIT...]"
 xterm -T "INSTALLER GIT" -geometry 100x30 -e "apt-get install git -y"
 fi 
 
+# Checking python requirements
+echo -e "\e[0;33m"
+echo -n [*] Verificando requerimientos de python...= ;
+sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
+echo ""
+echo -e "\033[92m"
+pip2 install py-getch 
+apt-get install python-tk
+pip2 install pathlib
+pip2 install python-zenity
+pip2 install pgrep
+apt-get install libatk-adaptor libgail-common
+apt-get install python-gtk2-dev
+
 # Creating temporary directory...
 echo -e "\e[0;33m"
 echo -n [*] Creando directorio temporal...= ;
@@ -82,7 +96,6 @@ echo ""
 git reset HEAD --hard
 git pull origin master
 echo ""
-echo -e "\033[92m[✔] Done."
 sleep 1.5
 
 # Moving the files in the temporary directory again
