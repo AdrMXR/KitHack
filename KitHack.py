@@ -34,12 +34,17 @@ def check(host='https://www.google.com'):
 		exit(0)
 
 def permissions():
-    if os.getuid() == 0:
-        info()    
-    else:
-    	os.system('clear')
-        print("{0}[!]{1} ¡Permiso denegado! Recuerde ejecutar: {2}sudo {1}python KitHack.py".format(RED, DEFAULT, GREEN))
-        exit(0)
+	if os.getuid() == 0:
+		if os.path.isdir("output"):
+			info()
+		else:
+			os.system('clear')
+			print("{0}[!]{1} No tiene instalado KitHack, favor de ejecutar: {2}sudo bash install.sh".format(RED, DEFAULT, GREEN))
+			exit(0)
+	else:
+    		os.system('clear')
+        	print("{0}[!]{1} ¡Permiso denegado! Recuerde ejecutar: {2}sudo {1}python KitHack.py".format(RED, DEFAULT, GREEN))
+        	exit(0)
 
 def info():
 	os.system('clear')
