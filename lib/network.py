@@ -11,7 +11,7 @@ import re
 import signal
 from os import system as run_command, kill as kill_process, popen as sys_url
 from pathlib import Path as pathlib_Path
-from pythonzenity import Entry as entry_token
+from pythonzenity import Entry as entry_token, Error
 from pgrep import pgrep as check_process
 
 BLUE, RED, WHITE, CYAN, DEFAULT, YELLOW, MAGENTA, GREEN, END, BOLD = '\33[94m', '\033[91m', '\33[97m', '\033[36m', '\033[0m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m', '\033[1m'
@@ -53,15 +53,19 @@ def run_ngrok():
                 break
     else:
         while True:
-            token = entry_token(title="SET NGROK AUTHTOKEN", text="Register at https://ngrok.com", width=450, height=140)        
-            if token is None:
-                continue
-            else:
-                ngrok_config.touch(mode=0o777, exist_ok=True)
-                ngrok_config = open('.config/ngrok.yml','w')
-                ngrok_config.write("authtoken: " + token)
-                ngrok_config.close()        
-                run_ngrok() 
+            try:
+                token = entry_token(title="SET NGROK AUTHTOKEN", text="Register at https://ngrok.com", width=450, height=140)        
+                if len(token) != 49:
+                    Error(text="Invalid token, please try again")
+                    continue
+                else:
+                    ngrok_config.touch(mode=0o777, exist_ok=True)
+                    ngrok_config = open('.config/ngrok.yml','w')
+                    ngrok_config.write("authtoken: " + token)
+                    ngrok_config.close()        
+                    run_ngrok() 
+                    break
+            except TypeError: #Evitar cierre de kithack 
                 break
 
 def run_network():
