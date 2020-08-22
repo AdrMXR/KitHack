@@ -1,0 +1,8 @@
+------------------------
+FORMAT: PNG 48X48 pixels
+------------------------
+
+Pagina para descargar iconos: https://icon-icons.com/es/
+
+Pagina para personalizar iconos: https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
+
