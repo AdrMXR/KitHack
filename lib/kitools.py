@@ -1227,7 +1227,7 @@ def Brutespray():
 
 def Pupi():
 	location = os.getcwd()
-	if not os.path('tools/Passwords/PUPI'):
+	if not os.path.isdir('tools/Passwords/PUPI'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
 		os.system('sudo apt install python3 && cd tools && cd Passwords && git clone https://github.com/mIcHyAmRaNe/PUPI.git')
@@ -1246,7 +1246,7 @@ def Pupi():
 
 def B4rbrute():
 	location = os.getcwd()
-	if not os.path('tools/Passwords/b4r-brute'):
+	if not os.path.isdir('tools/Passwords/b4r-brute'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
 		os.system('cd tools && cd Passwords && git clone https://github.com/b4rc0d37/b4r-brute.git')
@@ -1265,7 +1265,7 @@ def B4rbrute():
 
 def FbHack():
 	location = os.getcwd()
-	if not os.path('tools/Passwords/fb-hack'):
+	if not os.path.isdir('tools/Passwords/fb-hack'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
 		os.system('cd tools && cd Passwords && git clone https://github.com/mirzaaltaf/fb-hack.git')
