@@ -7,11 +7,9 @@
 - [Andspoilt](https://github.com/sundaysec/Andspoilt)
 - [kwetza](https://github.com/sensepost/kwetza)
 - [Termux](https://termux.com)
-- [DroidTracker](https://github.com/thelinuxchoice/DroidTracker)
-- [Droidcam](https://github.com/thelinuxchoice/droidcam)
-- [Crydroid](https://github.com/thelinuxchoice/crydroid)
-- [Keydroid](https://github.com/thelinuxchoice/keydroid)
 - [Android-Exploits](https://github.com/sundaysec/Android-Exploits)
+- [Grabcam](https://github.com/noob-hackers/grabcam)
+- [Androidpatternlock](https://github.com/sch3m4/androidpatternlock)
 
 ### Windows:
 
@@ -27,7 +25,6 @@
 - [Eternal_scanner](https://github.com/peterpt/eternal_scanner)
 - [Eternalblue-Doublepulsar-Metasploit](https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit)
 - [MS17-010-EternalBlue-WinXP-Win10](https://github.com/hanshaze/MS17-010-EternalBlue-WinXP-Win10)
-- [Spykey](https://github.com/thelinuxchoice/spykey)
 - [WindowsExploits](https://github.com/WindowsExploits/Exploits)
 
 ### Phishing:
@@ -37,13 +34,12 @@
 - [SocialPhish](https://github.com/xHak9x/SocialPhish)
 - [SocialFish](https://github.com/UndeadSec/SocialFish)
 - [Phisher-man](https://github.com/FDX100/Phisher-man)
-- [Shellphish](https://github.com/thelinuxchoice/shellphish)
 - [Spectre](https://github.com/Pure-L0G1C/Spectre)
 - [Blackeye](https://github.com/An0nUD4Y/blackeye)
 - [PhEmail](https://github.com/Dionach/PhEmail)
 - [Weeman](https://github.com/evait-security/weeman)
-- [Zphisher](https://github.com/htr-tech/zphisher.git)
-- [Lockphish](https://github.com/thelinuxchoice/lockphish.git)
+- [Zphisher](https://github.com/htr-tech/zphisher)
+- [AIOPhish](https://github.com/DeepSociety/AIOPhish)
 
 ### Wifi Attacks:
 
@@ -59,27 +55,30 @@
 - [Netool-toolkit](https://github.com/r00t-3xp10it/netool-toolkit)
 - [Dracnmap](https://github.com/Screetsec/Dracnmap)
 - [Airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon)
-- [Routersploit](https://www.github.com/threat9/routersploit)
+- [Routersploit](https://github.com/threat9/routersploit)
 - [Eaphammer](https://github.com/s0lst1c3/eaphammer)
 - [VMR-MDK](https://github.com/chunkingz/VMR-MDK-K2-2017R-012x4)
-- [FakeAP](https://github.com/thelinuxchoice/fakeap)
 - [Wirespy](https://github.com/aress31/wirespy)
 - [Wireshark](https://www.wireshark.org)
 - [SniffAir](https://github.com/Tylous/SniffAir)
 - [Wifijammer](https://github.com/DanMcInerney/wifijammer)
+- [KawaiiDeauther](https://github.com/aryanrtm/KawaiiDeauther)
 
 ### Passwords Attacks:
 
 - [Cupp](https://github.com/Mebus/cupp)
 - [Facebooker](https://github.com/FakeFBI/Facebooker)
-- [Instainsane](https://github.com/thelinuxchoice/instainsane)
 - [BluForce-FB](https://github.com/AngelSecurityTeam/BluForce-FB)
 - [Brut3k1t](https://github.com/ex0dus-0x/brut3k1t)
 - [SocialBox](https://github.com/TunisianEagles/SocialBox)
-- [Crunch](https://github.com/crunchsec/crunch)
 - [JohnTheRipper](https://github.com/magnumripper/JohnTheRipper)
 - [Hashcat](https://github.com/hashcat/hashcat)
-- [BruteDum](https://github.com/GitHackTools/BruteDum.git)
+- [BruteDum](https://github.com/GitHackTools/BruteDum)
+- [Facebash](https://github.com/thelinuxchoice/facebash)
+- [Brutespray](https://github.com/x90skysn3k/brutespray)
+- [PUPI](https://github.com/mIcHyAmRaNe/PUPI)
+- [B4r-brute](https://github.com/b4rc0d37/b4r-brute)
+- [Fb-hack](https://github.com/mirzaaltaf/fb-hack)
 
 ### Web Attacks:
 
@@ -97,6 +96,8 @@
 - [Dirsearch](https://github.com/maurosoria/dirsearch)
 - [XSStrike](https://github.com/s0md3v/XSStrike)
 - [LinksF1nd3r](https://github.com/ihebski/LinksF1nd3r)
+- [D-Tech](https://github.com/bibortone/D-Tech)
+ -[Phpsploit](https://github.com/nil0x42/phpsploit)
 
 ### Spoofing:
 
@@ -104,9 +105,8 @@
 - [Ip_spoofing](https://github.com/pankajmore/ip_spoofing)
 - [ArpSpoof](https://github.com/ickerwx/arpspoof)
 - [DerpNSpoof](https://github.com/Trackbool/DerpNSpoof)
-- [Email-spoof](https://github.com/MatiasTilerias/email-spoof)
 - [DrSpoof](https://github.com/Enixes/Dr.Spoof)
-- [Smslistattack](https://github.com/Firestormhacker/smslistattack)
+- [GOD-KILLER](https://github.com/FDX100/GOD-KILLER)
 
 ### Information Gathering:
 
@@ -121,15 +121,15 @@
 - [TheHarvester](https://github.com/alanchavez88/theHarvester) 
 - [PhoneInfoga](https://github.com/sundowndev/PhoneInfoga) 
 - [Gasmask](https://github.com/twelvesec/gasmask) 
-- [Infog](https://github.com/thelinuxchoice/infog) 
-- [Locator](https://github.com/thelinuxchoice/locator) 
-- [Userrecon](https://github.com/thelinuxchoice/userrecon) 
-- [Excuseme](https://github.com/thelinuxchoice/excuseme) 
 - [URLextractor](https://github.com/eschultze/URLextractor) 
 - [Devploit](https://github.com/GhettoCole/Devploit) 
 - [ReconDog](https://github.com/s0md3v/ReconDog) 
 - [Webkiller](https://github.com/ultrasecurity/webkiller) 
 - [Quasar](https://github.com/Cyb0r9/quasar) 
+- [Info-instagram-iphone](https://github.com/0xfff0800/info-instagram-iphone)
+- [UserScan](https://github.com/JoeTech-Studio/UserScan)
+- [XCTR-Hacking-Tools](https://github.com/capture0x/XCTR-Hacking-Tools)
+- [DeadTrap](https://github.com/Chr0m0s0m3s/DeadTrap)
 
 ### Others:
 
@@ -138,16 +138,12 @@
 - [Fcrackzip](https://github.com/hyc/fcrackzip)
 - [QRLJacking](https://github.com/OWASP/QRLJacking)
 - [Lazy](https://github.com/arismelachroinos/lscript)
-- [Blue-Thunder-IP-Locator](https://github.com/the-shadowbrokers/Blue-Thunder-IP-Locator)
 - [HTB-INVITE](https://github.com/nycto-hackerone/HTB-INVITE)
 - [Ngrok](https://ngrok.com)
-- [TheChoice](https://github.com/thelinuxchoice/thechoice)
-- [Ransomware](http://www.mediafire.com/file/3g7xyzt1611z8zl/ransomware.rar/file)
 - [Bluepot](https://github.com/andrewmichaelsmith/bluepot)
 - [Social-engineer-toolkit](https://github.com/trustedsec/social-engineer-toolkit)
 - [A2sv](https://github.com/hahwul/a2sv)
 - [4nonimizer](https://github.com/Hackplayers/4nonimizer)
-- [Saycheese](https://github.com/thelinuxchoice/saycheese)
 - [Easysploit](https://github.com/KALILINUXTRICKSYT/easysploit)
 - [NXcrypt](https://github.com/Hadi999/NXcrypt)
 - [KnockMail](https://github.com/4w4k3/KnockMail)
@@ -156,6 +152,14 @@
 - [ZLogger](https://github.com/z00z/ZLogger)
 - [Xerosploit](https://github.com/LionSec/xerosploit)
 - [Slacksec](https://github.com/franc205/Slacksec)
+- [KatanaFramework](https://github.com/PowerScript/KatanaFramework)
+- [Z0172CK-Tools](https://github.com/Erik172/Z0172CK-Tools)
+- [Cam-Hack](https://github.com/Hack-The-World-With-Tech/Cam-Hack)
+- [Onex](https://github.com/rajkumardusad/onex)
+- [Ransom0](https://github.com/HugoLB0/Ransom0)
+- [Morpheus](https://github.com/r00t-3xp10it/morpheus)
+- [FBTOOL](https://github.com/mkdirlove/FBTOOL)
+- [Venom](https://github.com/r00t-3xp10it/venom)
 
 ### Backdoors with msfvenom:
 

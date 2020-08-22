@@ -98,19 +98,17 @@ def options():
 	option = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 	if option == 1:
 		os.system('clear')
-		print '======={0}Tool{1}==================================={0}Information{1}================================'.format(GREEN, DEFAULT)
-		print '{0}01){1} Backdoor-apk      {2}Agrega una puerta trasera a cualquier archivo APK.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}02){1} Evil-Droid        {2}Genera puertas traseras para Android.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}03){1} Spade             {2}Script en python que genera una puerta trasera a cualquier APK.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}04){1} AhMyth            {2}Herramienta de administración remota de Android.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}05){1} Andspoilt         {2}Ejecuta exploits interactivos de Android en Linux.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}06){1} Kwetza            {2}Inyecta malware en aplicaciones android existentes.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}07){1} Termux            {2}Emulador de terminal Android basada en Linux.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}08){1} DroidTracker      {2}Genera una apk maliciosa para rastrear la ubicación en tiempo real.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}09){1} Droidcam          {2}Genera una apk maliciosa para tomar fotos desde la camara.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}10){1} Crydroid          {2}Android Crypter / Decrypter App Generator.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}11){1} KeyDroid          {2}Android Keylogger + Reverse Shell.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}12){1} Android-Exploits  {2}Coleccion de exploits y hacks Android.'.format(WHITE, YELLOW, DEFAULT)
+		print '========={0}Tool{1}==================================={0}Information{1}================================'.format(GREEN, DEFAULT)
+		print '{0}01){1} Backdoor-apk        {2}Agrega una puerta trasera a cualquier archivo APK.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}02){1} Evil-Droid          {2}Genera puertas traseras para Android.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}03){1} Spade               {2}Script en python que genera una puerta trasera a cualquier APK.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}04){1} AhMyth              {2}Herramienta de administración remota de Android.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}05){1} Andspoilt           {2}Ejecuta exploits interactivos de Android en Linux.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}06){1} Kwetza              {2}Inyecta malware en aplicaciones android existentes.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}07){1} Termux              {2}Emulador de terminal Android basada en Linux.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}08){1} Android-Exploits    {2}Coleccion de exploits y hacks Android.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}09){1} Grabcam             {2}Permite piratear la cámara de nuestras victimas con una página falsa.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}10){1} Androidpatternlock  {2}Permite obtener el patrón de bloqueo en dispositivos Android.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -141,19 +139,13 @@ def options():
 			kitools.Termux()
 
 		elif tool == 8:
-			kitools.DroidTracker()
+			kitools.AndroidExploits()
 
 		elif tool == 9:
-			kitools.Droidcam()
+			kitools.Grabcam()
 
 		elif tool == 10:
-			kitools.Crydroid()
-
-		elif tool == 11:
-			kitools.KeyDroid()
-
-		elif tool == 12:
-			kitools.AndroidExploits()
+			kitools.AndroidPatternLock()
 		
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
@@ -176,8 +168,7 @@ def options():
 		print '{0}10){1} Eternal_scanner         {2}Escáner para el exploit Eternal Blue y Eternal Romance.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}11){1} EternalblueDoublepulsar {2}Módulo de Metasploit para explotar la vulnerabilidad Eternalblue-Doublepulsar.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}12){1} EternalBlueWinXPWin10   {2}Modulo de Metasploit EternalBlue desde Windows XP SP2 hasta Windows 10 Pro.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}13){1} Spykey                  {2}Keylogger y Reverse Shell (cmd.exe).'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}14){1} Windows-Exploits        {2}Coleccion de Exploits Windows.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}13){1} Windows-Exploits        {2}Coleccion de Exploits Windows.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -223,9 +214,6 @@ def options():
 			kitools.MS17010EternalBlueWinXPWin10()
 
 		elif tool == 13:
-			kitools.Spykey()
-
-		elif tool == 14:
 			kitools.WindowsExploits()
 
 		else:
@@ -242,13 +230,12 @@ def options():
 		print '{0}03){1} SocialPhish  {2}Herramienta phishing con 32 plantillas + 1 personalizable.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}04){1} SocialFish   {2}Herramienta educativa de phishing.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}05){1} PhisherMan   {2}Herramienta phishing con 17 plantillas y funcional con ngrok.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}06){1} Shellphish   {2}Generador de phishing para 18 redes sociales.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}07){1} Spectre      {2}Admite ataques de phishing casi con cualquier sitio web.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}08){1} Blackeye     {2}Herramienta de phishing con 38 sitios web disponibles.'.format(WHITE, YELLOW, DEFAULT)		
-		print '{0}09){1} PhEmail      {2}Automatiza procesos de envío de correos electrónicos de phishing.'.format(WHITE, YELLOW, DEFAULT)		
-		print '{0}10){1} Weeman       {2}Servidor HTTP para phishing.'.format(WHITE, YELLOW, DEFAULT)				
-		print '{0}11){1} Zphisher     {2}Herramienta de phishing automatizada.'.format(WHITE, YELLOW, DEFAULT)				
-		print '{0}12){1} Lockphish    {2}Obtiene mediante phishing credenciales de Windows, PIN de Android y contraseña de iPhone.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}06){1} Spectre      {2}Admite ataques de phishing casi con cualquier sitio web.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}07){1} Blackeye     {2}Herramienta de phishing con 38 sitios web disponibles.'.format(WHITE, YELLOW, DEFAULT)		
+		print '{0}08){1} PhEmail      {2}Automatiza procesos de envío de correos electrónicos de phishing.'.format(WHITE, YELLOW, DEFAULT)		
+		print '{0}09){1} Weeman       {2}Servidor HTTP para phishing.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}10){1} Zphisher     {2}Herramienta de phishing automatizada.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}11){1} AIOPhish     {2}Herramienta phishing con diferentes opciones.'.format(WHITE, YELLOW, DEFAULT)				
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -273,25 +260,22 @@ def options():
 			kitools.PhisherMan()
 
 		elif tool == 6:
-			kitools.Shellphish()
-
-		elif tool == 7:
 			kitools.Spectre()
 
-		elif tool == 8:
+		elif tool == 7:
 			kitools.Blackeye()
 
-		elif tool == 9:
+		elif tool == 8:
 			kitools.PhEmail()
 
-		elif tool == 10:
+		elif tool == 9:
 			kitools.Weeman()
 
-		elif tool == 11:
+		elif tool == 10:
 			kitools.Zphisher()
 
-		elif tool == 12:
-			kitools.Lockphish()
+		elif tool == 11:
+			kitools.AIOPhish()
 
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
@@ -317,11 +301,11 @@ def options():
 		print '{0}13){1} Routersploit   {2}Se compone de varios módulos que ayudan a operar pruebas de penetracion.'.format(WHITE, YELLOW, DEFAULT)				
 		print '{0}14){1} Eaphammer      {2}Kit para realizar ataques dirigidos contra redes WPA2-Enterprise.'.format(WHITE, YELLOW, DEFAULT)				
 		print '{0}15){1} VMR-MDK        {2}Script para descifrar redes inalámbricas WPS.'.format(WHITE, YELLOW, DEFAULT)				
-		print '{0}16){1} FakeAP         {2}Acces point falso para realizar Evil Twin Attack.'.format(WHITE, YELLOW, DEFAULT)						
-		print '{0}17){1} Wirespy        {2}Permite configurar honeypots rápidos para llevar a cabo MITMA.'.format(WHITE, YELLOW, DEFAULT)						
-		print '{0}18){1} Wireshark      {2}Analizador de redes que te permite capturar y navegar en el trafico de una red.'.format(WHITE, YELLOW, DEFAULT)						
-		print '{0}19){1} SniffAir       {2}Framework para pentesting inalámbrico.'.format(WHITE, YELLOW, DEFAULT)						
-		print '{0}20){1} WifiJammer     {2}Atasca continuamente todos los clientes/enrutadores wifi.'.format(WHITE, YELLOW, DEFAULT)						
+		print '{0}16){1} Wirespy        {2}Permite configurar honeypots rápidos para llevar a cabo MITMA.'.format(WHITE, YELLOW, DEFAULT)						
+		print '{0}17){1} Wireshark      {2}Analizador de redes que te permite capturar y navegar en el trafico de una red.'.format(WHITE, YELLOW, DEFAULT)						
+		print '{0}18){1} SniffAir       {2}Framework para pentesting inalámbrico.'.format(WHITE, YELLOW, DEFAULT)						
+		print '{0}19){1} WifiJammer     {2}Atasca continuamente todos los clientes/enrutadores wifi.'.format(WHITE, YELLOW, DEFAULT)						
+		print '{0}20){1} KawaiiDeauther {2}Bloquea todos los clientes/enrutadores wifi.'.format(WHITE, YELLOW, DEFAULT)						
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT)) 
@@ -376,19 +360,19 @@ def options():
 			kitools.VMRMDK()
 
 		elif tool == 16:
-			kitools.FakeAP()
-
-		elif tool == 17:
 			kitools.Wirespy()
 
-		elif tool == 18:
+		elif tool == 17:
 			kitools.Wireshark()
 
-		elif tool == 19:
+		elif tool == 18:
 			kitools.SniffAir()
 
-		elif tool == 20:
+		elif tool == 19:
 			kitools.WifiJammer()
+
+		elif tool == 20:
+			kitools.KawaiiDeauther()
 
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
@@ -401,16 +385,17 @@ def options():
 		print '======={0}Tool{1}====================================={0}Information{1}================================'.format(GREEN, DEFAULT)
 		print '{0}01){1} Cupp            {2}Permite crear diccionarios específicamente para una persona.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}02){1} Facebooker      {2}Script en perl que realiza fuerza bruta contra Facebook.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}03){1} InstaInsane     {2}Realiza fuerza bruta contra instagram a 1000 contraseñas/min.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}04){1} BluForce-FB     {2}Ataques de fuerza bruta en cuentas de Facebook.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}05){1} Brut3k1t        {2}Ataques de fuerza bruta contra una multitud de protocolos y servicios.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}06){1} SocialBox       {2}Framework de fuerza bruta [Facebook, Gmail, Instagram, Twitter].'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}07){1} Crunch          {2}herramienta de permutacion el cual nos ayuda a crear diccionarios.'.format(WHITE, YELLOW, DEFAULT)		
-		print '{0}08){1} John The Ripper {2}Programa que aplica fuerza bruta para descifrar contraseñas.'.format(WHITE, YELLOW, DEFAULT)		
-		print '{0}09){1} Hashcat         {2}Herramienta para la recuperación de contraseñas.'.format(WHITE, YELLOW, DEFAULT)				
-		print '{0}10){1} Brutedum        {2}Ataca SSH, FTP, Telnet, PostgreSQL, RDP, VNC con Hydra, Medusa y Ncrack.'.format(WHITE, YELLOW, DEFAULT)				
-		print '{0}11){1} Facebash        {2}Ataque de fuerza bruta para facebook en shellscript usando TOR.'.format(WHITE, YELLOW, DEFAULT)				
-		print '{0}12){1} Brutespray      {2}Automatiza el escaneo de puertos y realiza ataques por fuerza bruta.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}03){1} BluForce-FB     {2}Ataques de fuerza bruta en cuentas de Facebook.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}04){1} Brut3k1t        {2}Ataques de fuerza bruta contra una multitud de protocolos y servicios.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}05){1} SocialBox       {2}Framework de fuerza bruta [Facebook, Gmail, Instagram, Twitter].'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}06){1} John The Ripper {2}Programa que aplica fuerza bruta para descifrar contraseñas.'.format(WHITE, YELLOW, DEFAULT)		
+		print '{0}07){1} Hashcat         {2}Herramienta para la recuperación de contraseñas.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}08){1} Brutedum        {2}Ataca SSH, FTP, Telnet, PostgreSQL, RDP, VNC con Hydra, Medusa y Ncrack.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}09){1} Facebash        {2}Ataque de fuerza bruta para facebook en shellscript usando TOR.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}10){1} Brutespray      {2}Automatiza el escaneo de puertos y realiza ataques por fuerza bruta.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}11){1} Pupi            {2}Pupi es un generador de contraseñas simple a partir de información personal.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}12){1} B4r-brute       {2}Script para crackear cuentas de Facebook usando la ID del usuario.'.format(WHITE, YELLOW, DEFAULT)				
+		print '{0}13){1} Fb-Hack         {2}Script de recuperación y pirateo de contraseña de Facebook.'.format(WHITE, YELLOW, DEFAULT)				
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -426,34 +411,37 @@ def options():
 			kitools.Facebooker()
 
 		elif tool == 3:
-			kitools.InstaInsane()
-
-		elif tool == 4:
 			kitools.BluForceFB()
 
-		elif tool == 5:
+		elif tool == 4:
 			kitools.Brut3k1t()
 
-		elif tool == 6:
+		elif tool == 5:
 			kitools.SocialBox()
 
-		elif tool == 7:
-			kitools.Crunch()
-
-		elif tool == 8:
+		elif tool == 6:
 			kitools.JohnTheRipper()
 
-		elif tool == 9:
+		elif tool == 7:
 			kitools.Hashcat()
 
-		elif tool == 10:
+		elif tool == 8:
 			kitools.Brutedum()
 
-		elif tool == 11:
+		elif tool == 9:
 			kitools.Facebash()
 
-		elif tool == 12:
+		elif tool == 10:
 			kitools.Brutespray()
+
+		elif tool == 11:
+			kitools.Pupi()
+
+		elif tool == 12:
+			kitools.B4rbrute()
+
+		elif tool == 13:
+			kitools.FbHack()
 
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
@@ -478,6 +466,8 @@ def options():
 		print '{0}12){1} Dirsearch    {2}Diseñada para directorios y archivos de fuerza bruta en sitios web.'.format(WHITE, YELLOW, DEFAULT)					
 		print '{0}13){1} XSStrike     {2}El escáner XSS más avanzado.'.format(WHITE, YELLOW, DEFAULT)					
 		print '{0}14){1} LinksF1nd3r  {2}Extractor de componentes web.'.format(WHITE, YELLOW, DEFAULT)					
+		print '{0}15){1} D-TECT       {2}Herramienta moderna para realizar pentesting en sitios web.'.format(WHITE, YELLOW, DEFAULT)					
+		print '{0}16){1} Phpsploit    {2}Herramienta capaz de mantener el acceso a un servidor web comprometido.'.format(WHITE, YELLOW, DEFAULT)					
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -528,6 +518,12 @@ def options():
 		elif tool == 14:
 			kitools.LinksF1nd3r()
 
+		elif tool == 15:
+			kitools.DTECH()
+
+		elif tool == 16:
+			kitools.Phpsploit()
+
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
 			time.sleep(1.5)
@@ -542,7 +538,7 @@ def options():
 		print '{0}03){1} Arpspoof      {2}Ataque de falsificación de ARP utilizando sockets del kernel de Linux.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}04){1} DerpNSpoof    {2}Herramienta de suplantación de DNS simple.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}05){1} DrSpoof       {2}Herramienta para detectar y detener ataques ARP Spoofing en su red local.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}06){1} Smslistattack {2}Programa para anonimizar textos de spam, objetivos o listas de objetivos.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}06){1} GODKILLER     {2}SMS-BOMBER y SMS-SENDER.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -567,7 +563,7 @@ def options():
 			kitools.DrSpoof()
 
 		elif tool == 6:
-			kitools.Smslistattack()
+			kitools.GODKILLER()
 
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
@@ -577,27 +573,27 @@ def options():
 
 	elif option == 8:
 		os.system('clear')
-		print '========{0}Tool{1}========================================{0}Information{1}========================================'.format(GREEN, DEFAULT)
-		print '{0}01){1} NMAP          {2}Obtiene información de los host, puertos y servicios dentro de una red.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}02){1} Th3inspector  {2}Herramienta todo en uno para recopilar información.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}03){1} FBI           {2}Recopilación de información confidencial en cuentas de Facebook.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}04){1} Infoga        {2}Extrae información de cuentas de correo electrónico.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}05){1} Crips         {2}Obtiene información sobre direcciones IP, paginas web y registros DNS.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}06){1} BillCipher    {2}Recopilación de información para un sitio web o direccion IP.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}07){1} RED_HAWK      {2}Herramienta para recopilar información, escanear vulnerabilidades y rastreo.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}08){1} Recon-ng      {2}Herramienta precargada con gran cantidad de modulos para recopilar información.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}09){1} theHarvester  {2}Recopilación de correos electrónicos, nombres, subdominios, direcciones IP y URL.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}10){1} PhoneInfoga   {2}Obtiene información sobre numeros de telefono utilizando recursos gratuitos.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}11){1} Gasmask       {2}Herramienta de recopilación de información todo en uno.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}12){1} Infog         {2}Shellscript para realizar recopilación de información.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}13){1} Locator       {2}Geolocalizador, ip tracker e información del dispositivo por URL (Serveo y Ngrok).'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}14){1} Userrecon     {2}Localiza nombres de usuario en mas de 75 redes sociales.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}15){1} Excuseme      {2}Obtiene dirección IP e información del dispositivo por URL.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}16){1} URLextractor  {2}Recopilación de información y reconocimiento de sitios web.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}17){1} Devploit      {2}Busqueda de DNS, Whois, IP, GeoIP, subred, puertos, host, etc.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}18){1} ReconDog      {2}Herramienta todo en uno para recopilar información básica.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}19){1} Webkiller     {2}Kit de recopilación de información.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}20){1} Quasar        {2}Framework de recopilación de información.'.format(WHITE, YELLOW, DEFAULT)
+		print '========={0}Tool{1}========================================{0}Information{1}========================================'.format(GREEN, DEFAULT)
+		print '{0}01){1} NMAP           {2}Obtiene información de los host, puertos y servicios dentro de una red.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}02){1} Th3inspector   {2}Herramienta todo en uno para recopilar información.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}03){1} FBI            {2}Recopilación de información confidencial en cuentas de Facebook.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}04){1} Infoga         {2}Extrae información de cuentas de correo electrónico.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}05){1} Crips          {2}Obtiene información sobre direcciones IP, paginas web y registros DNS.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}06){1} BillCipher     {2}Recopilación de información para un sitio web o direccion IP.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}07){1} RED_HAWK       {2}Herramienta para recopilar información, escanear vulnerabilidades y rastreo.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}08){1} Recon-ng       {2}Herramienta precargada con gran cantidad de modulos para recopilar información.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}09){1} theHarvester   {2}Recopilación de correos electrónicos, nombres, subdominios, direcciones IP y URL.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}10){1} PhoneInfoga    {2}Obtiene información sobre numeros de telefono utilizando recursos gratuitos.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}11){1} Gasmask        {2}Herramienta de recopilación de información todo en uno.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}12){1} URLextractor   {2}Recopilación de información y reconocimiento de sitios web.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}13){1} Devploit       {2}Busqueda de DNS, Whois, IP, GeoIP, subred, puertos, host, etc.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}14){1} ReconDog       {2}Herramienta todo en uno para recopilar información básica.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}15){1} Webkiller      {2}Kit de recopilación de información.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}16){1} Quasar         {2}Framework de recopilación de información.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}17){1} Info-instagram {2}Permite extraer información de cuentas de instagram.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}18){1} UserScan       {2}Scanner de indentidad con el que podras buscar cuentas que tengan un username.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}19){1} XCTR-Hacking   {2}Herramientas todo en uno para la recopilación de información.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}20){1} DeadTrap       {2}Herramienta OSINT para rastrear huellas de un número de teléfono.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -637,34 +633,34 @@ def options():
 			kitools.PhoneInfoga()
 
 		elif tool == 11:
-			kitools.Gasmask()
+			kitools.Gasmask()		
 
 		elif tool == 12:
-			kitools.Infog()
-
-		elif tool == 13:
-			kitools.Locator()
-
-		elif tool == 14:
-			kitools.Userrecon()
-
-		elif tool == 15:
-			kitools.Excuseme()
-
-		elif tool == 16:
 			kitools.URLextractor()
 
-		elif tool == 17:
+		elif tool == 13:
 			kitools.Devploit()
 
-		elif tool == 18:
+		elif tool == 14:
 			kitools.ReconDog()
 
-		elif tool == 19:
+		elif tool == 15:
 			kitools.Webkiller()
 
-		elif tool == 20:
+		elif tool == 16:
 			kitools.Quasar()
+
+		elif tool == 17:
+			kitools.InfoInstagramIphone()
+
+		elif tool == 18:
+			kitools.UserScan()
+
+		elif tool == 19:
+			kitools.XCTRHackingTools()
+
+		elif tool == 20:
+			kitools.DeadTrap()
 
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
@@ -680,27 +676,28 @@ def options():
 		print '{0}03){1} Fcrackzip               {2}Script para descifrar archivos ZIP encriptados por contraseña.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}04){1} QRLjacker               {2}Vector de ataque capaz de secuestrar sesiones que dependen de algun codigo QR.'.format(WHITE, YELLOW, DEFAULT)
 		print '{0}05){1} Lazy                    {2}Script que automatiza muchos procesos de penetracion.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}06){1} BlueThunderIPLocator    {2}Proporciona información sobre una direccion IP o HOST.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}07){1} HTBINVITE               {2}Generador de codigos de invitacion para HackTheBox.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}08){1} Ngrok                   {2}Proxy inverso que crea un túnel seguro desde un punto público a un servicio local.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}09){1} TheChoice               {2}Colección de 14 herramientas de hackers.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}10){1} Ransomware              {2}Herramienta que encripta los archivos de un directorio especifico en Linux.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}11){1} Bluepot                 {2}Honeypot Bluetooth escrito en Java.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}12){1} Setoolkit               {2}Marco de prueba de penetración de código abierto diseñado para la ingeniería social.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}13){1} A2sv                    {2}Vulnerabilidad de escaneo automático a SSL.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}14){1} 4nonimizer              {2}Anonimiza la IP pública utilizada para navegar por Internet mediante proveedores VPN.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}15){1} Saycheese               {2}Captura fotos de la cámara web del objetivo por medio de un enlace.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}16){1} Easysploit              {2}Automatización de Metasploit.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}17){1} NXcrypt                 {2}Inyección de malware en archivos con formato python.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}18){1} KnockMail               {2}Verifica si existe un correo electronico'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}19){1} RkHunter                {2}Herramienta de Unix que detecta los rootkits, puertas traseras y exploits locales.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}20){1} HeraKeylogger           {2}Chrome Keylogger Extension.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}21){1} ZLogger                 {2}Keylogger remoto persistente para Windows y Linux.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}22){1} Xerosploit              {2}Kit de herramientas de pruebas de penetración.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}23){1} Slacksec                {2}Kit basico de herramientas hacking.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}24){1} Katana-Framework        {2}Unifica distintas herramientas funcionales para pruebas de penetración.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}25){1} Sayhello                {2}Captura audio del objetivo usando un enlace.'.format(WHITE, YELLOW, DEFAULT)
-		print '{0}26){1} Ddostor                 {2}DDoS con herramienta Multi-tor y Torshammer.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}06){1} HTBINVITE               {2}Generador de codigos de invitacion para HackTheBox.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}07){1} Ngrok                   {2}Proxy inverso que crea un túnel seguro desde un punto público a un servicio local.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}08){1} Bluepot                 {2}Honeypot Bluetooth escrito en Java.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}09){1} Setoolkit               {2}Marco de prueba de penetración de código abierto diseñado para la ingeniería social.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}10){1} A2sv                    {2}Vulnerabilidad de escaneo automático a SSL.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}11){1} 4nonimizer              {2}Anonimiza la IP pública utilizada para navegar por Internet mediante proveedores VPN.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}12){1} Easysploit              {2}Automatización de Metasploit.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}13){1} NXcrypt                 {2}Inyección de malware en archivos con formato python.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}14){1} KnockMail               {2}Verifica si existe un correo electronico'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}15){1} RkHunter                {2}Herramienta de Unix que detecta los rootkits, puertas traseras y exploits locales.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}16){1} HeraKeylogger           {2}Chrome Keylogger Extension.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}17){1} ZLogger                 {2}Keylogger remoto persistente para Windows y Linux.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}18){1} Xerosploit              {2}Kit de herramientas de pruebas de penetración.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}19){1} Slacksec                {2}Kit basico de herramientas hacking.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}20){1} Katana-Framework        {2}Unifica distintas herramientas funcionales para pruebas de penetración.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}21){1} Z0172CK-Tools           {2}Hacking Tools Z0172CK.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}22){1} Cam-Hack                {2}Método avanzado para piratear la cámara de un móvil o una PC con un enlace.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}23){1} Onex                    {2}Biblioteca de herramientas para hackers.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}24){1} Ransom0                 {2}Ransomware diseñado para buscar y cifrar datos de usuarios.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}25){1} Morpheus                {2}Suite de Man-In-The-Middle que permite a los usuarios manipular tcp/udp.'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}26){1} FBTOOL                  {2}Kit de herramientas hacking de facebook'.format(WHITE, YELLOW, DEFAULT)
+		print '{0}27){1} Venom                   {2}Generador/compilador/controlador de shellcode (metasploit).'.format(WHITE, YELLOW, DEFAULT)
 		print '{0} 0){1} Back'.format(WHITE, YELLOW)	
 
 		tool = input("{0}KitHack >> {1}".format(RED, DEFAULT))
@@ -725,67 +722,70 @@ def options():
 			kitools.Lazy()
 
 		elif tool == 6:
-			kitools.BlueThunderIPLocator()
-
-		elif tool == 7:
 			kitools.HTBINVITE()
 
-		elif tool == 8:
+		elif tool == 7:
 			kitools.Ngrok()
 
-		elif tool == 9:
-			kitools.TheChoice()
-
-		elif tool == 10:
-			kitools.Ransomware()
-
-		elif tool == 11:
+		elif tool == 8:
 			kitools.Bluepot()
 
-		elif tool == 12:
+		elif tool == 9:
 			kitools.Setoolkit()
 
-		elif tool == 13:
+		elif tool == 10:
 			kitools.A2sv()
 
-		elif tool == 14:
+		elif tool == 11:
 			kitools.Fornonimizer()
 
-		elif tool == 15:
-			kitools.Saycheese()
-
-		elif tool == 16:
+		elif tool == 12:
 			kitools.Easysploit()
 
-		elif tool == 17:
+		elif tool == 13:
 			kitools.NXcrypt()
 
-		elif tool == 18:
+		elif tool == 14:
 			kitools.KnockMail()
 
-		elif tool == 19:
+		elif tool == 15:
 			kitools.RkHunter()
 
-		elif tool == 20:
+		elif tool == 16:
 			kitools.HeraKeylogger()
 
-		elif tool == 21:
+		elif tool == 17:
 			kitools.ZLogger()
 
-		elif tool == 22:
+		elif tool == 18:
 			kitools.Xerosploit()
 
-		elif tool == 23:
+		elif tool == 19:
 			kitools.Slacksec()
 
-		elif tool == 24:
+		elif tool == 20:
 			kitools.Katana()
 
+		elif tool == 21:
+			kitools.Z0172CKTools()
+
+		elif tool == 22:
+			kitools.CamHack()
+
+		elif tool == 23:
+			kitools.Onex()
+
+		elif tool == 24:
+			kitools.Ransom0()
+
 		elif tool == 25:
-			kitools.Sayhello()
+			kitools.Morpheus()
 
 		elif tool == 26:
-			kitools.DdosTor()
+			kitools.FBTOOL()
+
+		elif tool == 27:
+			kitools.Venom()
 
 		else:
 			print("\n{}[X] OPCION INVALIDA".format(RED))
