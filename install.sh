@@ -278,6 +278,7 @@ pip2 install pathlib
 pip2 install python-zenity
 pip2 install pgrep
 apt-get install libatk-adaptor libgail-common
+sudo apt-get purge fcitx-module-dbus
 apt-get install python-gtk2-dev
 
 # Shortcut for kithack
