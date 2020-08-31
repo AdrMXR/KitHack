@@ -188,7 +188,6 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
 - Ironpuerquito - Diseñador 
 - C1b0rk - Tester 
-- Erik172 - Programador
 
 ## Licencia:
 
