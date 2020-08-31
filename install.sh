@@ -147,19 +147,6 @@ echo -e "\e[0;33m[!][Installing Pwgen...]"
 xterm -T "INSTALLER PWGEN" -geometry 100x30 -e "sudo apt-get install pwgen"
 fi
 
-# Check if pip2 exists
-which pip2 > /dev/null 2>&1
-if [ "$?" -eq "0" ]; then
-echo -e "\033[92m[✔][Pip2]...........................[ OK ]"
-sleep 1.5
-else
-echo -e "\e[1;31m[x][Pip2]........................[ NOT FOUND ]"
-sleep 1.5
-echo -e "\e[0;33m[!][Installing Pip2...]"
-xterm -T "INSTALLER PIP2" -geometry 100x30 -e "wget https://bootstrap.pypa.io/get-pip.py && sudo python2.7 get-pip.py"
-rm get-pip.py
-fi
-
 # Configuring folders
 echo -e "\e[0;33m"
 echo -n [*] Configurando carpetas...= ;
@@ -272,11 +259,12 @@ echo -n [*] Instalando requerimientos de python...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 echo ""
 echo -e "\033[92m"
-pip2 install py-getch 
-apt-get install python-tk
-pip2 install pathlib
-pip2 install python-zenity
-pip2 install pgrep
+pip3 install requests
+pip3 install py-getch
+apt-get install python3-tk
+pip3 install pathlib
+pip3 install zenipy
+pip3 install pgrep
 apt-get install libatk-adaptor libgail-common
 apt-get install python-gtk2-dev
 
