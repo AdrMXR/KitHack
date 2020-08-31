@@ -283,7 +283,7 @@ case "$option" in
 y|Y)
 lnk=$?
 if [ "$lnk" ==  "0" ];then
-run="cd $path && sudo python KitHack.py"
+run="cd $path && sudo python3 KitHack.py"
 touch /usr/local/bin/kithack
 echo "#!/bin/bash" > /usr/local/bin/kithack
 echo "$run" >> /usr/local/bin/kithack
