@@ -55,7 +55,7 @@ def run_ngrok():
         while True:
             try:
                 token = entry_token(title="SET NGROK AUTHTOKEN", text="Register at https://ngrok.com\n", width=450, height=140)        
-                if len(token) != 49:
+                if len(token) in range(40, 50):
                     Error(text="Invalid token, please try again")
                     continue
                 else:
