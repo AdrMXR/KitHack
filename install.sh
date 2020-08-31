@@ -96,7 +96,7 @@ else
 echo -e "\e[1;31m[x][Apktool].....................[ NOT FOUND ]"
 sleep 1.5
 echo -e "\e[0;33m[!][Installing Apktool...]"
-xterm -T "INSTALLER APKTOOL" -geometry 100x30 -e "echo -e "" && echo [*] Añadiendo Apktool... && sleep 2 && echo -e "" && cp apktoolv2.4.0/apktool /usr/local/bin/apktool && echo [✔]/usr/local/bin/apktool && sleep 2 && cp apktoolv2.4.0/apktool.jar /usr/local/bin/apktool.jar && echo [✔]/usr/local/bin/apktool.jar && echo "" && sleep 2 && echo Instalación completa. && sleep 1"
+xterm -T "INSTALLER APKTOOL" -geometry 100x30 -e "echo -e "" && echo [*] Añadiendo Apktool... && sleep 2 && echo -e "" && cp apktoolv2.4.0/apktool /usr/local/bin/apktool && echo [✔]/usr/local/bin/apktool && sleep 2 && cp apktoolv2.4.0/apktool.jar /usr/local/bin/apktool.jar && echo [✔]/usr/local/bin/apktool.jar && chmod +x /usr/local/bin/apktool* && echo "" && sleep 2 && echo Instalación completa. && sleep 1"
 fi
 
 # Check if aapt exists
