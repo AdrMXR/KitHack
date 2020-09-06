@@ -108,7 +108,7 @@ $ sudo bash update.sh
 * pathlib
 * python-zenity
 * pgrep
-* Cuenta autentificada de Ngrok 
+* Ngrok authtoken
 
 ## Novedades:
 
