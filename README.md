@@ -101,13 +101,14 @@ $ sudo bash update.sh
 * aapt
 * jarsigner
 * zipalign 
+* requests
 * pwgen
 * py-getch
 * python-tk
 * pathlib
 * python-zenity
 * pgrep
-* Cuenta autentificada de Ngrok 
+* Ngrok authtoken 
 
 ## Novedades:
 
