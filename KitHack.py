@@ -4,13 +4,13 @@
 # Written by: Adrian Guillermo
 # Facebook: https://facebook.com/adrian.guillermo.22
 # Github: https://github.com/AdrMXR
-
 import os
 import subprocess
 import sys
 import time
 from sys import exit
-from tkinter import Tk, filedialog
+from tkinter import filedialog
+from tkinter import Tk
 
 import requests
 from getch import pause
