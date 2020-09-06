@@ -9,7 +9,7 @@
 
 <p align="center">
 <a href=""><img title="System" src="https://img.shields.io/badge/Supported%20OS-Linux-orange?style=for-the-badge&logo=linux"></a>
-<a href=""><img title="Python" src="https://img.shields.io/badge/Python-3.7-yellow?style=for-the-badge&logo=python"></a>
+<a href=""><img title="Python" src="https://img.shields.io/badge/Python-2.7|3.x-yellow?style=for-the-badge&logo=python"></a>
 <a href=""><img title="Lincencia" src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge&logo="></a>
 <a href="https://www.paypal.me/AdrMXR0"><img title="Paypal" src="https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=paypal"></a>
 </p>
@@ -35,40 +35,60 @@
 | Arch Linux   | En desarrollo |
 | Termux       | En desarrollo |
 
-## Instalación:
+## Instalación (Python 2.7):
 
-```
-sudo apt update
+```bash
+# Actualice su lista de paquetes 
+$ sudo apt update
+
+# Instale python2.7
+$ sudo apt install python2.7  
+
+# Clone el repositorio
+$ git clone https://github.com/AdrMXR/KitHack.git
+
+# Entre al repositorio
+$ cd KitHack
+
+# Instale KitHack
+$ sudo bash install.sh 
+
+# Inicie KitHack
+$ sudo python KitHack.py
+
+# También puede ejecutarla desde el atajo
+$ kithack
+
+# Cuando desee actualizar ejecute
+$ sudo bash update.sh
 ```
 
-```
-sudo apt install python3 python3-pip  
-```
+## Instalación (Python 3.x): 
 
-```
-git clone https://github.com/AdrMXR/KitHack.git
-```
+```bash
+# Actualice su lista de paquetes
+$ sudo apt update
 
-```
-cd KitHack
-```
+# Instale python3 python3-pip
+$ sudo apt install python3 python3-pip
 
-```
-sudo bash install.sh 
-```
+# Clone el repositorio de la rama dev
+$ git clone --branch dev https://github.com/AdrMXR/KitHack.git
 
-```
-sudo python KitHack.py
-```
+# Entre al repositorio
+$ cd KitHack
 
-***Si acepta poder ejecutar KitHack desde cualquier lugar de su terminal, simplemente escriba:***
-```
-kithack
-```
- 
-***Si desea actualizar en un futuro ejecute:***
-```
-sudo bash update.sh
+# Instale KitHack
+$ sudo bash install.sh
+
+# Inicie KitHack
+$ sudo python3 KitHack.py
+
+# También puede ejecutarla desde el atajo
+$ kithack
+
+# Cuando desee actualizar ejecute
+$ sudo bash update.sh
 ```
 
 ## Dependencias:
@@ -82,13 +102,12 @@ sudo bash update.sh
 * jarsigner
 * zipalign 
 * pwgen
-* requests
 * py-getch
 * python-tk
 * pathlib
 * python-zenity
 * pgrep
-* authtoken ngrok
+* Cuenta autentificada de Ngrok 
 
 ## Novedades:
 
@@ -105,7 +124,7 @@ sudo bash update.sh
 - Kithack nos proporciona la opción de poder infectar una APK original y certificarla para que sea menos detectable. Cabe destacar que no todas las aplicaciones son vulnerables, aplicaciones como Facebook, WhatsApp, Instagram y similares tienen los suficientes mecanismos de seguridad para evitar este tipo de infección de malware. Nosotros te sugerimos descargar las aplicaciones directamente de [apkpure](https://apkpure.com) o similares a esta.
 
 **5) Generación de enlaces tcp mediante Ngrok para conexiones publicas (puerto 443 por default).**
-- Ahora también puedes trabajar con [ngrok](https://ngrok.com) para realizar ataques fuera de tu red sin necesidad de abrir puertos. También se ha automatizado la validación de tu [authtoken](https://ngrok.com/docs#getting-started-authtoken), ya que en caso de no tenerlo configurado, kithack automaticamente te solicita ingresarlo para generar correctamente el enlace tcp. El archivo de configuración ```ngrok.yml``` ya no será validado en los directorios de inicio (home path), ahora se almacenará en ```KitHack/.config``` de manera predeterminada.
+- Ahora también puedes trabajar con [ngrok](https://ngrok.com) para realizar ataques fuera de tu red sin necesidad de abrir puertos. También se ha automatizado la validación de tu [authtoken](https://ngrok.com/docs#getting-started-authtoken), ya que en caso de no tenerlo configurado, kithack automaticamente te solicita ingresarlo para generar correctamente el enlace tcp. El archivo de configuración ```ngrok.yml``` ya no será validado en los directorios de inicio (home path), ahora se almacenará en ```KitHack/.config``` de manera predeterminada. Si por alguna razon necesita que kithack le solicite nuevamente su authtoken escriba ```rm .config/ngrok.yml```
 
 **6) Automatización de Metasploit para ponerlo en escucha de nuevas sesiones.**
 - No tienes que perder tiempo en volver a setear las configuraciones de tu payload, kithack se encarga de poner en escucha a [metasploit](https://www.metasploit.com) de manera rapida.
@@ -188,6 +207,7 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
 - Ironpuerquito - Diseñador 
 - C1b0rk - Tester 
+- Erik172 - Programador
 
 ## Licencia:
 
