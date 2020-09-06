@@ -7,23 +7,17 @@
 
 BLUE, RED, WHITE, CYAN, DEFAULT, YELLOW, MAGENTA, GREEN, END, BOLD = '\33[94m', '\033[91m', '\33[97m', '\033[36m', '\033[0m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m', '\033[1m'
 
-try:
-	import sys
-	import os 
-	import subprocess
-	import time
-	import requests 
-	from sys import exit 
-	from getch import pause  
-	from tkinter import Tk, filedialog
-	sys.path.insert(0,"lib")
-	import kitools
-	from network import run_network
-	sys.dont_write_bytecode = True
-except ImportError:
-	os.system('clear')
-	print("{0}[!]{1} No tiene instalado KitHack, favor de ejecutar: {2}sudo bash install.sh".format(RED, DEFAULT, GREEN))
-	exit(0)
+
+import sys
+import os 
+import subprocess
+import time
+import requests 
+from sys import exit 
+from getch import pause  
+from tkinter import Tk, filedialog
+from lib import kitools
+from lib.network import run_network
 
 def check_connection(host='https://www.google.com'):
 	print("{}Verificando su conexion a internet...".format(GREEN))
