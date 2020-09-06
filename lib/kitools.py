@@ -41,18 +41,11 @@ def BackdoorApk():
             "cd tools && cd Android && git clone https://github.com/dana-at-cp/backdoor-apk.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/backdoor-apk".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/backdoor-apk"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -76,22 +69,16 @@ def EvilDroid():
             "cd tools && cd Android && git clone https://github.com/M4sc3r4n0/Evil-Droid.git && cd Evil-Droid && chmod +x evil-droid"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/Evil-Droid".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/Evil-Droid"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Android && cd Evil-Droid && ./evil-droid")
+            os.system(
+                "cd tools && cd Android && cd Evil-Droid && ./evil-droid")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -109,18 +96,11 @@ def Spade():
             "cd tools && cd Android && git clone https://github.com/turksiberguvenlik/spade.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/spade".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/spade"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -141,18 +121,11 @@ def AhMyth():
             "cd tools && cd Android && mkdir AhMyth && cd AhMyth && wget http://download1581.mediafire.com/yda7cvfrnesg/ifxzqonwvff2wir/AhMyth_linux64.deb && dpkg -i AhMyth_linux64.deb && apt --fix-broken install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/local/bin/ahmyth".format(
-                GREEN, DEFAULT
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/local/bin/ahmyth".
+            format(GREEN, DEFAULT))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -174,18 +147,11 @@ def Andspoilt():
             "cd tools && cd Android && git clone https://github.com/sundaysec/Andspoilt.git && cd Andspoilt && python ./setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/Andspoilt".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/Andspoilt"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -207,22 +173,16 @@ def Kwetza():
             "cd tools && cd Android && git clone https://github.com/sensepost/kwetza.git && cd kwetza && pip install beautifulsoup4"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/kwetza".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/kwetza"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Android && cd kwetza && python kwetza.py")
+            os.system(
+                "cd tools && cd Android && cd kwetza && python kwetza.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -240,10 +200,8 @@ def Termux():
             "cd tools && cd Android && mkdir Termux && cd Termux && wget https://f-droid.org/repo/com.termux_96.apk"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/Termux".format(
-                GREEN, DEFAULT, location
-            )
-        )
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/Termux"
+            .format(GREEN, DEFAULT, location))
         pause("\n{}Presione una tecla para continuar...".format(GREEN))
         os.system("clear")
         KitHack.banner(), KitHack.menu(), KitHack.options()
@@ -264,10 +222,8 @@ def AndroidExploits():
             "cd tools && cd Android && git clone https://github.com/sundaysec/Android-Exploits.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nExploits guardados en {2}/tools/Android/Android-Exploits".format(
-                GREEN, DEFAULT, location
-            )
-        )
+            "\n{0}[✔] Done.{1}\nExploits guardados en {2}/tools/Android/Android-Exploits"
+            .format(GREEN, DEFAULT, location))
         pause("\n{}Presione una tecla para continuar...".format(GREEN))
         os.system("clear")
         KitHack.banner(), KitHack.menu(), KitHack.options()
@@ -288,22 +244,16 @@ def Grabcam():
             "cd tools && cd Android && git clone https://github.com/noob-hackers/grabcam.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/grabcam".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/grabcam"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Android && cd grabcam && sudo bash grabcam.sh")
+            os.system(
+                "cd tools && cd Android && cd grabcam && sudo bash grabcam.sh")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -321,18 +271,11 @@ def AndroidPatternLock():
             "cd tools && cd Android && git clone https://github.com/sch3m4/androidpatternlock.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/androidpatternlock".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Android/androidpatternlock"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -359,18 +302,11 @@ def Winpayloads():
             "cd tools && cd Windows && git clone https://github.com/nccgroup/Winpayloads.git && cd Winpayloads && chmod +x setup.sh && ./setup.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/Winpayloads".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/Winpayloads"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -394,22 +330,16 @@ def sAINT():
             "apt install maven default-jdk default-jre openjdk-8-jdk openjdk-8-jre -y && apt install maven default-jdk default-jre openjdk-8-jdk openjdk-8-jre -y && cd tools && cd Windows && git clone https://github.com/tiagorlampert/sAINT.git && cd sAINT && chmod +x configure.sh && ./configure.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/sAINT".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/sAINT"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Windows && cd sAINT && java -jar sAINT.jar")
+            os.system(
+                "cd tools && cd Windows && cd sAINT && java -jar sAINT.jar")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -427,22 +357,16 @@ def BeeLogger():
             "cd tools && cd Windows && git clone https://github.com/4w4k3/BeeLogger.git && cd BeeLogger && sudo su && chmod +x install.sh && ./install.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/BeeLogger".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/BeeLogger"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Windows && cd BeeLogger && python bee.py")
+            os.system(
+                "cd tools && cd Windows && cd BeeLogger && python bee.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -460,18 +384,11 @@ def FakeImageExploiter():
             "cd tools && cd Windows && git clone https://github.com/r00t-3xp10it/FakeImageExploiter.git && cd FakeImageExploiter && chmod +x *.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/FakeImageExploiter".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/FakeImageExploiter"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -495,18 +412,11 @@ def Koadic():
             "cd tools && cd Windows && git clone https://github.com/zerosum0x0/koadic.git && cd koadic && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/koadic".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/koadic"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -528,18 +438,11 @@ def PhantomEvasion():
             "cd tools && cd Windows && git clone https://github.com/oddcod3/Phantom-Evasion.git && cd Phantom-Evasion && sudo chmod +x phantom-evasion.py"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/Phantom-Evasion".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/Phantom-Evasion"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -563,22 +466,16 @@ def Ps1encode():
             "cd tools && cd Windows && git clone https://github.com/CroweCybersecurity/ps1encode.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/ps1encode".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/ps1encode"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Windows && cd ps1encode && ./ps1encode.rb")
+            os.system(
+                "cd tools && cd Windows && cd ps1encode && ./ps1encode.rb")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -596,18 +493,11 @@ def DKMC():
             "cd tools && cd Windows && git clone https://github.com/Mr-Un1k0d3r/DKMC.git && cd DKMC && mkdir output"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/DKMC".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/DKMC"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -629,22 +519,16 @@ def Cromos():
             "cd tools && cd Windows && git clone https://github.com/6IX7ine/cromos.git && sudo chmod -R 777 cromos/ && cd cromos && python setup.py"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/cromos".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/cromos"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Windows && cd cromos && python cromos.py")
+            os.system(
+                "cd tools && cd Windows && cd cromos && python cromos.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -662,22 +546,16 @@ def EternalScanner():
             "cd tools && cd Windows && git clone https://github.com/peterpt/eternal_scanner.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/eternal_scanner".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/eternal_scanner"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Windows && cd eternal_scanner && ./escan")
+            os.system(
+                "cd tools && cd Windows && cd eternal_scanner && ./escan")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -695,10 +573,8 @@ def EternalblueDoublepulsarMetasploit():
             "cd tools && cd Windows && git clone https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit.git && cd Eternalblue-Doublepulsar-Metasploit && cp eternalblue_doublepulsar.rb /usr/share/metasploit-framework/modules/exploits/windows/smb/"
         )
         print(
-            "\n{0}[✔] Done.{1}\nModulo guardado en /usr/share/metasploit-framework/modules/exploits/windows/smb/".format(
-                GREEN, DEFAULT
-            )
-        )
+            "\n{0}[✔] Done.{1}\nModulo guardado en /usr/share/metasploit-framework/modules/exploits/windows/smb/"
+            .format(GREEN, DEFAULT))
         pause("\n{}Presione una tecla para continuar...".format(GREEN))
         os.system("clear")
         KitHack.banner(), KitHack.menu(), KitHack.options()
@@ -719,10 +595,8 @@ def MS17010EternalBlueWinXPWin10():
             "cd tools && cd Windows && git clone https://github.com/hanshaze/MS17-010-EternalBlue-WinXP-Win10.git && cd MS17-010-EternalBlue-WinXP-Win10 && cp ms17_010_eternalblue_winXP-win10.rb /usr/share/metasploit-framework/modules/exploits/windows/smb/"
         )
         print(
-            "\n{0}[✔] Done.{1}\nModulo guardado en /usr/share/metasploit-framework/modules/exploits/windows/smb/".format(
-                GREEN, DEFAULT
-            )
-        )
+            "\n{0}[✔] Done.{1}\nModulo guardado en /usr/share/metasploit-framework/modules/exploits/windows/smb/"
+            .format(GREEN, DEFAULT))
         pause("\n{}Presione una tecla para continuar...".format(GREEN))
         os.system("clear")
         KitHack.banner(), KitHack.menu(), KitHack.options()
@@ -743,10 +617,8 @@ def WindowsExploits():
             "cd tools && cd Windows && git clone https://github.com/WindowsExploits/Exploits.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nExploits guardados en {2}/tools/Windows/Exploits".format(
-                GREEN, DEFAULT, location
-            )
-        )
+            "\n{0}[✔] Done.{1}\nExploits guardados en {2}/tools/Windows/Exploits"
+            .format(GREEN, DEFAULT, location))
         pause("\n{}Presione una tecla para continuar...".format(GREEN))
         os.system("clear")
         KitHack.banner(), KitHack.menu(), KitHack.options()
@@ -770,24 +642,21 @@ def HiddenEye():
             "cd tools && cd Phishing && git clone https://github.com/DarkSecDevelopers/HiddenEye.git && sudo apt install python3-pip && cd HiddenEye && sudo pip3 install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/HiddenEye".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/HiddenEye"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Phishing && cd HiddenEye && python3 HiddenEye.py")
+            os.system(
+                "cd tools && cd Phishing && cd HiddenEye && python3 HiddenEye.py"
+            )
             # Segunda Ejecucion de HiddenEye para evitar el problema de conexiòn de internet.
-            os.system("cd tools && cd Phishing && cd HiddenEye && python3 HiddenEye.py")
+            os.system(
+                "cd tools && cd Phishing && cd HiddenEye && python3 HiddenEye.py"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -805,22 +674,16 @@ def PhishX():
             "cd tools && cd Phishing && git clone https://github.com/Userphish/PhishX.git && cd PhishX && chmod +x installer.sh && bash ./installer.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/PhishX".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/PhishX"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Phishing && cd PhishX && python3 PhishX.py")
+            os.system(
+                "cd tools && cd Phishing && cd PhishX && python3 PhishX.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -838,18 +701,11 @@ def SocialPhish():
             "cd tools && cd Phishing && git clone https://github.com/xHak9x/SocialPhish.git && cd SocialPhish && chmod +x socialphish.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/SocialPhish".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/SocialPhish"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -873,18 +729,11 @@ def SocialFish():
             "cd tools && cd Phishing && git clone https://github.com/UndeadSec/SocialFish.git && sudo apt-get install python3 python3-pip python3-dev -y && cd SocialFish && python3 -m pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/SocialFish".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/SocialFish"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -908,18 +757,11 @@ def PhisherMan():
             "cd tools && cd Phishing && git clone https://github.com/FDX100/Phisher-man.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/Phisher-man".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/Phisher-man"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -943,18 +785,11 @@ def Spectre():
             "cd tools && cd Phishing && git clone https://github.com/Pure-L0G1C/Spectre.git && cd Spectre && chmod +x install.sh && ./install.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/Spectre".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/Spectre"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -978,18 +813,11 @@ def Blackeye():
             "cd tools && cd Phishing && git clone https://github.com/An0nUD4Y/blackeye.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/blackeye".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/blackeye"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1013,22 +841,16 @@ def PhEmail():
             "cd tools && cd Phishing && git clone https://github.com/Dionach/PhEmail.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/PhEmail".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/PhEmail"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Phishing && cd PhEmail && python phemail.py")
+            os.system(
+                "cd tools && cd Phishing && cd PhEmail && python phemail.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1046,22 +868,16 @@ def Weeman():
             "cd tools && cd Phishing && git clone https://github.com/evait-security/weeman.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/weeman".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/weeman"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Phishing && cd weeman && python weeman.py")
+            os.system(
+                "cd tools && cd Phishing && cd weeman && python weeman.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1079,22 +895,16 @@ def Zphisher():
             "cd tools && cd Phishing && git clone https://github.com/htr-tech/zphisher.git && cd zphisher && chmod +x zphisher.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/zphisher".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/zphisher"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Phishing && cd zphisher && bash zphisher.sh")
+            os.system(
+                "cd tools && cd Phishing && cd zphisher && bash zphisher.sh")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1112,22 +922,17 @@ def AIOPhish():
             "cd tools && cd Phishing && git clone https://github.com/DeepSociety/AIOPhish.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/AIOPhish".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/AIOPhish"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Phishing && cd AIOPhish && sudo bash aiophish.sh")
+            os.system(
+                "cd tools && cd Phishing && cd AIOPhish && sudo bash aiophish.sh"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1148,18 +953,11 @@ def Fluxion():
             "cd tools && cd Wifi && git clone https://github.com/FluxionNetwork/fluxion.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/fluxion".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/fluxion"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1181,18 +979,11 @@ def Wifiphisher():
             "cd tools && cd Wifi && git clone https://github.com/wifiphisher/wifiphisher.git && cd wifiphisher && sudo python setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifiphisher".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifiphisher"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1214,22 +1005,17 @@ def Wifibroot():
             "cd tools && cd Wifi && git clone https://github.com/hash3liZer/WiFiBroot.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/WiFiBroot".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/WiFiBroot"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Wifi && cd WiFiBroot && python wifibroot.py -h")
+            os.system(
+                "cd tools && cd Wifi && cd WiFiBroot && python wifibroot.py -h"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1247,18 +1033,11 @@ def Wifite():
             "cd tools && cd Wifi && git clone https://github.com/derv82/wifite.git && cd wifite && chmod +x wifite.py"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifite".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifite".
+            format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1278,19 +1057,11 @@ def Ettercap():
         os.system(
             "sudo apt-get install zlib1g zlib1g-dev && sudo apt-get install build-essential && sudo apt-get install ettercap && sudo apt-get install ettercap-graphical"
         )
-        print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/bin/ettercap".format(
-                GREEN, DEFAULT
-            )
-        )
-        if (
-            input(
+        print("\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/bin/ettercap".
+              format(GREEN, DEFAULT))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1312,22 +1083,16 @@ def Linset():
             "cd tools && cd Wifi && git clone https://github.com/chunkingz/linsetmv1-2.git && cd linsetmv1-2 && chmod a+x linsetmv1-2 && mv linset /"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/linsetmv1-2".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/linsetmv1-2"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Wifi && cd linsetmv1-2 && ./linsetmv1-2.sh")
+            os.system(
+                "cd tools && cd Wifi && cd linsetmv1-2 && ./linsetmv1-2.sh")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1345,18 +1110,11 @@ def WiFiPumpkin():
             "sudo apt install python3.7-dev python3-pyqt5 libssl-dev libffi-dev build-essential python3.7 && cd tools && cd Wifi && git clone https://github.com/P0cL4bs/wifipumpkin3.git && cd wifipumpkin3 && sudo python3 setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifipumpkin3".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifipumpkin3"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1378,18 +1136,11 @@ def Wifresti():
             "cd tools && cd Wifi && git clone https://github.com/LionSec/wifresti.git && cd wifresti && cp wifresti.py /usr/bin/wifresti && chmod +x /usr/bin/wifresti"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifresti".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifresti"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1411,18 +1162,11 @@ def EvilLimiter():
             "cd tools && cd Wifi && git clone https://github.com/bitbrute/evillimiter.git && cd evillimiter && sudo python3 setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/evillimiter".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/evillimiter"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1444,22 +1188,16 @@ def NetoolToolkit():
             "cd tools && cd Wifi && git clone https://github.com/r00t-3xp10it/netool-toolkit.git && cd netool-toolkit && sudo chmod +x INSTALL.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/netool-toolkit".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/netool-toolkit"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Wifi && cd netool-toolkit && sudo ./netool.sh")
+            os.system(
+                "cd tools && cd Wifi && cd netool-toolkit && sudo ./netool.sh")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1477,22 +1215,16 @@ def Dracnmap():
             "cd tools && cd Wifi && git clone https://github.com/Screetsec/Dracnmap.git && cd Dracnmap && chmod +x Dracnmap.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/Dracnmap".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/Dracnmap"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Wifi && cd Dracnmap && sudo ./Dracnmap.sh")
+            os.system(
+                "cd tools && cd Wifi && cd Dracnmap && sudo ./Dracnmap.sh")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1510,18 +1242,11 @@ def Airgeddon():
             "cd tools && cd Wifi && git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git && cd airgeddon && chmod +x airgeddon.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/airgeddon".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/airgeddon"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1543,22 +1268,16 @@ def Routersploit():
             "apt-get install python3-pip && cd tools && cd Wifi && git clone https://www.github.com/threat9/routersploit.git && cd routersploit && python3 -m pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/routersploit".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/routersploit"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Wifi && cd routersploit && python3 rsf.py")
+            os.system(
+                "cd tools && cd Wifi && cd routersploit && python3 rsf.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1576,18 +1295,11 @@ def Eaphammer():
             "apt-get install python3-pip && cd tools && cd Wifi && git clone https://github.com/s0lst1c3/eaphammer.git && cd eaphammer && ./kali-setup"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/eaphammer".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/eaphammer"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1609,18 +1321,11 @@ def VMRMDK():
             "cd tools && cd Wifi && git clone https://github.com/chunkingz/VMR-MDK-K2-2017R-012x4.git && cd VMR-MDK-K2-2017R-012x4 && chmod +x VMR-MDK-K2-2017R-012x4.sh && mkdir VARMAC_CONFIG /root/ && mkdir VARMAC_LOGS /root/ && mkdir VARMAC_WASH /root/"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/VMR-MDK-K2-2017R-012x4".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/VMR-MDK-K2-2017R-012x4"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1644,18 +1349,11 @@ def Wirespy():
             "cd tools && cd Wifi && git clone https://github.com/aress31/wirespy.git && cd wirespy && chmod +x wirespy.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wirespy".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wirespy"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1675,19 +1373,11 @@ def Wireshark():
         os.system(
             "sudo apt-get install wireshark && sudo setcap CAP_NET_RAW+eip CAP_NET_ADMIN+eip /usr/bin/dumpcap"
         )
-        print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/bin/wireshark".format(
-                GREEN, DEFAULT
-            )
-        )
-        if (
-            input(
+        print("\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/bin/wireshark".
+              format(GREEN, DEFAULT))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1709,22 +1399,16 @@ def SniffAir():
             "cd tools && cd Wifi && git clone https://github.com/Tylous/SniffAir.git && cd SniffAir && sudo ./setup.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/SniffAir".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/SniffAir"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Wifi && cd SniffAir && python SniffAir.py")
+            os.system(
+                "cd tools && cd Wifi && cd SniffAir && python SniffAir.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1742,22 +1426,17 @@ def WifiJammer():
             "cd tools && cd Wifi && git clone https://github.com/DanMcInerney/wifijammer.git && cd wifijammer && python ./setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/Wifijammer".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/Wifijammer"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Wifi && cd WifiJammer && sudo python wifijammer")
+            os.system(
+                "cd tools && cd Wifi && cd WifiJammer && sudo python wifijammer"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1775,18 +1454,11 @@ def KawaiiDeauther():
             "cd tools && cd Wifi && git clone https://github.com/aryanrtm/KawaiiDeauther.git && cd KawaiiDeauther && sudo ./install.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/KawaiiDeauther".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/KawaiiDeauther"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1813,18 +1485,11 @@ def Cupp():
             "cd tools && cd Passwords && git clone https://github.com/Mebus/cupp.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/cupp".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/cupp"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1846,22 +1511,17 @@ def Facebooker():
             "cd tools && cd Passwords && git clone https://github.com/FakeFBI/Facebooker.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/Facebooker".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/Facebooker"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Passwords && cd Facebooker && perl facebooker.pl")
+            os.system(
+                "cd tools && cd Passwords && cd Facebooker && perl facebooker.pl"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1879,18 +1539,11 @@ def BluForceFB():
             "cd tools && cd Passwords && git clone https://github.com/AngelSecurityTeam/BluForce-FB.git && cd BluForce-FB && pip2 install mechanize"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/BluForce-FB".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/BluForce-FB"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1914,18 +1567,11 @@ def Brut3k1t():
             "cd tools && cd Passwords && git clone https://github.com/ex0dus-0x/brut3k1t.git && cd brut3k1t && python setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/brut3k1t".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/brut3k1t"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -1947,22 +1593,16 @@ def SocialBox():
             "cd tools && cd Passwords && git clone https://github.com/TunisianEagles/SocialBox.git && cd SocialBox && chmod +x SocialBox.sh && chmod +x install-sb.sh && ./install-sb.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/SocialBox".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/SocialBox"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Passwords && cd SocialBox && ./SocialBox.sh")
+            os.system(
+                "cd tools && cd Passwords && cd SocialBox && ./SocialBox.sh")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -1980,18 +1620,11 @@ def JohnTheRipper():
             "cd tools && cd Passwords && mkdir JohnTheRipper && cd JohnTheRipper && wget http://www.openwall.com/john/j/john-1.8.0.tar.gz && tar -xzvf john-1.8.0.tar.gz && cd john-1.8.0/src/ && make clean generic"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/JohnTheRipper".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/JohnTheRipper"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2013,18 +1646,11 @@ def Hashcat():
             "cd tools && cd Passwords && git clone https://github.com/hashcat/hashcat.git && cd hashcat && make && sudo make install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/hashcat".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/hashcat"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2046,22 +1672,17 @@ def Brutedum():
             "sudo apt install python3 && cd tools && cd Passwords && git clone https://github.com/GitHackTools/BruteDum.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/Brutedum".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/Brutedum"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Passwords && cd Brutedum && python3 brutedum.py")
+            os.system(
+                "cd tools && cd Passwords && cd Brutedum && python3 brutedum.py"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2079,22 +1700,17 @@ def Facebash():
             "cd tools && cd Passwords && git clone https://github.com/thelinuxchoice/facebash && cd facebash && chmod +x * && sudo bash install.sh && service tor start"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/facebash".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/facebash"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Passwords && cd facebash && sudo ./facebash.sh")
+            os.system(
+                "cd tools && cd Passwords && cd facebash && sudo ./facebash.sh"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2112,18 +1728,11 @@ def Brutespray():
             "cd tools && cd Passwords && git clone https://github.com/x90skysn3k/brutespray.git && cd brutespray && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/brutespray".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/brutespray"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2147,18 +1756,11 @@ def Pupi():
             "sudo apt install python3 && cd tools && cd Passwords && git clone https://github.com/mIcHyAmRaNe/PUPI.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/PUPI".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/PUPI"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2180,22 +1782,17 @@ def B4rbrute():
             "cd tools && cd Passwords && git clone https://github.com/b4rc0d37/b4r-brute.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/b4r-brute".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/b4r-brute"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Passwords && cd b4r-brute && python b4r-brute.py")
+            os.system(
+                "cd tools && cd Passwords && cd b4r-brute && python b4r-brute.py"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2213,18 +1810,11 @@ def FbHack():
             "cd tools && cd Passwords && git clone https://github.com/mirzaaltaf/fb-hack.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/fb-hack".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/fb-hack"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2249,22 +1839,16 @@ def SQLmap():
             "cd tools && cd Web && git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/sqlmap-dev".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/sqlmap-dev"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd sqlmap-dev && python sqlmap.py -h")
+            os.system(
+                "cd tools && cd Web && cd sqlmap-dev && python sqlmap.py -h")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2282,22 +1866,16 @@ def XAttacker():
             "cd tools && cd Web && git clone https://github.com/Moham3dRiahi/XAttacker.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/XAttacker".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/XAttacker"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd XAttacker && perl XAttacker.pl")
+            os.system(
+                "cd tools && cd Web && cd XAttacker && perl XAttacker.pl")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2315,22 +1893,17 @@ def Fuxploider():
             "sudo apt-get install python3-pip && cd tools && cd Web && git clone https://github.com/almandin/fuxploider.git && cd fuxploider && pip3 install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/fuxploider".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/fuxploider"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd fuxploider && python3 fuxploider.py -h")
+            os.system(
+                "cd tools && cd Web && cd fuxploider && python3 fuxploider.py -h"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2348,18 +1921,11 @@ def Wordpresscan():
             "cd tools && cd Web && git clone https://github.com/swisskyrepo/Wordpresscan.git && cd Wordpresscan && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/Wordpresscan".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/Wordpresscan"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2383,22 +1949,16 @@ def SiteBroker():
             "cd tools && cd Web && git clone https://github.com/Anon-Exploiter/SiteBroker.git && cd SiteBroker && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/SiteBroker".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/SiteBroker"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd SiteBroker && python3 SiteBroker.py")
+            os.system(
+                "cd tools && cd Web && cd SiteBroker && python3 SiteBroker.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2416,22 +1976,16 @@ def NoSQLMap():
             "cd tools && cd Web && git clone https://github.com/codingo/NoSQLMap.git && cd NoSQLMap && python setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/NoSQLMap".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/NoSQLMap"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd NoSQLMap && python nosqlmap.py")
+            os.system(
+                "cd tools && cd Web && cd NoSQLMap && python nosqlmap.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2449,18 +2003,11 @@ def SqliScanner():
             "cd tools && cd Web && git clone https://github.com/the-c0d3r/sqli-scanner.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/sqli-scanner".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/sqli-scanner"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2484,18 +2031,11 @@ def Joomscan():
             "cd tools && cd Web && git clone https://github.com/rezasp/joomscan.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/joomscan".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/joomscan"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2517,22 +2057,16 @@ def Metagoofil():
             "cd tools && cd Web && git clone https://github.com/laramies/metagoofil.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/metagoofil".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/metagoofil"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd metagoofil && python metagoofil.py")
+            os.system(
+                "cd tools && cd Web && cd metagoofil && python metagoofil.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2550,22 +2084,16 @@ def Sublist3r():
             "cd tools && cd Web && git clone https://github.com/aboul3la/Sublist3r.git && cd Sublist3r && sudo pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/Sublist3r".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/Sublist3r"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd Sublist3r && python sublist3r.py -h")
+            os.system(
+                "cd tools && cd Web && cd Sublist3r && python sublist3r.py -h")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2583,22 +2111,16 @@ def WAFNinja():
             "cd tools && cd Web && git clone https://github.com/khalilbijjou/WAFNinja.git && cd WAFNinja && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/WAFNinja".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/WAFNinja"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd WAFNinja && python wafninja.py -h")
+            os.system(
+                "cd tools && cd Web && cd WAFNinja && python wafninja.py -h")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2616,22 +2138,17 @@ def Dirsearch():
             "sudo apt-get install python3.7 && cd tools && cd Web && git clone https://github.com/maurosoria/dirsearch.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/dirsearch".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/dirsearch"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd dirsearch && python3 dirsearch.py -h")
+            os.system(
+                "cd tools && cd Web && cd dirsearch && python3 dirsearch.py -h"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2649,22 +2166,16 @@ def XSStrike():
             "cd tools && cd Web && git clone https://github.com/s0md3v/XSStrike.git && cd XSStrike && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/XSStrike".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/XSStrike"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd XSStrike && python xsstrike.py")
+            os.system(
+                "cd tools && cd Web && cd XSStrike && python xsstrike.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2682,22 +2193,17 @@ def LinksF1nd3r():
             "cd tools && cd Web && git clone https://github.com/ihebski/LinksF1nd3r.git && cd LinksF1nd3r && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/linksF1nd3r".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/linksF1nd3r"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Web && cd LinksF1nd3r && python linksF1nd3r.py")
+            os.system(
+                "cd tools && cd Web && cd LinksF1nd3r && python linksF1nd3r.py"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2715,18 +2221,11 @@ def DTECH():
             "cd tools && cd Web && git clone https://github.com/bibortone/D-Tech.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/D-Tech".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/D-Tech".
+            format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2748,18 +2247,11 @@ def Phpsploit():
             "sudo apt install python3 python3-pip && cd tools && cd Web && git clone https://github.com/nil0x42/phpsploit.git && cd phpsploit && pip3 install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/phpsploit".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/phpsploit"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2786,18 +2278,11 @@ def SpoofMAC():
             "cd tools && cd Spoofing && git clone git://github.com/feross/SpoofMAC.git && cd SpoofMAC && python setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/SpoofMAC".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/SpoofMAC"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2821,18 +2306,11 @@ def IpSpoofing():
             "cd tools && cd Spoofing && git clone https://github.com/pankajmore/ip_spoofing.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/ip_spoofing".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/ip_spoofing"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2856,22 +2334,17 @@ def Arpspoof():
             "cd tools && cd Spoofing && git clone https://github.com/ickerwx/arpspoof.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/arpspoof".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/arpspoof"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Spoofing && cd arpspoof && python arpspoof.py -h")
+            os.system(
+                "cd tools && cd Spoofing && cd arpspoof && python arpspoof.py -h"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2889,18 +2362,11 @@ def DerpNSpoof():
             "sudo apt install python3-pip && cd tools && cd Spoofing && git clone https://github.com/Trackbool/DerpNSpoof.git && cd DerpNSpoof && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/DerpNSpoof".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/DerpNSpoof"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2924,22 +2390,16 @@ def DrSpoof():
             "cd tools && cd Spoofing && git clone https://github.com/Enixes/Dr.Spoof.git && cd Dr.Spoof && chmod +x DrSpoof.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/Dr.Spoof".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/Dr.Spoof"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Spoofing && cd Dr.Spoof && ./DrSpoof.sh -h")
+            os.system(
+                "cd tools && cd Spoofing && cd Dr.Spoof && ./DrSpoof.sh -h")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -2957,18 +2417,11 @@ def GODKILLER():
             "cd tools && cd Spoofing && git clone https://github.com/FDX100/GOD-KILLER.git && cd GOD-KILLER && python install.py"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/GOD-KILLER".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/GOD-KILLER"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -2993,18 +2446,11 @@ def NMAP():
             "cd tools && cd InformationGathering && git clone https://github.com/nmap/nmap.git && cd nmap && ./configure && make && make install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/nmap".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/nmap"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3026,18 +2472,11 @@ def Th3inspector():
             "cd tools && cd InformationGathering && git clone https://github.com/Moham3dRiahi/Th3inspector.git && cd Th3inspector && chmod +x install.sh && ./install.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/Th3inspector".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/Th3inspector"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3061,22 +2500,17 @@ def FBI():
             "cd tools && cd InformationGathering && git clone https://github.com/xHak9x/fbi.git && cd fbi && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/fbi".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/fbi"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd InformationGathering && cd fbi && python2 fbi.py")
+            os.system(
+                "cd tools && cd InformationGathering && cd fbi && python2 fbi.py"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -3094,18 +2528,11 @@ def Infoga():
             "cd tools && cd InformationGathering && git clone https://github.com/m4ll0k/Infoga.git && cd Infoga && python setup.py install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/Infoga".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/Infoga"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3129,18 +2556,11 @@ def Crips():
             "cd tools && cd InformationGathering && git clone https://github.com/Manisso/Crips.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/Crips".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/Crips"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3164,18 +2584,11 @@ def BillCipher():
             "sudo apt update && sudo apt install ruby python python-pip python3 python3-pip && sudo apt install httrack whatweb && cd tools && cd InformationGathering && git clone https://github.com/GitHackTools/BillCipher.git && cd BillCipher && pip install -r requirements.txt && pip3 install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/BillCipher".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/BillCipher"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3199,18 +2612,11 @@ def RedHawk():
             "sudo apt-get install php7.2 && cd tools && cd InformationGathering && git clone https://github.com/Tuhinshubhra/RED_HAWK.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/RED_HAWK".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/RED_HAWK"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3234,18 +2640,11 @@ def ReconNg():
             "sudo apt-get install python3.6 && cd tools && cd InformationGathering && git clone https://github.com/lanmaster53/recon-ng.git && cd recon-ng && pip install -r REQUIREMENTS"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/recon-ng".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/recon-ng"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3269,18 +2668,11 @@ def theHarvester():
             "cd tools && cd InformationGathering && git clone https://github.com/alanchavez88/theHarvester.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/theHarvester".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/theHarvester"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3304,18 +2696,11 @@ def PhoneInfoga():
             "sudo apt install python3-pip && cd tools && cd InformationGathering && git clone https://github.com/sundowndev/PhoneInfoga.git && cd PhoneInfoga && python3 -m pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/PhoneInfoga".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/PhoneInfoga"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3339,18 +2724,11 @@ def Gasmask():
             "cd tools && cd InformationGathering && git clone https://github.com/twelvesec/gasmask.git && cd gasmask && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/gasmask".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/gasmask"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3374,18 +2752,11 @@ def URLextractor():
             "cd tools && cd InformationGathering && git clone https://github.com/eschultze/URLextractor.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/URLextractor".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/URLextractor"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3409,18 +2780,11 @@ def Devploit():
             "cd tools && cd InformationGathering && git clone https://github.com/GhettoCole/Devploit.git && cd Devploit && chmod +x install && ./install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/Devploit".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/Devploit"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3442,18 +2806,11 @@ def ReconDog():
             "cd tools && cd InformationGathering && git clone https://github.com/s0md3v/ReconDog.git && cd ReconDog && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/ReconDog".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/ReconDog"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3477,18 +2834,11 @@ def Webkiller():
             "cd tools && cd InformationGathering && git clone https://github.com/ultrasecurity/webkiller.git && cd webkiller && pip3 install -r requirments.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/webkiller".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/webkiller"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3512,18 +2862,11 @@ def Quasar():
             "cd tools && cd InformationGathering && git clone https://github.com/Cyb0r9/quasar.git && cd quasar && chmod +x * && sudo ./install.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/quasar".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/quasar"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3547,18 +2890,11 @@ def InfoInstagramIphone():
             "sudo apt install python3 python3-pip && pip3 install quidam && cd tools && cd InformationGathering && git clone https://github.com/0xfff0800/info-instagram-iphone.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/info-instagram-iphone".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/info-instagram-iphone"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3582,18 +2918,11 @@ def UserScan():
             "cd tools && cd InformationGathering && git clone https://github.com/JoeTech-Studio/UserScan.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/userscan".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/userscan"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3617,18 +2946,11 @@ def XCTRHackingTools():
             "sudo apt install python3 python3-pip && cd tools && cd InformationGathering && git clone https://github.com/capture0x/XCTR-Hacking-Tools.git && cd XCTR-Hacking-Tools && pip3 install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/XCTR-Hacking-Tools".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/XCTR-Hacking-Tools"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3652,18 +2974,11 @@ def DeadTrap():
             "sudo apt install python3-pip firefox-geckodriver && cd tools && cd InformationGathering && git clone https://github.com/Chr0m0s0m3s/DeadTrap.git && cd DeadTrap && pip3 install ."
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/DeadTrap".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/DeadTrap"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3688,18 +3003,11 @@ def TheFatRat():
             "cd tools && cd Others && git clone https://github.com/Screetsec/TheFatRat.git && cd TheFatRat && chmod +x setup.sh && ./setup.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/TheFatRat".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/TheFatRat"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3721,18 +3029,11 @@ def Msfpc():
             "cd tools && cd Others && git clone https://github.com/g0tmi1k/msfpc.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/msfpc".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/msfpc"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3750,19 +3051,11 @@ def Fcrackzip():
         print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
         time.sleep(4)
         os.system("apt-get install fcrackzip")
-        print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/bin/fcrackzip".format(
-                GREEN, DEFAULT
-            )
-        )
-        if (
-            input(
+        print("\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/bin/fcrackzip".
+              format(GREEN, DEFAULT))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3784,18 +3077,11 @@ def QRLjacker():
             "sudo apt-get install python3.7 && cd tools && cd Others && git clone https://github.com/OWASP/QRLJacking.git && cd QRLJacking && cd QRLJacker && pip install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/QRLJacking".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/QRLJacking"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3819,18 +3105,11 @@ def Lazy():
             "cd tools && cd Others && git clone https://github.com/arismelachroinos/lscript.git && cd lscript && chmod +x install.sh && ./install.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/lscript ".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/lscript "
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3852,22 +3131,16 @@ def HTBINVITE():
             "cd tools && cd Others && git clone https://github.com/nycto-hackerone/HTB-INVITE.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/HTB-INVITE".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/HTB-INVITE"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd HTB-INVITE && python HTB.py")
+            os.system(
+                "cd tools && cd Others && cd HTB-INVITE && python HTB.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -3885,18 +3158,11 @@ def Ngrok():
             "cd tools && cd Others && mkdir Ngrok && cd Ngrok && wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip && chmod +x *"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Ngrok".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Ngrok"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3918,18 +3184,11 @@ def Bluepot():
             "sudo apt-get install default-jdk && cd tools && cd Others && mkdir Bluepot && cd Bluepot && wget https://github.com/andrewmichaelsmith/bluepot/raw/master/bin/bluepot-0.1.tar.gz && tar xfz bluepot-0.1.tar.gz"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Bluepot".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Bluepot"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3953,18 +3212,11 @@ def Setoolkit():
             "cd tools && cd Others && git clone https://github.com/trustedsec/social-engineer-toolkit/ set/ && cd set && pip install -r requirements"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/set".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/set".
+            format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -3986,18 +3238,11 @@ def A2sv():
             "pip install argparse && pip install netaddr && apt-get install openssl && cd tools && cd Others && git clone https://github.com/hahwul/a2sv.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/a2sv".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/a2sv".
+            format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -4019,18 +3264,11 @@ def Fornonimizer():
             "cd tools && cd Others && git clone https://github.com/Hackplayers/4nonimizer.git && cd 4nonimizer && ./4nonimizer install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/4nonimizer".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/4nonimizer"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -4052,18 +3290,11 @@ def Easysploit():
             "cd tools && cd Others && git clone https://github.com/KALILINUXTRICKSYT/easysploit.git && cd easysploit && bash installer.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/easysploit".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/easysploit"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -4085,22 +3316,17 @@ def NXcrypt():
             "cd tools && cd Others && git clone https://github.com/Hadi999/NXcrypt.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/NXcrypt".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/NXcrypt"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd NXcrypt && python NXcrypt.py --help")
+            os.system(
+                "cd tools && cd Others && cd NXcrypt && python NXcrypt.py --help"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4118,22 +3344,16 @@ def KnockMail():
             "cd tools && cd Others && git clone https://github.com/4w4k3/KnockMail.git && cd KnockMail && sudo su && pip install -r requeriments.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/KnockMail".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/KnockMail"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd KnockMail && python knock.py")
+            os.system(
+                "cd tools && cd Others && cd KnockMail && python knock.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4151,18 +3371,11 @@ def RkHunter():
             "cd tools && cd Others && git clone https://github.com/installation/rkhunter.git && cd rkhunter && chmod +x install.sh && bash install.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/rkhunter".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/rkhunter"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -4184,22 +3397,16 @@ def HeraKeylogger():
             "sudo apt-get install python3-pip -y && cd tools && cd Others && git clone https://github.com/UndeadSec/HeraKeylogger.git && cd HeraKeylogger && sudo pip3 install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/HeraKeylogger".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/HeraKeylogger"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd HeraKeylogger && python3 hera.py")
+            os.system(
+                "cd tools && cd Others && cd HeraKeylogger && python3 hera.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4217,22 +3424,16 @@ def ZLogger():
             "cd tools && cd Others && git clone https://github.com/z00z/ZLogger.git && cd ZLogger && bash install.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/ZLogger".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/ZLogger"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd ZLogger && python zlogger.py")
+            os.system(
+                "cd tools && cd Others && cd ZLogger && python zlogger.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4250,18 +3451,11 @@ def Xerosploit():
             "cd tools && cd Others && git clone https://github.com/LionSec/xerosploit.git && cd xerosploit && sudo python install.py"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/xerosploit".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/xerosploit"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -4283,18 +3477,11 @@ def Slacksec():
             "cd tools && cd Others && sudo git clone https://github.com/franc205/Slacksec.git && cp Slacksec/slacksec.py /usr/bin/slacksec && sudo chmod +x /usr/bin/slacksec"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Slacksec".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Slacksec"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -4316,22 +3503,16 @@ def Katana():
             "cd tools && cd Others && git clone https://github.com/PowerScript/KatanaFramework && cd KatanaFramework && sudo sh dependencies && sudo python install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/KatanaFramework".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/KatanaFramework"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd KatanaFramework && ktf.console")
+            os.system(
+                "cd tools && cd Others && cd KatanaFramework && ktf.console")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4349,22 +3530,17 @@ def Z0172CKTools():
             "sudo apt install python3 python3-pip && cd tools && cd Others && git clone https://github.com/Erik172/Z0172CK-Tools.git && cd Z0172CK-Tools && bash install.sh && pip3 install -r requirements.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Z0172CK-Tools".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Z0172CK-Tools"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd Z0172CK-Tools && python3 index.py")
+            os.system(
+                "cd tools && cd Others && cd Z0172CK-Tools && python3 index.py"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4382,22 +3558,16 @@ def CamHack():
             "cd tools && cd Others && git clone https://github.com/Hack-The-World-With-Tech/Cam-Hack.git && cd Cam-Hack && chmod +x *"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Cam-Hack".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Cam-Hack"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd Cam-Hack && sudo bash camhack.sh")
+            os.system(
+                "cd tools && cd Others && cd Cam-Hack && sudo bash camhack.sh")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4415,18 +3585,11 @@ def Onex():
             "cd tools && cd Others && git clone https://github.com/rajkumardusad/onex.git && cd onex && sudo bash install"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/onex".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/onex".
+            format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
@@ -4448,22 +3611,16 @@ def Ransom0():
             "cd tools && cd Others && git clone https://github.com/HugoLB0/Ransom0.git && cd Ransom0 && pip2 install requirementx.txt"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Ransom0".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Ransom0"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd Ransom0 && python ransom0.py")
+            os.system(
+                "cd tools && cd Others && cd Ransom0 && python ransom0.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4481,22 +3638,17 @@ def Morpheus():
             "cd tools && cd Others && git clone https://github.com/r00t-3xp10it/morpheus.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/morpheus".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/morpheus"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd morpheus && sudo bash morpheus.sh")
+            os.system(
+                "cd tools && cd Others && cd morpheus && sudo bash morpheus.sh"
+            )
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4514,22 +3666,16 @@ def FBTOOL():
             "cd tools && cd Others && git clone https://github.com/mkdirlove/FBTOOL.git"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/FBTOOL".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/FBTOOL"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd FBTOOL && sudo python2 fbtool.py")
+            os.system(
+                "cd tools && cd Others && cd FBTOOL && sudo python2 fbtool.py")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)
@@ -4547,22 +3693,16 @@ def Venom():
             "cd tools && cd Others && git clone https://github.com/r00t-3xp10it/venom.git && cd venom && chmod +x * && sudo bash setup.sh"
         )
         print(
-            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/venom".format(
-                GREEN, DEFAULT, location
-            )
-        )
-        if (
-            input(
+            "\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/venom"
+            .format(GREEN, DEFAULT, location))
+        if (input(
                 "\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(
-                    GREEN, RED, DEFAULT
-                )
-            ).upper()
-            != "Y"
-        ):
+                    GREEN, RED, DEFAULT)).upper() != "Y"):
             os.system("clear")
             KitHack.banner(), KitHack.menu(), KitHack.options()
         else:
-            os.system("cd tools && cd Others && cd venom && sudo bash venom.sh")
+            os.system(
+                "cd tools && cd Others && cd venom && sudo bash venom.sh")
     else:
         print("\n{}[X] Esta herramienta ya existe...".format(RED))
         time.sleep(2)

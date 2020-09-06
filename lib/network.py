@@ -62,7 +62,8 @@ def run_ngrok():
         for p in pid:
             kill_process(p, signal.SIGKILL)
         # Continue
-        run_command("./ngrok tcp -config=.config/ngrok.yml 443 > /dev/null 2>&1 &")
+        run_command(
+            "./ngrok tcp -config=.config/ngrok.yml 443 > /dev/null 2>&1 &")
         while True:
             tcp = sys_url(
                 'curl -s -N http://127.0.0.1:4040/status | grep -o "tcp://[0-9]*.tcp.ngrok.io:[0-9]*"'
