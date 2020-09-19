@@ -158,7 +158,7 @@ Podemos generar puertas traseras tanto para Linux, Windows, Android y Mac OS. Ta
 
  <li><strong>¿Por qué se me cierra muy rapido mi sesión de metasploit?</strong><br>Pueden ser diversos factores que provoquen que su sesión de metasploit expire muy rápido, depende mucho del LHOST que hayas configurado. Si realizaste una prueba local y tu sesión expira muy rápido, puede ser la velocidad de tu internet, si utilizaste tu ip publica, puede ser la velocidad de internet de tu victima, si estas trabajando con ngrok, puede que los servidores de ngrok estén muy lentos, lo recomendable es elegir un buen tipo de payload que se adapte a nuestros objetivos, y realizar persistencia o migrar a otro proceso al obtener nuestra shell meterpreter.
 
- <li><strong>¿Por qué me da errores el instalador de kithack?</strong><br>En este caso es necesario verificar en el archivo <code>/etc/apt/sources.list</code> que se encuentre la siguiente linea de codigo: <br><strong>deb http://http.kali.org/kali kali-rolling main non-free contrib</strong><br>En caso de que no se encuentre, es necesario añadirla y guardar cambios, y finalmente ejecutar <code>sudo apt-get update && sudo apt-get upgrade.</code></li>
+ <li><strong>¿Por qué me da errores el instalador de kithack?</strong><br>En este caso es necesario verificar que el archivo <code>/etc/apt/sources.list</code> se encuentre configurado correctamente de acuerdo a la distribución linux instalada.</li>
 </ol>
 
 <h2 id="licencia"><strong>Atención.</strong></h2>
