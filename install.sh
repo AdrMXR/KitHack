@@ -6,7 +6,7 @@
 
 #Installer KitHack
 
-path=$(pwd)
+path=$PWD
 
 # Check root 
 if [ "$(id -u)" != "0" ] > /dev/null 2>&1; then
