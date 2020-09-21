@@ -5,12 +5,14 @@
 # Facebook: https://facebook.com/adrian.guillermo.22
 # Github: https://github.com/AdrMXR
 
-from KitHack import main
-from getch import pause
-from sys import exit
+import os
 import sys
 import time
-import os
+from sys import exit
+
+from getch import pause
+
+from KitHack import main
 
 BLUE, RED, WHITE, CYAN, DEFAULT, YELLOW, MAGENTA, GREEN, END, BOLD = (
     "\33[94m",
