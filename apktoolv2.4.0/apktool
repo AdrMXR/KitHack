@@ -21,29 +21,29 @@
 # Set up prog to be the path of this script, including following symlinks,
 # and set up progdir to be the fully-qualified pathname of its directory.
 prog="$0"
-while [ -h "${prog}" ]; do
-    newProg=`/bin/ls -ld "${prog}"`
+while [ -h "$prog" ]; do
+    newProg=`/bin/ls -ld "$prog"`
 
-    newProg=`expr "${newProg}" : ".* -> \(.*\)$"`
-    if expr "x${newProg}" : 'x/' >/dev/null; then
-        prog="${newProg}"
+    newProg=`expr "$newProg" : ".* -> \(.*\)$"`
+    if expr "x$newProg" : 'x/' >/dev/null; then
+        prog="$newProg"
     else
-        progdir=`dirname "${prog}"`
-        prog="${progdir}/${newProg}"
+        progdir=`dirname "$prog"`
+        prog="$progdir/$newProg"
     fi
 done
 oldwd=`pwd`
-progdir=`dirname "${prog}"`
-cd "${progdir}"
+progdir=`dirname "$prog"`
+cd "$progdir"
 progdir=`pwd`
-prog="${progdir}"/`basename "${prog}"`
-cd "${oldwd}"
+prog="$progdir"/`basename "$prog"`
+cd "$oldwd"
 
 jarfile=apktool.jar
 libdir="$progdir"
 if [ ! -r "$libdir/$jarfile" ]
 then
-    echo `basename "$prog"`": can't find $jarfile"
+    echo "$(basename "$prog"): can't find $jarfile"
     exit 1
 fi
 
@@ -61,7 +61,7 @@ javaOpts="-Xmx512M -Dfile.encoding=utf-8"
 # example.
 while expr "x$1" : 'x-J' >/dev/null; do
     opt=`expr "$1" : '-J\(.*\)'`
-    javaOpts="${javaOpts} -${opt}"
+    javaOpts="$javaOpts -$opt"
     shift
 done
 
@@ -74,4 +74,4 @@ fi
 # add current location to path for aapt
 PATH=$PATH:`pwd`;
 export PATH;
-exec java $javaOpts -jar "$jarpath" "$@"
+exec java "$javaOpts" -jar "$jarpath" "$@"
