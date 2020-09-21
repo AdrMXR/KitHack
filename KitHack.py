@@ -13,6 +13,7 @@ import os
 import subprocess
 import time
 import requests 
+import webbrowser
 from sys import exit 
 from getch import pause  
 from tkinter import Tk, filedialog
@@ -4238,7 +4239,7 @@ def main():
 			main()
 
 	elif option == '11':
-		os.system("firefox https://adrmxr.github.io/KitHack/")
+		webbrowser.open("https://adrmxr.github.io/KitHack", new=1, autoraise=True)
 		os.system('clear')
 		main()	
 

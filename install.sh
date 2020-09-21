@@ -285,7 +285,6 @@ pip3 install zenipy
 pip3 install pgrep
 apt-get install libatk-adaptor libgail-common
 sudo apt-get purge fcitx-module-dbus
-apt-get install python-gtk2-dev
 
 # Shortcut for kithack
 echo -e "\e[0;33m"
