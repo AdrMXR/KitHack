@@ -35,35 +35,7 @@
 | Arch Linux   | En desarrollo |
 | Termux       | En desarrollo |
 
-## Instalación (Python 2.7):
-
-```bash
-# Actualice su lista de paquetes 
-$ sudo apt update
-
-# Instale python2.7
-$ sudo apt install python2.7  
-
-# Clone el repositorio
-$ git clone https://github.com/AdrMXR/KitHack.git
-
-# Entre al repositorio
-$ cd KitHack
-
-# Instale KitHack
-$ sudo bash install.sh 
-
-# Inicie KitHack
-$ sudo python KitHack.py
-
-# También puede ejecutarla desde el atajo
-$ kithack
-
-# Cuando desee actualizar ejecute
-$ sudo bash update.sh
-```
-
-## Instalación (Python 3.x): 
+## Instalación: 
 
 ```bash
 # Actualice su lista de paquetes
@@ -101,14 +73,14 @@ $ sudo bash update.sh
 * aapt
 * jarsigner
 * zipalign 
+* requests
 * pwgen
-* pip2
 * py-getch
 * python-tk
 * pathlib
 * python-zenity
 * pgrep
-* Ngrok authtoken
+* Ngrok authtoken 
 
 ## Novedades:
 
@@ -178,8 +150,6 @@ $ sudo bash update.sh
 
 |                   Titulo                  |             Link             |
 |-------------------------------------------|------------------------------| 
-| Hackear WhatsApp en Kali Linux (CON ROOT) | https://youtu.be/Qck83WG0B5A |
-| Hackear WhatsApp en Kali Linux (SIN ROOT) | https://youtu.be/19DyuX3a-qs |
 | Controlar un Android fuera de la red local| https://youtu.be/V1w1CMSdTyU |
 | KitHack - Una herramienta todo en uno     | https://youtu.be/-8TCtiI9HWM |
 
@@ -208,7 +178,6 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
 - Ironpuerquito - Diseñador 
 - C1b0rk - Tester 
-- Erik172 - Programador
 
 ## Licencia:
 

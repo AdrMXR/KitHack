@@ -66,13 +66,14 @@ echo -n [*] Verificando requerimientos de python...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 echo ""
 echo -e "\033[92m"
-pip2 install py-getch 
-apt-get install python-tk
-pip2 install pathlib
-pip2 install python-zenity
-pip2 install pgrep
+pip3 install requests
+pip3 install py-getch
+apt-get install python3-tk
+pip3 install pathlib
+pip3 install zenipy
+pip3 install pgrep
 apt-get install libatk-adaptor libgail-common
-apt-get install python-gtk2-dev
+sudo apt-get purge fcitx-module-dbus
 
 # Creating temporary directory...
 echo -e "\e[0;33m"
@@ -94,7 +95,7 @@ sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\'
 echo -e "\033[92m"
 echo ""
 git reset HEAD --hard
-git pull origin master
+git pull
 echo ""
 sleep 1.5
 
