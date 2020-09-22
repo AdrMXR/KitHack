@@ -7,7 +7,6 @@
 
 BLUE, RED, WHITE, CYAN, DEFAULT, YELLOW, MAGENTA, GREEN, END, BOLD = '\33[94m', '\033[91m', '\33[97m', '\033[36m', '\033[0m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m', '\033[1m'
 
-
 import sys
 import os 
 import subprocess
@@ -38,7 +37,7 @@ def check_permissions():
 		info()
 	else:
 		os.system('clear')
-		print("{0}[!]{1} ¡Permiso denegado! Recuerde ejecutar: {2}sudo {1}python KitHack.py".format(RED, DEFAULT, GREEN))
+		print("{0}[!]{1} ¡Permiso denegado! Recuerde ejecutar: {2}sudo {1}python3 KitHack.py".format(RED, DEFAULT, GREEN))
 		exit(0)
 
 def info():
@@ -68,7 +67,7 @@ def main():
 	print ('{}| $$ \  $$ /$$$$$$   | $$         | $$  | $$| $$  | $$|  $$$$$$/| $$ \  $$ '.format(RED).center(93))
 	print ('{}|__/  \__/|______/   |__/         |__/  |__/|__/  |__/ \______/ |__/  \__/ '.format(RED).center(93))
 	print ('{}                                                                      v1.3.0 by:AdrMXR'.format(BOLD))
-	print('\n\n')
+	print('\n')
 	print ('{0} ------------------------------------------------------------------------------------- '.format(DEFAULT))
 	print ('{0}||                                        {1}MENU{0}                                       ||'.format(DEFAULT, WHITE))
 	print ('{0}||-----------------------------------------------------------------------------------||'.format(DEFAULT))
