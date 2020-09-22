@@ -455,7 +455,6 @@ def HiddenEye():
 			main()		
 		else:
 			os.system('cd tools && cd Phishing && cd HiddenEye && python3 HiddenEye.py')
-			os.system('cd tools && cd Phishing && cd HiddenEye && python3 HiddenEye.py') #Segunda Ejecucion de HiddenEye para evitar el problema de conexiòn de internet.
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)

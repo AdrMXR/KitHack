@@ -54,17 +54,17 @@ def run_ngrok():
     else:
         while True:
             try:
-                token = entry_token(title="SET NGROK AUTHTOKEN", text="Register at https://ngrok.com\n", width=450, height=140)        
-                if not len(token) in range(40, 50):
-                    Error(text="Invalid token, please try again")
-                    continue
-                else:
+                token = entry_token(title="SET NGROK AUTHTOKEN", text="Register at https://ngrok.com", width=450, height=140)        
+                if len(token) in range(40, 50):
                     ngrok_config.touch(mode=0o777, exist_ok=True)
                     ngrok_config = open('.config/ngrok.yml','w')
                     ngrok_config.write("authtoken: " + token)
                     ngrok_config.close()        
                     run_ngrok() 
                     break
+                else:
+                    Error(text="Invalid token, please try again")
+                    continue
             except TypeError: #Evitar cierre de kithack 
                 break
 

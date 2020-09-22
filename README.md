@@ -35,7 +35,7 @@
 | Arch Linux   | En desarrollo |
 | Termux       | En desarrollo |
 
-## Instalación (Python 3.x): 
+## Instalación: 
 
 ```bash
 # Actualice su lista de paquetes
@@ -44,8 +44,8 @@ $ sudo apt update
 # Instale python3 python3-pip
 $ sudo apt install python3 python3-pip
 
-# Clone el repositorio
-$ git clone https://github.com/AdrMXR/KitHack.git
+# Clone el repositorio de la rama dev
+$ git clone --branch dev https://github.com/AdrMXR/KitHack.git
 
 # Entre al repositorio
 $ cd KitHack
@@ -150,8 +150,6 @@ $ sudo bash update.sh
 
 |                   Titulo                  |             Link             |
 |-------------------------------------------|------------------------------| 
-| Hackear WhatsApp en Kali Linux (CON ROOT) | https://youtu.be/Qck83WG0B5A |
-| Hackear WhatsApp en Kali Linux (SIN ROOT) | https://youtu.be/19DyuX3a-qs |
 | Controlar un Android fuera de la red local| https://youtu.be/V1w1CMSdTyU |
 | KitHack - Una herramienta todo en uno     | https://youtu.be/-8TCtiI9HWM |
 

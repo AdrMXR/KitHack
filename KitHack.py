@@ -4218,10 +4218,10 @@ def main():
 				os.system('clear')
 				main()
 
-		elif sys == '09':
-			LHOST = input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
-			LPORT = input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
-			PAYLOAD = input("\n{0}SET PAYLOAD: {1}".format(YELLOW, DEFAULT))
+		elif sys == 9:
+			LHOST = raw_input("\n{0}SET LHOST: {1}".format(YELLOW, DEFAULT))
+			LPORT = raw_input("\n{0}SET LPORT: {1}".format(YELLOW, DEFAULT))
+			PAYLOAD = raw_input("\n{0}SET PAYLOAD: {1}".format(YELLOW, DEFAULT))
 			if ".tcp.ngrok.io" in LHOST:
 				LHOST = "127.0.0.1"
 				LPORT = "443"
