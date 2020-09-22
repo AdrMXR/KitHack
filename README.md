@@ -44,8 +44,8 @@ $ sudo apt update
 # Instale python3 python3-pip
 $ sudo apt install python3 python3-pip
 
-# Clone el repositorio de la rama dev
-$ git clone --branch dev https://github.com/AdrMXR/KitHack.git
+# Clone el repositorio 
+$ git clone https://github.com/AdrMXR/KitHack.git
 
 # Entre al repositorio
 $ cd KitHack
