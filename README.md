@@ -88,7 +88,7 @@ $ sudo bash update.sh
 - Debido a la eliminación de algunos repositorios por parte de sus respectivos autores, es fundamental que nuestros usuarios nos [reporten](mailto:kithacking@gmail.com) cualquier herramienta que no se esté instalando de forma correcta, ya que de esa forma nosotros podremos depurarla completamente de kithack.
 
 **2) Integración de nuevas herramientas.**
-- Así como depuramos herramientas también integramos algunas nuevas, si tienes algún proyecto personal en github que te gustaría que apareciera en nuestro kit de herramientas, o si estás interesado en ser contribuidor de kithack, ayudanos a maximizar nuestro arsenal contestando esta [encuesta.](https://forms.gle/Kwrb3fbGni8z2kLi9) 
+- Así como depuramos herramientas también integramos algunas nuevas, si tienes algún proyecto personal en github que te gustaría que apareciera en nuestro kit de herramientas, o si estás interesado en ser contribuidor de kithack, lee nuestra [norma de contribución](https://github.com/AdrMXR/KitHack/blob/master/docs/CONTRIBUTING.md).
 
 **3) Unificación de tipos de Payloads (por etapas y sin etapas).**
 - Tal como lo explicamos en nuestra pagina web de documentación, kithack nos permite utilizar tanto payloads por etapas como individuales. Si deseas saber sus diferencias, consulta [aquí.](https://adrmxr.github.io/KitHack#tipos-de-payloads)
@@ -155,16 +155,16 @@ $ sudo bash update.sh
 
 ## Menu:
 
-- [Android](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#android)
-- [Windows](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#windows) 
-- [Phishing](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#phishing)
-- [Wifi Attacks](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#wifi-attacks)
-- [Passwords Attacks](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#passwords-attacks)
-- [Web Attacks](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#web-attacks)
-- [Spoofing](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#spoofing)
-- [Information Gathering](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#information-gathering)
-- [Others](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#others)
-- [Backdoors with msfvenom](https://github.com/AdrMXR/KitHack/blob/master/TOOLS.md#backdoors-with-msfvenom)
+- [Android](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#android)
+- [Windows](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#windows) 
+- [Phishing](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#phishing)
+- [Wifi Attacks](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#wifi-attacks)
+- [Passwords Attacks](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#passwords-attacks)
+- [Web Attacks](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#web-attacks)
+- [Spoofing](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#spoofing)
+- [Information Gathering](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#information-gathering)
+- [Others](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#others)
+- [Backdoors with msfvenom](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#backdoors-with-msfvenom)
 
 ## Bug? 
 
