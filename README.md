@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-<a href="mailto:kithacking@gmail.com"><img title="Correo" src="https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet?style=for-the-badge&logo=gmail"></a>
+<a href="mailto:support@kithack.ga"><img title="Correo" src="https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet?style=for-the-badge&logo=gmail"></a>
 <a href="https://t.me/AdrMXR"><img title="Chat" src="https://img.shields.io/badge/CHAT-TELEGRAM-blue?style=for-the-badge&logo=telegram"></a>
 </p>
 
@@ -171,7 +171,7 @@ $ sudo bash update.sh
 Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
 1. Tomar un screenshot y que el fallo se aprecie detalladamente.
-2. Contactarme mediante el siguiente correo: kithacking@gmail.com
+2. Contactarme mediante el siguiente correo: support@kithack.ga
 3. Mandar el screenshot y explicar su problemática con ese fallo.
 
 ## Contribuidores: 
