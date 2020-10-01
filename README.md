@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-<a href="mailto:support@kithack.ga"><img title="Correo" src="https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet?style=for-the-badge&logo=gmail"></a>
+<a href="mailto:support@kithack.ga"><img title="Correo" src="https://img.shields.io/badge/Correo-support%40kithack.ga-blueviolet?style=for-the-badge&logo=gmail"></a>
 <a href="https://t.me/AdrMXR"><img title="Chat" src="https://img.shields.io/badge/CHAT-TELEGRAM-blue?style=for-the-badge&logo=telegram"></a>
 </p>
 
