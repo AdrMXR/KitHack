@@ -4,7 +4,7 @@
 
 <p align="center">
 <a href="https://github.com/AdrMXR"><img title="Autor" src="https://img.shields.io/badge/Author-Adrián%20Guillermo-blue?style=for-the-badge&logo=github"></a>
-<a href=""><img title="Version" src="https://img.shields.io/badge/Version-1.3.0-red?style=for-the-badge&logo="></a>
+<a href=""><img title="Version" src="https://img.shields.io/badge/Version-1.3.1-red?style=for-the-badge&logo="></a>
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 <p align="center">
 <a href="mailto:support@kithack.ga"><img title="Correo" src="https://img.shields.io/badge/Correo-support%40kithack.ga-blueviolet?style=for-the-badge&logo=gmail"></a>
-<a href="https://t.me/AdrMXR"><img title="Chat" src="https://img.shields.io/badge/CHAT-TELEGRAM-blue?style=for-the-badge&logo=telegram"></a>
+<a href="https://github.com/AdrMXR/KitHack/tree/master/docs/translations/English/README.md"><img title="English" src="https://img.shields.io/badge/Translate%20to-English-inactive?style=for-the-badge&logo=google-translate"></a>
 </p>
 
 **Kithack** es un framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras multiplataforma mediante Metasploit Framework. 
@@ -61,6 +61,9 @@ $ kithack
 
 # Cuando desee actualizar ejecute
 $ sudo bash update.sh
+
+# Para desinstalar ejecute
+$ sudo bash uninstall.sh
 ```
 
 ## Dependencias:
@@ -94,7 +97,7 @@ $ sudo bash update.sh
 - Tal como lo explicamos en nuestra pagina web de documentación, kithack nos permite utilizar tanto payloads por etapas como individuales. Si deseas saber sus diferencias, consulta [aquí.](https://adrmxr.github.io/KitHack#tipos-de-payloads)
 
 **4) Incorporación de un nuevo método que permite infectar aplicaciones Android legitimas.**
-- Kithack nos proporciona la opción de poder infectar una APK original y certificarla para que sea menos detectable. Cabe destacar que no todas las aplicaciones son vulnerables, aplicaciones como Facebook, WhatsApp, Instagram y similares tienen los suficientes mecanismos de seguridad para evitar este tipo de infección de malware. Nosotros te sugerimos descargar las aplicaciones directamente de [apkpure](https://apkpure.com) o similares a esta.
+- Kithack nos proporciona la opción de poder infectar una APK original y certificarla para que sea menos detectable. Cabe destacar que no todas las aplicaciones son vulnerables, aplicaciones como Facebook, WhatsApp, Instagram y similares tienen los suficientes mecanismos de seguridad para evitar este tipo de ataques. Te sugerimos descargar aplicaciones directamente de [apkpure](https://apkpure.com) o similares a esta.
 
 **5) Generación de enlaces tcp mediante Ngrok para conexiones publicas (puerto 443 por default).**
 - Ahora también puedes trabajar con [ngrok](https://ngrok.com) para realizar ataques fuera de tu red sin necesidad de abrir puertos. También se ha automatizado la validación de tu [authtoken](https://ngrok.com/docs#getting-started-authtoken), ya que en caso de no tenerlo configurado, kithack automaticamente te solicita ingresarlo para generar correctamente el enlace tcp. El archivo de configuración ```ngrok.yml``` ya no será validado en los directorios de inicio (home path), ahora se almacenará en ```KitHack/.config``` de manera predeterminada. Si por alguna razon necesita que kithack le solicite nuevamente su authtoken escriba ```rm .config/ngrok.yml```
@@ -136,7 +139,7 @@ $ sudo bash update.sh
 
 | Demo 1 | Demo 2 | 
 | ------ | ------ | 
-<a href="https://asciinema.org/a/fiIoQatBqUh7z79DKTrQnG7bW" target="_blank"><img src="https://asciinema.org/a/fiIoQatBqUh7z79DKTrQnG7bW.svg" /></a>|<a href="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY" target="_blank"><img src="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY.svg" /></a>
+<a href="https://asciinema.org/a/6HmbtvVM2mMwfmoRjtCcGxg65" target="_blank"><img src="https://asciinema.org/a/6HmbtvVM2mMwfmoRjtCcGxg65.svg" /></a>|<a href="https://asciinema.org/a/njrEZg7HFw6RxnB3kMFmobFiy" target="_blank"><img src="https://asciinema.org/a/njrEZg7HFw6RxnB3kMFmobFiy.svg" /></a>
 <p align="center">
 
 ## Tutorial:
@@ -176,8 +179,8 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
 ## Contribuidores: 
 
-- Ironpuerquito - Diseñador 
-- C1b0rk - Tester 
+- Ironpuerquito 
+- C1b0rk 
 
 ## Licencia:
 

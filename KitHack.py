@@ -16,6 +16,7 @@ import webbrowser
 from sys import exit 
 from getch import pause  
 from tkinter import Tk, filedialog
+from lib.banners import *
 from lib import kitools
 from lib.network import run_network
 
@@ -42,7 +43,7 @@ def check_permissions():
 
 def info():
 	os.system('clear')
-	print("{0}[VERSION]:{1} 1.3.0\n\n".format(RED, DEFAULT))
+	print("{0}[VERSION]:{1} 1.3.1\n\n".format(RED, DEFAULT))
 	time.sleep(0.5)
 	print("{0}[AUTOR]:{1} Adrian Guillermo\n\n".format(RED, DEFAULT))
 	time.sleep(0.5)
@@ -57,34 +58,7 @@ def info():
 	os.system('clear')
 
 def main():
-	print ('\n\n') 
-	print ('{} /$$   /$$ /$$$$$$ /$$$$$$$$       /$$   /$$  /$$$$$$   /$$$$$$  /$$   /$$ '.format(RED).center(93))
-	print ('{}| $$  /$$/|_  $$_/|__  $$__/      | $$  | $$ /$$__  $$ /$$__  $$| $$  /$$/ '.format(RED).center(93))
-	print ('{}| $$ /$$/   | $$     | $$         | $$  | $$| $$  \ $$| $$  \__/| $$ /$$/  '.format(RED).center(93))
-	print ('{}| $$$$$/    | $$     | $$         | $$$$$$$$| $$$$$$$$| $$      | $$$$$/   '.format(RED).center(93))
-	print ('{}| $$  $$    | $$     | $$         | $$__  $$| $$__  $$| $$      | $$  $$   '.format(RED).center(93))
-	print ('{}| $$\  $$   | $$     | $$         | $$  | $$| $$  | $$| $$    $$| $$\  $$  '.format(RED).center(93))
-	print ('{}| $$ \  $$ /$$$$$$   | $$         | $$  | $$| $$  | $$|  $$$$$$/| $$ \  $$ '.format(RED).center(93))
-	print ('{}|__/  \__/|______/   |__/         |__/  |__/|__/  |__/ \______/ |__/  \__/ '.format(RED).center(93))
-	print ('{}                                                                      v1.3.0 by:AdrMXR'.format(BOLD))
-	print('\n')
-	print ('{0} ------------------------------------------------------------------------------------- '.format(DEFAULT))
-	print ('{0}||                                        {1}MENU{0}                                       ||'.format(DEFAULT, WHITE))
-	print ('{0}||-----------------------------------------------------------------------------------||'.format(DEFAULT))
-	print ('{0}||                                         |                                         ||'.format(DEFAULT))
-	print ('{0}||          [01] {1}Android{0}                   |       [07] {1}Spoofing{0}                     ||'.format(DEFAULT, YELLOW))
-	print ('{0}||                                         |                                         ||'.format(DEFAULT))
-	print ('{0}||          [02] {1}Windows{0}                   |       [08] {1}Information Gathering{0}        ||'.format(DEFAULT, YELLOW))
-	print ('{0}||                                         |                                         ||'.format(DEFAULT))
-	print ('{0}||          [03] {1}Phishing{0}                  |       [09] {1}Others{0}                       ||'.format(DEFAULT, YELLOW))
-	print ('{0}||                                         |                                         ||'.format(DEFAULT))
-	print ('{0}||          [04] {1}Wifi Attacks{0}              |       [10] {1}Backdoors with msfvenom{0}      ||'.format(DEFAULT, YELLOW))
-	print ('{0}||                                         |                                         ||'.format(DEFAULT))
-	print ('{0}||          [05] {1}Passwords Attacks{0}         |       [11] {1}Help{0}                         ||'.format(DEFAULT, YELLOW))
-	print ('{0}||                                         |                                         ||'.format(DEFAULT))
-	print ('{0}||          [06] {1}Web Attacks{0}               |       [12] {1}Exit{0}                         ||'.format(DEFAULT, YELLOW))
-	print ('{0} ------------------------------------------------------------------------------------- '.format(DEFAULT))
-
+	print(start_main_menu)
 	option = input("{0}KitHack >> {1}".format(RED, DEFAULT))
 	option = option.zfill(2)
 	
@@ -795,13 +769,10 @@ def main():
 			main()		
 
 	elif option == '10':
+		# sys msfvenom
 		os.system('clear')
-		print("\033[01;31m")
-		archivo = open("images/msf.txt")
-		print(archivo.read())
-
-		#Sys msfvenom 
-		print ('{0} [*] {1}Sys Payloads:\n'.format(DEFAULT, GREEN))
+		print(msf_banner)
+		print ('\n{0} [*] {1}Sys Payloads:\n'.format(DEFAULT, GREEN))
 		print ('{0}[01] {1}LINUX {0}--> {2}Kithack.elf'.format(WHITE, YELLOW, RED))
 		print ('{0}[02] {1}WINDOWS {0}--> {2}Kithack.exe'.format(WHITE, YELLOW, RED))
 		print ('{0}[03] {1}ANDROID {0}--> {2}Kithack.apk'.format(WHITE, YELLOW, RED))
@@ -4246,6 +4217,7 @@ def main():
 		pause("\n{}Presione cualquier tecla para salir...".format(GREEN))
 		time.sleep(1)
 		os.system('clear')
+		print(exit_main)
 		exit(0)
 
 	else:
@@ -4267,10 +4239,12 @@ if __name__ == "__main__":
 			if os.path.isfile('/usr/local/bin/kithack'):
 				os.system('clear && kithack')
 			else:
-				os.system('clear && sudo python KitHack.py')	
+				os.system('clear && sudo python3 KitHack.py')	
 
 		elif choice == '02':
 			time.sleep(2)
+			os.system('clear')
+			print(exit_main)
 			exit(0)
 		else:
 			print("\n{}[x] Opcion invalida.".format(RED))

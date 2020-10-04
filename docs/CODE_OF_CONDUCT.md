@@ -6,7 +6,7 @@ Con el fin de fomentar un entorno abierto y acogedor, como
 colaboradores y mantenedores se comprometen a participar en nuestro proyecto y
 nuestra comunidad una experiencia libre de acoso para todos, independientemente de su edad, cuerpo
 tamaño, discapacidad, origen étnico, características sexuales, identidad y expresión de género,
-nivel de experiencia, educación, nivel socioeconómico, nacionalidad, personal
+nivel de experiencia, educación, nivel socioeconómico, nacionalidad,
 apariencia, raza, religión o identidad y orientación sexual.
 
 ## Nuestros estándares
@@ -55,15 +55,9 @@ más definido y aclarado por los encargados del proyecto.
 ## Ejecución
 
 Los casos de comportamiento abusivo, acosador o inaceptable pueden ser
-informado poniéndose en contacto con el equipo del proyecto en kithacking@gmail.com. Todas
-Las quejas serán revisadas e investigadas y resultarán en una respuesta que
-se considera necesario y apropiado a las circunstancias. El equipo del proyecto es
+informado poniéndose en contacto con el equipo del proyecto en support@kithack.ga. Todas
+las quejas serán revisadas e investigadas. El equipo del proyecto es
 obligado a mantener la confidencialidad con respecto al informante de un incidente.
-Se pueden publicar más detalles de las políticas de aplicación específicas por separado.
-
-Los mantenedores de proyectos que no siguen o hacen cumplir el Código de Conducta de manera adecuada
-La fe puede enfrentar repercusiones temporales o permanentes según lo determinen otros
-miembros de la dirección del proyecto.
 
 ## Atribución
 

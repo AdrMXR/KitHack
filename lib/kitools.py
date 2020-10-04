@@ -14,9 +14,10 @@ from sys import exit
 from getch import pause
 from KitHack import main
 
+location = os.getcwd()
+
 #Tools Android 
 def BackdoorApk():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/backdoor-apk'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -35,7 +36,6 @@ def BackdoorApk():
 		main()
 
 def EvilDroid():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/Evil-Droid'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -54,7 +54,6 @@ def EvilDroid():
 		main()
 
 def Spade():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/spade'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -91,7 +90,6 @@ def AhMyth():
 		main()
 
 def Andspoilt():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/Andspoilt'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -110,7 +108,6 @@ def Andspoilt():
 		main()
 
 def Kwetza():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/kwetza'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -129,7 +126,6 @@ def Kwetza():
 		main()
 
 def Termux():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/Termux'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -146,7 +142,6 @@ def Termux():
 		main()
 
 def AndroidExploits():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/Android-Exploits'):	
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -163,7 +158,6 @@ def AndroidExploits():
 		main()
 
 def Grabcam():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/grabcam'):	
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -182,7 +176,6 @@ def Grabcam():
 		main()
 
 def AndroidPatternLock():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Android/androidpatternlock'):	
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -202,7 +195,6 @@ def AndroidPatternLock():
 
 #Tools Windows 
 def Winpayloads():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/Winpayloads'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -221,7 +213,6 @@ def Winpayloads():
 		main()
 
 def sAINT():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/sAINT'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -240,7 +231,6 @@ def sAINT():
 		main()
 
 def BeeLogger():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/BeeLogger'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -259,7 +249,6 @@ def BeeLogger():
 		main()
 
 def FakeImageExploiter():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/FakeImageExploiter'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -278,7 +267,6 @@ def FakeImageExploiter():
 		main()	
 
 def Koadic():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/koadic'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -297,7 +285,6 @@ def Koadic():
 		main()
 
 def PhantomEvasion():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/Phantom-Evasion'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -316,7 +303,6 @@ def PhantomEvasion():
 		main()
 
 def Ps1encode():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/ps1encode'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -335,7 +321,6 @@ def Ps1encode():
 		main()
 
 def DKMC():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/DKMC'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -354,7 +339,6 @@ def DKMC():
 		main()
 
 def Cromos():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/cromos'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -373,7 +357,6 @@ def Cromos():
 		main()
 
 def EternalScanner():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/eternal_scanner'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -392,7 +375,6 @@ def EternalScanner():
 		main()
 
 def EternalblueDoublepulsarMetasploit():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/Eternalblue-Doublepulsar-Metasploit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -409,7 +391,6 @@ def EternalblueDoublepulsarMetasploit():
 		main()
 
 def MS17010EternalBlueWinXPWin10():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/MS17-010-EternalBlue-WinXP-Win10'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -426,7 +407,6 @@ def MS17010EternalBlueWinXPWin10():
 		main()
 
 def WindowsExploits():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Windows/Exploits'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -444,7 +424,6 @@ def WindowsExploits():
 
 #Tools Phishing
 def HiddenEye():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/HiddenEye'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -463,7 +442,6 @@ def HiddenEye():
 		main()
 
 def PhishX():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/PhishX'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -482,7 +460,6 @@ def PhishX():
 		main()
 
 def SocialPhish():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/SocialPhish'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -501,7 +478,6 @@ def SocialPhish():
 		main()
 
 def SocialFish():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/SocialFish'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -520,7 +496,6 @@ def SocialFish():
 		main()
 
 def PhisherMan():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/Phisher-man'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -539,7 +514,6 @@ def PhisherMan():
 		main()
 
 def Spectre():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/Spectre'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -558,7 +532,6 @@ def Spectre():
 		main()
 
 def Blackeye():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/blackeye'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -577,7 +550,6 @@ def Blackeye():
 		main()
 
 def PhEmail():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/PhEmail'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -596,7 +568,6 @@ def PhEmail():
 		main()
 
 def Weeman():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/weeman'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -615,7 +586,6 @@ def Weeman():
 		main()
 
 def Zphisher():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/zphisher'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -634,7 +604,6 @@ def Zphisher():
 		main()
 
 def AIOPhish():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Phishing/AIOPhish'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -654,7 +623,6 @@ def AIOPhish():
 
 #Tools Wifi 
 def Fluxion():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/fluxion'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -673,7 +641,6 @@ def Fluxion():
 		main()
 
 def Wifiphisher():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/wifiphisher'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -692,7 +659,6 @@ def Wifiphisher():
 		main()
 
 def Wifibroot():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/WiFiBroot'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -711,7 +677,6 @@ def Wifibroot():
 		main()
 
 def Wifite():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/wifite'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -748,7 +713,6 @@ def Ettercap():
 		main()
 
 def Linset():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/linsetmv1-2'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -767,7 +731,6 @@ def Linset():
 		main()
 
 def WiFiPumpkin():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/wifipumpkin3'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -786,7 +749,6 @@ def WiFiPumpkin():
 		main()
 
 def Wifresti():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/wifresti'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -805,7 +767,6 @@ def Wifresti():
 		main()
 
 def EvilLimiter():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/evillimiter'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -824,7 +785,6 @@ def EvilLimiter():
 		main()
 
 def NetoolToolkit():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/netool-toolkit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -843,7 +803,6 @@ def NetoolToolkit():
 		main()
 
 def Dracnmap():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/Dracnmap'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -862,7 +821,6 @@ def Dracnmap():
 		main()
 
 def Airgeddon():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/airgeddon'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -881,7 +839,6 @@ def Airgeddon():
 		main()
 
 def Routersploit():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/routersploit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -900,7 +857,6 @@ def Routersploit():
 		main()
 
 def Eaphammer():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/eaphammer'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -919,7 +875,6 @@ def Eaphammer():
 		main()
 
 def VMRMDK():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/VMR-MDK-K2-2017R-012x4'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -938,7 +893,6 @@ def VMRMDK():
 		main()
 
 def Wirespy():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/wirespy'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -975,7 +929,6 @@ def Wireshark():
 		main()
 
 def SniffAir():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Wifi/SniffAir'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -994,7 +947,6 @@ def SniffAir():
 		main()
 
 def WifiJammer():
-	location = os.getcwd()
 	if not os.path.isfile('tools/Wifi/wifijammer'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1013,7 +965,6 @@ def WifiJammer():
 		main()
 
 def KawaiiDeauther():
-	location = os.getcwd()
 	if not os.path.isfile('tools/Wifi/KawaiiDeauther'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1033,7 +984,6 @@ def KawaiiDeauther():
 
 #Tools passwords 
 def Cupp():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/cupp'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1052,7 +1002,6 @@ def Cupp():
 		main()
 
 def Facebooker():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/Facebooker'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1071,7 +1020,6 @@ def Facebooker():
 		main()	
 
 def BluForceFB():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/BluForce-FB'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1090,7 +1038,6 @@ def BluForceFB():
 		main()
 
 def Brut3k1t():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/brut3k1t'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1109,7 +1056,6 @@ def Brut3k1t():
 		main()	
 
 def SocialBox():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/SocialBox'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1128,7 +1074,6 @@ def SocialBox():
 		main()	
 
 def JohnTheRipper():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/JohnTheRipper'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1147,7 +1092,6 @@ def JohnTheRipper():
 		main()
 
 def Hashcat():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/hashcat'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1166,7 +1110,6 @@ def Hashcat():
 		main()
 
 def Brutedum():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/Brutedum'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1185,7 +1128,6 @@ def Brutedum():
 		main()
 
 def Facebash():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/facebash'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1204,7 +1146,6 @@ def Facebash():
 		main()	
 
 def Brutespray():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/brutespray'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1223,7 +1164,6 @@ def Brutespray():
 		main()	
 
 def Pupi():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/PUPI'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1242,7 +1182,6 @@ def Pupi():
 		main()
 
 def B4rbrute():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/b4r-brute'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1261,7 +1200,6 @@ def B4rbrute():
 		main()
 
 def FbHack():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Passwords/fb-hack'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1281,7 +1219,6 @@ def FbHack():
 
 #Tools Web
 def SQLmap():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/sqlmap-dev'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1300,7 +1237,6 @@ def SQLmap():
 		main()
 
 def XAttacker():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/XAttacker'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1319,7 +1255,6 @@ def XAttacker():
 		main()
 
 def Fuxploider():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/fuxploider'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1338,7 +1273,6 @@ def Fuxploider():
 		main()
 
 def Wordpresscan():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/Wordpresscan'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1357,7 +1291,6 @@ def Wordpresscan():
 		main()
 
 def SiteBroker():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/SiteBroker'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1376,7 +1309,6 @@ def SiteBroker():
 		main()
 
 def NoSQLMap():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/NoSQLMap'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1395,7 +1327,6 @@ def NoSQLMap():
 		main()
 
 def SqliScanner():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/sqli-scanner'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1414,7 +1345,6 @@ def SqliScanner():
 		main()
 
 def Joomscan():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/joomscan'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -1433,7 +1363,6 @@ def Joomscan():
 		main()
 
 def Metagoofil():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/metagoofil'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1452,7 +1381,6 @@ def Metagoofil():
 		main()
 
 def Sublist3r():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/Sublist3r'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1471,7 +1399,6 @@ def Sublist3r():
 		main()
 
 def WAFNinja():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/WAFNinja'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1490,7 +1417,6 @@ def WAFNinja():
 		main()
 
 def Dirsearch():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/dirsearch'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1509,7 +1435,6 @@ def Dirsearch():
 		main()
 
 def XSStrike():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/XSStrike'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1528,7 +1453,6 @@ def XSStrike():
 		main()
 
 def LinksF1nd3r():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/LinksF1nd3r'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1547,7 +1471,6 @@ def LinksF1nd3r():
 		main()
 
 def DTECH():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/D-Tech'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1566,7 +1489,6 @@ def DTECH():
 		main()
 
 def Phpsploit():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Web/phpsploit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1586,7 +1508,6 @@ def Phpsploit():
 
 #Tools Spoofing
 def SpoofMAC():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Spoofing/SpoofMAC'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1605,7 +1526,6 @@ def SpoofMAC():
 		main()		
 
 def IpSpoofing():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Spoofing/ip_spoofing'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1624,7 +1544,6 @@ def IpSpoofing():
 		main()		
 
 def Arpspoof():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Spoofing/arpspoof'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1643,7 +1562,6 @@ def Arpspoof():
 		main()	
 
 def DerpNSpoof():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Spoofing/DerpNSpoof'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1662,7 +1580,6 @@ def DerpNSpoof():
 		main()	
 
 def DrSpoof():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Spoofing/Dr.Spoof'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1681,7 +1598,6 @@ def DrSpoof():
 		main()	
 
 def GODKILLER():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Spoofing/GOD-KILLER'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1701,7 +1617,6 @@ def GODKILLER():
 
 #Tools Information Gathering
 def NMAP():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/nmap'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1720,7 +1635,6 @@ def NMAP():
 		main()	
 
 def Th3inspector():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/Th3inspector'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1739,7 +1653,6 @@ def Th3inspector():
 		main()	
 
 def FBI():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/fbi'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1758,7 +1671,6 @@ def FBI():
 		main()	
 
 def Infoga():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/Infoga'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1777,7 +1689,6 @@ def Infoga():
 		main()	
 
 def Crips():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/Crips'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1796,7 +1707,6 @@ def Crips():
 		main()	
 
 def BillCipher():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/billcipher'):	
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1815,7 +1725,6 @@ def BillCipher():
 		main()	
 
 def RedHawk():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/RED_HAWK'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1834,7 +1743,6 @@ def RedHawk():
 		main()	
 
 def ReconNg():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/recon-ng'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1853,7 +1761,6 @@ def ReconNg():
 		main()	
 
 def theHarvester():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/theHarvester'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1872,7 +1779,6 @@ def theHarvester():
 		main()	
 
 def PhoneInfoga():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/PhoneInfoga'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1891,7 +1797,6 @@ def PhoneInfoga():
 		main()	
 
 def Gasmask():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/gasmask'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1910,7 +1815,6 @@ def Gasmask():
 		main()	
 
 def URLextractor():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/URLextractor'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1929,7 +1833,6 @@ def URLextractor():
 		main()	
 
 def Devploit():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/Devploit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1948,7 +1851,6 @@ def Devploit():
 		main()	
 
 def ReconDog():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/ReconDog'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1967,7 +1869,6 @@ def ReconDog():
 		main()	
 
 def Webkiller():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/webkiller'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -1986,7 +1887,6 @@ def Webkiller():
 		main()	
 
 def Quasar():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/quasar'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2005,7 +1905,6 @@ def Quasar():
 		main()	
 
 def InfoInstagramIphone():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/info-instagram-iphone'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2024,7 +1923,6 @@ def InfoInstagramIphone():
 		main()	
 
 def UserScan():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/userscan'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2043,7 +1941,6 @@ def UserScan():
 		main()	
 
 def XCTRHackingTools():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/XCTR-Hacking-Tools'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2062,7 +1959,6 @@ def XCTRHackingTools():
 		main()	
 
 def DeadTrap():
-	location = os.getcwd()
 	if not os.path.isdir('tools/InformationGathering/DeadTrap'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2082,7 +1978,6 @@ def DeadTrap():
 
 #Tools Others
 def TheFatRat():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/TheFatRat'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2101,7 +1996,6 @@ def TheFatRat():
 		main()	
 
 def Msfpc():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/msfpc'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2138,7 +2032,6 @@ def Fcrackzip():
 		main()	
 
 def QRLjacker():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/QRLJacking'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2157,7 +2050,6 @@ def QRLjacker():
 		main()	
 
 def Lazy():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/lscript'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2176,7 +2068,6 @@ def Lazy():
 		main()	
 
 def HTBINVITE():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/HTB-INVITE'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2195,7 +2086,6 @@ def HTBINVITE():
 		main()	
 
 def Ngrok():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/Ngrok'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2214,7 +2104,6 @@ def Ngrok():
 		main()	
 
 def Bluepot():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/Bluepot'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2233,7 +2122,6 @@ def Bluepot():
 		main()	
 
 def Setoolkit():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/set'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2252,7 +2140,6 @@ def Setoolkit():
 		main()	
 
 def A2sv():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/a2sv'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2271,7 +2158,6 @@ def A2sv():
 		main()	
 
 def Fornonimizer():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/4nonimizer'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2290,7 +2176,6 @@ def Fornonimizer():
 		main()	
 	
 def Easysploit():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/easysploit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2309,7 +2194,6 @@ def Easysploit():
 		main()	
 
 def NXcrypt():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/NXcrypt'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2328,7 +2212,6 @@ def NXcrypt():
 		main()	
 
 def KnockMail():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/KnockMail'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2347,7 +2230,6 @@ def KnockMail():
 		main()	
 
 def RkHunter():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/rkhunter'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2366,7 +2248,6 @@ def RkHunter():
 		main()	
 
 def HeraKeylogger():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/HeraKeylogger'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2385,7 +2266,6 @@ def HeraKeylogger():
 		main()	
 
 def ZLogger():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/ZLogger'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2404,7 +2284,6 @@ def ZLogger():
 		main()	
 
 def Xerosploit():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/xerosploit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2423,7 +2302,6 @@ def Xerosploit():
 		main()	
 
 def Slacksec():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/Slacksec'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
@@ -2442,7 +2320,6 @@ def Slacksec():
 		main()	
 
 def Katana():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/KatanaFramework'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -2461,7 +2338,6 @@ def Katana():
 		main()			
 
 def Z0172CKTools():	
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/Z0172CK-Tools'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -2480,7 +2356,6 @@ def Z0172CKTools():
 		main()	
 
 def CamHack():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/Cam-Hack'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -2499,7 +2374,6 @@ def CamHack():
 		main()	
 
 def Onex():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/onex'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -2518,7 +2392,6 @@ def Onex():
 		main()	
 
 def Ransom0():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/Ransom0'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -2537,7 +2410,6 @@ def Ransom0():
 		main()	
 
 def Morpheus():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/morpheus'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -2556,7 +2428,6 @@ def Morpheus():
 		main()		
 
 def FBTOOL():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/FBTOOL'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
@@ -2575,7 +2446,6 @@ def FBTOOL():
 		main()	
 
 def Venom():
-	location = os.getcwd()
 	if not os.path.isdir('tools/Others/venom'):	
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
