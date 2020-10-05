@@ -312,7 +312,6 @@ touch /usr/local/bin/kithack
 echo "#!/bin/bash" > /usr/local/bin/kithack
 echo "$run" >> /usr/local/bin/kithack
 chmod +x /usr/local/bin/kithack
-sed -i "4i\Exec=sh -c '$run'" images/kithack.desktop
 cp images/kithack.desktop /usr/share/applications/kithack.desktop
 cp images/kithack.png /usr/share/icons/kithack.png
 sleep 2

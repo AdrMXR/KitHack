@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=KitHack
 Encoding=UTF-8
+Exec=sh -c "kithack"
 Icon=/usr/share/icons/kithack.png
 Terminal=true
 Type=Application

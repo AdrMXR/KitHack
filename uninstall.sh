@@ -68,6 +68,12 @@ echo -e "[✔]/usr/share/applications/kithack.desktop"
 sleep 0.2
 fi
 
+if [ -f "/usr/share/icons/kithack.png" ]; then
+rm /usr/share/icons/kithack.png
+echo -e "[✔]/usr/share/icons/kithack.png"
+sleep 0.2
+fi
+
 if [ -f "/tmp/data.txt" ]; then
 rm /tmp/data.txt
 echo -e "[✔]/tmp/data.txt"
