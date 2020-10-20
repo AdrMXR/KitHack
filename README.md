@@ -139,7 +139,7 @@ $ sudo bash uninstall.sh
 
 | Demo 1 | Demo 2 | 
 | ------ | ------ | 
-<a href="https://asciinema.org/a/6HmbtvVM2mMwfmoRjtCcGxg65" target="_blank"><img src="https://asciinema.org/a/6HmbtvVM2mMwfmoRjtCcGxg65.svg" /></a>|<a href="https://asciinema.org/a/njrEZg7HFw6RxnB3kMFmobFiy" target="_blank"><img src="https://asciinema.org/a/njrEZg7HFw6RxnB3kMFmobFiy.svg" /></a>
+<a href="https://asciinema.org/a/fiIoQatBqUh7z79DKTrQnG7bW" target="_blank"><img src="https://asciinema.org/a/fiIoQatBqUh7z79DKTrQnG7bW.svg" /></a>|<a href="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY" target="_blank"><img src="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY.svg" /></a>
 <p align="center">
 
 ## Tutorial:
