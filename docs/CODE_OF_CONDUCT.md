@@ -55,7 +55,7 @@ más definido y aclarado por los encargados del proyecto.
 ## Ejecución
 
 Los casos de comportamiento abusivo, acosador o inaceptable pueden ser
-informado poniéndose en contacto con el equipo del proyecto en support@kithack.ga. Todas
+informado poniéndose en contacto con el equipo del proyecto en kithacking@gmail.com. Todas
 las quejas serán revisadas e investigadas. El equipo del proyecto es
 obligado a mantener la confidencialidad con respecto al informante de un incidente.
 

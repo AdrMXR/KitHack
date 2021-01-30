@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-<a href="mailto:support@kithack.ga"><img title="Correo" src="https://img.shields.io/badge/Correo-support%40kithack.ga-blueviolet?style=for-the-badge&logo=gmail"></a>
+<a href="mailto:kithacking@gmail.com"><img title="Correo" src="https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet?style=for-the-badge&logo=gmail"></a>
 <a href="https://github.com/AdrMXR/KitHack/tree/master/README.md"><img title="Spanish" src="https://img.shields.io/badge/Translate%20to-Spanish-inactive?style=for-the-badge&logo=google-translate"></a>
 </p>
 
@@ -88,7 +88,7 @@ $ sudo bash uninstall.sh
 ## New features:
 
 **1) Debugging of obsolete tools.**
-- Due to the elimination of some repositories by their respective authors, it is essential that our users [report us](mailto:support@kithack.ga) any tool that is not being installed correctly, since in this way we can eliminate it from kithack.
+- Due to the elimination of some repositories by their respective authors, it is essential that our users [report us](mailto:kithacking@gmail.com) any tool that is not being installed correctly, since in this way we can eliminate it from kithack.
 
 **2) Integration of new tools.**
 - As we debug tools we also integrate some new ones, if you have a personal project on github that you would like to appear in our toolkit, or if you are interested in being a kithack contributor, read our [contribution policy](https://github.com/AdrMXR/KitHack/blob/master/docs/translations/English/CONTRIBUTING.md).
@@ -174,7 +174,7 @@ $ sudo bash uninstall.sh
 If the tool fails, follow these steps:
 
 1. Take a screenshot and see the error in detail
-2. Contact me through the following email: support@kithack.ga
+2. Contact me through the following email: kithacking@gmail.com
 3. Submit the screenshot and explain your problem with that error.
 
 ## Contributors: 

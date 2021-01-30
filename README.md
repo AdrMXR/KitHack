@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-<a href="mailto:support@kithack.ga"><img title="Correo" src="https://img.shields.io/badge/Correo-support%40kithack.ga-blueviolet?style=for-the-badge&logo=gmail"></a>
+<a href="mailto:kithacking@gmail.com"><img title="Correo" src="https://img.shields.io/badge/Correo-kithacking%40gmail.com-blueviolet?style=for-the-badge&logo=gmail"></a>
 <a href="https://github.com/AdrMXR/KitHack/tree/master/docs/translations/English/README.md"><img title="English" src="https://img.shields.io/badge/Translate%20to-English-inactive?style=for-the-badge&logo=google-translate"></a>
 </p>
 
@@ -174,7 +174,7 @@ $ sudo bash uninstall.sh
 Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
 1. Tomar un screenshot y que el fallo se aprecie detalladamente.
-2. Contactarme mediante el siguiente correo: support@kithack.ga
+2. Contactarme mediante el siguiente correo: kithacking@gmail.com
 3. Mandar el screenshot y explicar su problemática con ese fallo.
 
 ## Contribuidores: 
