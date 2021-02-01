@@ -4,7 +4,7 @@
 
 <p align="center">
 <a href="https://github.com/AdrMXR"><img title="Autor" src="https://img.shields.io/badge/Author-Adrián%20Guillermo-blue?style=for-the-badge&logo=github"></a>
-<a href=""><img title="Version" src="https://img.shields.io/badge/Version-1.3.1-red?style=for-the-badge&logo="></a>
+<a href=""><img title="Version" src="https://img.shields.io/badge/Version-1.3.2-red?style=for-the-badge&logo="></a>
 </p>
 
 <p align="center">
@@ -88,31 +88,34 @@ $ sudo bash uninstall.sh
 ## Novedades:
 
 **1) Depuración de herramientas obsoletas.**
-- Debido a la eliminación de algunos repositorios por parte de sus respectivos autores, es fundamental que nuestros usuarios nos [reporten](mailto:kithacking@gmail.com) cualquier herramienta que no se esté instalando de forma correcta, ya que de esa forma nosotros podremos depurarla completamente de kithack.
+- Es fundamental que nuestros usuarios nos [reporten](mailto:kithacking@gmail.com) cualquier herramienta que no se esté instalando de forma correcta, ya que de esa forma nosotros podremos depurarla completamente de kithack.
 
 **2) Integración de nuevas herramientas.**
 - Así como depuramos herramientas también integramos algunas nuevas, si tienes algún proyecto personal en github que te gustaría que apareciera en nuestro kit de herramientas, o si estás interesado en ser contribuidor de kithack, lee nuestra [norma de contribución](https://github.com/AdrMXR/KitHack/blob/master/docs/CONTRIBUTING.md).
 
 **3) Unificación de tipos de Payloads (por etapas y sin etapas).**
-- Tal como lo explicamos en nuestra pagina web de documentación, kithack nos permite utilizar tanto payloads por etapas como individuales. Si deseas saber sus diferencias, consulta [aquí.](https://adrmxr.github.io/KitHack#tipos-de-payloads)
+- Kithack nos permite utilizar tanto payloads por etapas como individuales. Si deseas saber sus diferencias, consulta [aquí.](https://adrmxr.github.io/KitHack#tipos-de-payloads)
 
 **4) Incorporación de un nuevo método que permite infectar aplicaciones Android legitimas.**
-- Kithack nos proporciona la opción de poder infectar una APK original y certificarla para que sea menos detectable. Cabe destacar que no todas las aplicaciones son vulnerables, aplicaciones como Facebook, WhatsApp, Instagram y similares tienen los suficientes mecanismos de seguridad para evitar este tipo de ataques. Te sugerimos descargar aplicaciones directamente de [apkpure](https://apkpure.com) o similares a esta.
+- Kithack nos proporciona la opción de poder infectar una APK original. Cabe destacar que no todas las aplicaciones son vulnerables.
 
-**5) Generación de enlaces tcp mediante Ngrok para conexiones publicas (puerto 443 por default).**
-- Ahora también puedes trabajar con [ngrok](https://ngrok.com) para realizar ataques fuera de tu red sin necesidad de abrir puertos. También se ha automatizado la validación de tu [authtoken](https://ngrok.com/docs#getting-started-authtoken), ya que en caso de no tenerlo configurado, kithack automaticamente te solicita ingresarlo para generar correctamente el enlace tcp. El archivo de configuración ```ngrok.yml``` ya no será validado en los directorios de inicio (home path), ahora se almacenará en ```KitHack/.config``` de manera predeterminada. Si por alguna razon necesita que kithack le solicite nuevamente su authtoken escriba ```rm .config/ngrok.yml```
+**5) Generación de conexiones TCP con ngrok.**
+- Ahora también puedes trabajar con [ngrok](https://ngrok.com) para realizar ataques fuera de tu red sin necesidad de abrir puertos. El archivo de configuración ```ngrok.yml``` se almacena en ```KitHack/.config``` de manera predeterminada. Si por alguna razon necesita que kithack le solicite nuevamente su authtoken escriba ```rm .config/ngrok.yml```.
 
-**6) Automatización de Metasploit para ponerlo en escucha de nuevas sesiones.**
-- No tienes que perder tiempo en volver a setear las configuraciones de tu payload, kithack se encarga de poner en escucha a [metasploit](https://www.metasploit.com) de manera rapida.
+**6) Automatización de Metasploit.**
+- No tienes que perder tiempo en volver a establecer las configuraciones de tu payload, kithack se encarga de poner en escucha a [metasploit](https://www.metasploit.com) de manera rapida.
 
-**7) Planificación de puntos estrategicos para la evasión de antivirus.**
-- Para nosotros es importante que nuestros backdoors sean lo menos detectables posibles, es por eso que te pedimos no subirlos a paginas como [virustotal](https://www.virustotal.com) ya que este tipo de plataformas almacenan en su base de datos los resultados de cada análisis.
+**7) Personalización de payloads para android.**
+- Ahora también tienes la posibilidad de personalizar tu propio payload para Android. Con kithack puedes cambiar el nombre predeterminado de la apk que genera [metasploit](https://www.metasploit.com) conocido como "MainActivity" y también puedes modificar el icono de Android predeterminado. Da click [aquí](https://github.com/AdrMXR/KitHack/blob/master/icons/LEEME.txt) para conocer el formato.
 
-**8) Elaboración de un nuevo método que permite modificar el nombre e icono predeterminados de una APK generada por Metasploit.**
-- Ahora también tienes la posibilidad de personalizar tu propio payload para Android. Con kithack puedes cambiar el nombre predeterminado de la apk que genera [metasploit](https://www.metasploit.com) conocido como "MainActivity" y también puedes modificar el icono Android predeterminado. Da click [aquí](https://github.com/AdrMXR/KitHack/blob/master/icons/LEEME.txt) para conocer el formato.
-
-**9) Aplicación de persistencia automatizada para cualquier APK.**
+**8) Aplicación de persistencia automatizada para cualquier APK.**
 - Olvidate de que tu sesión de [metasploit](https://www.metasploit.com) expire muy rapido, con kithack ahora podrás generar tu archivo de persistencia para cualquier APK. Si deseas saber como ponerlo en marcha en la shell de meterpreter, da click [aquí.](https://youtu.be/nERwsZyIVeo)
+
+**9) Ejecución de herramientas.**
+- Ahora el usuario podrá ejecutar las herramientas directamente desde kithack a pesar de que ya se encuentren instaladas.
+
+**10) Creación de ```clean.sh```.**
+- Si necesitas eliminar el contenido que te ha generado kithack en tu carpeta `tools` y `output`, puedes ejecutar el archivo `clean.sh` para hacerlo de forma rápida. 
 
 ## Algunas APK vulnerables:  
 
@@ -139,22 +142,8 @@ $ sudo bash uninstall.sh
 
 | Demo 1 | Demo 2 | 
 | ------ | ------ | 
-<a href="https://asciinema.org/a/fiIoQatBqUh7z79DKTrQnG7bW" target="_blank"><img src="https://asciinema.org/a/fiIoQatBqUh7z79DKTrQnG7bW.svg" /></a>|<a href="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY" target="_blank"><img src="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY.svg" /></a>
+<a href="https://asciinema.org/a/OTymOt3NNSTfFERrw2bHvuFw7" target="_blank"><img src="https://asciinema.org/a/OTymOt3NNSTfFERrw2bHvuFw7.svg" /></a>|<a href="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY" target="_blank"><img src="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY.svg" /></a>
 <p align="center">
-
-## Tutorial:
-
-<p align="center">
-<a href="https://www.youtube.com/watch?v=Wsdn158PH50">
-  <img src="https://github.com/AdrMXR/KitHack/blob/master/images/youtube.png" />
-</a></p>
-
-## Documentación:
-
-|                   Titulo                  |             Link             |
-|-------------------------------------------|------------------------------| 
-| Controlar un Android fuera de la red local| https://youtu.be/V1w1CMSdTyU |
-| KitHack - Una herramienta todo en uno     | https://youtu.be/-8TCtiI9HWM |
 
 ## Menu:
 

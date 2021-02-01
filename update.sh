@@ -1,5 +1,5 @@
 #!/usr/bin
-#Copyright 2020 KITHACK
+#Copyright 2021 KITHACK
 #Written by: Adrian Guillermo
 #Facebook: https://facebook.com/adrian.guillermo.22
 #Github: https://github.com/AdrMXR
@@ -32,7 +32,7 @@ echo -e "$yellow |    |  / |  |_> > /_/ | / __ \|  | \  ___/               "
 echo -e "$yellow |______/  |   __/\____ |(____  /__|  \___  > /\  /\  /\   "
 echo -e "$yellow           |__|        \/     \/          \/  \/  \/  \/   "
 echo -e "                                                                  "
-echo -e "$orange                    Update KitHack v1.3.1                  "
+echo -e "$orange                    Update KitHack v1.3.2                  "
 echo -e "                                                                  "
 echo -e "$orange                         By:AdrMXR                         "
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Copyright 2020 KITHACK
+#Copyright 2021 KITHACK
 #Written by: Adrian Guillermo
 #Facebook: https://facebook.com/adrian.guillermo.22
 #Github: https://github.com/AdrMXR

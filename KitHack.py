@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-#Copyright 2020 KITHACK
+#Copyright 2021 KITHACK
 #Written by: Adrian Guillermo
 #Facebook: https://facebook.com/adrian.guillermo.22
 #Github: https://github.com/AdrMXR
@@ -43,7 +43,7 @@ def check_permissions():
 
 def info():
 	os.system('clear')
-	print("{0}[VERSION]:{1} 1.3.1\n\n".format(RED, DEFAULT))
+	print("{0}[VERSION]:{1} 1.3.2\n\n".format(RED, DEFAULT))
 	time.sleep(0.5)
 	print("{0}[AUTOR]:{1} Adrian Guillermo\n\n".format(RED, DEFAULT))
 	time.sleep(0.5)

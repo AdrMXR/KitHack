@@ -26,8 +26,7 @@ Some code contribution scenarios are as follows:
 **Important**: When you are going to make a pull request, it is necessary that you comply with the following points:
 
 * Specify a descriptive title to facilitate understanding of your request.
-* Include all possible details, if possible incorporate a copy-paste of the output in your terminal.
+* Include as much detail as possible.
 * Include references
-* Never leave the description empty
 * Include instructions, advice or suggestions
 * Include documentation
