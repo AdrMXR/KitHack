@@ -60,7 +60,7 @@
 <p>En cada sección se encuentran las diferentes herramientas que podemos instalar junto con una pequeña descripción que nos beneficia en saber de que tratan o que funciones tienen.
 
 <h2 id="installation-tools"><strong>¿Cómo es el proceso de instalación de las herramientas?</strong></h2>
-<p>KitHack de manera automatizada se encarga tanto de la clonación del repositorio como de la instalación de sus dependencias o requerimientos especiales. Una vez terminada la instalación de su herramienta, esta se almacenará en la carpeta tools, y dentro de esta carpeta nos vamos a encontrar con otras subcarpetas con los nombres de cada categoría. <br>Por ejemplo, si la herramienta que usted eligió se encuentra dentro de la categoría Android, esta se almacenará en el directorio <code>KitHack/tools/Android/mi_herramienta.</code></p>
+<p>KitHack de manera automatizada se encarga tanto de la clonación del repositorio como de la instalación de sus dependencias o requerimientos especiales. Una vez terminada la instalación de su herramienta, esta se almacenará en la carpeta tools, y dentro de esta carpeta nos vamos a encontrar con otras subcarpetas con los nombres de cada categoría. <br>Por ejemplo, si la herramienta que usted eligió se encuentra dentro de la categoría Android, esta se almacenará en el directorio <code>KitHack/tools/Android/mi_herramienta.</code><br>Puede ejecutar sus herramientas directamente desde kithack a pesar de que ya se encuentren instaladas.</p>
 
 <h2 id="backdoors-with-msfvenom"><strong>Generador de backdoors.</strong></h2>
 <p>Una de las funciones más atractivas que tiene KitHack es el generador de puertas traseras que funciona mediante <a href="https://www.metasploit.com">Metasploit Framework.</a>
@@ -121,7 +121,7 @@ Podemos generar puertas traseras tanto para Linux, Windows, Android y Mac OS. Ta
 
 <p>Para realizar el ataque fuera de nuestra red local, debemos colocar como LHOST: <strong>0.tcp.ngrok.io</strong> y como LPORT el puerto que nos genere ngrok, en mi caso sería el <strong>15225.</strong>
 
-<h3 id="apks-originales"><strong>Infección de aplicaciones android originales.</strong></h3>
+<h3 id="apks-originales"><strong>Inyección de payloads en APKs legitimas.</strong></h3>
 <p>Este nuevo método nos permite onfuscar un payload dentro de una APK legitima. ¿Alguna vez intentaste realizar este proceso con el parametro <code>-x</code> de msfvenom? Este método mayormente genera algún tipo de error a los usuarios ya que no admite la mayoría de aplicaciones y tampoco realiza un método de certificación valido que pueda ser indetectable por los antivirus. El método de KitHack tiene menor margen de error al realizar el mismo proceso. Aún así, cabe mencionar que no todas las aplicaciones son vulnerables a este ataque, aplicaciones como Facebook, WhatsApp, instagram, y similares a estas, tienen los suficientes mecanismos de seguridad para evitar este tipo de actividades. Nosotros te aconsejamos descargar las aplicaciones desde <a href="https://apkpure.com">apkpure</a> o similares a esta.
 
 <br><br>El proceso que realiza KitHack para infectar una APK es el siguiente:</p>
@@ -139,7 +139,7 @@ Podemos generar puertas traseras tanto para Linux, Windows, Android y Mac OS. Ta
   <li>Certifica el archivo APK generado con jarsigner.
 </ul>
 
-<h3 id="payload-personalizado"><strong>Modificación de nombre e icono en nuestro payload para android.</strong></h3>
+<h3 id="payload-personalizado"><strong>Personalización de payloads para android.</strong></h3>
 <p>Esta nueva función nos permite modificar el nombre e icono predeterminados que nos proporciona metasploit a la hora de generar un payload básico de android. El famoso nombre conocido como <code>MainActivity</code> lo reemplaza kithack por el nombre que le proporciamos a nuestro archivo de salida. De la misma forma, podemos modificar el icono android predeterminado, este tiene que tener las siguientes caracteristicas:
 <ul>
 <li>Resolución 48x48.</li>
