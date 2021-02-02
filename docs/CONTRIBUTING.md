@@ -26,8 +26,7 @@ Algunos escenarios de contribución con código son los siguientes:
 **Importante**: Cuando vaya a realizar una solicitud de extracción, es necesario que cumpla con los siguientes puntos:
 
 * Especifique un titulo descriptivo para facilitar la comprensión de su solicitud.
-* Incluya todos los detalles posibles, si es posible incorpore un copy-paste de la salida en su terminal.
+* Incluya todos los detalles posibles.
 * Incluya referencias
-* Nunca deje la descripción vacía
 * Incluya instrucciones, consejos o sugerencias
 * Incluya documentación

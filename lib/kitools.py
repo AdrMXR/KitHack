@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-#Copyright 2020 KITHACK
+#Copyright 2021 KITHACK
 #Written by: Adrian Guillermo
 #Facebook: https://facebook.com/adrian.guillermo.22
 #Github: https://github.com/AdrMXR
@@ -31,9 +31,11 @@ def BackdoorApk():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Android && cd backdoor-apk && cd backdoor-apk && ./backdoor-apk.sh')
 
 def EvilDroid():
 	if not os.path.isdir('tools/Android/Evil-Droid'):
@@ -49,9 +51,11 @@ def EvilDroid():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Android && cd Evil-Droid && ./evil-droid')
 
 def Spade():
 	if not os.path.isdir('tools/Android/spade'):
@@ -67,9 +71,11 @@ def Spade():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Android && cd spade && python spade.py')
 
 def AhMyth():
 	if not os.path.isdir('tools/Android/AhMyth'):
@@ -85,9 +91,11 @@ def AhMyth():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('ahmyth')
 
 def Andspoilt():
 	if not os.path.isdir('tools/Android/Andspoilt'):
@@ -103,9 +111,11 @@ def Andspoilt():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('andspoilt')	
 
 def Kwetza():
 	if not os.path.isdir('tools/Android/kwetza'):
@@ -121,9 +131,11 @@ def Kwetza():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Android && cd kwetza && python kwetza.py')
 
 def Termux():
 	if not os.path.isdir('tools/Android/Termux'):
@@ -167,13 +179,15 @@ def Grabcam():
 			os.system('clear')
 			main()			
 		else:
-			os.system('cd tools && cd Android && cd grabcam && sudo bash grabcam.sh')
+			os.system('cd tools && cd Android && cd grabcam && bash grabcam.sh')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Android && cd grabcam && bash grabcam.sh')
 
 def AndroidPatternLock():
 	if not os.path.isdir('tools/Android/androidpatternlock'):	
@@ -189,9 +203,11 @@ def AndroidPatternLock():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()	
+		else:
+			os.system('cd tools && cd Android && cd androidpatternlock && python aplc.py')
 
 #Tools Windows 
 def Winpayloads():
@@ -208,9 +224,11 @@ def Winpayloads():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd Winpayloads && python WinPayloads.py')
 
 def sAINT():
 	if not os.path.isdir('tools/Windows/sAINT'):
@@ -226,15 +244,17 @@ def sAINT():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd sAINT && java -jar sAINT.jar')
 
 def BeeLogger():
 	if not os.path.isdir('tools/Windows/BeeLogger'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Windows && git clone https://github.com/4w4k3/BeeLogger.git && cd BeeLogger && sudo su && chmod +x install.sh && ./install.sh')
+		os.system('cd tools && cd Windows && git clone https://github.com/4w4k3/BeeLogger.git && cd BeeLogger && su && chmod +x install.sh && ./install.sh')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/BeeLogger".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -244,9 +264,11 @@ def BeeLogger():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd BeeLogger && python bee.py')
 
 def FakeImageExploiter():
 	if not os.path.isdir('tools/Windows/FakeImageExploiter'):
@@ -258,13 +280,15 @@ def FakeImageExploiter():
 			os.system('clear')
 			main()	
 		else:
-			os.system('cd tools && cd Windows && cd FakeImageExploiter && sudo ./FakeImageExploiter.sh')	
+			os.system('cd tools && cd Windows && cd FakeImageExploiter && ./FakeImageExploiter.sh')	
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()	
+		else:
+			os.system('cd tools && cd Windows && cd FakeImageExploiter && ./FakeImageExploiter.sh')
 
 def Koadic():
 	if not os.path.isdir('tools/Windows/koadic'):
@@ -280,27 +304,31 @@ def Koadic():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd koadic && ./koadic.py')
 
 def PhantomEvasion():
 	if not os.path.isdir('tools/Windows/Phantom-Evasion'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Windows && git clone https://github.com/oddcod3/Phantom-Evasion.git && cd Phantom-Evasion && sudo chmod +x phantom-evasion.py')
+		os.system('cd tools && cd Windows && git clone https://github.com/oddcod3/Phantom-Evasion.git && cd Phantom-Evasion && chmod +x phantom-evasion.py')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/Phantom-Evasion".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()	
 		else:
-			os.system('cd tools && cd Windows && cd Phantom-Evasion && sudo ./phantom-evasion.py')
+			os.system('cd tools && cd Windows && cd Phantom-Evasion && ./phantom-evasion.py')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd Phantom-Evasion && ./phantom-evasion.py')
 
 def Ps1encode():
 	if not os.path.isdir('tools/Windows/ps1encode'):
@@ -316,9 +344,11 @@ def Ps1encode():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd ps1encode && ./ps1encode.rb')
 
 def DKMC():
 	if not os.path.isdir('tools/Windows/DKMC'):
@@ -334,15 +364,17 @@ def DKMC():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd DKMC && python dkmc.py')
 
 def Cromos():
 	if not os.path.isdir('tools/Windows/cromos'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Windows && git clone https://github.com/6IX7ine/cromos.git && sudo chmod -R 777 cromos/ && cd cromos && python setup.py')
+		os.system('cd tools && cd Windows && git clone https://github.com/6IX7ine/cromos.git && chmod -R 777 cromos/ && cd cromos && python setup.py')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Windows/cromos".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -352,9 +384,11 @@ def Cromos():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd cromos && python cromos.py')
 
 def EternalScanner():
 	if not os.path.isdir('tools/Windows/eternal_scanner'):
@@ -370,9 +404,11 @@ def EternalScanner():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Windows && cd eternal_scanner && ./escan')
 
 def EternalblueDoublepulsarMetasploit():
 	if not os.path.isdir('tools/Windows/Eternalblue-Doublepulsar-Metasploit'):
@@ -427,7 +463,7 @@ def HiddenEye():
 	if not os.path.isdir('tools/Phishing/HiddenEye'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Phishing && git clone https://github.com/DarkSecDevelopers/HiddenEye.git && sudo apt install python3-pip && cd HiddenEye && sudo pip3 install -r requirements.txt')
+		os.system('cd tools && cd Phishing && git clone https://github.com/AdrMXR/HiddenEye.git && apt install python3-pip && cd HiddenEye && pip3 install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/HiddenEye".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -437,9 +473,11 @@ def HiddenEye():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd HiddenEye && python3 HiddenEye.py')
 
 def PhishX():
 	if not os.path.isdir('tools/Phishing/PhishX'):
@@ -455,9 +493,11 @@ def PhishX():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd PhishX && python3 PhishX.py')
 
 def SocialPhish():
 	if not os.path.isdir('tools/Phishing/SocialPhish'):
@@ -473,15 +513,17 @@ def SocialPhish():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('clear && cd tools && cd Phishing && cd SocialPhish && ./socialphish.sh')
 
 def SocialFish():
 	if not os.path.isdir('tools/Phishing/SocialFish'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Phishing && git clone https://github.com/UndeadSec/SocialFish.git && sudo apt-get install python3 python3-pip python3-dev -y && cd SocialFish && python3 -m pip install -r requirements.txt')
+		os.system('cd tools && cd Phishing && git clone https://github.com/UndeadSec/SocialFish.git && apt-get install python3 python3-pip python3-dev -y && cd SocialFish && python3 -m pip install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Phishing/SocialFish".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -491,9 +533,11 @@ def SocialFish():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd SocialFish && python3 SocialFish.py')
 
 def PhisherMan():
 	if not os.path.isdir('tools/Phishing/Phisher-man'):
@@ -509,9 +553,11 @@ def PhisherMan():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd Phisher-man && python phisherman.py')
 
 def Spectre():
 	if not os.path.isdir('tools/Phishing/Spectre'):
@@ -527,9 +573,11 @@ def Spectre():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd Spectre && python spectre.py --help')
 
 def Blackeye():
 	if not os.path.isdir('tools/Phishing/blackeye'):
@@ -545,9 +593,11 @@ def Blackeye():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('clear && cd tools && cd Phishing && cd blackeye && bash blackeye.sh')
 
 def PhEmail():
 	if not os.path.isdir('tools/Phishing/PhEmail'):
@@ -563,9 +613,11 @@ def PhEmail():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd PhEmail && python phemail.py')
 
 def Weeman():
 	if not os.path.isdir('tools/Phishing/weeman'):
@@ -581,9 +633,11 @@ def Weeman():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd weeman && python weeman.py')
 
 def Zphisher():
 	if not os.path.isdir('tools/Phishing/zphisher'):
@@ -599,9 +653,11 @@ def Zphisher():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd zphisher && bash zphisher.sh')
 
 def AIOPhish():
 	if not os.path.isdir('tools/Phishing/AIOPhish'):
@@ -613,13 +669,15 @@ def AIOPhish():
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Phishing && cd AIOPhish && sudo bash aiophish.sh')	 	
+			os.system('cd tools && cd Phishing && cd AIOPhish && bash aiophish.sh')	 	
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()			
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Phishing && cd AIOPhish && bash aiophish.sh')		
 
 #Tools Wifi 
 def Fluxion():
@@ -636,15 +694,17 @@ def Fluxion():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd fluxion && ./fluxion.sh -i')
 
 def Wifiphisher():
 	if not os.path.isdir('tools/Wifi/wifiphisher'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Wifi && git clone https://github.com/wifiphisher/wifiphisher.git && cd wifiphisher && sudo python setup.py install')
+		os.system('cd tools && cd Wifi && git clone https://github.com/wifiphisher/wifiphisher.git && cd wifiphisher && python setup.py install')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifiphisher".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -654,9 +714,11 @@ def Wifiphisher():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('wifiphisher')
 
 def Wifibroot():
 	if not os.path.isdir('tools/Wifi/WiFiBroot'):
@@ -672,9 +734,11 @@ def Wifibroot():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd WiFiBroot && python wifibroot.py -h')
 
 def Wifite():
 	if not os.path.isdir('tools/Wifi/wifite'):
@@ -690,27 +754,31 @@ def Wifite():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd wifite && ./wifite.py')
 
 def Ettercap():
 	if not os.path.isfile('/usr/bin/ettercap'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install zlib1g zlib1g-dev && sudo apt-get install build-essential && sudo apt-get install ettercap && sudo apt-get install ettercap-graphical')
+		os.system('apt-get install zlib1g zlib1g-dev && apt-get install build-essential && apt-get install ettercap && apt-get install ettercap-graphical')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/bin/ettercap".format(GREEN, DEFAULT))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()		
 		else:
-			os.system('sudo ettercap -G')
+			os.system('ettercap -G')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('ettercap -G')
 
 def Linset():
 	if not os.path.isdir('tools/Wifi/linsetmv1-2'):
@@ -726,27 +794,31 @@ def Linset():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd linsetmv1-2 && ./linsetmv1-2.sh')
 
 def WiFiPumpkin():
 	if not os.path.isdir('tools/Wifi/wifipumpkin3'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3.7-dev python3-pyqt5 libssl-dev libffi-dev build-essential python3.7 && cd tools && cd Wifi && git clone https://github.com/P0cL4bs/wifipumpkin3.git && cd wifipumpkin3 && sudo python3 setup.py install')
+		os.system('apt install python3.7-dev python3-pyqt5 libssl-dev libffi-dev build-essential python3.7 && cd tools && cd Wifi && git clone https://github.com/P0cL4bs/wifipumpkin3.git && cd wifipumpkin3 && python3 setup.py install')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/wifipumpkin3".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()	
 		else:
-			os.system('sudo wifipumpkin3')
+			os.system('wifipumpkin3')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('wifipumpkin3')
 
 def Wifresti():
 	if not os.path.isdir('tools/Wifi/wifresti'):
@@ -758,19 +830,21 @@ def Wifresti():
 			os.system('clear')
 			main()	
 		else:
-			os.system('sudo wifresti')
+			os.system('wifresti')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('wifresti')
 
 def EvilLimiter():
 	if not os.path.isdir('tools/Wifi/evillimiter'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Wifi && git clone https://github.com/bitbrute/evillimiter.git && cd evillimiter && sudo python3 setup.py install')
+		os.system('cd tools && cd Wifi && git clone https://github.com/bitbrute/evillimiter.git && cd evillimiter && python3 setup.py install')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/evillimiter".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -780,27 +854,31 @@ def EvilLimiter():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('evillimiter')
 
 def NetoolToolkit():
 	if not os.path.isdir('tools/Wifi/netool-toolkit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Wifi && git clone https://github.com/r00t-3xp10it/netool-toolkit.git && cd netool-toolkit && sudo chmod +x INSTALL.sh')
+		os.system('cd tools && cd Wifi && git clone https://github.com/r00t-3xp10it/netool-toolkit.git && cd netool-toolkit && chmod +x INSTALL.sh')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/netool-toolkit".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()	
 		else:
-			os.system('cd tools && cd Wifi && cd netool-toolkit && sudo ./netool.sh')	
+			os.system('cd tools && cd Wifi && cd netool-toolkit && ./netool.sh')	
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd netool-toolkit && ./netool.sh')
 
 def Dracnmap():
 	if not os.path.isdir('tools/Wifi/Dracnmap'):
@@ -812,13 +890,15 @@ def Dracnmap():
 			os.system('clear')
 			main()	
 		else:
-			os.system('cd tools && cd Wifi && cd Dracnmap && sudo ./Dracnmap.sh')					
+			os.system('cd tools && cd Wifi && cd Dracnmap && bash Dracnmap.sh')					
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd Dracnmap && bash Dracnmap.sh')
 
 def Airgeddon():
 	if not os.path.isdir('tools/Wifi/airgeddon'):
@@ -834,9 +914,11 @@ def Airgeddon():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd airgeddon && ./airgeddon.sh')
 
 def Routersploit():
 	if not os.path.isdir('tools/Wifi/routersploit'):
@@ -852,9 +934,11 @@ def Routersploit():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd routersploit && python3 rsf.py')
 
 def Eaphammer():
 	if not os.path.isdir('tools/Wifi/eaphammer'):
@@ -870,9 +954,11 @@ def Eaphammer():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd eaphammer && ./eaphammer')
 
 def VMRMDK():
 	if not os.path.isdir('tools/Wifi/VMR-MDK-K2-2017R-012x4'):
@@ -888,9 +974,11 @@ def VMRMDK():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd VMR-MDK-K2-2017R-012x4 && ./VMR-MDK-K2-2017R-012x4.sh')
 
 def Wirespy():
 	if not os.path.isdir('tools/Wifi/wirespy'):
@@ -902,19 +990,21 @@ def Wirespy():
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Wifi && cd wirespy && sudo ./wirespy.sh')	
+			os.system('cd tools && cd Wifi && cd wirespy && ./wirespy.sh')	
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd wirespy && ./wirespy.sh')
 
 def Wireshark():
 	if not os.path.isfile('/usr/bin/wireshark'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install wireshark && sudo setcap CAP_NET_RAW+eip CAP_NET_ADMIN+eip /usr/bin/dumpcap')	
+		os.system('apt-get install wireshark && setcap CAP_NET_RAW+eip CAP_NET_ADMIN+eip /usr/bin/dumpcap')	
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en /usr/bin/wireshark".format(GREEN, DEFAULT))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -924,15 +1014,17 @@ def Wireshark():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('wireshark')
 
 def SniffAir():
 	if not os.path.isdir('tools/Wifi/SniffAir'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Wifi && git clone https://github.com/Tylous/SniffAir.git && cd SniffAir && sudo ./setup.sh')
+		os.system('cd tools && cd Wifi && git clone https://github.com/Tylous/SniffAir.git && cd SniffAir && ./setup.sh')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/SniffAir".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -942,9 +1034,11 @@ def SniffAir():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd SniffAir && python SniffAir.py')
 
 def WifiJammer():
 	if not os.path.isfile('tools/Wifi/wifijammer'):
@@ -956,31 +1050,35 @@ def WifiJammer():
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Wifi && cd WifiJammer && sudo python wifijammer')		
+			os.system('cd tools && cd Wifi && cd WifiJammer && python wifijammer')		
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd WifiJammer && python wifijammer')
 
 def KawaiiDeauther():
 	if not os.path.isfile('tools/Wifi/KawaiiDeauther'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Wifi && git clone https://github.com/aryanrtm/KawaiiDeauther.git && cd KawaiiDeauther && sudo ./install.sh')
+		os.system('cd tools && cd Wifi && git clone https://github.com/aryanrtm/KawaiiDeauther.git && cd KawaiiDeauther && ./install.sh')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Wifi/KawaiiDeauther".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Wifi && cd KawaiiDeauther && sudo bash KawaiiDeauther.sh')		
+			os.system('cd tools && cd Wifi && cd KawaiiDeauther && bash KawaiiDeauther.sh')		
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Wifi && cd KawaiiDeauther && bash KawaiiDeauther.sh')
 
 #Tools passwords 
 def Cupp():
@@ -997,9 +1095,11 @@ def Cupp():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd cupp && ./cupp.py')
 
 def Facebooker():
 	if not os.path.isdir('tools/Passwords/Facebooker'):
@@ -1015,9 +1115,11 @@ def Facebooker():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd Facebooker && perl facebooker.pl')	
 
 def BluForceFB():
 	if not os.path.isdir('tools/Passwords/BluForce-FB'):
@@ -1033,9 +1135,11 @@ def BluForceFB():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd BluForce-FB && python2 bluforcefb.py')
 
 def Brut3k1t():
 	if not os.path.isdir('tools/Passwords/brut3k1t'):
@@ -1051,9 +1155,11 @@ def Brut3k1t():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('brut3k1t -h')
 
 def SocialBox():
 	if not os.path.isdir('tools/Passwords/SocialBox'):
@@ -1069,9 +1175,11 @@ def SocialBox():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd SocialBox && ./SocialBox.sh')
 
 def JohnTheRipper():
 	if not os.path.isdir('tools/Passwords/JohnTheRipper'):
@@ -1087,15 +1195,17 @@ def JohnTheRipper():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('john')
 
 def Hashcat():
 	if not os.path.isdir('tools/Passwords/hashcat'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Passwords && git clone https://github.com/hashcat/hashcat.git && cd hashcat && make && sudo make install')
+		os.system('cd tools && cd Passwords && git clone https://github.com/hashcat/hashcat.git && cd hashcat && make && make install')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/hashcat".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1105,15 +1215,17 @@ def Hashcat():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('hashcat -h')
 
 def Brutedum():
 	if not os.path.isdir('tools/Passwords/Brutedum'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3 && cd tools && cd Passwords && git clone https://github.com/GitHackTools/BruteDum.git')
+		os.system('apt install python3 && cd tools && cd Passwords && git clone https://github.com/GitHackTools/BruteDum.git')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/Brutedum".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1123,27 +1235,31 @@ def Brutedum():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd Brutedum && python3 brutedum.py')		
 
 def Facebash():
 	if not os.path.isdir('tools/Passwords/facebash'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Passwords && git clone https://github.com/thelinuxchoice/facebash && cd facebash && chmod +x * && sudo bash install.sh && service tor start')
+		os.system('cd tools && cd Passwords && git clone https://github.com/thelinuxchoice/facebash && cd facebash && chmod +x * && bash install.sh && service tor start')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/facebash".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Passwords && cd facebash && sudo ./facebash.sh')		
+			os.system('cd tools && cd Passwords && cd facebash && ./facebash.sh')		
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd facebash && ./facebash.sh')	
 
 def Brutespray():
 	if not os.path.isdir('tools/Passwords/brutespray'):
@@ -1159,15 +1275,17 @@ def Brutespray():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd brutespray && python brutespray.py')		
 
 def Pupi():
 	if not os.path.isdir('tools/Passwords/PUPI'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3 && cd tools && cd Passwords && git clone https://github.com/mIcHyAmRaNe/PUPI.git')
+		os.system('apt install python3 && cd tools && cd Passwords && git clone https://github.com/mIcHyAmRaNe/PUPI.git')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Passwords/PUPI".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1177,9 +1295,11 @@ def Pupi():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd PUPI && python3 pupi.py')		
 
 def B4rbrute():
 	if not os.path.isdir('tools/Passwords/b4r-brute'):
@@ -1195,9 +1315,11 @@ def B4rbrute():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd b4r-brute && python b4r-brute.py')		
 
 def FbHack():
 	if not os.path.isdir('tools/Passwords/fb-hack'):
@@ -1213,9 +1335,11 @@ def FbHack():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()							
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Passwords && cd fb-hack && python fb.py')		
 
 #Tools Web
 def SQLmap():
@@ -1232,9 +1356,11 @@ def SQLmap():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd sqlmap-dev && python sqlmap.py -h')	
 
 def XAttacker():
 	if not os.path.isdir('tools/Web/XAttacker'):
@@ -1250,15 +1376,17 @@ def XAttacker():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd XAttacker && perl XAttacker.pl')
 
 def Fuxploider():
 	if not os.path.isdir('tools/Web/fuxploider'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install python3-pip && cd tools && cd Web && git clone https://github.com/almandin/fuxploider.git && cd fuxploider && pip3 install -r requirements.txt')	
+		os.system('apt-get install python3-pip && cd tools && cd Web && git clone https://github.com/almandin/fuxploider.git && cd fuxploider && pip3 install -r requirements.txt')	
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/fuxploider".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1268,9 +1396,11 @@ def Fuxploider():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd fuxploider && python3 fuxploider.py -h')			
 
 def Wordpresscan():
 	if not os.path.isdir('tools/Web/Wordpresscan'):
@@ -1286,9 +1416,11 @@ def Wordpresscan():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd Wordpresscan && python wordpresscan.py -h')
 
 def SiteBroker():
 	if not os.path.isdir('tools/Web/SiteBroker'):
@@ -1304,9 +1436,11 @@ def SiteBroker():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd SiteBroker && python3 SiteBroker.py')
 
 def NoSQLMap():
 	if not os.path.isdir('tools/Web/NoSQLMap'):
@@ -1322,9 +1456,11 @@ def NoSQLMap():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd NoSQLMap && python nosqlmap.py')		
 
 def SqliScanner():
 	if not os.path.isdir('tools/Web/sqli-scanner'):
@@ -1340,9 +1476,11 @@ def SqliScanner():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd sqli-scanner && python sqli-scanner.py -h')
 
 def Joomscan():
 	if not os.path.isdir('tools/Web/joomscan'):
@@ -1358,9 +1496,11 @@ def Joomscan():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd joomscan && perl joomscan.pl')	
 
 def Metagoofil():
 	if not os.path.isdir('tools/Web/metagoofil'):
@@ -1376,15 +1516,17 @@ def Metagoofil():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd metagoofil && python metagoofil.py')
 
 def Sublist3r():
 	if not os.path.isdir('tools/Web/Sublist3r'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Web && git clone https://github.com/aboul3la/Sublist3r.git && cd Sublist3r && sudo pip install -r requirements.txt')
+		os.system('cd tools && cd Web && git clone https://github.com/aboul3la/Sublist3r.git && cd Sublist3r && pip install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/Sublist3r".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1394,9 +1536,11 @@ def Sublist3r():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd metagoofil && python metagoofil.py')
 
 def WAFNinja():
 	if not os.path.isdir('tools/Web/WAFNinja'):
@@ -1412,15 +1556,17 @@ def WAFNinja():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd WAFNinja && python wafninja.py -h')			
 
 def Dirsearch():
 	if not os.path.isdir('tools/Web/dirsearch'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install python3.7 && cd tools && cd Web && git clone https://github.com/maurosoria/dirsearch.git')
+		os.system('apt-get install python3.7 && cd tools && cd Web && git clone https://github.com/maurosoria/dirsearch.git')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/dirsearch".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1430,9 +1576,11 @@ def Dirsearch():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd dirsearch && python3 dirsearch.py -h')
 
 def XSStrike():
 	if not os.path.isdir('tools/Web/XSStrike'):
@@ -1448,9 +1596,11 @@ def XSStrike():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd XSStrike && python xsstrike.py')		
 
 def LinksF1nd3r():
 	if not os.path.isdir('tools/Web/LinksF1nd3r'):
@@ -1466,9 +1616,11 @@ def LinksF1nd3r():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd LinksF1nd3r && python linksF1nd3r.py')		
 
 def DTECH():
 	if not os.path.isdir('tools/Web/D-Tech'):
@@ -1484,15 +1636,17 @@ def DTECH():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd D-Tech && python d-tect.py')		
 
 def Phpsploit():
 	if not os.path.isdir('tools/Web/phpsploit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3 python3-pip && cd tools && cd Web && git clone https://github.com/nil0x42/phpsploit.git && cd phpsploit && pip3 install -r requirements.txt')
+		os.system('apt install python3 python3-pip && cd tools && cd Web && git clone https://github.com/nil0x42/phpsploit.git && cd phpsploit && pip3 install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Web/phpsploit".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1502,9 +1656,11 @@ def Phpsploit():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Web && cd phpsploit && ./phpsploit --interactive --eval "help help"')		
 
 #Tools Spoofing
 def SpoofMAC():
@@ -1521,9 +1677,11 @@ def SpoofMAC():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()		
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Spoofing && cd SpoofMAC && cd scripts && ./spoof-mac.py')		
 
 def IpSpoofing():
 	if not os.path.isdir('tools/Spoofing/ip_spoofing'):
@@ -1539,9 +1697,11 @@ def IpSpoofing():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()		
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Spoofing && cd ip_spoofing && python dos_attack.py')	
 
 def Arpspoof():
 	if not os.path.isdir('tools/Spoofing/arpspoof'):
@@ -1557,15 +1717,17 @@ def Arpspoof():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Spoofing && cd arpspoof && python arpspoof.py -h')
 
 def DerpNSpoof():
 	if not os.path.isdir('tools/Spoofing/DerpNSpoof'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3-pip && cd tools && cd Spoofing && git clone https://github.com/Trackbool/DerpNSpoof.git && cd DerpNSpoof && pip install -r requirements.txt')	
+		os.system('apt install python3-pip && cd tools && cd Spoofing && git clone https://github.com/Trackbool/DerpNSpoof.git && cd DerpNSpoof && pip install -r requirements.txt')	
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Spoofing/DerpNSpoof".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1575,9 +1737,11 @@ def DerpNSpoof():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Spoofing && cd DerpNSpoof && python3 DerpNSpoof.py')
 
 def DrSpoof():
 	if not os.path.isdir('tools/Spoofing/Dr.Spoof'):
@@ -1593,9 +1757,11 @@ def DrSpoof():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Spoofing && cd Dr.Spoof && ./DrSpoof.sh -h')	
 
 def GODKILLER():
 	if not os.path.isdir('tools/Spoofing/GOD-KILLER'):
@@ -1611,9 +1777,11 @@ def GODKILLER():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('GOD-KILLER')	
 
 #Tools Information Gathering
 def NMAP():
@@ -1630,9 +1798,11 @@ def NMAP():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('nmap')	
 
 def Th3inspector():
 	if not os.path.isdir('tools/InformationGathering/Th3inspector'):
@@ -1648,9 +1818,11 @@ def Th3inspector():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd Th3inspector && perl Th3inspector.pl -h')	
 
 def FBI():
 	if not os.path.isdir('tools/InformationGathering/fbi'):
@@ -1666,9 +1838,11 @@ def FBI():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd fbi && python2 fbi.py')	
 
 def Infoga():
 	if not os.path.isdir('tools/InformationGathering/Infoga'):
@@ -1684,9 +1858,11 @@ def Infoga():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd Infoga && python infoga.py')	
 
 def Crips():
 	if not os.path.isdir('tools/InformationGathering/Crips'):
@@ -1702,15 +1878,17 @@ def Crips():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd Crips && python Crips.py')
 
 def BillCipher():
 	if not os.path.isdir('tools/InformationGathering/billcipher'):	
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt update && sudo apt install ruby python python-pip python3 python3-pip && sudo apt install httrack whatweb && cd tools && cd InformationGathering && git clone https://github.com/GitHackTools/BillCipher.git && cd BillCipher && pip install -r requirements.txt && pip3 install -r requirements.txt')
+		os.system('apt update && apt install ruby python python-pip python3 python3-pip && apt install httrack whatweb && cd tools && cd InformationGathering && git clone https://github.com/GitHackTools/BillCipher.git && cd BillCipher && pip install -r requirements.txt && pip3 install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/BillCipher".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1720,15 +1898,17 @@ def BillCipher():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd BillCipher && python3 billcipher.py')
 
 def RedHawk():
 	if not os.path.isdir('tools/InformationGathering/RED_HAWK'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install php7.2 && cd tools && cd InformationGathering && git clone https://github.com/Tuhinshubhra/RED_HAWK.git')	
+		os.system('apt-get install php7.2 && cd tools && cd InformationGathering && git clone https://github.com/Tuhinshubhra/RED_HAWK.git')	
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/RED_HAWK".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1738,15 +1918,17 @@ def RedHawk():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd RED_HAWK && php redh.php')				
 
 def ReconNg():
 	if not os.path.isdir('tools/InformationGathering/recon-ng'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install python3.6 && cd tools && cd InformationGathering && git clone https://github.com/lanmaster53/recon-ng.git && cd recon-ng && pip install -r REQUIREMENTS')
+		os.system('apt-get install python3.6 && cd tools && cd InformationGathering && git clone https://github.com/lanmaster53/recon-ng.git && cd recon-ng && pip install -r REQUIREMENTS')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/recon-ng".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1756,9 +1938,11 @@ def ReconNg():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd recon-ng && python3 recon-ng')		
 
 def theHarvester():
 	if not os.path.isdir('tools/InformationGathering/theHarvester'):
@@ -1774,15 +1958,17 @@ def theHarvester():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd theHarvester && python theHarvester.py')
 
 def PhoneInfoga():
 	if not os.path.isdir('tools/InformationGathering/PhoneInfoga'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3-pip && cd tools && cd InformationGathering && git clone https://github.com/sundowndev/PhoneInfoga.git && cd PhoneInfoga && python3 -m pip install -r requirements.txt')
+		os.system('apt install python3-pip && cd tools && cd InformationGathering && git clone https://github.com/sundowndev/PhoneInfoga.git && cd PhoneInfoga && python3 -m pip install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/PhoneInfoga".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1792,9 +1978,11 @@ def PhoneInfoga():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd PhoneInfoga && python3 phoneinfoga.py -h')
 
 def Gasmask():
 	if not os.path.isdir('tools/InformationGathering/gasmask'):
@@ -1810,9 +1998,11 @@ def Gasmask():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd gasmask && python gasmask.py')		
 
 def URLextractor():
 	if not os.path.isdir('tools/InformationGathering/URLextractor'):
@@ -1828,9 +2018,11 @@ def URLextractor():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd URLextractor && bash extractor.sh')	
 
 def Devploit():
 	if not os.path.isdir('tools/InformationGathering/Devploit'):
@@ -1846,9 +2038,11 @@ def Devploit():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('Devploit')
 
 def ReconDog():
 	if not os.path.isdir('tools/InformationGathering/ReconDog'):
@@ -1864,9 +2058,11 @@ def ReconDog():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd ReconDog && python dog')	
 
 def Webkiller():
 	if not os.path.isdir('tools/InformationGathering/webkiller'):
@@ -1882,33 +2078,37 @@ def Webkiller():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd webkiller && python3 webkiller.py')	
 
 def Quasar():
 	if not os.path.isdir('tools/InformationGathering/quasar'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd InformationGathering && git clone https://github.com/Cyb0r9/quasar.git && cd quasar && chmod +x * && sudo ./install.sh')
+		os.system('cd tools && cd InformationGathering && git clone https://github.com/Cyb0r9/quasar.git && cd quasar && chmod +x * && ./install.sh')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/quasar".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd InformationGathering && cd quasar && sudo ./quasar.sh')		
+			os.system('cd tools && cd InformationGathering && cd quasar && ./quasar.sh')		
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd quasar && ./quasar.sh')		
 
 def InfoInstagramIphone():
 	if not os.path.isdir('tools/InformationGathering/info-instagram-iphone'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3 python3-pip && pip3 install quidam && cd tools && cd InformationGathering && git clone https://github.com/0xfff0800/info-instagram-iphone.git')
+		os.system('apt install python3 python3-pip && pip3 install quidam && cd tools && cd InformationGathering && git clone https://github.com/0xfff0800/info-instagram-iphone.git')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/info-instagram-iphone".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1918,9 +2118,11 @@ def InfoInstagramIphone():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd info-instagram-iphone && python3 FaLaH-iphone.py')		
 
 def UserScan():
 	if not os.path.isdir('tools/InformationGathering/userscan'):
@@ -1932,19 +2134,21 @@ def UserScan():
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd InformationGathering && cd userscan && sudo bash userscan.sh')		
+			os.system('cd tools && cd InformationGathering && cd userscan && bash userscan.sh')		
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd userscan && bash userscan.sh')		
 
 def XCTRHackingTools():
 	if not os.path.isdir('tools/InformationGathering/XCTR-Hacking-Tools'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3 python3-pip && cd tools && cd InformationGathering && git clone https://github.com/capture0x/XCTR-Hacking-Tools.git && cd XCTR-Hacking-Tools && pip3 install -r requirements.txt')
+		os.system('apt install python3 python3-pip && cd tools && cd InformationGathering && git clone https://github.com/capture0x/XCTR-Hacking-Tools.git && cd XCTR-Hacking-Tools && pip3 install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/XCTR-Hacking-Tools".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1954,15 +2158,17 @@ def XCTRHackingTools():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd InformationGathering && cd XCTR-Hacking-Tools && python3 xctr.py')		
 
 def DeadTrap():
 	if not os.path.isdir('tools/InformationGathering/DeadTrap'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt install python3-pip firefox-geckodriver && cd tools && cd InformationGathering && git clone https://github.com/Chr0m0s0m3s/DeadTrap.git && cd DeadTrap && pip3 install .')
+		os.system('apt install python3-pip firefox-geckodriver && cd tools && cd InformationGathering && git clone https://github.com/Chr0m0s0m3s/DeadTrap.git && cd DeadTrap && pip3 install .')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/InformationGathering/DeadTrap".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -1972,9 +2178,11 @@ def DeadTrap():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()			
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('deadtrap')		
 
 #Tools Others
 def TheFatRat():
@@ -1991,9 +2199,11 @@ def TheFatRat():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('fatrat')
 
 def Msfpc():
 	if not os.path.isdir('tools/Others/msfpc'):
@@ -2009,9 +2219,11 @@ def Msfpc():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd msfpc && bash msfpc.sh')
 
 def Fcrackzip():
 	if not os.path.isfile('/usr/bin/fcrackzip'):
@@ -2027,15 +2239,17 @@ def Fcrackzip():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('fcrackzip --help')
 
 def QRLjacker():
 	if not os.path.isdir('tools/Others/QRLJacking'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install python3.7 && cd tools && cd Others && git clone https://github.com/OWASP/QRLJacking.git && cd QRLJacking && cd QRLJacker && pip install -r requirements.txt')
+		os.system('apt-get install python3.7 && cd tools && cd Others && git clone https://github.com/OWASP/QRLJacking.git && cd QRLJacking && cd QRLJacker && pip install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/QRLJacking".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -2045,9 +2259,11 @@ def QRLjacker():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd QRLJacking && cd QRLJacker && python3 QrlJacker.py')
 
 def Lazy():
 	if not os.path.isdir('tools/Others/lscript'):
@@ -2063,9 +2279,11 @@ def Lazy():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('l')
 
 def HTBINVITE():
 	if not os.path.isdir('tools/Others/HTB-INVITE'):
@@ -2081,9 +2299,11 @@ def HTBINVITE():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd HTB-INVITE && python HTB.py')
 
 def Ngrok():
 	if not os.path.isdir('tools/Others/Ngrok'):
@@ -2099,27 +2319,31 @@ def Ngrok():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd Ngrok && ./ngrok')
 
 def Bluepot():
 	if not os.path.isdir('tools/Others/Bluepot'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install default-jdk && cd tools && cd Others && mkdir Bluepot && cd Bluepot && wget https://github.com/andrewmichaelsmith/bluepot/raw/master/bin/bluepot-0.1.tar.gz && tar xfz bluepot-0.1.tar.gz')
+		os.system('apt-get install default-jdk && cd tools && cd Others && mkdir Bluepot && cd Bluepot && wget https://github.com/andrewmichaelsmith/bluepot/raw/master/bin/bluepot-0.1.tar.gz && tar xfz bluepot-0.1.tar.gz')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Bluepot".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Others && cd Bluepot && sudo java -jar bluepot/BluePot-0.1.jar')
+			os.system('cd tools && cd Others && cd Bluepot && java -jar bluepot/BluePot-0.1.jar')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd Bluepot && java -jar bluepot/BluePot-0.1.jar')
 
 def Setoolkit():
 	if not os.path.isdir('tools/Others/set'):
@@ -2135,9 +2359,11 @@ def Setoolkit():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('setoolkit')
 
 def A2sv():
 	if not os.path.isdir('tools/Others/a2sv'):
@@ -2153,9 +2379,11 @@ def A2sv():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd a2sv && python a2sv.py -h')
 
 def Fornonimizer():
 	if not os.path.isdir('tools/Others/4nonimizer'):
@@ -2171,9 +2399,11 @@ def Fornonimizer():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('4nonimizer help')
 	
 def Easysploit():
 	if not os.path.isdir('tools/Others/easysploit'):
@@ -2189,9 +2419,11 @@ def Easysploit():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('easysploit')		
 
 def NXcrypt():
 	if not os.path.isdir('tools/Others/NXcrypt'):
@@ -2207,15 +2439,17 @@ def NXcrypt():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd NXcrypt && python NXcrypt.py --help')
 
 def KnockMail():
 	if not os.path.isdir('tools/Others/KnockMail'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Others && git clone https://github.com/4w4k3/KnockMail.git && cd KnockMail && sudo su && pip install -r requeriments.txt')
+		os.system('cd tools && cd Others && git clone https://github.com/4w4k3/KnockMail.git && cd KnockMail && su && pip install -r requeriments.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/KnockMail".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -2225,9 +2459,11 @@ def KnockMail():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd KnockMail && python knock.py')		
 
 def RkHunter():
 	if not os.path.isdir('tools/Others/rkhunter'):
@@ -2243,15 +2479,17 @@ def RkHunter():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('rkhunter')
 
 def HeraKeylogger():
 	if not os.path.isdir('tools/Others/HeraKeylogger'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('sudo apt-get install python3-pip -y && cd tools && cd Others && git clone https://github.com/UndeadSec/HeraKeylogger.git && cd HeraKeylogger && sudo pip3 install -r requirements.txt')
+		os.system('apt-get install python3-pip -y && cd tools && cd Others && git clone https://github.com/UndeadSec/HeraKeylogger.git && cd HeraKeylogger && pip3 install -r requirements.txt')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/HeraKeylogger".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -2261,9 +2499,11 @@ def HeraKeylogger():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd HeraKeylogger && python3 hera.py')		
 
 def ZLogger():
 	if not os.path.isdir('tools/Others/ZLogger'):
@@ -2279,51 +2519,57 @@ def ZLogger():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd ZLogger && python zlogger.py')		
 
 def Xerosploit():
 	if not os.path.isdir('tools/Others/xerosploit'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Others && git clone https://github.com/LionSec/xerosploit.git && cd xerosploit && sudo python install.py')
+		os.system('cd tools && cd Others && git clone https://github.com/LionSec/xerosploit.git && cd xerosploit && python install.py')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/xerosploit".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()
 		else:
-			os.system('sudo xerosploit')
+			os.system('xerosploit')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
-
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('xerosploit')
+	
 def Slacksec():
 	if not os.path.isdir('tools/Others/Slacksec'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Others && sudo git clone https://github.com/franc205/Slacksec.git && cp Slacksec/slacksec.py /usr/bin/slacksec && sudo chmod +x /usr/bin/slacksec')
+		os.system('cd tools && cd Others && git clone https://github.com/franc205/Slacksec.git && cp Slacksec/slacksec.py /usr/bin/slacksec && chmod +x /usr/bin/slacksec')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Slacksec".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()
 		else:
-			os.system('sudo slacksec')
+			os.system('slacksec')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('slacksec')
 
 def Katana():
 	if not os.path.isdir('tools/Others/KatanaFramework'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
-		os.system('cd tools && cd Others && git clone https://github.com/PowerScript/KatanaFramework && cd KatanaFramework && sudo sh dependencies && sudo python install')		
+		os.system('cd tools && cd Others && git clone https://github.com/PowerScript/KatanaFramework && cd KatanaFramework && sh dependencies && python install')		
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/KatanaFramework".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -2333,15 +2579,17 @@ def Katana():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()			
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd KatanaFramework && ktf.console')
 
 def Z0172CKTools():	
 	if not os.path.isdir('tools/Others/Z0172CK-Tools'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
-		os.system('sudo apt install python3 python3-pip && cd tools && cd Others && git clone https://github.com/Erik172/Z0172CK-Tools.git && cd Z0172CK-Tools && bash install.sh && pip3 install -r requirements.txt')		
+		os.system('apt install python3 python3-pip && cd tools && cd Others && git clone https://github.com/Erik172/Z0172CK-Tools.git && cd Z0172CK-Tools && bash install.sh && pip3 install -r requirements.txt')		
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Z0172CK-Tools".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
@@ -2351,9 +2599,11 @@ def Z0172CKTools():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd Z0172CK-Tools && python3 index.py')
 
 def CamHack():
 	if not os.path.isdir('tools/Others/Cam-Hack'):
@@ -2365,31 +2615,35 @@ def CamHack():
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Others && cd Cam-Hack && sudo bash camhack.sh')
+			os.system('cd tools && cd Others && cd Cam-Hack && bash camhack.sh')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd Cam-Hack && bash camhack.sh')
 
 def Onex():
 	if not os.path.isdir('tools/Others/onex'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)	
-		os.system('cd tools && cd Others && git clone https://github.com/rajkumardusad/onex.git && cd onex && sudo bash install')		
+		os.system('cd tools && cd Others && git clone https://github.com/rajkumardusad/onex.git && cd onex && bash install')		
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/onex".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Others && cd onex && sudo bash onex')
+			os.system('cd tools && cd Others && cd onex && bash onex')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd onex && bash onex')
 
 def Ransom0():
 	if not os.path.isdir('tools/Others/Ransom0'):
@@ -2405,9 +2659,11 @@ def Ransom0():
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd Ransom0 && python ransom0.py')
 
 def Morpheus():
 	if not os.path.isdir('tools/Others/morpheus'):
@@ -2419,13 +2675,15 @@ def Morpheus():
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Others && cd morpheus && sudo bash morpheus.sh')
+			os.system('cd tools && cd Others && cd morpheus && bash morpheus.sh')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()		
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd morpheus && bash morpheus.sh')
 
 def FBTOOL():
 	if not os.path.isdir('tools/Others/FBTOOL'):
@@ -2437,30 +2695,33 @@ def FBTOOL():
 			os.system('clear')
 			main()
 		else:
-			os.system('cd tools && cd Others && cd FBTOOL && sudo python2 fbtool.py')
+			os.system('cd tools && cd Others && cd FBTOOL && python2 fbtool.py')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()	
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd FBTOOL && python2 fbtool.py')
 
 def Venom():
 	if not os.path.isdir('tools/Others/venom'):	
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
 		time.sleep(4)
-		os.system('cd tools && cd Others && git clone https://github.com/r00t-3xp10it/venom.git && cd venom && chmod +x * && sudo bash setup.sh')
+		os.system('cd tools && cd Others && git clone https://github.com/r00t-3xp10it/venom.git && cd venom && chmod +x * && bash setup.sh')
 		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/venom".format(GREEN, DEFAULT, location))
 		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
 			os.system('clear')
 			main()			
 		else:
-			os.system('cd tools && cd Others && cd venom && sudo bash venom.sh')
+			os.system('cd tools && cd Others && cd venom && bash venom.sh')
 	else:
 		print("\n{}[X] Esta herramienta ya existe...".format(RED))
 		time.sleep(2)
-		pause("\n{}Presione cualquier tecla para continuar...".format(GREEN))
-		os.system('clear')
-		main()
-
+		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
+			os.system('clear')
+			main()
+		else:
+			os.system('cd tools && cd Others && cd venom && bash venom.sh')
 
