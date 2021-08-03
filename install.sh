@@ -1,4 +1,4 @@
-#!/usr/bin
+#!/usr/bin/env bash
 #Copyright 2021 KITHACK
 #Written by: Adrian Guillermo
 #Facebook: https://facebook.com/adrian.guillermo.22
@@ -18,8 +18,8 @@ path=$(pwd)
 
 # Check root 
 if [ "$(id -u)" != "0" ] > /dev/null 2>&1; then
-echo -e '\n$red[x] Este script necesita permisos root.' 1>&2
-exit
+  echo -e '\n$red[x] Este script necesita permisos root.' 1>&2
+  exit
 fi
 
 # Banner 
