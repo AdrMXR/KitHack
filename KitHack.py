@@ -29,7 +29,7 @@ def check_connection(host='https://www.google.com'):
 			print("{}Conexion a internet exitosa.".format(GREEN))
 			time.sleep(0.5)
 			pass
-	except:
+	except requests.ConnectionError:
 		print("{0}[x]:{1} Verifique su conexion a internet.".format(RED, DEFAULT))
 		exit(0)
 
@@ -39,10 +39,10 @@ def check_permissions():
 	else:
 		os.system('clear')
 		print("{0}[!]{1} ¡Permiso denegado! Recuerde ejecutar: {2}sudo {1}python3 KitHack.py".format(RED, DEFAULT, GREEN))
-		exit(0)
+		sys.exit()
 
 def info():
-	os.system('clear')
+	os.system("clear")
 	print("{0}[VERSION]:{1} 1.3.2\n\n".format(RED, DEFAULT))
 	time.sleep(0.5)
 	print("{0}[AUTOR]:{1} Adrian Guillermo\n\n".format(RED, DEFAULT))
@@ -121,7 +121,7 @@ def main():
 			main()	
 
 	elif option == '02':
-		os.system('clear')
+		cls()
 		print ('========{0}Tool{1}================================================{0}Information{1}==================================='.format(GREEN, DEFAULT))
 		print ('{0}01){1} Winpayloads             {2}Generador de payloads indetectables en Windows.'.format(WHITE, YELLOW, DEFAULT))
 		print ('{0}02){1} sAINT                   {2}Generador de spyware para sistemas Windows.'.format(WHITE, YELLOW, DEFAULT))
@@ -142,7 +142,7 @@ def main():
 		tool = tool.zfill(2)
 		
 		if tool == '00':
-			os.system('clear')
+			os.system("clear")
 			main()
 
 		elif tool == '01':
@@ -4228,10 +4228,14 @@ def main():
 
 if __name__ == "__main__":
 	try:
-		check_connection()
-		check_permissions()
-		main()
-
+		try:
+			check_connection()
+			check_permissions()
+			main()
+		except EOFError:
+			print("\nCtrl + D")
+			print("\nExiting...")
+			sys.exit()
 	except KeyboardInterrupt:
 		choice = input('\n\n{0}[1] {1}Return KitHack {0}[2] {1}Exit \n{2}KitHack >> {1}'.format(GREEN, DEFAULT, RED))
 		choice = choice.zfill(2)
@@ -4245,8 +4249,8 @@ if __name__ == "__main__":
 			time.sleep(2)
 			os.system('clear')
 			print(exit_main)
-			exit(0)
+			sys.exit()
 		else:
 			print("\n{}[x] Opcion invalida.".format(RED))
 			time.sleep(2)	
-			exit(0)
+			sys.exit()
