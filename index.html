@@ -74,8 +74,8 @@ Podemos generar puertas traseras tanto para Linux, Windows, Android y Mac OS. Ta
 <br><br>Las principales caracteristicas que tiene este generador de puertas traseras son las siguientes:</p>
 <ul>
   <li>Disponibilidad de payloads por etapas y sin etapas.</li>
-  <li>Generación de enlaces tcp mediante ngrok para conexiones publicas.</li>
-  <li>Infección de aplicaciones android originales.</li>
+  <li>Conexiones publicas mediante ngrok.</li>
+  <li>Inyección de aplicaciones android legitimas.</li>
   <li>Personalización de payloads para android.</li>
   <li>Persistencia automatizada.</li>
 </ul>
@@ -120,15 +120,15 @@ Podemos generar puertas traseras tanto para Linux, Windows, Android y Mac OS. Ta
 </table>
 
 <h3 id="ngrok"><strong>Ngrok.</strong></h3>
-<p>Para poder utilizar ngrok correctamente debemos registrarnos en su <a href="https://dashboard.ngrok.com/signup">pagina oficial</a> y configurar nuestro <a href="https://ngrok.com/docs#getting-started-authtoken">authtoken</a> en kithack. Una vez teniendo configurado correctamente nuestro authtoken, ya podemos configurar nuestro backdoor. Kithack como primera instancia nos solicita un LHOST y un LPORT, pero antes de estas 2 solicitudes nos proporciona nuestra IP local, nuestra IP publica y el enlace TCP generado con ngrok. Si nosotros queremos realizar un ataque fuera de nuestra red local podemos utilizar ngrok para realizar la conexión con nuestro victima sin necesidad de abrir puertos en nuestro router.
+<p>Para poder utilizar ngrok correctamente debemos registrarnos en su <a href="https://dashboard.ngrok.com/signup">pagina oficial</a> y configurar nuestro <a href="https://ngrok.com/docs#getting-started-authtoken">authtoken</a> en kithack. Una vez configurado, ya podemos crear nuestro backdoor. Kithack como primera instancia nos solicita un LHOST y un LPORT, también nos proporciona nuestra IP local, nuestra IP publica y el enlace TCP generado con ngrok. Si deseamos realizar un ataque fuera de nuestra red local, podemos utilizar ngrok para realizar la conexión con nuestro victima sin necesidad de abrir puertos en nuestro router.
 <br>Ejemplo:</p>
 
 <div class="nx"><pre class="nx"><code><span class="nx">Local IP: 192.168.1.223</span><span class="nx"><br>Public IP: 201.97.221.230</span><span class="nx"><br>Ngrok TCP: tcp://0.tcp.ngrok.io:15225</span><span class="nx"><br><br>SET LHOST:</span><span class="nx"><br>SET LPORT:</span></code></pre></div>
 
-<p>Para realizar el ataque fuera de nuestra red local, debemos colocar como LHOST: <strong>0.tcp.ngrok.io</strong> y como LPORT el puerto que nos genere ngrok, en mi caso sería el <strong>15225.</strong>
+<p>Para realizar el ataque fuera de nuestra red local, en este ejemplo, se coloca como LHOST: <strong>0.tcp.ngrok.io</strong> y como LPORT: <strong>15225.</strong>
 
 <h3 id="apks-originales"><strong>Inyección de payloads en APKs legitimas.</strong></h3>
-<p>Este nuevo método nos permite onfuscar un payload dentro de una APK legitima. ¿Alguna vez intentaste realizar este proceso con el parametro <code>-x</code> de msfvenom? Este método mayormente genera algún tipo de error a los usuarios ya que no admite la mayoría de aplicaciones y tampoco realiza un método de certificación valido que pueda ser indetectable por los antivirus. El método de KitHack tiene menor margen de error al realizar el mismo proceso. Aún así, cabe mencionar que no todas las aplicaciones son vulnerables a este ataque, aplicaciones como Facebook, WhatsApp, instagram, y similares a estas, tienen los suficientes mecanismos de seguridad para evitar este tipo de actividades. Nosotros te aconsejamos descargar las aplicaciones desde <a href="https://apkpure.com">apkpure</a> o similares a esta.
+<p>Este nuevo método nos permite onfuscar un payload dentro de una APK legitima. ¿Alguna vez intentaste realizar este proceso con el parametro <code>-x</code> de msfvenom? Este método mayormente genera algún tipo de error a los usuarios ya que no admite la mayoría de aplicaciones y tampoco realiza un método de certificación valido. El método de KitHack tiene menor margen de error al realizar el mismo proceso. Aún así, cabe mencionar que no todas las aplicaciones son vulnerables a este ataque, aplicaciones como Facebook, WhatsApp, instagram y similares a estas, tienen los suficientes mecanismos de seguridad para evitar este tipo de actividades. Como consejo, se recomienda descargar aplicaciones desde <a href="https://apkpure.com">apkpure</a> o similares a esta.
 
 <br><br>El proceso que realiza KitHack para infectar una APK es el siguiente:</p>
 <ul>
@@ -162,7 +162,7 @@ Podemos generar puertas traseras tanto para Linux, Windows, Android y Mac OS. Ta
  <li><strong>¿Cómo configuro mi authtoken?</strong><br>Primero que nada, debemos de registrarnos en la pagina oficial de 
   <a href="https://dashboard.ngrok.com/signup">ngrok</a> con nuestro nombre, correo electronico y una contraseña. Una vez registrados y logueados en la plataforma, debemos ubicar la sección de <strong>Connect your account</strong> y copiaremos todo el serial alfanumérico que nos proporciona ngrok. Posteriormente, debemos ejecutar kithack y seleccionar la opción número 10 de <strong>backdoors with msfvenom</strong>, elegimos el tipo de backdoor que deseamos crear con su respectivo payload, y automaticamente kithack va a detectar que su achivo de configuración <code>ngrok.yml</code> no existe, por lo tanto le va a solicitar ingresar su authtoken, en ese apartado debe pegar su serial alfanumérico.
 
- <li><strong>¿Por qué se me cierra muy rapido mi sesión de metasploit?</strong><br>Pueden ser diversos factores que provoquen que su sesión de metasploit expire muy rápido, depende mucho del LHOST que hayas configurado. Si realizaste una prueba local y tu sesión expira muy rápido, puede ser la velocidad de tu internet, si utilizaste tu ip publica, puede ser la velocidad de internet de tu victima, si estas trabajando con ngrok, puede que los servidores de ngrok estén muy lentos, lo recomendable es elegir un buen tipo de payload que se adapte a nuestros objetivos, y realizar persistencia o migrar a otro proceso al obtener nuestra shell meterpreter.
+ <li><strong>¿Por qué se me cierra muy rapido mi sesión de metasploit?</strong><br>Pueden ser diversos factores que provoquen que su sesión de metasploit expire muy rápido, depende mucho del LHOST que hayas configurado. Si realizaste una prueba local y la sesión expira muy rápido, puede ser la velocidad de tu internet, si utilizaste tu ip publica, puede ser la velocidad de internet de tu victima, si estas trabajando con ngrok, puede que los servidores de ngrok estén muy lentos, lo recomendable es elegir un buen tipo de payload que se adapte a nuestros objetivos, y realizar persistencia o migrar a otro proceso al obtener nuestra shell meterpreter.
 
  <li><strong>¿Por qué me da errores el instalador de kithack?</strong><br>En este caso es necesario verificar que el archivo <code>/etc/apt/sources.list</code> se encuentre configurado correctamente de acuerdo a la distribución linux instalada.</li>
 </ol>
@@ -175,7 +175,7 @@ Podemos generar puertas traseras tanto para Linux, Windows, Android y Mac OS. Ta
 <div class="redes">
   <a href="https://facebook.com/adrian.guillermo.22"><img src="images/facebook.png" width="35" height="35"></a>
   <a href="https://github.com/AdrMXR"><img src="images/github.png" width="35" height="35" hspace="10"></a>
-  <a href="https://www.youtube.com/channel/UCqEtxJKbIghx6lyymrjfvnA?view_as=subscriber"><img src="images/youtube.png" width="35" height="35"></a>
+  <a href="https://www.youtube.com/channel/UCn8E1nnPrM6kBkHGUOWbjAA"><img src="images/youtube.png" width="35" height="35"></a>
   <a href="mailto:kithacking@gmail.com"><img src="images/gmail.png" width="35" height="35" hspace="10"></a>
 </div>
 	</section>
