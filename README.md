@@ -21,6 +21,10 @@
 
 **Kithack** es un framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras multiplataforma mediante Metasploit Framework. 
 
+## Advertencia
+**Actualmente múltiples personas están haciéndose pasar sobre mi persona, difamando que ellos son los creadores de la herramienta KitHack Framework, lo cual es completamente falso. También se dedican a estafar a la gente ofreciendo servicios de hacking en mi nombre, quiero dejar en claro que el objetivo de este proyecto jamás ha sido con fines de comerciabilidad, tal como lo redacto en el apartado final de la web de KitHack, si quieres consultarlo, da click [aquí](https://adrmxr.github.io/KitHack/#licencia). 
+Mi único perfil real lo pueden consultar dando click [aquí](https://facebook.com/adrian.guillermo.22).**
+
 ## Distribuciones compatibles con KitHack:
 
 | Distribución |   Estado      |
