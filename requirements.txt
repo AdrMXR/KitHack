@@ -1,0 +1,6 @@
+requests
+py-getch
+python3-tk
+pathlib
+zenipy
+pgrep
