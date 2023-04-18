@@ -14,17 +14,28 @@ from pathlib import Path as pathlib_Path
 from zenipy.zenipy import entry as entry_token, error as Error
 from pgrep import pgrep as check_process
 
-BLUE, RED, WHITE, CYAN, DEFAULT, YELLOW, MAGENTA, GREEN, END, BOLD = '\33[94m', '\033[91m', '\33[97m', '\033[36m', '\033[0m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m', '\033[1m'
+BLUE, RED, WHITE, CYAN, DEFAULT, YELLOW, MAGENTA, GREEN, END, BOLD = (
+    "\33[94m",
+    "\033[91m",
+    "\33[97m",
+    "\033[36m",
+    "\033[0m",
+    "\33[93m",
+    "\033[1;35m",
+    "\033[1;32m",
+    "\033[0m",
+    "\033[1m",
+)
 
 
 def local():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
-        s.connect(('10.255.255.255', 1))
+        s.connect(("10.255.255.255", 1))
         IP = s.getsockname()[0]
         print("\n{0}Local IP: {1}{2}".format(GREEN, DEFAULT, IP))
     except:
-        IP = '127.0.0.1'
+        IP = "127.0.0.1"
     finally:
         s.close()
     return IP
