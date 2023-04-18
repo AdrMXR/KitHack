@@ -14,7 +14,7 @@ orange='\e[38;5;166m'
 green='\033[92m'
 
 # Location
-path=$(pwd)
+path=$PWD
 
 # Check root 
 if [ "$(id -u)" != "0" ] > /dev/null 2>&1; then
@@ -50,7 +50,7 @@ exit
 fi
 
 # Check dependencies
-echo -e $yellow
+echo -e "$yellow"
 echo -n [*] Checando dependencias...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done 
 echo ""
@@ -154,11 +154,11 @@ xterm -T "INSTALLER PWGEN" -geometry 100x30 -e "sudo apt-get install pwgen"
 fi
 
 # Configuring folders
-echo -e $yellow
+echo -e "$yellow"
 echo -n [*] Configurando carpetas...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 echo ""
-echo -e $green
+echo -e "$green"
 
 if [ -d output ]; then
 echo -e "[✔]Ya existe $path/output"
@@ -260,11 +260,11 @@ sleep 0.2
 fi
 
 # Installing requirements
-echo -e $yellow
+echo -e "$yellow"
 echo -n [*] Instalando requerimientos de python...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 echo ""
-echo -e $green
+echo -e "$green"
 pip3 install requests
 pip3 install py-getch
 apt-get install python3-tk
@@ -275,7 +275,7 @@ apt-get install libatk-adaptor libgail-common
 sudo apt-get purge fcitx-module-dbus
 
 # Shortcut for kithack
-echo -e $yellow
+echo -e "$yellow"
 echo -n [*] Configuración de acceso directo...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 echo ""
@@ -297,7 +297,7 @@ chmod +x /usr/local/bin/kithack
 cp images/kithack.desktop /usr/share/applications/kithack.desktop
 cp images/kithack.png /usr/share/icons/kithack.png
 sleep 2
-echo -e $green
+echo -e "$green"
 echo -e "╔──────────────────────────────────────────────────────────╗"
 echo -e "|[✔] Installation complete. Type 'kithack' to run the tool.|"
 echo -e "┖──────────────────────────────────────────────────────────┙"
@@ -306,7 +306,7 @@ fi
 
 n|N)
 sleep 2
-echo -e $green
+echo -e "$green"
 echo -e "╔──────────────────────────╗"
 echo -e "|[✔] Installation complete.|"
 echo -e "┖──────────────────────────┙"
