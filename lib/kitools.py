@@ -2305,26 +2305,6 @@ def HTBINVITE():
 		else:
 			os.system('cd tools && cd Others && cd HTB-INVITE && python HTB.py')
 
-def Ngrok():
-	if not os.path.isdir('tools/Others/Ngrok'):
-		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))
-		time.sleep(4)
-		os.system('cd tools && cd Others && mkdir Ngrok && cd Ngrok && wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip && chmod +x *')
-		print("\n{0}[✔] Done.{1}\nHerramienta guardada en {2}/tools/Others/Ngrok".format(GREEN, DEFAULT, location))
-		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
-			os.system('clear')
-			main()
-		else:
-			os.system('cd tools && cd Others && cd Ngrok && ./ngrok')
-	else:
-		print("\n{}[X] Esta herramienta ya existe...".format(RED))
-		time.sleep(2)
-		if input("\n{0}[!] ¿Desea ejecutarla? (y/n)\n{1}KitHack >>{2} ".format(GREEN, RED, DEFAULT)).upper() != "Y":
-			os.system('clear')
-			main()
-		else:
-			os.system('cd tools && cd Others && cd Ngrok && ./ngrok')
-
 def Bluepot():
 	if not os.path.isdir('tools/Others/Bluepot'):
 		print("\n{0}[*] Downloading tool...{1}".format(GREEN, DEFAULT))

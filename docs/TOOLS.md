@@ -139,7 +139,6 @@
 - [QRLJacking](https://github.com/OWASP/QRLJacking)
 - [Lazy](https://github.com/arismelachroinos/lscript)
 - [HTB-INVITE](https://github.com/nycto-hackerone/HTB-INVITE)
-- [Ngrok](https://ngrok.com)
 - [Bluepot](https://github.com/andrewmichaelsmith/bluepot)
 - [Social-engineer-toolkit](https://github.com/trustedsec/social-engineer-toolkit)
 - [A2sv](https://github.com/hahwul/a2sv)

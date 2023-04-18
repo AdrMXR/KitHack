@@ -153,24 +153,6 @@ echo -e "$yellow[!][Installing Pwgen...]"
 xterm -T "INSTALLER PWGEN" -geometry 100x30 -e "sudo apt-get install pwgen"
 fi
 
-# Check if ngrok exists
-arch=`arch`
-if [ -f "ngrok" ]; then
-echo -e "$green[✔][Ngrok]..........................[ OK ]"
-sleep 1.5
-else
-echo -e "$red[x][Ngrok]........................[ NOT FOUND ]"
-sleep 1.5
-echo -e "$yellow[!][Downloading ngrok...]"
-if [ "$arch" ==  "x86_64" ]; then
-xterm -T "DOWNLOAD NGROK" -geometry 100x30 -e "wget https://bin.equinox.io/a/kpRGfBMYeTx/ngrok-2.2.8-linux-amd64.zip && unzip ngrok-2.2.8-linux-amd64.zip"
-rm ngrok-2.2.8-linux-amd64.zip
-else
-xterm -T "DOWNLOAD NGROK" -geometry 100x30 -e "wget https://bin.equinox.io/a/4hREUYJSmzd/ngrok-2.2.8-linux-386.zip && unzip ngrok-2.2.8-linux-386.zip"
-rm ngrok-2.2.8-linux-386.zip
-fi
-fi
-
 # Configuring folders
 echo -e $yellow
 echo -n [*] Configurando carpetas...= ;

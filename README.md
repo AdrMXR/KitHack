@@ -86,8 +86,7 @@ $ sudo bash uninstall.sh
 * python-tk
 * pathlib
 * python-zenity
-* pgrep
-* Ngrok authtoken 
+* pgrep 
 
 ## Novedades:
 
@@ -103,22 +102,19 @@ $ sudo bash uninstall.sh
 **4) Incorporación de un nuevo método que permite infectar aplicaciones Android legitimas.**
 - Kithack nos proporciona la opción de poder infectar una APK original. Cabe destacar que no todas las aplicaciones son vulnerables.
 
-**5) Generación de conexiones TCP con ngrok.**
-- Ahora también puedes trabajar con [ngrok](https://ngrok.com) para realizar ataques fuera de tu red sin necesidad de abrir puertos. El archivo de configuración ```ngrok.yml``` se almacena en ```KitHack/.config``` de manera predeterminada. Si por alguna razon necesita que kithack le solicite nuevamente su authtoken escriba ```rm .config/ngrok.yml```.
-
-**6) Automatización de Metasploit.**
+**5) Automatización de Metasploit.**
 - No tienes que perder tiempo en volver a establecer las configuraciones de tu payload, kithack se encarga de poner en escucha a [metasploit](https://www.metasploit.com) de manera rapida.
 
-**7) Personalización de payloads para android.**
+**6) Personalización de payloads para android.**
 - Ahora también tienes la posibilidad de personalizar tu propio payload para Android. Con kithack puedes cambiar el nombre predeterminado de la apk que genera [metasploit](https://www.metasploit.com) conocido como "MainActivity" y también puedes modificar el icono de Android predeterminado. Da click [aquí](https://github.com/AdrMXR/KitHack/blob/master/icons/LEEME.txt) para conocer el formato.
 
-**8) Aplicación de persistencia automatizada para cualquier APK.**
+**7) Aplicación de persistencia automatizada para cualquier APK.**
 - Olvidate de que tu sesión de [metasploit](https://www.metasploit.com) expire muy rapido, con kithack ahora podrás generar tu archivo de persistencia para cualquier APK. Si deseas saber como ponerlo en marcha en la shell de meterpreter, da click [aquí.](https://youtu.be/nERwsZyIVeo)
 
-**9) Ejecución de herramientas.**
+**8) Ejecución de herramientas.**
 - Ahora el usuario podrá ejecutar las herramientas directamente desde kithack a pesar de que ya se encuentren instaladas.
 
-**10) Creación de ```clean.sh```.**
+**9) Creación de ```clean.sh```.**
 - Si necesitas eliminar el contenido que te ha generado kithack en tus carpetas `tools` y `output`, puedes ejecutar el archivo `clean.sh` para hacerlo de forma rápida. 
 
 ## Algunas APK vulnerables:  

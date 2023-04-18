@@ -38,37 +38,6 @@ def public_ip():
     print("\n{0}Public IP: {1}{2}".format(GREEN, DEFAULT, ip))              
     return ip 
 
-def run_ngrok():
-    ngrok_config = pathlib_Path(".config/ngrok.yml")
-    if ngrok_config.exists():
-        pid = check_process("ngrok")
-        for p in pid:
-            kill_process(p, signal.SIGKILL)
-        # Continue
-        run_command('./ngrok tcp -config=.config/ngrok.yml 443 > /dev/null 2>&1 &')
-        while True:
-            tcp = sys_url('curl -s -N http://127.0.0.1:4040/status | grep -o "tcp://[0-9]*.tcp.ngrok.io:[0-9]*"').read()
-            if re.match("tcp://[0-9]*.tcp.ngrok.io:[0-9]*", tcp) != None:
-                print("\n{0}Ngrok TCP: {1}{2}".format(GREEN, DEFAULT, tcp))
-                break
-    else:
-        while True:
-            try:
-                token = entry_token(title="SET NGROK AUTHTOKEN", text="Register at https://ngrok.com\n", width=450, height=140)        
-                if len(token) in range(40, 50):
-                    ngrok_config.touch(mode=0o777, exist_ok=True)
-                    ngrok_config = open('.config/ngrok.yml','w')
-                    ngrok_config.write("authtoken: " + token)
-                    ngrok_config.close()        
-                    run_ngrok() 
-                    break
-                else:
-                    Error(text="Invalid token, please try again")
-                    continue
-            except TypeError: #Evitar cierre de kithack 
-                break
-
 def run_network():
     local()
     public_ip()
-    run_ngrok()
