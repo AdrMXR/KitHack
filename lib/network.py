@@ -5,14 +5,18 @@
 # Facebook: Adrian Guillero
 # Github: https://www.github.com/AdrMXR
 
-import socket
-from urllib.request import urlopen
 import re
 import signal
-from os import system as run_command, kill as kill_process, popen as sys_url
+import socket
+from os import kill as kill_process
+from os import popen as sys_url
+from os import system as run_command
 from pathlib import Path as pathlib_Path
-from zenipy.zenipy import entry as entry_token, error as Error
+from urllib.request import urlopen
+
 from pgrep import pgrep as check_process
+from zenipy.zenipy import entry as entry_token
+from zenipy.zenipy import error as Error
 
 BLUE, RED, WHITE, CYAN, DEFAULT, YELLOW, MAGENTA, GREEN, END, BOLD = (
     "\33[94m",
