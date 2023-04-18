@@ -96,8 +96,7 @@
 - [Dirsearch](https://github.com/maurosoria/dirsearch)
 - [XSStrike](https://github.com/s0md3v/XSStrike)
 - [LinksF1nd3r](https://github.com/ihebski/LinksF1nd3r)
-- [D-Tech](https://github.com/bibortone/D-Tech)
- -[Phpsploit](https://github.com/nil0x42/phpsploit)
+- [D-Tech](https://github.com/bibortone/D-Tech) -[Phpsploit](https://github.com/nil0x42/phpsploit)
 
 ### Spoofing:
 
@@ -110,22 +109,22 @@
 
 ### Information Gathering:
 
-- [Nmap](https://github.com/nmap/nmap) 
-- [Th3inspector](https://github.com/Moham3dRiahi/Th3inspector)  
-- [Facebook Information](https://github.com/xHak9x/fbi) 
-- [Infoga](https://github.com/m4ll0k/Infoga) 
-- [Crips](https://github.com/Manisso/Crips) 
-- [BillCipher](https://github.com/GitHackTools/BillCipher) 
-- [RED_HAWK](https://github.com/Tuhinshubhra/RED_HAWK) 
-- [Recon-ng](https://github.com/lanmaster53/recon-ng) 
-- [TheHarvester](https://github.com/alanchavez88/theHarvester) 
-- [PhoneInfoga](https://github.com/sundowndev/PhoneInfoga) 
-- [Gasmask](https://github.com/twelvesec/gasmask) 
-- [URLextractor](https://github.com/eschultze/URLextractor) 
-- [Devploit](https://github.com/GhettoCole/Devploit) 
-- [ReconDog](https://github.com/s0md3v/ReconDog) 
-- [Webkiller](https://github.com/ultrasecurity/webkiller) 
-- [Quasar](https://github.com/Cyb0r9/quasar) 
+- [Nmap](https://github.com/nmap/nmap)
+- [Th3inspector](https://github.com/Moham3dRiahi/Th3inspector)
+- [Facebook Information](https://github.com/xHak9x/fbi)
+- [Infoga](https://github.com/m4ll0k/Infoga)
+- [Crips](https://github.com/Manisso/Crips)
+- [BillCipher](https://github.com/GitHackTools/BillCipher)
+- [RED_HAWK](https://github.com/Tuhinshubhra/RED_HAWK)
+- [Recon-ng](https://github.com/lanmaster53/recon-ng)
+- [TheHarvester](https://github.com/alanchavez88/theHarvester)
+- [PhoneInfoga](https://github.com/sundowndev/PhoneInfoga)
+- [Gasmask](https://github.com/twelvesec/gasmask)
+- [URLextractor](https://github.com/eschultze/URLextractor)
+- [Devploit](https://github.com/GhettoCole/Devploit)
+- [ReconDog](https://github.com/s0md3v/ReconDog)
+- [Webkiller](https://github.com/ultrasecurity/webkiller)
+- [Quasar](https://github.com/Cyb0r9/quasar)
 - [Info-instagram-iphone](https://github.com/0xfff0800/info-instagram-iphone)
 - [UserScan](https://github.com/JoeTech-Studio/UserScan)
 - [XCTR-Hacking-Tools](https://github.com/capture0x/XCTR-Hacking-Tools)
@@ -162,8 +161,8 @@
 
 ### Backdoors with msfvenom:
 
-| Sistema |    Formato    |
-|---------|---------------|
+| Sistema | Formato       |
+| ------- | ------------- |
 | Linux   | Kithack.elf   |
 | Windows | Kithack.exe   |
 | Android | Kithack.apk   |

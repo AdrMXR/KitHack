@@ -19,16 +19,17 @@
 <a href="https://github.com/AdrMXR/KitHack/tree/master/docs/translations/English/README.md"><img title="English" src="https://img.shields.io/badge/Translate%20to-English-inactive?style=for-the-badge&logo=google-translate"></a>
 </p>
 
-**Kithack** es un framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras multiplataforma mediante Metasploit Framework. 
+**Kithack** es un framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras multiplataforma mediante Metasploit Framework.
 
 ## Advertencia
-**Actualmente múltiples personas están haciéndose pasar sobre mi persona, difamando que ellos son los creadores de la herramienta KitHack Framework, lo cual es completamente falso. También se dedican a estafar a la gente ofreciendo servicios de hacking en mi nombre, quiero dejar en claro que el objetivo de este proyecto jamás ha sido con fines de comerciabilidad, tal como lo redacto en el apartado final de la web de KitHack, si quieres consultarlo, da click [aquí](https://adrmxr.github.io/KitHack/#licencia). 
+
+**Actualmente múltiples personas están haciéndose pasar sobre mi persona, difamando que ellos son los creadores de la herramienta KitHack Framework, lo cual es completamente falso. También se dedican a estafar a la gente ofreciendo servicios de hacking en mi nombre, quiero dejar en claro que el objetivo de este proyecto jamás ha sido con fines de comerciabilidad, tal como lo redacto en el apartado final de la web de KitHack, si quieres consultarlo, da click [aquí](https://adrmxr.github.io/KitHack/#licencia).
 Mi único perfil real lo pueden consultar dando click [aquí](https://facebook.com/adrian.guillermo.22).**
 
 ## Distribuciones compatibles con KitHack:
 
-| Distribución |   Estado      |
-|--------------|---------------| 
+| Distribución | Estado        |
+| ------------ | ------------- |
 | Kali Linux   | Compatible    |
 | Ubuntu       | Compatible    |
 | Xbuntu       | Compatible    |
@@ -39,7 +40,7 @@ Mi único perfil real lo pueden consultar dando click [aquí](https://facebook.c
 | Arch Linux   | En desarrollo |
 | Termux       | En desarrollo |
 
-## Instalación: 
+## Instalación:
 
 ```bash
 # Actualice su lista de paquetes
@@ -48,7 +49,7 @@ $ sudo apt update
 # Instale python3 python3-pip
 $ sudo apt install python3 python3-pip
 
-# Clone el repositorio 
+# Clone el repositorio
 $ git clone https://github.com/AdrMXR/KitHack.git
 
 # Entre al repositorio
@@ -72,55 +73,64 @@ $ sudo bash uninstall.sh
 
 ## Dependencias:
 
-* sudo
-* xterm
-* postgresql
-* Metasploit-Framework 
-* apktool
-* aapt
-* jarsigner
-* zipalign 
-* requests
-* pwgen
-* py-getch
-* python-tk
-* pathlib
-* python-zenity
-* pgrep 
+- sudo
+- xterm
+- postgresql
+- Metasploit-Framework
+- apktool
+- aapt
+- jarsigner
+- zipalign
+- requests
+- pwgen
+- py-getch
+- python-tk
+- pathlib
+- python-zenity
+- pgrep
 
 ## Novedades:
 
 **1) Depuración de herramientas obsoletas.**
+
 - Es fundamental que nuestros usuarios nos [reporten](mailto:kithacking@gmail.com) cualquier herramienta que no se esté instalando de forma correcta, ya que de esa forma nosotros podremos depurarla completamente de kithack.
 
 **2) Integración de nuevas herramientas.**
+
 - Así como depuramos herramientas también integramos algunas nuevas, si tienes algún proyecto personal en github que te gustaría que apareciera en nuestro kit de herramientas, o si estás interesado en ser contribuidor de kithack, lee nuestra [norma de contribución](https://github.com/AdrMXR/KitHack/blob/master/docs/CONTRIBUTING.md).
 
 **3) Unificación de tipos de Payloads (por etapas y sin etapas).**
+
 - Kithack nos permite utilizar tanto payloads por etapas como individuales. Si deseas saber sus diferencias, consulta [aquí.](https://adrmxr.github.io/KitHack#tipos-de-payloads)
 
 **4) Incorporación de un nuevo método que permite infectar aplicaciones Android legitimas.**
+
 - Kithack nos proporciona la opción de poder infectar una APK original. Cabe destacar que no todas las aplicaciones son vulnerables.
 
 **5) Automatización de Metasploit.**
+
 - No tienes que perder tiempo en volver a establecer las configuraciones de tu payload, kithack se encarga de poner en escucha a [metasploit](https://www.metasploit.com) de manera rapida.
 
 **6) Personalización de payloads para android.**
+
 - Ahora también tienes la posibilidad de personalizar tu propio payload para Android. Con kithack puedes cambiar el nombre predeterminado de la apk que genera [metasploit](https://www.metasploit.com) conocido como "MainActivity" y también puedes modificar el icono de Android predeterminado. Da click [aquí](https://github.com/AdrMXR/KitHack/blob/master/icons/LEEME.txt) para conocer el formato.
 
 **7) Aplicación de persistencia automatizada para cualquier APK.**
+
 - Olvidate de que tu sesión de [metasploit](https://www.metasploit.com) expire muy rapido, con kithack ahora podrás generar tu archivo de persistencia para cualquier APK. Si deseas saber como ponerlo en marcha en la shell de meterpreter, da click [aquí.](https://youtu.be/nERwsZyIVeo)
 
 **8) Ejecución de herramientas.**
+
 - Ahora el usuario podrá ejecutar las herramientas directamente desde kithack a pesar de que ya se encuentren instaladas.
 
-**9) Creación de ```clean.sh```.**
-- Si necesitas eliminar el contenido que te ha generado kithack en tus carpetas `tools` y `output`, puedes ejecutar el archivo `clean.sh` para hacerlo de forma rápida. 
+**9) Creación de `clean.sh`.**
 
-## Algunas APK vulnerables:  
+- Si necesitas eliminar el contenido que te ha generado kithack en tus carpetas `tools` y `output`, puedes ejecutar el archivo `clean.sh` para hacerlo de forma rápida.
 
-|        APK          |   Versión    |
-|---------------------|--------------| 
+## Algunas APK vulnerables:
+
+| APK                 | Versión      |
+| ------------------- | ------------ |
 | FaceApp             | 1.00         |
 | Pou                 | 1.4.79       |
 | Google Now Launcher | 1.4.large    |
@@ -132,23 +142,24 @@ $ sudo bash uninstall.sh
 | Ccleaner            | 1.19.74      |
 | AVG Cleaner         | 2.0.2        |
 
- ## Screenshots: 
+## Screenshots:
 
-| Menu principal | Generador de backdoors |	
-| -------------- | ---------------------- |   
-|![Index](https://github.com/AdrMXR/KitHack/blob/master/images/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/images/screenshot-2.png)
+| Menu principal                                                                  | Generador de backdoors                                                      |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| ![Index](https://github.com/AdrMXR/KitHack/blob/master/images/screenshot-1.png) | ![f](https://github.com/AdrMXR/KitHack/blob/master/images/screenshot-2.png) |
 
-## Videos:  
+## Videos:
 
-| Demo 1 | Demo 2 | 
-| ------ | ------ | 
-<a href="https://asciinema.org/a/OTymOt3NNSTfFERrw2bHvuFw7" target="_blank"><img src="https://asciinema.org/a/OTymOt3NNSTfFERrw2bHvuFw7.svg" /></a>|<a href="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY" target="_blank"><img src="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY.svg" /></a>
+| Demo 1                                                                                                                                              | Demo 2                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <a href="https://asciinema.org/a/OTymOt3NNSTfFERrw2bHvuFw7" target="_blank"><img src="https://asciinema.org/a/OTymOt3NNSTfFERrw2bHvuFw7.svg" /></a> | <a href="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY" target="_blank"><img src="https://asciinema.org/a/oV5lttCQpOmmgcgIaFIQEkcxY.svg" /></a> |
+
 <p align="center">
 
 ## Menu:
 
 - [Android](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#android)
-- [Windows](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#windows) 
+- [Windows](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#windows)
 - [Phishing](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#phishing)
 - [Wifi Attacks](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#wifi-attacks)
 - [Passwords Attacks](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#passwords-attacks)
@@ -158,7 +169,7 @@ $ sudo bash uninstall.sh
 - [Others](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#others)
 - [Backdoors with msfvenom](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#backdoors-with-msfvenom)
 
-## Bug? 
+## Bug?
 
 Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 
@@ -166,10 +177,10 @@ Si encuentra algun fallo en la herramienta siga los siguientes pasos:
 2. Contactarme mediante el siguiente correo: kithacking@gmail.com
 3. Mandar el screenshot y explicar su problemática con ese fallo.
 
-## Contribuidores: 
+## Contribuidores:
 
-- Ironpuerquito 
-- C1b0rk 
+- Ironpuerquito
+- C1b0rk
 
 ## Licencia:
 
@@ -194,11 +205,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-
-
-
-
-
-
