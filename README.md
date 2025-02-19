@@ -11,7 +11,6 @@
 <a href=""><img title="System" src="https://img.shields.io/badge/Supported%20OS-Linux-orange?style=for-the-badge&logo=linux"></a>
 <a href=""><img title="Python" src="https://img.shields.io/badge/Python-3.7-yellow?style=for-the-badge&logo=python"></a>
 <a href=""><img title="Lincencia" src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge&logo="></a>
-<a href="https://www.paypal.me/AdrMXR0"><img title="Paypal" src="https://img.shields.io/badge/Donate-PayPal-green.svg?style=for-the-badge&logo=paypal"></a>
 </p>
 
 <p align="center">
@@ -22,8 +21,7 @@
 **Kithack** es un framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras multiplataforma mediante Metasploit Framework. 
 
 ## Advertencia
-**Actualmente múltiples personas están haciéndose pasar sobre mi persona, difamando que ellos son los creadores de la herramienta KitHack Framework, lo cual es completamente falso. También se dedican a estafar a la gente ofreciendo servicios de hacking en mi nombre, quiero dejar en claro que el objetivo de este proyecto jamás ha sido con fines de comerciabilidad, tal como lo redacto en el apartado final de la web de KitHack, si quieres consultarlo, da click [aquí](https://adrmxr.github.io/KitHack/#licencia). 
-Mi único perfil real lo pueden consultar dando click [aquí](https://facebook.com/adrian.guillermo.22).**
+**DEPRECATED.**
 
 ## Distribuciones compatibles con KitHack:
 
