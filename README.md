@@ -18,12 +18,12 @@
 <a href="https://github.com/AdrMXR/KitHack/tree/master/docs/translations/English/README.md"><img title="English" src="https://img.shields.io/badge/Translate%20to-English-inactive?style=for-the-badge&logo=google-translate"></a>
 </p>
 
-**Kithack** es un framework diseñado para automatizar el proceso de descarga e instalación de diferentes herramientas para pruebas de penetración, con una opción especial que permite generar puertas traseras multiplataforma mediante Metasploit Framework. 
+**Kithack** is a framework designed to automate the download and installation process of different penetration testing tools, with a special option that allows generating cross-platform backdoors using Metasploit Framework.
 
-## Advertencia
+## Warning
 **DEPRECATED.**
 
-## Distribuciones compatibles con KitHack:
+## Distributions compatible with KitHack:
 
 | Distribución |   Estado      |
 |--------------|---------------| 
@@ -37,38 +37,39 @@
 | Arch Linux   | En desarrollo |
 | Termux       | En desarrollo |
 
-## Instalación: 
+
+## Installation:
 
 ```bash
-# Actualice su lista de paquetes
+# Update your package list
 $ sudo apt update
 
-# Instale python3 python3-pip
+# Install python3 python3-pip
 $ sudo apt install python3 python3-pip
 
-# Clone el repositorio 
+# Clone the repository
 $ git clone https://github.com/AdrMXR/KitHack.git
 
-# Entre al repositorio
+# Enter the repository
 $ cd KitHack
 
-# Instale KitHack
+# Install KitHack
 $ sudo bash install.sh
 
-# Inicie KitHack
+# Start KitHack
 $ sudo python3 KitHack.py
 
-# También puede ejecutarla desde el atajo
+# You can also run it from the shortcut
 $ kithack
 
-# Cuando desee actualizar ejecute
+# When you want to update, run
 $ sudo bash update.sh
 
-# Para desinstalar ejecute
+# To uninstall, run
 $ sudo bash uninstall.sh
 ```
 
-## Dependencias:
+## Dependencies:
 
 * sudo
 * xterm
@@ -87,38 +88,37 @@ $ sudo bash uninstall.sh
 * pgrep
 * Ngrok authtoken 
 
-## Novedades:
+## What's New:
 
-**1) Depuración de herramientas obsoletas.**
-- Es fundamental que nuestros usuarios nos [reporten](mailto:kithacking@gmail.com) cualquier herramienta que no se esté instalando de forma correcta, ya que de esa forma nosotros podremos depurarla completamente de kithack.
+**1) Debugging outdated tools.**
+- It's essential that our users report to us (mailto:kithacking@gmail.com) any tools that aren't installing correctly, as this way we can fully debug them from Kithack.
 
-**2) Integración de nuevas herramientas.**
-- Así como depuramos herramientas también integramos algunas nuevas, si tienes algún proyecto personal en github que te gustaría que apareciera en nuestro kit de herramientas, o si estás interesado en ser contribuidor de kithack, lee nuestra [norma de contribución](https://github.com/AdrMXR/KitHack/blob/master/docs/CONTRIBUTING.md).
+**2) Integrating new tools.**
+- Just as we're debugging tools, we're also integrating new ones. If you have a personal project on GitHub that you'd like to see featured in our toolkit, or if you're interested in becoming a Kithack contributor, please read our contribution policy.
 
-**3) Unificación de tipos de Payloads (por etapas y sin etapas).**
-- Kithack nos permite utilizar tanto payloads por etapas como individuales. Si deseas saber sus diferencias, consulta [aquí.](https://adrmxr.github.io/KitHack#tipos-de-payloads)
+**3) Unified payload types (staged and non-staged).**
+- Kithack allows us to use both staged and single payloads. If you want to know their differences, see [here.](https://adrmxr.github.io/KitHack#types-of-payloads)
 
-**4) Incorporación de un nuevo método que permite infectar aplicaciones Android legitimas.**
-- Kithack nos proporciona la opción de poder infectar una APK original. Cabe destacar que no todas las aplicaciones son vulnerables.
+**4) Addition of a new method to infect legitimate Android apps.**
+- Kithack gives us the option to infect an original APK. It's worth noting that not all apps are vulnerable.
 
-**5) Generación de conexiones TCP con ngrok.**
-- Ahora también puedes trabajar con [ngrok](https://ngrok.com) para realizar ataques fuera de tu red sin necesidad de abrir puertos. El archivo de configuración ```ngrok.yml``` se almacena en ```KitHack/.config``` de manera predeterminada. Si por alguna razon necesita que kithack le solicite nuevamente su authtoken escriba ```rm .config/ngrok.yml```.
+**5) Generating TCP connections with ngrok.**
+- You can now also work with [ngrok](https://ngrok.com) to perform attacks outside your network without having to open ports. The ```ngrok.yml``` configuration file is stored in ```KitHack/.config``` by default. If for any reason you need Kithack to prompt you for your authtoken again, type ```rm .config/ngrok.yml```.
 
-**6) Automatización de Metasploit.**
-- No tienes que perder tiempo en volver a establecer las configuraciones de tu payload, kithack se encarga de poner en escucha a [metasploit](https://www.metasploit.com) de manera rapida.
+**6) Metasploit Automation.**
+- You don't have to waste time reconfiguring your payload settings; KitHack quickly listens to [metasploit](https://www.metasploit.com).
 
-**7) Personalización de payloads para android.**
-- Ahora también tienes la posibilidad de personalizar tu propio payload para Android. Con kithack puedes cambiar el nombre predeterminado de la apk que genera [metasploit](https://www.metasploit.com) conocido como "MainActivity" y también puedes modificar el icono de Android predeterminado. Da click [aquí](https://github.com/AdrMXR/KitHack/blob/master/icons/LEEME.txt) para conocer el formato.
+**7) Android Payload Customization.**
+- You now also have the ability to customize your own Android payload. With KitHack, you can change the default name of the APK generated by [metasploit](https://www.metasploit.com), known as "MainActivity," and you can also modify the default Android icon. Click [here](https://github.com/AdrMXR/KitHack/blob/master/icons/README.txt) to learn the format.
 
-**8) Aplicación de persistencia automatizada para cualquier APK.**
-- Olvidate de que tu sesión de [metasploit](https://www.metasploit.com) expire muy rapido, con kithack ahora podrás generar tu archivo de persistencia para cualquier APK. Si deseas saber como ponerlo en marcha en la shell de meterpreter, da click [aquí.](https://youtu.be/nERwsZyIVeo)
+**8) Automated persistence application for any APK.**
+- Forget about your [metasploit](https://www.metasploit.com) session expiring too quickly. With Kithack, you can now generate your persistence file for any APK. If you want to know how to run it in the Meterpreter shell, click [here.](https://youtu.be/nERwsZyIVeo)
 
-**9) Ejecución de herramientas.**
-- Ahora el usuario podrá ejecutar las herramientas directamente desde kithack a pesar de que ya se encuentren instaladas.
+**9) Executing tools.**
+- Users can now run tools directly from Kithack, even if they're already installed.
 
-**10) Creación de ```clean.sh```.**
-- Si necesitas eliminar el contenido que te ha generado kithack en tus carpetas `tools` y `output`, puedes ejecutar el archivo `clean.sh` para hacerlo de forma rápida. 
-
+**10) Creating ```clean.sh```.**
+- If you need to delete the content generated by Kithack in your `tools` and `output` folders, you can run the `clean.sh` file to do so quickly.
 ## Algunas APK vulnerables:  
 
 |        APK          |   Versión    |
@@ -136,7 +136,7 @@ $ sudo bash uninstall.sh
 
  ## Screenshots: 
 
-| Menu principal | Generador de backdoors |	
+| Main Menu | Backdoor Generator |
 | -------------- | ---------------------- |   
 |![Index](https://github.com/AdrMXR/KitHack/blob/master/images/screenshot-1.png)|![f](https://github.com/AdrMXR/KitHack/blob/master/images/screenshot-2.png)
 
@@ -160,20 +160,20 @@ $ sudo bash uninstall.sh
 - [Others](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#others)
 - [Backdoors with msfvenom](https://github.com/AdrMXR/KitHack/blob/master/docs/TOOLS.md#backdoors-with-msfvenom)
 
-## Bug? 
+## Bug?
 
-Si encuentra algun fallo en la herramienta siga los siguientes pasos:
+If you find a bug in the tool, follow these steps:
 
-1. Tomar un screenshot y que el fallo se aprecie detalladamente.
-2. Contactarme mediante el siguiente correo: kithacking@gmail.com
-3. Mandar el screenshot y explicar su problemática con ese fallo.
+1. Take a screenshot and see the bug in detail.
+2. Contact me at the following email: kithacking@gmail.com
+3. Send the screenshot and explain your problem with the bug.
 
-## Contribuidores: 
+## Contributors:
 
-- Ironpuerquito 
-- C1b0rk 
+- Ironpuerquito
+- C1b0rk
 
-## Licencia:
+## License:
 
 MIT License
 
