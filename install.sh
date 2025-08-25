@@ -283,13 +283,13 @@ echo -n [*] Instalando requerimientos de python...= ;
 sleep 3 & while [ "$(ps a | awk '{print $1}' | grep $!)" ] ; do for X in '-' '\' '|' '/'; do echo -en "\b$X"; sleep 0.1; done; done
 echo ""
 echo -e $green
-pip3 install requests
-pip3 install py-getch
-apt-get install python3-tk
-pip3 install pathlib
-pip3 install zenipy
-pip3 install pgrep
-apt-get install libatk-adaptor libgail-common
+pip3 install requests --break-system-packages
+pip3 install py-getch --break-system-packages
+sudo apt-get install python3-tk
+pip3 install pathlib --break-system-packages
+pip3 install zenipy --break-system-packages
+pip3 install pgrep --break-system-packages
+sudo apt-get install libatk-adaptor libgail-common
 sudo apt-get purge fcitx-module-dbus
 
 # Shortcut for kithack
